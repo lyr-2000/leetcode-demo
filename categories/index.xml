@@ -7,13 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Wed, 11 May 2022 23:28:48 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/leetcode-demo/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 May 2022 16:24:48 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/leetcode-demo/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>准备工作</title>
-      <link>https://lyr-2000.github.io/leetcode-demo/categories/%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/</link>
+      <title>并查集</title>
+      <link>https://lyr-2000.github.io/leetcode-demo/categories/%E5%B9%B6%E6%9F%A5%E9%9B%86/</link>
+      <pubDate>Thu, 12 May 2022 16:24:48 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/leetcode-demo/categories/%E5%B9%B6%E6%9F%A5%E9%9B%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>notes</title>
+      <link>https://lyr-2000.github.io/leetcode-demo/categories/notes/</link>
       <pubDate>Wed, 11 May 2022 23:28:48 +0800</pubDate>
       
-      <guid>https://lyr-2000.github.io/leetcode-demo/categories/%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/</guid>
+      <guid>https://lyr-2000.github.io/leetcode-demo/categories/notes/</guid>
       <description></description>
     </item>
     
@@ -23,6 +32,15 @@
       <pubDate>Wed, 11 May 2022 20:02:48 +0800</pubDate>
       
       <guid>https://lyr-2000.github.io/leetcode-demo/categories/docs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dp</title>
+      <link>https://lyr-2000.github.io/leetcode-demo/categories/dp/</link>
+      <pubDate>Wed, 11 May 2022 20:02:48 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/leetcode-demo/categories/dp/</guid>
       <description></description>
     </item>
     

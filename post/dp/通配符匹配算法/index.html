@@ -52,7 +52,7 @@
 <meta itemprop="name" content="通配符匹配算法">
 <meta itemprop="description" content="通配符匹配算法 ​ 参考leetcode44.通配符匹配 给定一个字符串 (s) 和一个字符模式 (p) ，实现一个支持 &lsquo;?&rsquo; 和 &lsquo;*&rsquo; 的通配符匹配。 &lsquo;?&rsquo; 可以匹配任何单个字符"><meta itemprop="datePublished" content="2022-05-11T20:02:48+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
-<meta itemprop="wordCount" content="516"><meta itemprop="image" content="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkimfevkj31hc0u0tmy.jpg">
+<meta itemprop="wordCount" content="649"><meta itemprop="image" content="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkimfevkj31hc0u0tmy.jpg">
 <meta itemprop="keywords" content="dp," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkimfevkj31hc0u0tmy.jpg"/>
 
@@ -99,8 +99,10 @@
         <li class="mobile-menu-item">标签</li>
       </a><a href="/leetcode-demo/categories/">
         <li class="mobile-menu-item">分类</li>
+      </a><a href="/leetcode-demo/about/">
+        <li class="mobile-menu-item">关于</li>
       </a><a href="/leetcode-demo/friends">
-        <li class="mobile-menu-item">友人帐</li>
+        <li class="mobile-menu-item">友链</li>
       </a>
 	
 	
@@ -132,7 +134,9 @@
       </li><li class="menu-item">
         <a class="menu-item-link" href="/leetcode-demo/categories/">分类</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/leetcode-demo/friends">友人帐</a>
+        <a class="menu-item-link" href="/leetcode-demo/about/">关于</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/leetcode-demo/friends">友链</a>
       </li></ul>
 </nav>
 
@@ -186,9 +190,9 @@ input.PC_MARK1:focus{
       <div class="post-meta">
         <span class="post-time"> 2022-05-11 </span>
         <div class="post-category">
-            <a href="/leetcode-demo/categories/docs/"> docs </a>
+            <a href="/leetcode-demo/categories/dp/"> dp </a>
             </div>
-          <span class="more-meta"> 约 516 字 </span>
+          <span class="more-meta"> 约 649 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/leetcode-demo/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -202,6 +206,7 @@ input.PC_MARK1:focus{
     <li>
       <ul>
         <li><a href="#通配符匹配算法">通配符匹配算法</a></li>
+        <li><a href="#动规解法">动规解法</a></li>
       </ul>
     </li>
   </ul>
@@ -324,6 +329,75 @@ p = &ldquo;a*c?b&rdquo;
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>
 </div>
+</div><h2 id="动规解法">动规解法</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">bool</span> <span class="n">isMatch</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">,</span> <span class="n">string</span> <span class="n">p</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">       <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="n">m</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">       <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">dp</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// *** 匹配0个字符
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="o">&amp;&amp;</span> <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;*&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">// 匹配 1-&gt; i ,1-&gt;j 个字符
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="kt">char</span> <span class="n">y</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">char</span> <span class="n">x</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span><span class="p">(</span><span class="n">y</span><span class="o">==</span><span class="n">x</span> <span class="o">||</span> <span class="n">y</span> <span class="o">==</span> <span class="sc">&#39;?&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span><span class="c1">// match ok
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span><span class="p">(</span><span class="n">y</span><span class="o">==</span><span class="sc">&#39;*&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">// 0 (i-1,j)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="c1">// 1 (i,j-1)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">||</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">dp</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">m</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">       
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
 </div>
 
 
@@ -332,15 +406,15 @@ p = &ldquo;a*c?b&rdquo;
 <p>
   
    
-     <a href="https://lyr-2000.github.io/leetcode-demotags/dp" class="tag">dp</a>
+     <a href="https://lyr-2000.github.io/leetcode-demo/tags/dp" class="tag">dp</a>
    
   
    
-     <a href="https://lyr-2000.github.io/leetcode-demotags/%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92" class="tag">动态规划</a>
+     <a href="https://lyr-2000.github.io/leetcode-demo/tags/%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92" class="tag">动态规划</a>
    
   
    
-     <a href="https://lyr-2000.github.io/leetcode-demotags/%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%8c%b9%e9%85%8d" class="tag">字符串匹配</a>
+     <a href="https://lyr-2000.github.io/leetcode-demo/tags/%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%8c%b9%e9%85%8d" class="tag">字符串匹配</a>
    
   
 </p>
@@ -369,7 +443,7 @@ p = &ldquo;a*c?b&rdquo;
           <a href="/leetcode-demo/tags/dp/">dp</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/leetcode-demo/post/%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C/vscode%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF%E5%8A%9F%E8%83%BD/">
+        <a class="prev" href="/leetcode-demo/post/notes/vscode%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF%E5%8A%9F%E8%83%BD/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">vscode代码模板功能</span>
             <span class="prev-text nav-mobile">上一篇</span>
