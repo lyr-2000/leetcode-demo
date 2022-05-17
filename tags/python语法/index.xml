@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python语法 on 凌冬的前端实验室</title>
+    <link>https://lyr-2000.github.io/leetcode-demo/tags/python%E8%AF%AD%E6%B3%95/</link>
+    <description>Recent content in python语法 on 凌冬的前端实验室</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>LYR</copyright>
+    <lastBuildDate>Wed, 18 May 2022 00:24:40 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/leetcode-demo/tags/python%E8%AF%AD%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>函数</title>
+      <link>https://lyr-2000.github.io/leetcode-demo/post/python%E8%AF%AD%E6%B3%95/%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Wed, 18 May 2022 00:24:40 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/leetcode-demo/post/python%E8%AF%AD%E6%B3%95/%E5%87%BD%E6%95%B0/</guid>
+      <description>函数定义 参考学习教程 脚本中函数定义要放在函数调用之前，因为这是解释型语言 1 2 3 4 def say(); print(&amp;#34;hello world&amp;#34;) say() # say调用放在定义之后 注释 名字 描述 单行注释 #, 注意</description>
+    </item>
+    
+  </channel>
+</rss>

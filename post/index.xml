@@ -9,6 +9,33 @@
     <copyright>LYR</copyright>
     <lastBuildDate>Wed, 11 May 2022 20:02:48 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/leetcode-demo/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>学习网站</title>
+      <link>https://lyr-2000.github.io/leetcode-demo/post/notes/%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/</link>
+      <pubDate>Wed, 18 May 2022 00:25:33 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/leetcode-demo/post/notes/%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/</guid>
+      <description>学习网站收集 学前端 学前端2</description>
+    </item>
+    
+    <item>
+      <title>函数</title>
+      <link>https://lyr-2000.github.io/leetcode-demo/post/python%E8%AF%AD%E6%B3%95/%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Wed, 18 May 2022 00:24:40 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/leetcode-demo/post/python%E8%AF%AD%E6%B3%95/%E5%87%BD%E6%95%B0/</guid>
+      <description>函数定义 参考学习教程 脚本中函数定义要放在函数调用之前，因为这是解释型语言 1 2 3 4 def say(); print(&amp;#34;hello world&amp;#34;) say() # say调用放在定义之后 注释 名字 描述 单行注释 #, 注意</description>
+    </item>
+    
+    <item>
+      <title>leetcode 227实现计算器</title>
+      <link>https://lyr-2000.github.io/leetcode-demo/post/%E6%A0%88/leetcode-227%E5%AE%9E%E7%8E%B0%E8%AE%A1%E7%AE%97%E5%99%A8/</link>
+      <pubDate>Tue, 17 May 2022 23:01:19 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/leetcode-demo/post/%E6%A0%88/leetcode-227%E5%AE%9E%E7%8E%B0%E8%AE%A1%E7%AE%97%E5%99%A8/</guid>
+      <description>编译原理 栈 给你一个字符串表达式 s ，请你实现一个基本计算器来计算并返回它的值。 整数除法仅保留整数部分。 你可以假设给定的表达式总是有效的。所有中</description>
+    </item>
+    
+    <item>
       <title>剑指117.相似的字符串</title>
       <link>https://lyr-2000.github.io/leetcode-demo/post/%E5%B9%B6%E6%9F%A5%E9%9B%86/%E5%89%91%E6%8C%87117.%E7%9B%B8%E4%BC%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
       <pubDate>Thu, 12 May 2022 16:24:48 +0800</pubDate>
