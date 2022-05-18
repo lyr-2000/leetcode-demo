@@ -9,6 +9,15 @@
     <copyright>LYR</copyright>
     <lastBuildDate>Wed, 11 May 2022 20:02:48 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/leetcode-demo/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>yield生成器</title>
+      <link>https://lyr-2000.github.io/leetcode-demo/post/python%E8%AF%AD%E6%B3%95/yield%E7%94%9F%E6%88%90%E5%99%A8/</link>
+      <pubDate>Wed, 18 May 2022 11:40:28 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/leetcode-demo/post/python%E8%AF%AD%E6%B3%95/yield%E7%94%9F%E6%88%90%E5%99%A8/</guid>
+      <description>yield 生成器语法 1 2 3 4 5 6 7 8 9 10 def fab(max): n, a, b = 0, 0, 1 while n &amp;lt; max: yield b # 使用 yield # print b a, b = b, a + b n = n + 1 for n in fab(5): print n 通过这个 yield ,我们就不需要在 while</description>
+    </item>
+    
+    <item>
       <title>学习网站</title>
       <link>https://lyr-2000.github.io/leetcode-demo/post/notes/%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/</link>
       <pubDate>Wed, 18 May 2022 00:25:33 +0800</pubDate>
