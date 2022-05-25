@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>docs on 凌冬的前端实验室</title>
-    <link>https://lyr-2000.github.io/leetcode-demo/tags/docs/</link>
+    <link>https://lyr-2000.github.io/code/tags/docs/</link>
     <description>Recent content in docs on 凌冬的前端实验室</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Wed, 11 May 2022 20:02:48 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/leetcode-demo/tags/docs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 May 2022 20:02:48 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/tags/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>准备工作</title>
-      <link>https://lyr-2000.github.io/leetcode-demo/</link>
+      <link>https://lyr-2000.github.io/code/</link>
       <pubDate>Wed, 11 May 2022 20:02:48 +0800</pubDate>
       
-      <guid>https://lyr-2000.github.io/leetcode-demo/</guid>
+      <guid>https://lyr-2000.github.io/code/</guid>
       <description></description>
     </item>
     
     <item>
       <title>准备工作</title>
-      <link>https://lyr-2000.github.io/leetcode-demo/post/</link>
+      <link>https://lyr-2000.github.io/code/post/</link>
       <pubDate>Wed, 11 May 2022 20:02:48 +0800</pubDate>
       
-      <guid>https://lyr-2000.github.io/leetcode-demo/post/</guid>
+      <guid>https://lyr-2000.github.io/code/post/</guid>
       <description></description>
     </item>
     

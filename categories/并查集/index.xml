@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>并查集 on 凌冬的前端实验室</title>
-    <link>https://lyr-2000.github.io/leetcode-demo/categories/%E5%B9%B6%E6%9F%A5%E9%9B%86/</link>
+    <link>https://lyr-2000.github.io/code/categories/%E5%B9%B6%E6%9F%A5%E9%9B%86/</link>
     <description>Recent content in 并查集 on 凌冬的前端实验室</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Thu, 12 May 2022 16:24:48 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/leetcode-demo/categories/%E5%B9%B6%E6%9F%A5%E9%9B%86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 May 2022 16:24:48 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/categories/%E5%B9%B6%E6%9F%A5%E9%9B%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>剑指117.相似的字符串</title>
-      <link>https://lyr-2000.github.io/leetcode-demo/post/%E5%B9%B6%E6%9F%A5%E9%9B%86/%E5%89%91%E6%8C%87117.%E7%9B%B8%E4%BC%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <link>https://lyr-2000.github.io/code/post/%E5%B9%B6%E6%9F%A5%E9%9B%86/%E5%89%91%E6%8C%87117.%E7%9B%B8%E4%BC%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
       <pubDate>Thu, 12 May 2022 16:24:48 +0800</pubDate>
       
-      <guid>https://lyr-2000.github.io/leetcode-demo/post/%E5%B9%B6%E6%9F%A5%E9%9B%86/%E5%89%91%E6%8C%87117.%E7%9B%B8%E4%BC%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <guid>https://lyr-2000.github.io/code/post/%E5%B9%B6%E6%9F%A5%E9%9B%86/%E5%89%91%E6%8C%87117.%E7%9B%B8%E4%BC%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
       <description>剑指117.相似的字符串 ​ 如果交换字符串 X 中的两个不同位置的字母，使得它和字符串 Y 相等，那么称 X 和 Y 两个字符串相似。如果这两个字符串本身是相</description>
     </item>
     
