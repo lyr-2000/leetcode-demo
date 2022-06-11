@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>位运算 on 凌冬的代码博客站</title>
+    <link>https://lyr-2000.github.io/code/categories/%E4%BD%8D%E8%BF%90%E7%AE%97/</link>
+    <description>Recent content in 位运算 on 凌冬的代码博客站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>LYR</copyright>
+    <lastBuildDate>Sat, 11 Jun 2022 14:30:50 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/categories/%E4%BD%8D%E8%BF%90%E7%AE%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>393验证utf8编码</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BD%8D%E8%BF%90%E7%AE%97/393%E9%AA%8C%E8%AF%81utf8%E7%BC%96%E7%A0%81/</link>
+      <pubDate>Sat, 11 Jun 2022 14:30:50 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BD%8D%E8%BF%90%E7%AE%97/393%E9%AA%8C%E8%AF%81utf8%E7%BC%96%E7%A0%81/</guid>
+      <description>393. UTF-8 编码验证 Description Difficulty: 中等 Related Topics: 位运算, 数组 给定一个表示数据的整数数组 data ，返回它是否为有效的 UTF-8 编码。 UTF-8 中的一个字符可能的长度为 1 到 4 字节，遵循以下的</description>
+    </item>
+    
+  </channel>
+</rss>

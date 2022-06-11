@@ -18,11 +18,92 @@
     </item>
     
     <item>
+      <title>leetcode.282.给表达式添加运算符</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%9B%9E%E6%BA%AF%E6%90%9C%E7%B4%A2/leetcode.282.%E7%BB%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B7%BB%E5%8A%A0%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+      <pubDate>Sat, 11 Jun 2022 18:24:29 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%9B%9E%E6%BA%AF%E6%90%9C%E7%B4%A2/leetcode.282.%E7%BB%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B7%BB%E5%8A%A0%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
+      <description>282. 给表达式添加运算符 Description Difficulty: 困难 Related Topics: 数学, 字符串, 回溯 给定一个仅包含数字 0-9 的字符串 num 和一个目标值整数 target ，在 num 的数字之间添加 二元 运算符（不是一元）</description>
+    </item>
+    
+    <item>
+      <title>leetcode.410.分割数组的最大值</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/%E5%BA%8F%E5%88%97%E8%BE%B9%E7%95%8C/leetcode.410.%E5%88%86%E5%89%B2%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC/</link>
+      <pubDate>Sat, 11 Jun 2022 17:28:23 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/%E5%BA%8F%E5%88%97%E8%BE%B9%E7%95%8C/leetcode.410.%E5%88%86%E5%89%B2%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC/</guid>
+      <description>410. 分割数组的最大值 Description Difficulty: 困难 Related Topics: 贪心, 数组, 二分查找, 动态规划 给定一个非负整数数组 nums 和一个整数 m ，你需要将这个数组分成 m个非空的连续子数组。 设</description>
+    </item>
+    
+    <item>
+      <title>leetcode.413.等差数列划分</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/%E8%AE%A1%E7%AE%97%E6%95%B0%E9%87%8F/leetcode.413.%E7%AD%89%E5%B7%AE%E6%95%B0%E5%88%97%E5%88%92%E5%88%86/</link>
+      <pubDate>Sat, 11 Jun 2022 16:39:30 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/%E8%AE%A1%E7%AE%97%E6%95%B0%E9%87%8F/leetcode.413.%E7%AD%89%E5%B7%AE%E6%95%B0%E5%88%97%E5%88%92%E5%88%86/</guid>
+      <description>413. 等差数列划分 Description Difficulty: 中等 Related Topics: 数组, 动态规划 如果一个数列 至少有三个元素 ，并且任意两个相邻元素之差相同，则称该数列为等差数列。 例如，[1,3,5,</description>
+    </item>
+    
+    <item>
+      <title>leetcode.62.不同路径</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/%E8%AE%A1%E7%AE%97%E6%95%B0%E9%87%8F/leetcode.62.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84/</link>
+      <pubDate>Sat, 11 Jun 2022 15:49:28 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/%E8%AE%A1%E7%AE%97%E6%95%B0%E9%87%8F/leetcode.62.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84/</guid>
+      <description>62. 不同路径 Description Difficulty: 中等 Related Topics: 数学, 动态规划, 组合数学 一个机器人位于一个 m x n网格的左上角 （起始点在下图中标记为 “Start” ）。 机器人每次只能向下</description>
+    </item>
+    
+    <item>
+      <title>926.将字符串翻转到递增</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/%E8%AE%A1%E7%AE%97%E6%AC%A1%E6%95%B0/926.%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BF%BB%E8%BD%AC%E5%88%B0%E9%80%92%E5%A2%9E/</link>
+      <pubDate>Sat, 11 Jun 2022 15:22:02 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/%E8%AE%A1%E7%AE%97%E6%AC%A1%E6%95%B0/926.%E5%B0%86%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BF%BB%E8%BD%AC%E5%88%B0%E9%80%92%E5%A2%9E/</guid>
+      <description>926. 将字符串翻转到单调递增 Description Difficulty: 中等 Related Topics: 字符串, 动态规划 如果一个二进制字符串，是以一些 0（可能没有 0）后面跟着一些 1（也可能没有 1）的形式组成的</description>
+    </item>
+    
+    <item>
+      <title>393验证utf8编码</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BD%8D%E8%BF%90%E7%AE%97/393%E9%AA%8C%E8%AF%81utf8%E7%BC%96%E7%A0%81/</link>
+      <pubDate>Sat, 11 Jun 2022 14:30:50 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BD%8D%E8%BF%90%E7%AE%97/393%E9%AA%8C%E8%AF%81utf8%E7%BC%96%E7%A0%81/</guid>
+      <description>393. UTF-8 编码验证 Description Difficulty: 中等 Related Topics: 位运算, 数组 给定一个表示数据的整数数组 data ，返回它是否为有效的 UTF-8 编码。 UTF-8 中的一个字符可能的长度为 1 到 4 字节，遵循以下的</description>
+    </item>
+    
+    <item>
+      <title>877.石子游戏</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/%E5%8D%9A%E5%BC%88%E9%97%AE%E9%A2%98/877.%E7%9F%B3%E5%AD%90%E6%B8%B8%E6%88%8F/</link>
+      <pubDate>Sat, 11 Jun 2022 13:18:42 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/%E5%8D%9A%E5%BC%88%E9%97%AE%E9%A2%98/877.%E7%9F%B3%E5%AD%90%E6%B8%B8%E6%88%8F/</guid>
+      <description>石子游戏 1 Alice 和 Bob 用几堆石子在做游戏。一共有偶数堆石子，排成一行；每堆都有 正 整数颗石子，数目为 piles[i] 。 游戏以谁手中的石子最多来决出胜负。石子的 总数</description>
+    </item>
+    
+    <item>
+      <title>347.前k个高频元素</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%A0%86/347.%E9%AB%98%E9%A2%91%E6%95%B0%E5%AD%97/</link>
+      <pubDate>Sat, 11 Jun 2022 01:37:53 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%A0%86/347.%E9%AB%98%E9%A2%91%E6%95%B0%E5%AD%97/</guid>
+      <description>给你一个整数数组 nums 和一个整数 k ，请你返回其中出现频率前 k 高的元素。你可以按 任意顺序 返回答案。 示例 1: 输入: nums = [1,1,1,2,2,3], k = 2 输出: [1,2] 示例 2: 输入: nums =</description>
+    </item>
+    
+    <item>
+      <title>23.合并前k个升序链表</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%A0%86/23.%E5%90%88%E5%B9%B6%E5%89%8Dk%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Sat, 11 Jun 2022 01:24:49 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%A0%86/23.%E5%90%88%E5%B9%B6%E5%89%8Dk%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8/</guid>
+      <description>leetcode23. 合并k个有序链表 给你一个链表数组，每个链表都已经按升序排列。 请你将所有链表合并到一个升序链表中，返回合并后的链表。 1 2 3 4 5 6 7 8 9 10 11 12</description>
+    </item>
+    
+    <item>
       <title>yield生成器</title>
-      <link>https://lyr-2000.github.io/code/post/python%E8%AF%AD%E6%B3%95/yield%E7%94%9F%E6%88%90%E5%99%A8/</link>
+      <link>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python%E8%AF%AD%E6%B3%95/yield%E7%94%9F%E6%88%90%E5%99%A8/</link>
       <pubDate>Wed, 18 May 2022 11:40:28 +0800</pubDate>
       
-      <guid>https://lyr-2000.github.io/code/post/python%E8%AF%AD%E6%B3%95/yield%E7%94%9F%E6%88%90%E5%99%A8/</guid>
+      <guid>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python%E8%AF%AD%E6%B3%95/yield%E7%94%9F%E6%88%90%E5%99%A8/</guid>
       <description>yield 生成器语法 1 2 3 4 5 6 7 8 9 10 def fab(max): n, a, b = 0, 0, 1 while n &amp;lt; max: yield b # 使用 yield # print b a, b = b, a + b n = n + 1 for n in fab(5): print n 通过这个 yield ,我们就不需要在 while</description>
     </item>
     
@@ -37,28 +118,28 @@
     
     <item>
       <title>函数</title>
-      <link>https://lyr-2000.github.io/code/post/python%E8%AF%AD%E6%B3%95/%E5%87%BD%E6%95%B0/</link>
+      <link>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python%E8%AF%AD%E6%B3%95/%E5%87%BD%E6%95%B0/</link>
       <pubDate>Wed, 18 May 2022 00:24:40 +0800</pubDate>
       
-      <guid>https://lyr-2000.github.io/code/post/python%E8%AF%AD%E6%B3%95/%E5%87%BD%E6%95%B0/</guid>
+      <guid>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python%E8%AF%AD%E6%B3%95/%E5%87%BD%E6%95%B0/</guid>
       <description>函数定义 参考学习教程 脚本中函数定义要放在函数调用之前，因为这是解释型语言 1 2 3 4 def say(); print(&amp;#34;hello world&amp;#34;) say() # say调用放在定义之后 注释 名字 描述 单行注释 #, 注意</description>
     </item>
     
     <item>
       <title>leetcode 227实现计算器</title>
-      <link>https://lyr-2000.github.io/code/post/%E6%A0%88/leetcode-227%E5%AE%9E%E7%8E%B0%E8%AE%A1%E7%AE%97%E5%99%A8/</link>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%A0%88/leetcode-227%E5%AE%9E%E7%8E%B0%E8%AE%A1%E7%AE%97%E5%99%A8/</link>
       <pubDate>Tue, 17 May 2022 23:01:19 +0800</pubDate>
       
-      <guid>https://lyr-2000.github.io/code/post/%E6%A0%88/leetcode-227%E5%AE%9E%E7%8E%B0%E8%AE%A1%E7%AE%97%E5%99%A8/</guid>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%A0%88/leetcode-227%E5%AE%9E%E7%8E%B0%E8%AE%A1%E7%AE%97%E5%99%A8/</guid>
       <description>编译原理 栈 给你一个字符串表达式 s ，请你实现一个基本计算器来计算并返回它的值。 整数除法仅保留整数部分。 你可以假设给定的表达式总是有效的。所有中</description>
     </item>
     
     <item>
       <title>剑指117.相似的字符串</title>
-      <link>https://lyr-2000.github.io/code/post/%E5%B9%B6%E6%9F%A5%E9%9B%86/%E5%89%91%E6%8C%87117.%E7%9B%B8%E4%BC%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%B9%B6%E6%9F%A5%E9%9B%86/%E5%89%91%E6%8C%87117.%E7%9B%B8%E4%BC%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
       <pubDate>Thu, 12 May 2022 16:24:48 +0800</pubDate>
       
-      <guid>https://lyr-2000.github.io/code/post/%E5%B9%B6%E6%9F%A5%E9%9B%86/%E5%89%91%E6%8C%87117.%E7%9B%B8%E4%BC%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%B9%B6%E6%9F%A5%E9%9B%86/%E5%89%91%E6%8C%87117.%E7%9B%B8%E4%BC%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
       <description>剑指117.相似的字符串 ​ 如果交换字符串 X 中的两个不同位置的字母，使得它和字符串 Y 相等，那么称 X 和 Y 两个字符串相似。如果这两个字符串本身是相</description>
     </item>
     
@@ -73,11 +154,20 @@
     
     <item>
       <title>通配符匹配算法</title>
-      <link>https://lyr-2000.github.io/code/post/dp/%E9%80%9A%E9%85%8D%E7%AC%A6%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/</link>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB/%E9%80%9A%E9%85%8D%E7%AC%A6%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/</link>
       <pubDate>Wed, 11 May 2022 20:02:48 +0800</pubDate>
       
-      <guid>https://lyr-2000.github.io/code/post/dp/%E9%80%9A%E9%85%8D%E7%AC%A6%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/</guid>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB/%E9%80%9A%E9%85%8D%E7%AC%A6%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/</guid>
       <description>通配符匹配算法 ​ 参考leetcode44.通配符匹配 给定一个字符串 (s) 和一个字符模式 (p) ，实现一个支持 &amp;lsquo;?&amp;rsquo; 和 &amp;lsquo;*&amp;rsquo; 的通配符匹配。 &amp;lsquo;?&amp;rsquo; 可以匹配任何单个字符</description>
+    </item>
+    
+    <item>
+      <title>准备工作</title>
+      <link>https://lyr-2000.github.io/code/post/docs/%E5%B8%B8%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</link>
+      <pubDate>Wed, 11 May 2022 20:02:48 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/docs/%E5%B8%B8%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</guid>
+      <description>shell 文档网站 awk 使用教程</description>
     </item>
     
     <item>
@@ -95,7 +185,7 @@
       <pubDate>Wed, 25 Dec 2019 14:27:01 +0000</pubDate>
       
       <guid>https://lyr-2000.github.io/code/friends/</guid>
-      <description>算法学习网站收集 注意，这个是专门学习 算法的文档站，不接受友链，需要友链的请 选择 根节点站 geeksforgeeks 学算法网站 与我联系 或者 在本页面评论区留言您的友链信息</description>
+      <description>算法学习网站收集 注意，这个是专门学习 算法的文档站，不接受友链，需要友链的请 选择 根节点站 geeksforgeeks 学算法网站 与我 联系 或者 在本页面评论区留言您的友链信息</description>
     </item>
     
   </channel>

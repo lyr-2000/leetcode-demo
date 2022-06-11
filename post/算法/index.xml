@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>凌冬的代码博客站</title>
+    <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content on 凌冬的代码博客站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>LYR</copyright>
+    <lastBuildDate>Sat, 11 Jun 2022 18:24:29 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>leetcode.282.给表达式添加运算符</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%9B%9E%E6%BA%AF%E6%90%9C%E7%B4%A2/leetcode.282.%E7%BB%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B7%BB%E5%8A%A0%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+      <pubDate>Sat, 11 Jun 2022 18:24:29 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%9B%9E%E6%BA%AF%E6%90%9C%E7%B4%A2/leetcode.282.%E7%BB%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B7%BB%E5%8A%A0%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
+      <description>282. 给表达式添加运算符 Description Difficulty: 困难 Related Topics: 数学, 字符串, 回溯 给定一个仅包含数字 0-9 的字符串 num 和一个目标值整数 target ，在 num 的数字之间添加 二元 运算符（不是一元）</description>
+    </item>
+    
+    <item>
+      <title>393验证utf8编码</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BD%8D%E8%BF%90%E7%AE%97/393%E9%AA%8C%E8%AF%81utf8%E7%BC%96%E7%A0%81/</link>
+      <pubDate>Sat, 11 Jun 2022 14:30:50 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BD%8D%E8%BF%90%E7%AE%97/393%E9%AA%8C%E8%AF%81utf8%E7%BC%96%E7%A0%81/</guid>
+      <description>393. UTF-8 编码验证 Description Difficulty: 中等 Related Topics: 位运算, 数组 给定一个表示数据的整数数组 data ，返回它是否为有效的 UTF-8 编码。 UTF-8 中的一个字符可能的长度为 1 到 4 字节，遵循以下的</description>
+    </item>
+    
+    <item>
+      <title>347.前k个高频元素</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%A0%86/347.%E9%AB%98%E9%A2%91%E6%95%B0%E5%AD%97/</link>
+      <pubDate>Sat, 11 Jun 2022 01:37:53 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%A0%86/347.%E9%AB%98%E9%A2%91%E6%95%B0%E5%AD%97/</guid>
+      <description>给你一个整数数组 nums 和一个整数 k ，请你返回其中出现频率前 k 高的元素。你可以按 任意顺序 返回答案。 示例 1: 输入: nums = [1,1,1,2,2,3], k = 2 输出: [1,2] 示例 2: 输入: nums =</description>
+    </item>
+    
+    <item>
+      <title>23.合并前k个升序链表</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%A0%86/23.%E5%90%88%E5%B9%B6%E5%89%8Dk%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Sat, 11 Jun 2022 01:24:49 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%A0%86/23.%E5%90%88%E5%B9%B6%E5%89%8Dk%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8/</guid>
+      <description>leetcode23. 合并k个有序链表 给你一个链表数组，每个链表都已经按升序排列。 请你将所有链表合并到一个升序链表中，返回合并后的链表。 1 2 3 4 5 6 7 8 9 10 11 12</description>
+    </item>
+    
+    <item>
+      <title>leetcode 227实现计算器</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%A0%88/leetcode-227%E5%AE%9E%E7%8E%B0%E8%AE%A1%E7%AE%97%E5%99%A8/</link>
+      <pubDate>Tue, 17 May 2022 23:01:19 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%A0%88/leetcode-227%E5%AE%9E%E7%8E%B0%E8%AE%A1%E7%AE%97%E5%99%A8/</guid>
+      <description>编译原理 栈 给你一个字符串表达式 s ，请你实现一个基本计算器来计算并返回它的值。 整数除法仅保留整数部分。 你可以假设给定的表达式总是有效的。所有中</description>
+    </item>
+    
+    <item>
+      <title>剑指117.相似的字符串</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%B9%B6%E6%9F%A5%E9%9B%86/%E5%89%91%E6%8C%87117.%E7%9B%B8%E4%BC%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Thu, 12 May 2022 16:24:48 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%B9%B6%E6%9F%A5%E9%9B%86/%E5%89%91%E6%8C%87117.%E7%9B%B8%E4%BC%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>剑指117.相似的字符串 ​ 如果交换字符串 X 中的两个不同位置的字母，使得它和字符串 Y 相等，那么称 X 和 Y 两个字符串相似。如果这两个字符串本身是相</description>
+    </item>
+    
+  </channel>
+</rss>
