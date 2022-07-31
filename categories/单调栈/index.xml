@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>单调栈 on 凌冬的代码博客站</title>
+    <link>https://lyr-2000.github.io/code/categories/%E5%8D%95%E8%B0%83%E6%A0%88/</link>
+    <description>Recent content in 单调栈 on 凌冬的代码博客站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>LYR</copyright>
+    <lastBuildDate>Sat, 30 Jul 2022 22:20:31 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/categories/%E5%8D%95%E8%B0%83%E6%A0%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>柱状图的最大矩形</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%8D%95%E8%B0%83%E6%A0%88/%E6%9F%B1%E7%8A%B6%E5%9B%BE%E7%9A%84%E6%9C%80%E5%A4%A7%E7%9F%A9%E5%BD%A2/</link>
+      <pubDate>Sat, 30 Jul 2022 22:20:31 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%8D%95%E8%B0%83%E6%A0%88/%E6%9F%B1%E7%8A%B6%E5%9B%BE%E7%9A%84%E6%9C%80%E5%A4%A7%E7%9F%A9%E5%BD%A2/</guid>
+      <description>84. 柱状图中最大的矩形 Description Difficulty: 困难 Related Topics: 栈, 数组, 单调栈 给定 n 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。 求在该柱状图</description>
+    </item>
+    
+    <item>
+      <title>单调栈</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%8D%95%E8%B0%83%E6%A0%88/%E5%8D%95%E8%B0%83%E6%A0%88/</link>
+      <pubDate>Sat, 30 Jul 2022 22:19:20 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%8D%95%E8%B0%83%E6%A0%88/%E5%8D%95%E8%B0%83%E6%A0%88/</guid>
+      <description>单调栈 单调栈的解题思路： 确定递增递减，关键在于前面不能影响后面的条件</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Sat, 11 Jun 2022 17:28:23 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Jun 2022 20:32:51 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>正则表达式匹配</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/</link>
+      <pubDate>Thu, 30 Jun 2022 20:32:51 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/</guid>
+      <description>10. 正则表达式匹配 Description Difficulty: 困难 Related Topics: 递归, 字符串, 动态规划 给你一个字符串 s 和一个字符规律 p，请你来实现一个支持 &#39;.&#39; 和 &#39;*&#39; 的正则表达式匹配。 &#39;.&#39; 匹配任意单个</description>
+    </item>
+    
     <item>
       <title>leetcode.410.分割数组的最大值</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/%E5%BA%8F%E5%88%97%E8%BE%B9%E7%95%8C/leetcode.410.%E5%88%86%E5%89%B2%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC/</link>
