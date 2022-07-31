@@ -18,6 +18,33 @@
     </item>
     
     <item>
+      <title>环形链表</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8/%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Mon, 01 Aug 2022 01:09:32 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8/%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</guid>
+      <description>142. 环形链表 II Description Difficulty: 中等 Related Topics: 哈希表, 链表, 双指针 给定一个链表的头节点 head ，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。 如果链表中有</description>
+    </item>
+    
+    <item>
+      <title>k个一组翻转链表</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8/k%E4%B8%AA%E4%B8%80%E7%BB%84%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Mon, 01 Aug 2022 01:02:32 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8/k%E4%B8%AA%E4%B8%80%E7%BB%84%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8/</guid>
+      <description>25. K 个一组翻转链表 Description Difficulty: 困难 Related Topics: 递归, 链表 给你链表的头节点 head ，每 k个节点一组进行翻转，请你返回修改后的链表。 k 是一个正整数，它的值小于或等于链</description>
+    </item>
+    
+    <item>
+      <title>数据结构</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Mon, 01 Aug 2022 00:12:20 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+      <description>变长数组 一个建议的实现方法： 初始化：空数组，分配常数空间 push_back, 空间不够，申请2倍内存拷贝 pop_back, 空间利用率不到 25%，就释放一半内存 均摊复杂度 o(1) 在空数</description>
+    </item>
+    
+    <item>
       <title>单调队列</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/</link>
       <pubDate>Sat, 30 Jul 2022 23:30:18 +0800</pubDate>
