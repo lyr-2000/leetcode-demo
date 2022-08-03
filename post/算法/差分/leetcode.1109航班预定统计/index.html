@@ -52,7 +52,7 @@
 <meta itemprop="name" content="leetcode.1109航班预定统计">
 <meta itemprop="description" content="leetcode 航班预定统计 1109. 航班预订统计 Description Difficulty: 中等 Related Topics: 数组, 前缀和 这里有 n 个航班，它们分别从 1 到 n 进行编号。 有一份航班预订表 bookings ，表中第 i 条预订记录 bookings[i] = [firsti, lasti,"><meta itemprop="datePublished" content="2022-07-30T18:24:21+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
-<meta itemprop="wordCount" content="547"><meta itemprop="image" content="https://api.mtyqx.cn/api/random.php">
+<meta itemprop="wordCount" content="567"><meta itemprop="image" content="https://api.mtyqx.cn/api/random.php">
 <meta itemprop="keywords" content="差分," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://api.mtyqx.cn/api/random.php"/>
 
@@ -192,7 +192,7 @@ input.PC_MARK1:focus{
         <div class="post-category">
             <a href="/code/categories/%E5%B7%AE%E5%88%86/"> 差分 </a>
             </div>
-          <span class="more-meta"> 约 547 字 </span>
+          <span class="more-meta"> 约 567 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -304,6 +304,7 @@ input.PC_MARK1:focus{
 <p>注意到一个预订记录实际上代表了一个区间的增量。我们的任务是将这些增量叠加得到答案。因此，我们可以使用差分解决本题。</p>
 <p><strong>任务区间操作，可以转为两个关键点（事件），事件的影响从l开始，从r+1 处消失</strong></p>
 <p>差分可以解决区间覆盖问题</p>
+<p>增量叠加起来 就是数量 【类似于微积分这种】</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -365,9 +366,9 @@ input.PC_MARK1:focus{
           <a href="/code/tags/%E5%B7%AE%E5%88%86/">差分</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/code/post/%E7%AE%97%E6%B3%95/%E5%89%8D%E7%BC%80%E5%92%8C/">
+        <a class="prev" href="/code/post/%E7%AE%97%E6%B3%95/%E5%89%8D%E7%BC%80%E5%92%8C/%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">算法解释</span>
+            <span class="prev-text nav-default">最大子序和</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         <a class="next" href="/code/post/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/ac.%E5%8F%AF%E8%BE%BE%E6%80%A7%E7%BB%9F%E8%AE%A1/">

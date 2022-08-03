@@ -9,6 +9,24 @@
     <copyright>LYR</copyright>
     <lastBuildDate>Wed, 11 May 2022 20:02:48 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>开发环境安装</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/rust/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Mon, 01 Aug 2022 22:47:47 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/rust/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</guid>
+      <description>安装 rust 无论使用何种系统, 均可以根据 Rust 官方网站提供的 rustup-init 工具完成 Rust 的安装. rustup-init 下载地址: https://www.rust-lang.org/zh-CN/tools/install. 网站会自动识别你的操作系统并给出提示, 遵循网站提示一步一</description>
+    </item>
+    
+    <item>
+      <title>基本数据类型</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/rust/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Mon, 01 Aug 2022 22:45:16 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/rust/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid>
+      <description>rust介绍 rust 能做什么？ 区块链 系统层面 编译器虚拟机 rust 基本数据类型学习 复合类型 元组 1 2 3 4 5 6 7 8 fn main() { let a :i32 = 10; let b:char = &amp;#39;A&amp;#39;; let tuple = (a,b); println!(&amp;#34;key{},value={}&amp;#34;,tuple.0,tuple.1); } 定义数组</description>
+    </item>
+    
+    <item>
       <title>yield生成器</title>
       <link>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python%E8%AF%AD%E6%B3%95/yield%E7%94%9F%E6%88%90%E5%99%A8/</link>
       <pubDate>Wed, 18 May 2022 11:40:28 +0800</pubDate>

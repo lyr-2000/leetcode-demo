@@ -52,7 +52,7 @@
 <meta itemprop="name" content="环形链表">
 <meta itemprop="description" content="142. 环形链表 II Description Difficulty: 中等 Related Topics: 哈希表, 链表, 双指针 给定一个链表的头节点 head ，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。 如果链表中有"><meta itemprop="datePublished" content="2022-08-01T01:09:32+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
-<meta itemprop="wordCount" content="583"><meta itemprop="image" content="https://api.mtyqx.cn/api/random.php">
+<meta itemprop="wordCount" content="626"><meta itemprop="image" content="https://api.mtyqx.cn/api/random.php">
 <meta itemprop="keywords" content="链表," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://api.mtyqx.cn/api/random.php"/>
 
@@ -192,7 +192,7 @@ input.PC_MARK1:focus{
         <div class="post-category">
             <a href="/code/categories/%E9%93%BE%E8%A1%A8/"> 链表 </a>
             </div>
-          <span class="more-meta"> 约 583 字 </span>
+          <span class="more-meta"> 约 626 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -293,6 +293,7 @@ $l+p = k</em>r$
 $l = k*r - p$</p>
 <p>$ l = k*r - p + r -r$</p>
 <p>$ l = (k-1) *r + (r-p) $</p>
+<p>实际工作中我们不需要这么复杂，直接用一个 HashMap 将 node存起来即可。</p>
 <h2 id="solution">Solution</h2>
 <p>Language: <strong>C++</strong></p>
 <div class="highlight"><div class="chroma">
@@ -329,6 +330,7 @@ $l = k*r - p$</p>
 </span><span class="lnt">30
 </span><span class="lnt">31
 </span><span class="lnt">32
+</span><span class="lnt">33
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cm">/**
@@ -359,7 +361,8 @@ $l = k*r - p$</p>
 </span></span><span class="line"><span class="cl">        <span class="k">while</span><span class="p">(</span><span class="n">x</span><span class="o">!=</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">//y一直在原地转圈
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">x</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
@@ -388,7 +391,11 @@ $l = k*r - p$</p>
           <a href="/code/tags/%E9%93%BE%E8%A1%A8/">链表</a>
           </div>
       <nav class="post-nav">
-        
+        <a class="prev" href="/code/post/%E7%AE%97%E6%B3%95/%E5%89%8D%E7%BC%80%E5%92%8C/1248.%E7%BB%9F%E8%AE%A1%E4%BC%98%E7%BE%8E%E5%AD%90%E6%95%B0%E7%BB%84/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">1248.统计优美子数组</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
         <a class="next" href="/code/post/%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8/k%E4%B8%AA%E4%B8%80%E7%BB%84%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8/">
             <span class="next-text nav-default">k个一组翻转链表</span>
             <span class="next-text nav-mobile">下一篇</span>

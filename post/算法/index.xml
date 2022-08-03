@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Mon, 01 Aug 2022 01:09:32 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Aug 2022 22:18:11 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1248.统计优美子数组</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%89%8D%E7%BC%80%E5%92%8C/1248.%E7%BB%9F%E8%AE%A1%E4%BC%98%E7%BE%8E%E5%AD%90%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Wed, 03 Aug 2022 22:18:11 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%89%8D%E7%BC%80%E5%92%8C/1248.%E7%BB%9F%E8%AE%A1%E4%BC%98%E7%BE%8E%E5%AD%90%E6%95%B0%E7%BB%84/</guid>
+      <description>1248. 统计「优美子数组」 Description Difficulty: 中等 Related Topics: 数组, 哈希表, 数学, 滑动窗口 给你一个整数数组 nums 和一个整数 k。如果某个连续子数组中恰好有 k 个奇数数字，我们就认</description>
+    </item>
+    
     <item>
       <title>环形链表</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8/%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</link>
@@ -82,11 +91,20 @@
     
     <item>
       <title>算法解释</title>
-      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%89%8D%E7%BC%80%E5%92%8C/</link>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%89%8D%E7%BC%80%E5%92%8C/%E5%89%8D%E7%BC%80%E5%92%8C/</link>
       <pubDate>Sat, 30 Jul 2022 21:00:31 +0800</pubDate>
       
-      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%89%8D%E7%BC%80%E5%92%8C/</guid>
-      <description>算法解释 前缀和 算法不局限于求和，也可以扩展到求前缀最小值、最大值等</description>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%89%8D%E7%BC%80%E5%92%8C/%E5%89%8D%E7%BC%80%E5%92%8C/</guid>
+      <description>算法解释 前缀和 算法不局限于求和，也可以扩展到求前缀最小值、最大值等 二维前缀和题目 $sum(p,q,i,j)=s[i][j]-s[i][q-1]-s[p-1][j]+s[p-1][q-1]$ 练习题： 加一 （Easy） 半年内出题频次： 合并两个有序链表 （</description>
+    </item>
+    
+    <item>
+      <title>最大子序和</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%89%8D%E7%BC%80%E5%92%8C/%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C/</link>
+      <pubDate>Sat, 30 Jul 2022 20:39:00 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%89%8D%E7%BC%80%E5%92%8C/%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C/</guid>
+      <description>53. 最大子数组和 Description Difficulty: 中等 Related Topics: 数组, 分治, 动态规划 给你一个整数数组 nums ，请你找出一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和</description>
     </item>
     
     <item>
