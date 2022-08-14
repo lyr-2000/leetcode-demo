@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>开发环境安装 - 凌冬的代码博客站</title>
+  <title>并发原语 - 凌冬的代码博客站</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="lyr" /><meta name="description" content="安装 rust 无论使用何种系统, 均可以根据 Rust 官方网站提供的 rustup-init 工具完成 Rust 的安装. rustup-init 下载地址: https://www.rust-lang.org/zh-CN/tools/install. 网站会自动识别你的操作系统并给出提示, 遵循网站提示一步一" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
+<meta name="author" content="lyr" /><meta name="description" content="atomic.Value 参考 参考博客 Go的sync/atomic包提供了原子操作，支持的数据类型包括： int32, int64, uint32, uint64, uintptr, unsafe.Pointer 1 若需要扩大原子操作的适用范围，可以使用atom" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.101.0 with theme even" />
 
 
-<link rel="canonical" href="https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/rust/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" />
+<link rel="canonical" href="https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/go/sync/%E5%B9%B6%E5%8F%91%E5%8E%9F%E8%AF%AD/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/code/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/code/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/code/favicon-16x16.png">
@@ -42,22 +42,22 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="开发环境安装" />
-<meta property="og:description" content="安装 rust 无论使用何种系统, 均可以根据 Rust 官方网站提供的 rustup-init 工具完成 Rust 的安装. rustup-init 下载地址: https://www.rust-lang.org/zh-CN/tools/install. 网站会自动识别你的操作系统并给出提示, 遵循网站提示一步一" />
+<meta property="og:title" content="并发原语" />
+<meta property="og:description" content="atomic.Value 参考 参考博客 Go的sync/atomic包提供了原子操作，支持的数据类型包括： int32, int64, uint32, uint64, uintptr, unsafe.Pointer 1 若需要扩大原子操作的适用范围，可以使用atom" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/rust/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" /><meta property="og:image" content="https://api.mtyqx.cn/api/random.php" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-08-01T22:47:47+08:00" />
+<meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/go/sync/%E5%B9%B6%E5%8F%91%E5%8E%9F%E8%AF%AD/" /><meta property="og:image" content="https://api.mtyqx.cn/api/random.php" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-08-04T22:10:35+08:00" />
 <meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
 
-<meta itemprop="name" content="开发环境安装">
-<meta itemprop="description" content="安装 rust 无论使用何种系统, 均可以根据 Rust 官方网站提供的 rustup-init 工具完成 Rust 的安装. rustup-init 下载地址: https://www.rust-lang.org/zh-CN/tools/install. 网站会自动识别你的操作系统并给出提示, 遵循网站提示一步一"><meta itemprop="datePublished" content="2022-08-01T22:47:47+08:00" />
+<meta itemprop="name" content="并发原语">
+<meta itemprop="description" content="atomic.Value 参考 参考博客 Go的sync/atomic包提供了原子操作，支持的数据类型包括： int32, int64, uint32, uint64, uintptr, unsafe.Pointer 1 若需要扩大原子操作的适用范围，可以使用atom"><meta itemprop="datePublished" content="2022-08-04T22:10:35+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
-<meta itemprop="wordCount" content="662"><meta itemprop="image" content="https://api.mtyqx.cn/api/random.php">
-<meta itemprop="keywords" content="rust," /><meta name="twitter:card" content="summary_large_image"/>
+<meta itemprop="wordCount" content="158"><meta itemprop="image" content="https://api.mtyqx.cn/api/random.php">
+<meta itemprop="keywords" content="sync," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://api.mtyqx.cn/api/random.php"/>
 
-<meta name="twitter:title" content="开发环境安装"/>
-<meta name="twitter:description" content="安装 rust 无论使用何种系统, 均可以根据 Rust 官方网站提供的 rustup-init 工具完成 Rust 的安装. rustup-init 下载地址: https://www.rust-lang.org/zh-CN/tools/install. 网站会自动识别你的操作系统并给出提示, 遵循网站提示一步一"/>
+<meta name="twitter:title" content="并发原语"/>
+<meta name="twitter:description" content="atomic.Value 参考 参考博客 Go的sync/atomic包提供了原子操作，支持的数据类型包括： int32, int64, uint32, uint64, uintptr, unsafe.Pointer 1 若需要扩大原子操作的适用范围，可以使用atom"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -185,15 +185,15 @@ input.PC_MARK1:focus{
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">开发环境安装</h1>
+      <h1 class="post-title">并发原语</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2022-08-01 </span>
+        <span class="post-time"> 2022-08-04 </span>
         <div class="post-category">
-            <a href="/code/categories/rust/"> rust </a>
+            <a href="/code/categories/sync/"> sync </a>
             </div>
-          <span class="more-meta"> 约 662 字 </span>
-          <span class="more-meta"> 预计阅读 2 分钟 </span>
+          <span class="more-meta"> 约 158 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -205,17 +205,7 @@ input.PC_MARK1:focus{
   <ul>
     <li>
       <ul>
-        <li>
-          <ul>
-            <li><a href="#安装-rust">安装 rust</a></li>
-            <li><a href="#vscode-插件配置">vscode 插件配置</a></li>
-          </ul>
-        </li>
-        <li><a href="#rust-所有权问题">rust 所有权问题</a>
-          <ul>
-            <li><a href="#生命周期">生命周期</a></li>
-          </ul>
-        </li>
+        <li><a href="#atomicvalue-参考">atomic.Value 参考</a></li>
       </ul>
     </li>
   </ul>
@@ -224,42 +214,51 @@ input.PC_MARK1:focus{
 </div>
 
     <div class="post-content">
-      <h3 id="安装-rust">安装 rust</h3>
-<p>无论使用何种系统, 均可以根据 Rust 官方网站提供的 rustup-init 工具完成 Rust 的安装. rustup-init 下载地址: <a href="https://www.rust-lang.org/zh-CN/tools/install">https://www.rust-lang.org/zh-CN/tools/install</a>. 网站会自动识别你的操作系统并给出提示, 遵循网站提示一步一步执行即可. 当安装完成后, 可使用以下命令进行测试, 如果正确输出版本号则表明安装已经成功.</p>
+      <h2 id="atomicvalue-参考">atomic.Value 参考</h2>
+<p><a href="https://blog.csdn.net/u010853261/article/details/103996679">参考博客</a></p>
+<p>Go的sync/atomic包提供了原子操作，支持的数据类型包括：</p>
+<p>int32, int64, uint32, uint64, uintptr, unsafe.Pointer
+1
+若需要扩大原子操作的适用范围，可以使用atomic包中的Value。利用它可以实现对任意值进行原子得存储与加载。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rustc --version
-</span></span><span class="line"><span class="cl">cargo new hello
-</span></span><span class="line"><span class="cl"><span class="nb">cd</span> hello
-</span></span><span class="line"><span class="cl">code .
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">//值类型
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="nf">atomic_value</span><span class="p">(</span><span class="nx">a</span> <span class="kt">uint32</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="nx">v</span> <span class="nx">atomic</span><span class="p">.</span><span class="nx">Value</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">v</span><span class="p">.</span><span class="nf">Store</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">a</span> <span class="p">=</span> <span class="mi">666</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">v</span><span class="p">.</span><span class="nf">Load</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 引用类型
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="nf">atomic_slice</span><span class="p">(</span><span class="nx">s</span> <span class="p">[]</span><span class="kt">uint32</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="nx">v</span> <span class="nx">atomic</span><span class="p">.</span><span class="nx">Value</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">v</span><span class="p">.</span><span class="nf">Store</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">=</span> <span class="mi">666</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">v</span><span class="p">.</span><span class="nf">Load</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
-</div>
-</div><p>提示: 如果你使用的是 Linux 系统, 那么在 rustup-init 运行完成后它会在命令行中提示你将软件安装目录加入 PATH 环境变量中. 对于 Windows 系统来说不需要这一步.</p>
-<h3 id="vscode-插件配置">vscode 插件配置</h3>
-<p>安装 rust-analyzer</p>
-<p>rust-analyzer 包含代码提示, 代码检查, 自动补全等多种功能. 你可能会注意到在插件市场中存在一个标了小星星的名字就叫 Rust 的插件, 它的下载量与安装量都远远高于 rust-analyzer, 那么为什么不选择使用它呢? 因为这个排名第一的 Rust 插件底层使用的是 名为 rls 的 Rust 前端, 由于 rls 本身性能过于捉急, 在 2020 年的时候社区推出了 rust-analyzer 项目并旨在全面替换掉 rls. 在体验上, rust-analyzer 要远远好于 rls.</p>
-<h2 id="rust-所有权问题">rust 所有权问题</h2>
-<p>所有编程语言都存在某种管理内存的机制，拿c语言来说，这种机制是 free 和 malloc ，这意味着开发者要手动管理内存，对于编程高手来说，这种拥有无限可能性的技术，对于普通的开发者而言，这是一个 bug,制造机器，一些语言采用了垃圾回收技术来管理内存，也就是说开发者可以只申请内存，而不用手动释放内存，然后，垃圾回收期，也就是GC，会自动检测某块内存是否不再被使用，如果是的话，就释放那块内存，但是 GC会导致程序性能下降，任何使用GC语言几乎不可能用来写底层程序，我们指的是底层贴近硬件的软件程序，例如操作系统和硬件驱动。</p>
-<p>rust 采用raii,它兼具GC的易用性和安全性，同时又有极高的性能。</p>
-<h3 id="生命周期">生命周期</h3>
-<p>以下是错误定义</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">Person</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">name</span>: <span class="kp">&amp;</span><span class="kt">str</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
-</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -281,16 +280,12 @@ input.PC_MARK1:focus{
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/code/tags/rust/">rust</a>
+          <a href="/code/tags/sync/">sync</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/go/sync/%E5%B9%B6%E5%8F%91%E5%8E%9F%E8%AF%AD/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">并发原语</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        <a class="next" href="/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/rust/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-            <span class="next-text nav-default">基本数据类型</span>
+        
+        <a class="next" href="/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/rust/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/">
+            <span class="next-text nav-default">开发环境安装</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
@@ -306,8 +301,8 @@ input.PC_MARK1:focus{
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
       var gitalk = new Gitalk({
-        id: '2022-08-01 22:47:47 \u002b0800 \u002b0800',
-        title: '开发环境安装',
+        id: '2022-08-04 22:10:35 \u002b0800 \u002b0800',
+        title: '并发原语',
         clientID: '604ae0a4eff099135503',
         clientSecret: '403ff7c3a3ff6a91d905110c91eb1651219b7233',
         repo: 'lyr-2000.github.io',
