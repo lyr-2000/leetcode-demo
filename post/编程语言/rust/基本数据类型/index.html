@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.101.0 with theme even" />
+<meta name="generator" content="Hugo 0.102.3 with theme even" />
 
 
 <link rel="canonical" href="https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/rust/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" />
@@ -45,16 +45,16 @@
 <meta property="og:title" content="基本数据类型" />
 <meta property="og:description" content="rust介绍 rust 能做什么？ 区块链 系统层面 编译器虚拟机 rust 基本数据类型学习 复合类型 元组 1 2 3 4 5 6 7 8 fn main() { let a :i32 = 10; let b:char = &#39;A&#39;; let tuple = (a,b); println!(&#34;key{},value={}&#34;,tuple.0,tuple.1); } 定义数组" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/rust/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" /><meta property="og:image" content="https://api.mtyqx.cn/api/random.php" /><meta property="article:section" content="post" />
+<meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/rust/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" /><meta property="og:image" content="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxk3gtfinj31hc0u0k6t.jpg" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-08-01T22:45:16+08:00" />
 <meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
 
 <meta itemprop="name" content="基本数据类型">
 <meta itemprop="description" content="rust介绍 rust 能做什么？ 区块链 系统层面 编译器虚拟机 rust 基本数据类型学习 复合类型 元组 1 2 3 4 5 6 7 8 fn main() { let a :i32 = 10; let b:char = &#39;A&#39;; let tuple = (a,b); println!(&#34;key{},value={}&#34;,tuple.0,tuple.1); } 定义数组"><meta itemprop="datePublished" content="2022-08-01T22:45:16+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
-<meta itemprop="wordCount" content="1209"><meta itemprop="image" content="https://api.mtyqx.cn/api/random.php">
+<meta itemprop="wordCount" content="1209"><meta itemprop="image" content="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxk3gtfinj31hc0u0k6t.jpg">
 <meta itemprop="keywords" content="rust," /><meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://api.mtyqx.cn/api/random.php"/>
+<meta name="twitter:image" content="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxk3gtfinj31hc0u0k6t.jpg"/>
 
 <meta name="twitter:title" content="基本数据类型"/>
 <meta name="twitter:description" content="rust介绍 rust 能做什么？ 区块链 系统层面 编译器虚拟机 rust 基本数据类型学习 复合类型 元组 1 2 3 4 5 6 7 8 fn main() { let a :i32 = 10; let b:char = &#39;A&#39;; let tuple = (a,b); println!(&#34;key{},value={}&#34;,tuple.0,tuple.1); } 定义数组"/>
@@ -66,7 +66,7 @@
 <!--[if lt IE 9]>
   <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
+<![endif]--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
 
 </head>
@@ -91,7 +91,9 @@
   </div>
 </div>
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list"><a href="/code/">
+  <ul class="mobile-menu-list"><li style="display:inline-block;margin-right:10px;">
+			<input type="search" class="mob-docsearch-input" placeholder="Search" />
+		</li><a href="/code/">
         <li class="mobile-menu-item">首页</li>
       </a><a href="/code/post/">
         <li class="mobile-menu-item">归档页</li>
@@ -137,7 +139,9 @@
         <a class="menu-item-link" href="/code/about/">关于</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/code/friends">友链</a>
-      </li></ul>
+      </li><li  style="list-style: none;position: relative;left: 360px;bottom: 32px;">
+		<input type="search" class="docsearch-input PC_MARK1" placeholder="Search" />
+	  </li></ul>
 </nav>
 
 <style>
@@ -176,7 +180,7 @@ input.PC_MARK1:focus{
 	
 	<div class="customByLyr">
   
-			<img class="lazyload"  draggable="false"  data-original="https://api.mtyqx.cn/api/random.php" />
+			<img class="lazyload"  draggable="false"  data-original="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxk3gtfinj31hc0u0k6t.jpg" />
 		</div>
 
     <main id="main" class="main">
@@ -919,7 +923,27 @@ input.PC_MARK1:focus{
 <script src="/js/docsearch.min.js"></script>
 <script src="/js/lazyload.min.js"></script>
 <script src="/js/x-plugin.js"></script>
-
+<script defer="defer" async>
+ 
+  window.addEventListener('load',function() {
+  
+	docsearch({
+		apiKey: "2991187e127fb95e62db841ea946bc06",
+		indexName: "blog",
+		appId: "UVGAU2QDTQ",
+		inputSelector: '.docsearch-input',
+		debug: false,
+    });
+    docsearch({
+	 apiKey: "2991187e127fb95e62db841ea946bc06",
+	 indexName: "blog",
+	 appId: "UVGAU2QDTQ",
+	 inputSelector: '.mob-docsearch-input',
+	 debug: false,
+    });
+  });
+ 
+</script>
   
  
   <div id="BR_cornner">
