@@ -10,19 +10,19 @@
     <lastBuildDate>Sat, 11 Jun 2022 01:37:53 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/categories/%E5%A0%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>347.前k个高频元素</title>
-      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%A0%86/347.%E9%AB%98%E9%A2%91%E6%95%B0%E5%AD%97/</link>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%A0%86/347.%E9%AB%98%E9%A2%91%E6%95%B0%E5%AD%97/</link>
       <pubDate>Sat, 11 Jun 2022 01:37:53 +0800</pubDate>
       
-      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%A0%86/347.%E9%AB%98%E9%A2%91%E6%95%B0%E5%AD%97/</guid>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%A0%86/347.%E9%AB%98%E9%A2%91%E6%95%B0%E5%AD%97/</guid>
       <description>给你一个整数数组 nums 和一个整数 k ，请你返回其中出现频率前 k 高的元素。你可以按 任意顺序 返回答案。 示例 1: 输入: nums = [1,1,1,2,2,3], k = 2 输出: [1,2] 示例 2: 输入: nums =</description>
     </item>
     
     <item>
       <title>23.合并前k个升序链表</title>
-      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%A0%86/23.%E5%90%88%E5%B9%B6%E5%89%8Dk%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8/</link>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%A0%86/23.%E5%90%88%E5%B9%B6%E5%89%8Dk%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8/</link>
       <pubDate>Sat, 11 Jun 2022 01:24:49 +0800</pubDate>
       
-      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%A0%86/23.%E5%90%88%E5%B9%B6%E5%89%8Dk%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8/</guid>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%A0%86/23.%E5%90%88%E5%B9%B6%E5%89%8Dk%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8/</guid>
       <description>leetcode23. 合并k个有序链表 给你一个链表数组，每个链表都已经按升序排列。 请你将所有链表合并到一个升序链表中，返回合并后的链表。 1 2 3 4 5 6 7 8 9 10 11 12</description>
     </item>
     

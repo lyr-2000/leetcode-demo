@@ -7,7 +7,142 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Sat, 03 Sep 2022 22:25:41 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Sep 2022 23:23:24 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lc.1202.交换字符串中的元素</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/lc.1202.%E4%BA%A4%E6%8D%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0/</link>
+      <pubDate>Wed, 07 Sep 2022 23:23:24 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/lc.1202.%E4%BA%A4%E6%8D%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0/</guid>
+      <description>1202. 交换字符串中的元素 Description Difficulty: 中等 Related Topics: 深度优先搜索, 广度优先搜索, 并查集, 哈希表, 字符串 给你一个字符串 s，以及该字符串中的一些「索引对」数组 pai</description>
+    </item>
+    
+    <item>
+      <title>lc.947.移除最多的同行或同列石头</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/lc.947.%E7%A7%BB%E9%99%A4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%90%8C%E8%A1%8C%E6%88%96%E5%90%8C%E5%88%97%E7%9F%B3%E5%A4%B4/</link>
+      <pubDate>Wed, 07 Sep 2022 23:07:15 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/lc.947.%E7%A7%BB%E9%99%A4%E6%9C%80%E5%A4%9A%E7%9A%84%E5%90%8C%E8%A1%8C%E6%88%96%E5%90%8C%E5%88%97%E7%9F%B3%E5%A4%B4/</guid>
+      <description>947. 移除最多的同行或同列石头 Description Difficulty: 中等 Related Topics: 深度优先搜索, 并查集, 图 n 块石头放置在二维平面中的一些整数坐标点上。每个坐标点上最多只能有一块石头。 如</description>
+    </item>
+    
+    <item>
+      <title>lc.128.最长连续序列</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/lc.128.%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E5%BA%8F%E5%88%97/</link>
+      <pubDate>Wed, 07 Sep 2022 22:35:33 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/lc.128.%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E5%BA%8F%E5%88%97/</guid>
+      <description>128. 最长连续序列 Description Difficulty: 中等 Related Topics: 并查集, 数组, 哈希表 给定一个未排序的整数数组 nums ，找出数字连续的最长序列（不要求序列元素在原数组中连续）的长度。 请你</description>
+    </item>
+    
+    <item>
+      <title>lc.1319.连通网络的操作次数</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/lc.1319.%E8%BF%9E%E9%80%9A%E7%BD%91%E7%BB%9C%E7%9A%84%E6%93%8D%E4%BD%9C%E6%AC%A1%E6%95%B0/</link>
+      <pubDate>Wed, 07 Sep 2022 21:26:50 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/lc.1319.%E8%BF%9E%E9%80%9A%E7%BD%91%E7%BB%9C%E7%9A%84%E6%93%8D%E4%BD%9C%E6%AC%A1%E6%95%B0/</guid>
+      <description>1319. 连通网络的操作次数 Description Difficulty: 中等 Related Topics: 深度优先搜索, 广度优先搜索, 并查集, 图 用以太网线缆将 n 台计算机连接成一个网络，计算机的编号从 0 到 n-1。线缆</description>
+    </item>
+    
+    <item>
+      <title>lc.990.等式方程的可满足性</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/lc.990.%E7%AD%89%E5%BC%8F%E6%96%B9%E7%A8%8B%E7%9A%84%E5%8F%AF%E6%BB%A1%E8%B6%B3%E6%80%A7/</link>
+      <pubDate>Wed, 07 Sep 2022 21:03:41 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/lc.990.%E7%AD%89%E5%BC%8F%E6%96%B9%E7%A8%8B%E7%9A%84%E5%8F%AF%E6%BB%A1%E8%B6%B3%E6%80%A7/</guid>
+      <description>990. 等式方程的可满足性 Description Difficulty: 中等 Related Topics: 并查集, 图, 数组, 字符串 给定一个由表示变量之间关系的字符串方程组成的数组，每个字符串方程 equations[i] 的长度为 4，并采用</description>
+    </item>
+    
+    <item>
+      <title>岛屿数量</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/%E5%B2%9B%E5%B1%BF%E6%95%B0%E9%87%8F/</link>
+      <pubDate>Wed, 07 Sep 2022 20:46:22 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/%E5%B2%9B%E5%B1%BF%E6%95%B0%E9%87%8F/</guid>
+      <description>200. 岛屿数量 Description Difficulty: 中等 Related Topics: 深度优先搜索, 广度优先搜索, 并查集, 数组, 矩阵 给你一个由 &#39;1&#39;（陆地）和 &#39;0&#39;（水）组成的的二维网格，请你计算网格中岛</description>
+    </item>
+    
+    <item>
+      <title>lc.547.省份数量</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/lc.547.%E7%9C%81%E4%BB%BD%E6%95%B0%E9%87%8F/</link>
+      <pubDate>Wed, 07 Sep 2022 20:20:24 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/lc.547.%E7%9C%81%E4%BB%BD%E6%95%B0%E9%87%8F/</guid>
+      <description>547. 省份数量 Description Difficulty: 中等 Related Topics: 深度优先搜索, 广度优先搜索, 并查集, 图 有 n 个城市，其中一些彼此相连，另一些没有相连。如果城市 a 与城市 b 直接相连，且城市</description>
+    </item>
+    
+    <item>
+      <title>连通性问题</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E8%BF%9E%E9%80%9A%E6%80%A7%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Mon, 05 Sep 2022 21:53:06 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E8%BF%9E%E9%80%9A%E6%80%A7%E9%97%AE%E9%A2%98/</guid>
+      <description>连通性问题 连通性问题的性质： 传递性， a和b联通，b和c联通，那么 a和 c联通。 quick find 算法 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 #include &amp;lt;bits/stdc++.h&amp;gt; using</description>
+    </item>
+    
+    <item>
+      <title>lc.684.冗余连接</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%9B%BE/lc.684.%E5%86%97%E4%BD%99%E8%BF%9E%E6%8E%A5/</link>
+      <pubDate>Sun, 04 Sep 2022 23:09:36 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%9B%BE/lc.684.%E5%86%97%E4%BD%99%E8%BF%9E%E6%8E%A5/</guid>
+      <description>684. 冗余连接 Description Difficulty: 中等 Related Topics: 深度优先搜索, 广度优先搜索, 并查集, 图 树可以看成是一个连通且 无环的 无向图。 给定往一棵 n 个节点 (节点值 1～n) 的树中添加</description>
+    </item>
+    
+    <item>
+      <title>lc.207.课程表</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%9B%BE/lc.207.%E8%AF%BE%E7%A8%8B%E8%A1%A8/</link>
+      <pubDate>Sun, 04 Sep 2022 22:25:58 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%9B%BE/lc.207.%E8%AF%BE%E7%A8%8B%E8%A1%A8/</guid>
+      <description>207. 课程表 Description Difficulty: 中等 Related Topics: 深度优先搜索, 广度优先搜索, 图, 拓扑排序 你这个学期必须选修 numCourses 门课程，记为 0 到 numCourses - 1 。 在选修某些课程之前需要一些先修课程。</description>
+    </item>
+    
+    <item>
+      <title>lc.232.二叉树的最近公共祖先</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/lc.232.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/</link>
+      <pubDate>Sun, 04 Sep 2022 21:50:25 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/lc.232.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/</guid>
+      <description>236. 二叉树的最近公共祖先 Description Difficulty: 中等 Related Topics: 树, 深度优先搜索, 二叉树 给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。 百度百科中最近公共祖先的定义</description>
+    </item>
+    
+    <item>
+      <title>lc.105.重建二叉树</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/lc.105.%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <pubDate>Sun, 04 Sep 2022 21:36:10 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/lc.105.%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <description>105. 从前序与中序遍历序列构造二叉树 Description Difficulty: 中等 Related Topics: 树, 数组, 哈希表, 分治, 二叉树 给定两个整数数组 preorder 和 inorder ，其中 preorder 是二叉树的先序遍历， inorder 是同一棵树的中</description>
+    </item>
+    
+    <item>
+      <title>lc.662.二叉树的最大宽度</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/lc.662.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E5%AE%BD%E5%BA%A6/</link>
+      <pubDate>Sun, 04 Sep 2022 21:13:26 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/lc.662.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E5%AE%BD%E5%BA%A6/</guid>
+      <description>二叉树的最大宽度 662. 二叉树最大宽度 Description Difficulty: 中等 Related Topics: 树, 深度优先搜索, 广度优先搜索, 二叉树 给你一棵二叉树的根节点 root ，返回树的 最大宽度 。 树的 最大宽度 是</description>
+    </item>
+    
+    <item>
+      <title>lc.968.监控二叉树</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/lc.968.%E7%9B%91%E6%8E%A7%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <pubDate>Sun, 04 Sep 2022 20:35:38 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/lc.968.%E7%9B%91%E6%8E%A7%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <description>968. 监控二叉树 Description Difficulty: 困难 Related Topics: 树, 深度优先搜索, 动态规划, 二叉树 给定一个二叉树，我们在树的节点上安装摄像头。 节点上的每个摄影头都可以监视其父对象、</description>
+    </item>
+    
+    <item>
+      <title>树的作用</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%9A%84%E4%BD%9C%E7%94%A8/</link>
+      <pubDate>Sun, 04 Sep 2022 20:04:52 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%9A%84%E4%BD%9C%E7%94%A8/</guid>
+      <description>树的作用 完全二叉树，堆，优先队列&amp;ndash; 维护集合最值 多叉树，森林， 字典树，ac自动机，并查集，&amp;mdash; 字符串转换问题，连通性问题</description>
+    </item>
+    
     <item>
       <title>lc.1124.表现良好的最长时间段</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%88/lc.1124.%E8%A1%A8%E7%8E%B0%E8%89%AF%E5%A5%BD%E7%9A%84%E6%9C%80%E9%95%BF%E6%97%B6%E9%97%B4%E6%AE%B5/</link>
@@ -136,37 +271,37 @@
     
     <item>
       <title>lc.82.删除链表重复节点</title>
-      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8/lc.82.%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E9%87%8D%E5%A4%8D%E8%8A%82%E7%82%B9/</link>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/lc.82.%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E9%87%8D%E5%A4%8D%E8%8A%82%E7%82%B9/</link>
       <pubDate>Sun, 28 Aug 2022 22:39:02 +0800</pubDate>
       
-      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8/lc.82.%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E9%87%8D%E5%A4%8D%E8%8A%82%E7%82%B9/</guid>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/lc.82.%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E9%87%8D%E5%A4%8D%E8%8A%82%E7%82%B9/</guid>
       <description>82. 删除排序链表中的重复元素 II Description Difficulty: 中等 Related Topics: 链表, 双指针 给定一个已排序的链表的头 head ， 删除原始链表中所有重复数字的节点，只留下不同的数字 。返回 已排</description>
     </item>
     
     <item>
       <title>lc.92.翻转链表2</title>
-      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8/lc.92.%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A82/</link>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/lc.92.%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A82/</link>
       <pubDate>Sun, 28 Aug 2022 22:30:26 +0800</pubDate>
       
-      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8/lc.92.%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A82/</guid>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/lc.92.%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A82/</guid>
       <description>92. 反转链表 II Description Difficulty: 中等 Related Topics: 链表 给你单链表的头指针 head 和两个整数 left 和 right ，其中 left &amp;lt;= right 。请你反转从位置 left 到位置 right 的链表节点，返回 反转后的链表 。 示例 1：</description>
     </item>
     
     <item>
       <title>lc.202.快乐数</title>
-      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8/lc.202.%E5%BF%AB%E4%B9%90%E6%95%B0/</link>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/lc.202.%E5%BF%AB%E4%B9%90%E6%95%B0/</link>
       <pubDate>Sun, 28 Aug 2022 21:37:39 +0800</pubDate>
       
-      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8/lc.202.%E5%BF%AB%E4%B9%90%E6%95%B0/</guid>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/lc.202.%E5%BF%AB%E4%B9%90%E6%95%B0/</guid>
       <description>202. 快乐数 Description Difficulty: 简单 Related Topics: 哈希表, 数学, 双指针 编写一个算法来判断一个数 n 是不是快乐数。 「快乐数」 定义为： 对于一个正整数，每一次将该数替换为它每个位</description>
     </item>
     
     <item>
       <title>链表基础</title>
-      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8/%E9%93%BE%E8%A1%A8%E5%9F%BA%E7%A1%80/</link>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/%E9%93%BE%E8%A1%A8%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Sun, 28 Aug 2022 17:07:48 +0800</pubDate>
       
-      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8/%E9%93%BE%E8%A1%A8%E5%9F%BA%E7%A1%80/</guid>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/%E9%93%BE%E8%A1%A8%E5%9F%BA%E7%A1%80/</guid>
       <description>定义链表的实现方法 指针实现链表 1 2 3 4 type Node { int data; Node *next; } 静态数组实现链表 通过相对地址实现链表 1 2 3 4 5 6 7 8 int data[10]; int next[10]; void add(int ind,int p,int val) { next[ind] = p; data[p] = val; return;</description>
     </item>
     
@@ -253,19 +388,19 @@
     
     <item>
       <title>环形链表</title>
-      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8/lc.142.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</link>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/lc.142.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</link>
       <pubDate>Mon, 01 Aug 2022 01:09:32 +0800</pubDate>
       
-      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8/lc.142.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</guid>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/lc.142.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</guid>
       <description>142. 环形链表 II Description Difficulty: 中等 Related Topics: 哈希表, 链表, 双指针 给定一个链表的头节点 head ，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。 如果链表中有</description>
     </item>
     
     <item>
       <title>k个一组翻转链表</title>
-      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8/lc.25.k%E4%B8%AA%E4%B8%80%E7%BB%84%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8/</link>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/lc.25.k%E4%B8%AA%E4%B8%80%E7%BB%84%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8/</link>
       <pubDate>Mon, 01 Aug 2022 01:02:32 +0800</pubDate>
       
-      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%93%BE%E8%A1%A8/lc.25.k%E4%B8%AA%E4%B8%80%E7%BB%84%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8/</guid>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/lc.25.k%E4%B8%AA%E4%B8%80%E7%BB%84%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8/</guid>
       <description>25. K 个一组翻转链表 Description Difficulty: 困难 Related Topics: 递归, 链表 给你链表的头节点 head ，每 k个节点一组进行翻转，请你返回修改后的链表。 k 是一个正整数，它的值小于或等于链</description>
     </item>
     
@@ -379,19 +514,19 @@
     
     <item>
       <title>347.前k个高频元素</title>
-      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%A0%86/347.%E9%AB%98%E9%A2%91%E6%95%B0%E5%AD%97/</link>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%A0%86/347.%E9%AB%98%E9%A2%91%E6%95%B0%E5%AD%97/</link>
       <pubDate>Sat, 11 Jun 2022 01:37:53 +0800</pubDate>
       
-      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%A0%86/347.%E9%AB%98%E9%A2%91%E6%95%B0%E5%AD%97/</guid>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%A0%86/347.%E9%AB%98%E9%A2%91%E6%95%B0%E5%AD%97/</guid>
       <description>给你一个整数数组 nums 和一个整数 k ，请你返回其中出现频率前 k 高的元素。你可以按 任意顺序 返回答案。 示例 1: 输入: nums = [1,1,1,2,2,3], k = 2 输出: [1,2] 示例 2: 输入: nums =</description>
     </item>
     
     <item>
       <title>23.合并前k个升序链表</title>
-      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%A0%86/23.%E5%90%88%E5%B9%B6%E5%89%8Dk%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8/</link>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%A0%86/23.%E5%90%88%E5%B9%B6%E5%89%8Dk%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8/</link>
       <pubDate>Sat, 11 Jun 2022 01:24:49 +0800</pubDate>
       
-      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%A0%86/23.%E5%90%88%E5%B9%B6%E5%89%8Dk%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8/</guid>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%A0%86/23.%E5%90%88%E5%B9%B6%E5%89%8Dk%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8/</guid>
       <description>leetcode23. 合并k个有序链表 给你一个链表数组，每个链表都已经按升序排列。 请你将所有链表合并到一个升序链表中，返回合并后的链表。 1 2 3 4 5 6 7 8 9 10 11 12</description>
     </item>
     
@@ -406,10 +541,10 @@
     
     <item>
       <title>剑指117.相似的字符串</title>
-      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%B9%B6%E6%9F%A5%E9%9B%86/%E5%89%91%E6%8C%87117.%E7%9B%B8%E4%BC%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/%E5%89%91%E6%8C%87117.%E7%9B%B8%E4%BC%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
       <pubDate>Thu, 12 May 2022 16:24:48 +0800</pubDate>
       
-      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%B9%B6%E6%9F%A5%E9%9B%86/%E5%89%91%E6%8C%87117.%E7%9B%B8%E4%BC%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/%E5%89%91%E6%8C%87117.%E7%9B%B8%E4%BC%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
       <description>剑指117.相似的字符串 ​ 如果交换字符串 X 中的两个不同位置的字母，使得它和字符串 Y 相等，那么称 X 和 Y 两个字符串相似。如果这两个字符串本身是相</description>
     </item>
     
