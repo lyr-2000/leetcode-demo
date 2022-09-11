@@ -23,7 +23,7 @@
       <pubDate>Sat, 11 Jun 2022 01:24:49 +0800</pubDate>
       
       <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%A0%86/23.%E5%90%88%E5%B9%B6%E5%89%8Dk%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8/</guid>
-      <description>leetcode23. 合并k个有序链表 给你一个链表数组，每个链表都已经按升序排列。 请你将所有链表合并到一个升序链表中，返回合并后的链表。 1 2 3 4 5 6 7 8 9 10 11 12</description>
+      <description>23. 合并K个升序链表 Description Difficulty: 困难 Related Topics: 链表, 分治, 堆（优先队列）, 归并排序 给你一个链表数组，每个链表都已经按升序排列。 请你将所有链表合并到一个升序链</description>
     </item>
     
   </channel>
