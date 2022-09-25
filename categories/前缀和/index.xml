@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Wed, 03 Aug 2022 22:18:11 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/categories/%E5%89%8D%E7%BC%80%E5%92%8C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Sep 2022 11:39:42 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/categories/%E5%89%8D%E7%BC%80%E5%92%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lc.327.区间和的个数</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%89%8D%E7%BC%80%E5%92%8C/lc.327.%E5%8C%BA%E9%97%B4%E5%92%8C%E7%9A%84%E4%B8%AA%E6%95%B0/</link>
+      <pubDate>Sun, 18 Sep 2022 11:39:42 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%89%8D%E7%BC%80%E5%92%8C/lc.327.%E5%8C%BA%E9%97%B4%E5%92%8C%E7%9A%84%E4%B8%AA%E6%95%B0/</guid>
+      <description>327. 区间和的个数 Description Difficulty: 困难 Related Topics: 树状数组, 线段树, 数组, 二分查找, 分治, 有序集合, 归并排序 给你一个整数数组 nums 以及两个整数 lower 和 upper 。求数组中，值位于范</description>
+    </item>
+    
     <item>
       <title>1248.统计优美子数组</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%89%8D%E7%BC%80%E5%92%8C/1248.%E7%BB%9F%E8%AE%A1%E4%BC%98%E7%BE%8E%E5%AD%90%E6%95%B0%E7%BB%84/</link>
@@ -23,7 +32,7 @@
       <pubDate>Sat, 30 Jul 2022 21:00:31 +0800</pubDate>
       
       <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%89%8D%E7%BC%80%E5%92%8C/%E5%89%8D%E7%BC%80%E5%92%8C/</guid>
-      <description>算法解释 前缀和 算法不局限于求和，也可以扩展到求前缀最小值、最大值等 二维前缀和题目 $sum(p,q,i,j)=s[i][j]-s[i][q-1]-s[p-1][j]+s[p-1][q-1]$ 练习题： 加一 （Easy） 半年内出题频次： 合并两个有序链表 （</description>
+      <description>算法解释 前缀和 算法不局限于求和，也可以扩展到求前缀最小值、最大值等 二维前缀和题目 $sum(p,q,i,j)=s[i][j]-s[i][q-1]-s[p-1][j]+s[p-1][q-1]$ 练习题 加一 （Easy） 半年内出题频次： 合并两个有序链表 （E</description>
     </item>
     
     <item>
