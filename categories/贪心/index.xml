@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>贪心 on 凌冬的代码博客站</title>
+    <link>https://lyr-2000.github.io/code/categories/%E8%B4%AA%E5%BF%83/</link>
+    <description>Recent content in 贪心 on 凌冬的代码博客站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>LYR</copyright>
+    <lastBuildDate>Sun, 25 Sep 2022 14:06:21 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/categories/%E8%B4%AA%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lc.45.跳跃游戏</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E8%B4%AA%E5%BF%83/lc.45.%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/</link>
+      <pubDate>Sun, 25 Sep 2022 14:06:21 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E8%B4%AA%E5%BF%83/lc.45.%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/</guid>
+      <description>45. 跳跃游戏 II Description Difficulty: 中等 Related Topics: 贪心, 数组, 动态规划 给你一个非负整数数组 nums ，你最初位于数组的第一个位置。 数组中的每个元素代表你在该位置可以跳跃的最大</description>
+    </item>
+    
+  </channel>
+</rss>
