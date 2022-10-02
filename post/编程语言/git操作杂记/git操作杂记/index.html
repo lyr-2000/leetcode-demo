@@ -52,7 +52,7 @@
 <meta itemprop="name" content="git操作杂记">
 <meta itemprop="description" content="git 操作杂记 git config git config 的三个作用域 1 2 3 4 5 6 7 8 9 git config --local # 某个仓库 git config --global # 当前用户所有仓库 git config --system # 是对系统所有登录用户 git config --list --global 删除不需要的分支"><meta itemprop="datePublished" content="2022-10-02T09:26:17+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
-<meta itemprop="wordCount" content="1296"><meta itemprop="image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxlhvnh9qj31hc0u0tmu.jpg">
+<meta itemprop="wordCount" content="1332"><meta itemprop="image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxlhvnh9qj31hc0u0tmu.jpg">
 <meta itemprop="keywords" content="git操作杂记," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxlhvnh9qj31hc0u0tmu.jpg"/>
 
@@ -196,7 +196,7 @@ input.PC_MARK1:focus{
         <div class="post-category">
             <a href="/code/categories/git%E6%93%8D%E4%BD%9C%E6%9D%82%E8%AE%B0/"> git操作杂记 </a>
             </div>
-          <span class="more-meta"> 约 1296 字 </span>
+          <span class="more-meta"> 约 1332 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -238,6 +238,7 @@ input.PC_MARK1:focus{
           </ul>
         </li>
         <li><a href="#自定义-alias">自定义 alias</a></li>
+        <li><a href="#比较-head-和-暂存区">比较 HEAD 和 暂存区</a></li>
       </ul>
     </li>
   </ul>
@@ -518,6 +519,29 @@ input.PC_MARK1:focus{
 </span></span><span class="line"><span class="cl">git config --global alias.last <span class="s1">&#39;log -1 HEAD&#39;</span>
 </span></span><span class="line"><span class="cl">git config --global alias.s <span class="s1">&#39;status&#39;</span>
 </span></span><span class="line"><span class="cl">git config --global alias.view <span class="s1">&#39;diff&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="比较-head-和-暂存区">比较 HEAD 和 暂存区</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># example:</span>
+</span></span><span class="line"><span class="cl">vi index.html
+</span></span><span class="line"><span class="cl"><span class="c1"># 修改了文件</span>
+</span></span><span class="line"><span class="cl">git add index.html
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git status
+</span></span><span class="line"><span class="cl"><span class="c1"># modified: index.html</span>
+</span></span><span class="line"><span class="cl">git diff --cached
 </span></span></code></pre></td></tr></table>
 </div>
 </div>
