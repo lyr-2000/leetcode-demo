@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>git操作杂记 - 凌冬的代码博客站</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="lyr" /><meta name="description" content="git 操作杂记 git config git config 的三个作用域 1 2 3 4 5 6 7 8 9 git config --local # 某个仓库 git config --global # 当前用户所有仓库 git config --system # 是对系统所有登录用户 git config --list --global 删除不需要的分支" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.104.2 with theme even" />
+
+
+<link rel="canonical" href="https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/git%E6%93%8D%E4%BD%9C%E6%9D%82%E8%AE%B0/git%E6%93%8D%E4%BD%9C%E6%9D%82%E8%AE%B0/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/code/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/code/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/code/favicon-16x16.png">
+<link rel="manifest" href="/code/manifest.json">
+<link rel="mask-icon" href="/code/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/code/sass/main.min.4d31fe93a248bf2a033aec98b3dca0e0e3f55453ad76230e57f190d60450d008.css" rel="stylesheet"> 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/post.css">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="git操作杂记" />
+<meta property="og:description" content="git 操作杂记 git config git config 的三个作用域 1 2 3 4 5 6 7 8 9 git config --local # 某个仓库 git config --global # 当前用户所有仓库 git config --system # 是对系统所有登录用户 git config --list --global 删除不需要的分支" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/git%E6%93%8D%E4%BD%9C%E6%9D%82%E8%AE%B0/git%E6%93%8D%E4%BD%9C%E6%9D%82%E8%AE%B0/" /><meta property="og:image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxlhvnh9qj31hc0u0tmu.jpg" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-10-02T09:26:17+08:00" />
+<meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
+
+<meta itemprop="name" content="git操作杂记">
+<meta itemprop="description" content="git 操作杂记 git config git config 的三个作用域 1 2 3 4 5 6 7 8 9 git config --local # 某个仓库 git config --global # 当前用户所有仓库 git config --system # 是对系统所有登录用户 git config --list --global 删除不需要的分支"><meta itemprop="datePublished" content="2022-10-02T09:26:17+08:00" />
+<meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
+<meta itemprop="wordCount" content="1296"><meta itemprop="image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxlhvnh9qj31hc0u0tmu.jpg">
+<meta itemprop="keywords" content="git操作杂记," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxlhvnh9qj31hc0u0tmu.jpg"/>
+
+<meta name="twitter:title" content="git操作杂记"/>
+<meta name="twitter:description" content="git 操作杂记 git config git config 的三个作用域 1 2 3 4 5 6 7 8 9 git config --local # 某个仓库 git config --global # 当前用户所有仓库 git config --system # 是对系统所有登录用户 git config --list --global 删除不需要的分支"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+</head>
+<body >
+  
+  
+  <div>
+    <button class="button pink back">back</button>
+    <button class="button pink go">go</button>
+    <button class="button pink topUrl">top</button>
+    
+  </div>
+  <div id="globalbg"></div>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">凌冬的博客</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list"><li style="display:inline-block;margin-right:10px;">
+			<input type="search" class="mob-docsearch-input" placeholder="Search" />
+		</li><a href="/code/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/code/post/">
+        <li class="mobile-menu-item">归档页</li>
+      </a><a href="/code/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/code/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/code/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a><a href="/code/friends">
+        <li class="mobile-menu-item">友链</li>
+      </a>
+	
+	
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel" >
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">凌冬的博客</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/code/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/code/post/">归档页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/code/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/code/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/code/about/">关于</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/code/friends">友链</a>
+      </li><li  style="list-style: none;position: relative;left: 360px;bottom: 32px;">
+		<input type="search" class="docsearch-input PC_MARK1" placeholder="Search" />
+	  </li></ul>
+</nav>
+
+<style>
+  .mob-docsearch-input {
+	border: 1px solid #ccc;
+	padding: 6px 0px;
+	border-radius: 3px;
+	padding-left:5px;
+	position: relative;
+    vertical-align: top;
+    width: 93%;
+    margin: auto;
+    margin-left: 7px;
+  
+  }
+  input.PC_MARK1{
+	border: 1px solid #ccc;
+	padding: 6px 0px;
+	border-radius: 3px;
+	padding-left:5px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+input.PC_MARK1:focus{
+		border-color: #66afe9;
+		outline: 0;
+		-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+		box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+</style>
+
+    </header>
+	
+	<div class="customByLyr">
+  
+			<img class="lazyload"  draggable="false"  data-original="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxlhvnh9qj31hc0u0tmu.jpg" />
+		</div>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">git操作杂记</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-10-02 </span>
+        <div class="post-category">
+            <a href="/code/categories/git%E6%93%8D%E4%BD%9C%E6%9D%82%E8%AE%B0/"> git操作杂记 </a>
+            </div>
+          <span class="more-meta"> 约 1296 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#git-操作杂记">git 操作杂记</a>
+          <ul>
+            <li><a href="#git-config">git config</a></li>
+            <li><a href="#删除不需要的分支">删除不需要的分支</a></li>
+          </ul>
+        </li>
+        <li><a href="#commit-tree-和blob-区别">commit tree 和blob 区别</a></li>
+        <li><a href="#如何快速淘到自己感兴趣的开源项目">如何快速淘到自己感兴趣的开源项目</a>
+          <ul>
+            <li><a href="#取消暂存区部分文件变更">取消暂存区部分文件变更</a></li>
+            <li><a href="#git-log-查看历史">git log 查看历史</a></li>
+            <li><a href="#通过-github-进行-code-review">通过 github 进行 code review</a></li>
+          </ul>
+        </li>
+        <li><a href="#commit-messge-相关">commit Messge 相关</a>
+          <ul>
+            <li><a href="#修改最近一次的-commit-message">修改最近一次的 commit message</a></li>
+            <li><a href="#修改前几次提交的-commit-message">修改前几次提交的 commit message</a></li>
+            <li><a href="#连续的几个-commit-整理成1个">连续的几个 commit 整理成1个</a></li>
+            <li><a href="#间隔的几个-commit-整理成1个">间隔的几个 commit 整理成1个</a></li>
+          </ul>
+        </li>
+        <li><a href="#git-rebase-合并代码">git rebase 合并代码</a>
+          <ul>
+            <li><a href="#rebase-其他用法演示">rebase 其他用法演示</a></li>
+            <li><a href="#rebase-黄金法则">Rebase 黄金法则</a></li>
+          </ul>
+        </li>
+        <li><a href="#自定义-alias">自定义 alias</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    <div class="post-content">
+      <h2 id="git-操作杂记">git 操作杂记</h2>
+<h3 id="git-config">git config</h3>
+<p>git config 的三个作用域</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --local
+</span></span><span class="line"><span class="cl"><span class="c1"># 某个仓库</span>
+</span></span><span class="line"><span class="cl">git config --global
+</span></span><span class="line"><span class="cl"><span class="c1"># 当前用户所有仓库</span>
+</span></span><span class="line"><span class="cl">git config --system
+</span></span><span class="line"><span class="cl"><span class="c1"># 是对系统所有登录用户</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git config --list --global
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="删除不需要的分支">删除不需要的分支</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git branch -av
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">gitk --all
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看各种分支的关联</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git branch -d   fix-readme
+</span></span><span class="line"><span class="cl"><span class="c1"># 删除 fix-readme分支</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git branch  -D fix-readme
+</span></span><span class="line"><span class="cl"><span class="c1"># 确认强行删除  fix-readme 分支</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="commit-tree-和blob-区别">commit tree 和blob 区别</h2>
+<p>一次commit 对应一颗树(视图)，当前本项目所有的文件快照，这个时间点所有时间段文件的记录都记录在tree里面</p>
+<p>blob是指的是具体某个文件</p>
+<p><img src="https://s2.loli.net/2022/10/02/4RTcpwUBDiWEHYI.png" alt="图 1"></p>
+<p>commit === 每次提交的集合</p>
+<p>tree === 文件夹</p>
+<p>blob === 文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git cat file -p master
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="如何快速淘到自己感兴趣的开源项目">如何快速淘到自己感兴趣的开源项目</h2>
+<p>在搜索框输入 <code>git 最好 学习 资料 in:readme</code>, 利用git搜索引擎提高查询效率。</p>
+<p>默认搜索框搜索的是 仓库名称 和仓库描述 这段话。
+搜索:
+<code>launguage:go starts:&gt;3000  web in:readme</code></p>
+<h3 id="取消暂存区部分文件变更">取消暂存区部分文件变更</h3>
+<h4 id="只是取消某个文件撤销">只是取消某个文件撤销</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git reset HEAD --  styles/style.css
+</span></span><span class="line"><span class="cl">git reset  --  index.html  readme.me
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="恢复全部">恢复全部</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git reset --hard
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="git-log-查看历史">git log 查看历史</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git log --oneline <span class="c1"># 查看哪次变更了什么东西</span>
+</span></span><span class="line"><span class="cl">git log -n4 
+</span></span><span class="line"><span class="cl"><span class="c1"># 最近的4次 commit</span>
+</span></span><span class="line"><span class="cl">git branch -v
+</span></span><span class="line"><span class="cl"><span class="c1"># 本地多少分支</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git log -n3 --graph
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="通过-github-进行-code-review">通过 github 进行 code review</h3>
+<p>点击 settings.branchs, add rule</p>
+<p>add rule to master,  勾选上 require  pull request reviews before merging</p>
+<h2 id="commit-messge-相关">commit Messge 相关</h2>
+<p>我们修改代码 提交后，发现 commit message 写的不好
+要如何修改 message 呢？</p>
+<h3 id="修改最近一次的-commit-message">修改最近一次的 commit message</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 命令演示如下：  也可用 gitk工具 修改</span>
+</span></span><span class="line"><span class="cl">git log -l
+</span></span><span class="line"><span class="cl">git commit --amend 
+</span></span><span class="line"><span class="cl"><span class="c1"># 就可以对最近一次提交的message 变更</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="修改前几次提交的-commit-message">修改前几次提交的 commit message</h3>
+<p>如果觉得 前几次的 commit message  有问题，就可以用 rebase 修改</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git log -3
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看最近3次提交</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 变基  git rebase </span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 交互式变基</span>
+</span></span><span class="line"><span class="cl">git rebase -i 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="连续的几个-commit-整理成1个">连续的几个 commit 整理成1个</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git branch -av
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git rebase -i 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git log --graph
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>commit message 那里 ，将pick 改为 s, 具体命令用法参考注释文档</p>
+<p><img src="https://s2.loli.net/2022/10/02/oCgJH9EQPXt5a1A.png" alt="图 1"></p>
+<h3 id="间隔的几个-commit-整理成1个">间隔的几个 commit 整理成1个</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git rebase -i  f09112c
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 将一个 地方 的 pick 改为 s, 然后 合并</span>
+</span></span><span class="line"><span class="cl">git rebase --continue
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="git-rebase-合并代码">git rebase 合并代码</h2>
+<p><a href="https://www.bilibili.com/video/BV19B4y1u7vm/?spm_id_from=333.337.search-card.all.click&amp;vd_source=5680f9cc1e793f7b70191c94d5552ecb">参考学习教程</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git checkout main
+</span></span><span class="line"><span class="cl">git rebase feacture1
+</span></span><span class="line"><span class="cl">git push
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>“rebase的最大好处并不是消除merge，而是避免merge的交织。
+简要来说，就是在merge进被合分支（如master）之前，最好将自己的分支给rebase到最新的被合分支（如master）上，然后用pull request创建merge请求</p>
+<p>官网推荐的是
+第一步，次级分支rebase main
+第二步， main merge次级分支。</p>
+<p><a href="https://www.bilibili.com/video/BV1Qb411N7ay/?spm_id_from=333.788.recommend_more_video.-1&amp;vd_source=5680f9cc1e793f7b70191c94d5552ecb">参考教程</a></p>
+<h3 id="rebase-其他用法演示">rebase 其他用法演示</h3>
+<p>git 提倡多用分之，开发的时候你可以根据 bug fix 或者 new feature 前缀命名分之。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 新建分之并切过去开搞(一般我在 zsh 里映射了很多 git 快捷命令)</span>
+</span></span><span class="line"><span class="cl">git checkout -b bugfix
+</span></span><span class="line"><span class="cl"><span class="c1"># ... 在你搞完了之后执行 add 和 commit （当然中间可以用 rabase -i 合并一些无用提交信息）</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;fix a bug balabala&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注意这个时候可能有其他人已经把它的代码合并到了 zhihu 的 master 上了，你本地的 master 已经落后了。这个时候可以用 git rebase 了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout master   <span class="c1"># 切换自己的 master</span>
+</span></span><span class="line"><span class="cl">git pull zhihu master  <span class="c1"># 拉取 zhihu 主仓库 master 保持本地 master 最新</span>
+</span></span><span class="line"><span class="cl">git checkout bugfix
+</span></span><span class="line"><span class="cl">git rebase master  <span class="c1"># 切到刚才的分支并且 rebase master。中间有冲突解决后 git add add 然后 git rebase --contiune</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 这个时候就可以提个 MR 了。 上边也可以用 git pull --rebase zhihu master 来简化，一般我都是用 git 简化命令，操作起来很快</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="rebase-黄金法则">Rebase 黄金法则</h3>
+<p>最后必须要提到一条 rebase 黄金法则：绝不要在公共的分支上使用它。 git rebase 会重写历史，一定只能在你自己的分支上使用它, 否则你的队友们可能会暴打你一顿。</p>
+<h2 id="自定义-alias">自定义 alias</h2>
+<p><a href="https://blog.csdn.net/m0_52773472/article/details/116195401">参考博客</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config --global alias.lg <span class="s2">&#34;log --color --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --abbrev-commit&#34;</span>
+</span></span><span class="line"><span class="cl">git config --global alias.ld <span class="s1">&#39;log --pretty=format:&#34;%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&#34; --decorate --date=short --graph&#39;</span>
+</span></span><span class="line"><span class="cl">git config --global alias.ls  <span class="s1">&#39;log --pretty=format:&#34;%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]&#34; --decorate --date=relative&#39;</span>
+</span></span><span class="line"><span class="cl">git config --global alias.ll <span class="s1">&#39;log --pretty=format:&#34;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&#34; --decorate --numstat&#39;</span>
+</span></span><span class="line"><span class="cl">git config --global alias.last <span class="s1">&#39;log -1 HEAD&#39;</span>
+</span></span><span class="line"><span class="cl">git config --global alias.s <span class="s1">&#39;status&#39;</span>
+</span></span><span class="line"><span class="cl">git config --global alias.view <span class="s1">&#39;diff&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">lyr</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2022-05-11
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/code/tags/git%E6%93%8D%E4%BD%9C%E6%9D%82%E8%AE%B0/">git操作杂记</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/vim%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95/vim%E5%85%B6%E4%BB%96%E7%94%A8%E6%B3%95/">
+            <span class="next-text nav-default">vim其他用法</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+        </div>
+        <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '2022-10-02 09:26:17 \u002b0800 \u002b0800',
+        title: 'git操作杂记',
+        clientID: '604ae0a4eff099135503',
+        clientSecret: '403ff7c3a3ff6a91d905110c91eb1651219b7233',
+        repo: 'lyr-2000.github.io',
+        owner: 'lyr-2000',
+        admin: ['lyr-2000'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:lyr-2000@qq.com" class="iconfont icon-email" title="email"></a>
+  <a href="https://lyr-2000.github.io/code/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2021-09-23 - 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>LYR</span>
+  </span>
+</div>
+
+
+
+<script 
+ 
+    src="https://cdn.jsdelivr.net/gh/lyr-2000/live2d-widget@latest/autoload.js"></script>
+
+
+
+
+
+
+
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/code/js/main.min.6d2c4f127d59e1dce56e2845adf7d359011b86d8fc907e98877eb35bd445b2b3.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        tags: 'ams',
+        },
+	  options: {
+		ignoreHtmlClass:'mathjax_ignore',
+	  }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+<script src="/js/back_btn.js"></script>
+<script src="/js/docsearch.min.js"></script>
+<script src="/js/lazyload.min.js"></script>
+<script src="/js/x-plugin.js"></script>
+<script defer="defer" async>
+ 
+  window.addEventListener('load',function() {
+  
+	docsearch({
+		apiKey: "a3054d64a9a7bbdef3c0601fee941703",
+		indexName: "blog-code-pratice",
+		appId: "MVN1L6O934",
+		inputSelector: '.docsearch-input',
+		debug: false,
+    });
+    docsearch({
+	 apiKey: "a3054d64a9a7bbdef3c0601fee941703",
+	 indexName: "blog-code-pratice",
+	 appId: "MVN1L6O934",
+	 inputSelector: '.mob-docsearch-input',
+	 debug: false,
+    });
+  });
+ 
+</script>
+  
+ 
+  <div id="BR_cornner">
+    <div id='darkThemeBtn'>T</div> 
+  </div> 
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
+<script defer async>
+
+  mermaid.initialize({startOnLoad:true});
+</script>
+</body>
+</html>
