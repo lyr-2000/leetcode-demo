@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.104.2 with theme even" />
+<meta name="generator" content="Hugo 0.104.3 with theme even" />
 
 
 <link rel="canonical" href="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/%E5%BA%8F%E5%88%97%E8%BE%B9%E7%95%8C/leetcode.410.%E5%88%86%E5%89%B2%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC/" />
@@ -375,7 +375,7 @@ input.PC_MARK1:focus{
 <h2 id="动态规划思路">动态规划思路</h2>
 <p>令 f[i][j]  表示将数组的前 i 个数分割为 j  段所能得到的最大连续子数组和的最小值。在进行状态转移时，我们可以考虑第 j 段的具体范围，即我们可以枚举 k ，其中前 k 个数被分割为 j-1  段，而第 k+1 到第 i  个数为第 j  段。此时，这 j  段子数组中和的最大值，就等于 f[k][j-1]  与  sub(k+1,i) 中的较大值，其中  sub(i,j) 表示数组 nums 中下标落在区间 [i,j] 内的数的和。</p>
 <p>作者：LeetCode-Solution
-链接：https://leetcode.cn/problems/split-array-largest-sum/solution/fen-ge-shu-zu-de-zui-da-zhi-by-leetcode-solution/
+链接：<a href="https://leetcode.cn/problems/split-array-largest-sum/solution/fen-ge-shu-zu-de-zui-da-zhi-by-leetcode-solution/">https://leetcode.cn/problems/split-array-largest-sum/solution/fen-ge-shu-zu-de-zui-da-zhi-by-leetcode-solution/</a>
 来源：力扣（LeetCode）
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <div class="highlight"><div class="chroma">
