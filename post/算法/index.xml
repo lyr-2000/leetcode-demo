@@ -7,7 +7,61 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Fri, 07 Oct 2022 18:48:53 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Oct 2022 22:55:11 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lc.462.最少移动次数使数组元素相等</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E8%B4%AA%E5%BF%83/lc.462.%E6%9C%80%E5%B0%91%E7%A7%BB%E5%8A%A8%E6%AC%A1%E6%95%B0%E4%BD%BF%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E7%9B%B8%E7%AD%89/</link>
+      <pubDate>Fri, 07 Oct 2022 22:55:11 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E8%B4%AA%E5%BF%83/lc.462.%E6%9C%80%E5%B0%91%E7%A7%BB%E5%8A%A8%E6%AC%A1%E6%95%B0%E4%BD%BF%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E7%9B%B8%E7%AD%89/</guid>
+      <description>462. 最小操作次数使数组元素相等 II Description Difficulty: 中等 Related Topics: 数组, 数学, 排序 给你一个长度为 n 的整数数组 nums ，返回使所有数组元素相等需要的最小操作数。 在一次操作中</description>
+    </item>
+    
+    <item>
+      <title>lc.377.组合总和5</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.377.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C5/</link>
+      <pubDate>Fri, 07 Oct 2022 22:42:42 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.377.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C5/</guid>
+      <description>377. 组合总和 Ⅳ Description Difficulty: 中等 Related Topics: 数组, 动态规划 给你一个由 不同 整数组成的数组 nums ，和一个目标整数 target 。请你从 nums 中找出并返回总和为 target 的元素组合的个数。 题目数</description>
+    </item>
+    
+    <item>
+      <title>lc.494.目标和</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.494.%E7%9B%AE%E6%A0%87%E5%92%8C/</link>
+      <pubDate>Fri, 07 Oct 2022 22:21:31 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.494.%E7%9B%AE%E6%A0%87%E5%92%8C/</guid>
+      <description>494. 目标和 Description Difficulty: 中等 Related Topics: 数组, 动态规划, 回溯 给你一个整数数组 nums 和一个整数 target 。 向数组中的每个整数前添加 &#39;+&#39; 或 &#39;-&#39; ，然后串联起所有整数，可以构造一个 表达</description>
+    </item>
+    
+    <item>
+      <title>lc.474.一和零</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.474.%E4%B8%80%E5%92%8C%E9%9B%B6/</link>
+      <pubDate>Fri, 07 Oct 2022 21:18:14 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.474.%E4%B8%80%E5%92%8C%E9%9B%B6/</guid>
+      <description>474. 一和零 Description Difficulty: 中等 Related Topics: 数组, 字符串, 动态规划 给你一个二进制字符串数组 strs 和两个整数 m 和 n 。 请你找出并返回 strs 的最大子集的长度，该子集中 最多 有 m 个 0</description>
+    </item>
+    
+    <item>
+      <title>lc.416.分割等和子集</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.416.%E5%88%86%E5%89%B2%E7%AD%89%E5%92%8C%E5%AD%90%E9%9B%86/</link>
+      <pubDate>Fri, 07 Oct 2022 20:21:24 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.416.%E5%88%86%E5%89%B2%E7%AD%89%E5%92%8C%E5%AD%90%E9%9B%86/</guid>
+      <description>416. 分割等和子集 Description Difficulty: 中等 Related Topics: 数组, 动态规划 给你一个 只包含正整数 的 非空 数组 nums 。请你判断是否可以将这个数组分割成两个子集，使得两个子集的元素和相等</description>
+    </item>
+    
+    <item>
+      <title>lc.213.打家劫舍2</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.213.%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D2/</link>
+      <pubDate>Fri, 07 Oct 2022 20:07:36 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.213.%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D2/</guid>
+      <description>213. 打家劫舍 II Description Difficulty: 中等 Related Topics: 数组, 动态规划 你是一个专业的小偷，计划偷窃沿街的房屋，每间房内都藏有一定的现金。这个地方所有的房屋都 围成一圈 ，这意味</description>
+    </item>
+    
     <item>
       <title>lc.714.买卖股票的最佳时机含手续费</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.714.%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA%E5%90%AB%E6%89%8B%E7%BB%AD%E8%B4%B9/</link>

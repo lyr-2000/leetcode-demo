@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>lc.714.买卖股票的最佳时机含手续费 - 凌冬的代码博客站</title>
+  <title>lc.494.目标和 - 凌冬的代码博客站</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="lyr" /><meta name="description" content="714. 买卖股票的最佳时机含手续费 Description Difficulty: 中等 Related Topics: 贪心, 数组, 动态规划 给定一个整数数组 prices，其中 prices[i]表示第 i 天的股票价格 ；整数 fee" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
+<meta name="author" content="lyr" /><meta name="description" content="494. 目标和 Description Difficulty: 中等 Related Topics: 数组, 动态规划, 回溯 给你一个整数数组 nums 和一个整数 target 。 向数组中的每个整数前添加 &#39;&#43;&#39; 或 &#39;-&#39; ，然后串联起所有整数，可以构造一个 表达" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.104.3 with theme even" />
 
 
-<link rel="canonical" href="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.714.%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA%E5%90%AB%E6%89%8B%E7%BB%AD%E8%B4%B9/" />
+<link rel="canonical" href="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.494.%E7%9B%AE%E6%A0%87%E5%92%8C/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/code/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/code/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/code/favicon-16x16.png">
@@ -42,22 +42,22 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="lc.714.买卖股票的最佳时机含手续费" />
-<meta property="og:description" content="714. 买卖股票的最佳时机含手续费 Description Difficulty: 中等 Related Topics: 贪心, 数组, 动态规划 给定一个整数数组 prices，其中 prices[i]表示第 i 天的股票价格 ；整数 fee" />
+<meta property="og:title" content="lc.494.目标和" />
+<meta property="og:description" content="494. 目标和 Description Difficulty: 中等 Related Topics: 数组, 动态规划, 回溯 给你一个整数数组 nums 和一个整数 target 。 向数组中的每个整数前添加 &#39;&#43;&#39; 或 &#39;-&#39; ，然后串联起所有整数，可以构造一个 表达" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.714.%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA%E5%90%AB%E6%89%8B%E7%BB%AD%E8%B4%B9/" /><meta property="og:image" content="https://tva3.sinaimg.cn/large/0076Ry2fly1fqld8cxrgnj31hc0u01kx.jpg" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-10-07T18:48:53+08:00" />
+<meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.494.%E7%9B%AE%E6%A0%87%E5%92%8C/" /><meta property="og:image" content="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxk3pfp31j31hc0u0kas.jpg" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-10-07T22:21:31+08:00" />
 <meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
 
-<meta itemprop="name" content="lc.714.买卖股票的最佳时机含手续费">
-<meta itemprop="description" content="714. 买卖股票的最佳时机含手续费 Description Difficulty: 中等 Related Topics: 贪心, 数组, 动态规划 给定一个整数数组 prices，其中 prices[i]表示第 i 天的股票价格 ；整数 fee"><meta itemprop="datePublished" content="2022-10-07T18:48:53+08:00" />
+<meta itemprop="name" content="lc.494.目标和">
+<meta itemprop="description" content="494. 目标和 Description Difficulty: 中等 Related Topics: 数组, 动态规划, 回溯 给你一个整数数组 nums 和一个整数 target 。 向数组中的每个整数前添加 &#39;&#43;&#39; 或 &#39;-&#39; ，然后串联起所有整数，可以构造一个 表达"><meta itemprop="datePublished" content="2022-10-07T22:21:31+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
-<meta itemprop="wordCount" content="442"><meta itemprop="image" content="https://tva3.sinaimg.cn/large/0076Ry2fly1fqld8cxrgnj31hc0u01kx.jpg">
+<meta itemprop="wordCount" content="496"><meta itemprop="image" content="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxk3pfp31j31hc0u0kas.jpg">
 <meta itemprop="keywords" content="递推," /><meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://tva3.sinaimg.cn/large/0076Ry2fly1fqld8cxrgnj31hc0u01kx.jpg"/>
+<meta name="twitter:image" content="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxk3pfp31j31hc0u0kas.jpg"/>
 
-<meta name="twitter:title" content="lc.714.买卖股票的最佳时机含手续费"/>
-<meta name="twitter:description" content="714. 买卖股票的最佳时机含手续费 Description Difficulty: 中等 Related Topics: 贪心, 数组, 动态规划 给定一个整数数组 prices，其中 prices[i]表示第 i 天的股票价格 ；整数 fee"/>
+<meta name="twitter:title" content="lc.494.目标和"/>
+<meta name="twitter:description" content="494. 目标和 Description Difficulty: 中等 Related Topics: 数组, 动态规划, 回溯 给你一个整数数组 nums 和一个整数 target 。 向数组中的每个整数前添加 &#39;&#43;&#39; 或 &#39;-&#39; ，然后串联起所有整数，可以构造一个 表达"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -180,7 +180,7 @@ input.PC_MARK1:focus{
 	
 	<div class="customByLyr">
   
-			<img class="lazyload"  draggable="false"  data-original="https://tva3.sinaimg.cn/large/0076Ry2fly1fqld8cxrgnj31hc0u01kx.jpg" />
+			<img class="lazyload"  draggable="false"  data-original="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxk3pfp31j31hc0u0kas.jpg" />
 		</div>
 
     <main id="main" class="main">
@@ -189,14 +189,14 @@ input.PC_MARK1:focus{
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">lc.714.买卖股票的最佳时机含手续费</h1>
+      <h1 class="post-title">lc.494.目标和</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2022-10-07 </span>
         <div class="post-category">
             <a href="/code/categories/%E9%80%92%E6%8E%A8/"> 递推 </a>
             </div>
-          <span class="more-meta"> 约 442 字 </span>
+          <span class="more-meta"> 约 496 字 </span>
           <span class="more-meta"> 预计阅读 1 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -207,10 +207,11 @@ input.PC_MARK1:focus{
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#714-买卖股票的最佳时机含手续费httpsleetcodecnproblemsbest-time-to-buy-and-sell-stock-with-transaction-fee"><a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/">714. 买卖股票的最佳时机含手续费</a></a>
+    <li><a href="#494-目标和httpsleetcodecnproblemstarget-sum"><a href="https://leetcode.cn/problems/target-sum/">494. 目标和</a></a>
       <ul>
         <li><a href="#description">Description</a></li>
         <li><a href="#solution">Solution</a></li>
+        <li><a href="#解题思路">解题思路</a></li>
       </ul>
     </li>
   </ul>
@@ -219,14 +220,16 @@ input.PC_MARK1:focus{
 </div>
 
     <div class="post-content">
-      <h1 id="714-买卖股票的最佳时机含手续费httpsleetcodecnproblemsbest-time-to-buy-and-sell-stock-with-transaction-fee"><a href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/">714. 买卖股票的最佳时机含手续费</a></h1>
+      <h1 id="494-目标和httpsleetcodecnproblemstarget-sum"><a href="https://leetcode.cn/problems/target-sum/">494. 目标和</a></h1>
 <h2 id="description">Description</h2>
 <p>Difficulty: <strong>中等</strong></p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/greedy/">贪心</a>, <a href="https://leetcode.cn/tag/array/">数组</a>, <a href="https://leetcode.cn/tag/dynamic-programming/">动态规划</a></p>
-<p>给定一个整数数组 <code>prices</code>，其中 <code>prices[i]</code>表示第 <code>i</code> 天的股票价格 ；整数 <code>fee</code> 代表了交易股票的手续费用。</p>
-<p>你可以无限次地完成交易，但是你每笔交易都需要付手续费。如果你已经购买了一个股票，在卖出它之前你就不能再继续购买股票了。</p>
-<p>返回获得利润的最大值。</p>
-<p>**注意：**这里的一笔交易指买入持有并卖出股票的整个过程，每笔交易你只需要为支付一次手续费。</p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/array/">数组</a>, <a href="https://leetcode.cn/tag/dynamic-programming/">动态规划</a>, <a href="https://leetcode.cn/tag/backtracking/">回溯</a></p>
+<p>给你一个整数数组 <code>nums</code> 和一个整数 <code>target</code> 。</p>
+<p>向数组中的每个整数前添加 <code>'+'</code> 或 <code>'-'</code> ，然后串联起所有整数，可以构造一个 <strong>表达式</strong> ：</p>
+<ul>
+<li>例如，<code>nums = [2, 1]</code> ，可以在 <code>2</code> 之前添加 <code>'+'</code> ，在 <code>1</code> 之前添加 <code>'-'</code> ，然后串联起来得到表达式 <code>&quot;+2-1&quot;</code> 。</li>
+</ul>
+<p>返回可以通过上述方法构造的、运算结果等于 <code>target</code> 的不同 <strong>表达式</strong> 的数目。</p>
 <p><strong>示例 1：</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -240,14 +243,14 @@ input.PC_MARK1:focus{
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">输入：prices = [1, 3, 2, 8, 4, 9], fee = 2
-</span></span><span class="line"><span class="cl">输出：8
-</span></span><span class="line"><span class="cl">解释：能够达到的最大利润:  
-</span></span><span class="line"><span class="cl">在此处买入 prices[0] = 1
-</span></span><span class="line"><span class="cl">在此处卖出 prices[3] = 8
-</span></span><span class="line"><span class="cl">在此处买入 prices[4] = 4
-</span></span><span class="line"><span class="cl">在此处卖出 prices[5] = 9
-</span></span><span class="line"><span class="cl">总利润: ((8 - 1) - 2) + ((9 - 4) - 2) = 8
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">输入：nums = [1,1,1,1,1], target = 3
+</span></span><span class="line"><span class="cl">输出：5
+</span></span><span class="line"><span class="cl">解释：一共有 5 种方法让最终目标和为 3 。
+</span></span><span class="line"><span class="cl">-1 + 1 + 1 + 1 + 1 = 3
+</span></span><span class="line"><span class="cl">+1 - 1 + 1 + 1 + 1 = 3
+</span></span><span class="line"><span class="cl">+1 + 1 - 1 + 1 + 1 = 3
+</span></span><span class="line"><span class="cl">+1 + 1 + 1 - 1 + 1 = 3
+</span></span><span class="line"><span class="cl">+1 + 1 + 1 + 1 - 1 = 3
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>示例 2：</strong></p>
@@ -257,18 +260,29 @@ input.PC_MARK1:focus{
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">输入：prices = [1,3,7,5,10,3], fee = 3
-</span></span><span class="line"><span class="cl">输出：6
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">输入：nums = [1], target = 1
+</span></span><span class="line"><span class="cl">输出：1
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>提示：</strong></p>
 <ul>
-<li>1 &lt;= prices.length &lt;= 5 * 10<sup>4</sup></li>
-<li>1 &lt;= prices[i] &lt; 5 * 10<sup>4</sup></li>
-<li>0 &lt;= fee &lt; 5 * 10<sup>4</sup></li>
+<li><code>1 &lt;= nums.length &lt;= 20</code></li>
+<li><code>0 &lt;= nums[i] &lt;= 1000</code></li>
+<li><code>0 &lt;= sum(nums[i]) &lt;= 1000</code></li>
+<li><code>-1000 &lt;= target &lt;= 1000</code></li>
 </ul>
 <h2 id="solution">Solution</h2>
 <p>Language: <strong>C++</strong></p>
+<h2 id="解题思路">解题思路</h2>
+<ol>
+<li>滚动数组 + 偏移量</li>
+</ol>
+<p>状态的更新方式是 我到哪里去，而不是我从哪里来！！</p>
+<p>经过推导，可以列出以下的 DP方程</p>
+<p>$$</p>
+<p>dp[next_ind][j+x] += f[ind][j]
+dp[next_ind][j-x] += f[ind][j]</p>
+<p>$$</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -291,26 +305,44 @@ input.PC_MARK1:focus{
 </span><span class="lnt">18
 </span><span class="lnt">19
 </span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">maxProfit</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">prices</span><span class="p">,</span> <span class="kt">int</span> <span class="n">fee</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">prices</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">&lt;=</span><span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">dp</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="p">(</span><span class="mi">2</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">//dp[i][0] = dp[i-1][1] 卖   dp[i-1][0] x
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">//dp[1][1] = dp[i-1][1] x  dp[i-1][0] 买
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">prices</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">//买入 或者 之前就有
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">prices</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span> 
-</span></span><span class="line"><span class="cl">            <span class="c1">//卖出
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">prices</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">fee</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">dp</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">findTargetSumWays</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span>  <span class="n">n</span> <span class="o">=</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">&lt;=</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// if(n==1) return nums[0] == target;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">int</span> <span class="n">sum</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">x</span><span class="p">:</span><span class="n">nums</span><span class="p">)</span> <span class="n">sum</span><span class="o">+=</span><span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//dp[i][j] = f( dp[i-1][j -x ] ,  dp[i-1][j + x] )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">int</span> <span class="n">buff</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="o">*</span><span class="n">sum</span> <span class="o">+</span> <span class="mi">5</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="o">*</span><span class="n">f</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">buff</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">sum</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span><span class="n">buff</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">sum</span> <span class="o">+</span> <span class="mi">2</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">memset</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">buff</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="c1">//前0个值，拼出为0 是 1种方案
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">int</span> <span class="n">ind</span> <span class="o">=</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">int</span> <span class="n">pre</span> <span class="o">=</span> <span class="o">!</span><span class="n">ind</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">memset</span><span class="p">(</span><span class="n">buff</span><span class="p">[</span><span class="n">ind</span><span class="p">],</span><span class="mi">0</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">buff</span><span class="p">[</span><span class="n">ind</span><span class="p">]));</span>
 </span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=-</span><span class="n">sum</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;=</span><span class="n">sum</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">f</span><span class="p">[</span><span class="n">ind</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="n">x</span><span class="p">]</span> <span class="o">+=</span> <span class="n">f</span><span class="p">[</span><span class="n">pre</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">                <span class="n">f</span><span class="p">[</span><span class="n">ind</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="n">x</span><span class="p">]</span> <span class="o">+=</span> <span class="n">f</span><span class="p">[</span><span class="n">pre</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="n">sum</span><span class="o">+=</span><span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="o">%</span><span class="mi">2</span><span class="p">][</span><span class="n">target</span><span class="p">];</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>
@@ -338,13 +370,13 @@ input.PC_MARK1:focus{
           <a href="/code/tags/%E9%80%92%E6%8E%A8/">递推</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.213.%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D2/">
+        <a class="prev" href="/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.377.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C5/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">lc.213.打家劫舍2</span>
+            <span class="prev-text nav-default">lc.377.组合总和5</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        <a class="next" href="/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.%E5%89%91%E6%8C%87offer.%E6%9C%80%E5%B0%91%E5%9B%9E%E6%96%87%E5%88%86%E5%89%B2/">
-            <span class="next-text nav-default">lc.剑指offer.最少回文分割</span>
+        <a class="next" href="/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.474.%E4%B8%80%E5%92%8C%E9%9B%B6/">
+            <span class="next-text nav-default">lc.474.一和零</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
@@ -360,8 +392,8 @@ input.PC_MARK1:focus{
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
       var gitalk = new Gitalk({
-        id: '2022-10-07 18:48:53 \u002b0800 \u002b0800',
-        title: 'lc.714.买卖股票的最佳时机含手续费',
+        id: '2022-10-07 22:21:31 \u002b0800 \u002b0800',
+        title: 'lc.494.目标和',
         clientID: '604ae0a4eff099135503',
         clientSecret: '403ff7c3a3ff6a91d905110c91eb1651219b7233',
         repo: 'lyr-2000.github.io',
