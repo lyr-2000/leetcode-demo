@@ -7,7 +7,88 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Fri, 07 Oct 2022 22:55:11 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Oct 2022 23:52:11 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lc.3.无重复字符的最长子串</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/lc.3.%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/</link>
+      <pubDate>Tue, 11 Oct 2022 23:52:11 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/lc.3.%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/</guid>
+      <description>3. 无重复字符的最长子串 Description Difficulty: 中等 Related Topics: 哈希表, 字符串, 滑动窗口 给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串的长度。 示例 1: 1 2 3 输入: s</description>
+    </item>
+    
+    <item>
+      <title>lc.28.实现strStr()</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/lc.28.%E5%AE%9E%E7%8E%B0strstr/</link>
+      <pubDate>Tue, 11 Oct 2022 22:06:18 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/lc.28.%E5%AE%9E%E7%8E%B0strstr/</guid>
+      <description>28. 找出字符串中第一个匹配项的下标 Description Difficulty: 中等 Related Topics: 双指针, 字符串, 字符串匹配 给你两个字符串 haystack 和 needle ，请你在 haystack 字符串中找出 needle 字符串的第一个匹配项的下标</description>
+    </item>
+    
+    <item>
+      <title>manacher算法</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/manacher%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Tue, 11 Oct 2022 00:27:11 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/manacher%E7%AE%97%E6%B3%95/</guid>
+      <description>5. 最长回文子串 Description Difficulty: 中等 Related Topics: 字符串, 动态规划 给你一个字符串 s，找到 s 中最长的回文子串。 示例 1： 1 2 3 输入：s = &amp;#34;babad&amp;#34; 输出：&amp;#34;bab&amp;#34</description>
+    </item>
+    
+    <item>
+      <title>lc.214.最短回文串</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/lc.214.%E6%9C%80%E7%9F%AD%E5%9B%9E%E6%96%87%E4%B8%B2/</link>
+      <pubDate>Mon, 10 Oct 2022 22:38:17 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/lc.214.%E6%9C%80%E7%9F%AD%E5%9B%9E%E6%96%87%E4%B8%B2/</guid>
+      <description>214. 最短回文串 Description Difficulty: 困难 Related Topics: 字符串, 字符串匹配, 哈希函数, 滚动哈希 给定一个字符串 s，你可以通过在字符串前面添加字符将其转换为回文串。找到并返回可</description>
+    </item>
+    
+    <item>
+      <title>lc.1392.最长快乐前缀</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/lc.1392.%E6%9C%80%E9%95%BF%E5%BF%AB%E4%B9%90%E5%89%8D%E7%BC%80/</link>
+      <pubDate>Mon, 10 Oct 2022 22:31:43 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/lc.1392.%E6%9C%80%E9%95%BF%E5%BF%AB%E4%B9%90%E5%89%8D%E7%BC%80/</guid>
+      <description>1392. 最长快乐前缀 Description Difficulty: 困难 Related Topics: 字符串, 字符串匹配, 哈希函数, 滚动哈希 「快乐前缀」 是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串</description>
+    </item>
+    
+    <item>
+      <title>lc.459.重复的子字符串</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/lc.459.%E9%87%8D%E5%A4%8D%E7%9A%84%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Mon, 10 Oct 2022 22:18:02 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/lc.459.%E9%87%8D%E5%A4%8D%E7%9A%84%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>459. 重复的子字符串 Description Difficulty: 简单 Related Topics: 字符串, 字符串匹配 给定一个非空的字符串 s ，检查是否可以通过由它的一个子串重复多次构成。 示例 1: 1 2 3 输入: s = &amp;#34;abab&amp;#34; 输</description>
+    </item>
+    
+    <item>
+      <title>shift-and算法</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/shift-and%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Mon, 10 Oct 2022 20:59:33 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/shift-and%E7%AE%97%E6%B3%95/</guid>
+      <description>shift and 算法 Shift-And算法是一种基于前缀的单字符串匹配算法，采用位运算。其算法思想比KMP简单得多。 在最简单的brute force算法中</description>
+    </item>
+    
+    <item>
+      <title>sunday算法</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/sunday%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Mon, 10 Oct 2022 00:25:57 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/sunday%E7%AE%97%E6%B3%95/</guid>
+      <description>sunday算法 KMP算法是一个里程碑似的算法，它的出现宣告了人类是找到线性时间复杂度的字符串匹配算法的。在这之后，出现了许多的字符串匹配算</description>
+    </item>
+    
+    <item>
+      <title>kmp匹配算法</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/kmp%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Sun, 09 Oct 2022 21:35:28 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/kmp%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/</guid>
+      <description>KMP 匹配算法 预处理过程： pre_4 == last_4 pre_3 == last_3 pre_2 == last_2 如果不是最长的后缀，就可能错过答案的位置，要保证后缀和前缀最长。 证明 两个串可以直接匹配： $$ TA == TB\ SA ==</description>
+    </item>
+    
     <item>
       <title>lc.462.最少移动次数使数组元素相等</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E8%B4%AA%E5%BF%83/lc.462.%E6%9C%80%E5%B0%91%E7%A7%BB%E5%8A%A8%E6%AC%A1%E6%95%B0%E4%BD%BF%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E7%9B%B8%E7%AD%89/</link>
