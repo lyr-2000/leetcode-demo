@@ -18,6 +18,213 @@
     </item>
     
     <item>
+      <title>lc.229.多数元素II</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/lc.229.%E5%A4%9A%E6%95%B0%E5%85%83%E7%B4%A0ii/</link>
+      <pubDate>Thu, 20 Oct 2022 00:22:02 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/lc.229.%E5%A4%9A%E6%95%B0%E5%85%83%E7%B4%A0ii/</guid>
+      <description>229. 多数元素 II Description Difficulty: 中等 Related Topics: 数组, 哈希表, 计数, 排序 给定一个大小为 _n_的整数数组，找出其中所有出现超过 ⌊ n/3 ⌋ 次的元素。 示例 1： 1 2 输入：num</description>
+    </item>
+    
+    <item>
+      <title>lc.1201.丑数</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/lc.1201.%E4%B8%91%E6%95%B0/</link>
+      <pubDate>Wed, 19 Oct 2022 23:46:57 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/lc.1201.%E4%B8%91%E6%95%B0/</guid>
+      <description>1201. 丑数 III Description Difficulty: 中等 Related Topics: 数学, 二分查找, 数论 给你四个整数：n 、a 、b 、c ，请你设计一个算法来找出第 n 个丑数。 丑数是可以被 a 或 b 或 c 整除的 正整数 。</description>
+    </item>
+    
+    <item>
+      <title>lc.029.排序的循环链表</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/lc.029.%E6%8E%92%E5%BA%8F%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Wed, 19 Oct 2022 21:58:35 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/lc.029.%E6%8E%92%E5%BA%8F%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8/</guid>
+      <description>剑指 Offer II 029. 排序的循环链表 Description Difficulty: 中等 Related Topics: 链表 给定循环单调非递减列表中的一个点，写一个函数向这个列表中插入一个新元素 insertVal ，使这个列表仍然是循环升序的</description>
+    </item>
+    
+    <item>
+      <title>搜索算法的应用</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%9B%9E%E6%BA%AF%E6%90%9C%E7%B4%A2/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95%E7%9A%84%E5%BA%94%E7%94%A8/</link>
+      <pubDate>Sun, 16 Oct 2022 22:21:51 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%9B%9E%E6%BA%AF%E6%90%9C%E7%B4%A2/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
+      <description>搜索算法的应用 1. 迭代加深 对于DFS 算法的优化： 适用于搜索树深度很大，但是答案可能不是很深的情况， 可以防止DFS 一开始选错了分支，但是在不包含</description>
+    </item>
+    
+    <item>
+      <title>lc.1447.最简分数</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/lc.1447.%E6%9C%80%E7%AE%80%E5%88%86%E6%95%B0/</link>
+      <pubDate>Sun, 16 Oct 2022 15:31:51 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/lc.1447.%E6%9C%80%E7%AE%80%E5%88%86%E6%95%B0/</guid>
+      <description>1447. 最简分数 Description Difficulty: 中等 Related Topics: 数学, 字符串, 数论 给你一个整数 n ，请你返回所有 0 到 1 之间（不包括 0 和 1）满足分母小于等于 n 的 最简分数 。分数可以以 任意顺</description>
+    </item>
+    
+    <item>
+      <title>lc.1071.字符串的最大公因子</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/lc.1071.%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9C%80%E5%A4%A7%E5%85%AC%E5%9B%A0%E5%AD%90/</link>
+      <pubDate>Sun, 16 Oct 2022 15:09:56 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/lc.1071.%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9C%80%E5%A4%A7%E5%85%AC%E5%9B%A0%E5%AD%90/</guid>
+      <description>1071. 字符串的最大公因子 Description Difficulty: 简单 Related Topics: 数学, 字符串 对于字符串 s 和 t，只有在 s = t + ... + t（t 自身连接 1 次或多次）时，我们才认定 “t 能除尽 s”。 给定</description>
+    </item>
+    
+    <item>
+      <title>欧几里得算法</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Sun, 16 Oct 2022 10:06:44 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95/</guid>
+      <description>欧几里得算法 辗转相除法的意义： 把 一个大规模的问题转化为一个小规模的问题。 辗转相除法用来求解 整数 a,b 的最大公约数, 表示 gcd(a,b), gcd(a,b) = gcd(b,a%b) 证明1： b 和 a%b 的最</description>
+    </item>
+    
+    <item>
+      <title>lc.1409.查带键值的排列</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lc.1409.%E6%9F%A5%E5%B8%A6%E9%94%AE%E5%80%BC%E7%9A%84%E6%8E%92%E5%88%97/</link>
+      <pubDate>Sun, 16 Oct 2022 10:03:12 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lc.1409.%E6%9F%A5%E5%B8%A6%E9%94%AE%E5%80%BC%E7%9A%84%E6%8E%92%E5%88%97/</guid>
+      <description>1409. 查询带键的排列 Description Difficulty: 中等 Related Topics: 树状数组, 数组, 模拟 给你一个待查数组 queries ，数组中的元素为 1 到 m 之间的正整数。 请你根据以下规则处理所有待查项 quer</description>
+    </item>
+    
+    <item>
+      <title>lc.1310.子数组异或查询</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lc.1310.%E5%AD%90%E6%95%B0%E7%BB%84%E5%BC%82%E6%88%96%E6%9F%A5%E8%AF%A2/</link>
+      <pubDate>Sun, 16 Oct 2022 00:24:12 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lc.1310.%E5%AD%90%E6%95%B0%E7%BB%84%E5%BC%82%E6%88%96%E6%9F%A5%E8%AF%A2/</guid>
+      <description>1310. 子数组异或查询 Description Difficulty: 中等 Related Topics: 位运算, 数组, 前缀和 有一个正整数数组 arr，现给你一个对应的查询数组 queries，其中 queries[i] = [Li, Ri]。 对于每个查</description>
+    </item>
+    
+    <item>
+      <title>lc.10.10数字流的秩</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lc.10.10%E6%95%B0%E5%AD%97%E6%B5%81%E7%9A%84%E7%A7%A9/</link>
+      <pubDate>Sat, 15 Oct 2022 23:54:28 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lc.10.10%E6%95%B0%E5%AD%97%E6%B5%81%E7%9A%84%E7%A7%A9/</guid>
+      <description>面试题 10.10. 数字流的秩 Description Difficulty: 中等 Related Topics: 设计, 树状数组, 二分查找, 数据流 假设你正在读取一串整数。每隔一段时间，你希望能找出数字 x 的秩(小于或等于 x 的值</description>
+    </item>
+    
+    <item>
+      <title>lc.307.区域和检索-数组可修改</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lc.307.%E5%8C%BA%E5%9F%9F%E5%92%8C%E6%A3%80%E7%B4%A2-%E6%95%B0%E7%BB%84%E5%8F%AF%E4%BF%AE%E6%94%B9/</link>
+      <pubDate>Sat, 15 Oct 2022 23:44:10 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lc.307.%E5%8C%BA%E5%9F%9F%E5%92%8C%E6%A3%80%E7%B4%A2-%E6%95%B0%E7%BB%84%E5%8F%AF%E4%BF%AE%E6%94%B9/</guid>
+      <description>307. 区域和检索 - 数组可修改 Description Difficulty: 中等 Related Topics: 设计, 树状数组, 线段树, 数组 给你一个数组 nums ，请你完成两类查询。 其中一类查询要求 更新 数组 nums 下标对应的值 另一</description>
+    </item>
+    
+    <item>
+      <title>lc.1109.航班预定统计</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lc.1109.%E8%88%AA%E7%8F%AD%E9%A2%84%E5%AE%9A%E7%BB%9F%E8%AE%A1/</link>
+      <pubDate>Sat, 15 Oct 2022 23:18:12 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lc.1109.%E8%88%AA%E7%8F%AD%E9%A2%84%E5%AE%9A%E7%BB%9F%E8%AE%A1/</guid>
+      <description>1109. 航班预订统计 Description Difficulty: 中等 Related Topics: 数组, 前缀和 这里有 n 个航班，它们分别从 1 到 n 进行编号。 有一份航班预订表 bookings ，表中第 i 条预订记录 bookings[i] = [firsti, lasti, seatsi] 意味着在从 firsti</description>
+    </item>
+    
+    <item>
+      <title>树状数组基础</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Sat, 15 Oct 2022 21:27:14 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%9F%BA%E7%A1%80/</guid>
+      <description>前缀和数组算法理解 lowbit 函数 lowbit(i): 代表i这个数字， 二进制表示的最后一位1的位权： $lowbit(8) = (1000)_2 = 8$ $lowbit(x) = x&amp;amp;(-x)$ 改进前缀和数组 tree[i] 代表 C[i] 代表前lowbit(i) 项的和</description>
+    </item>
+    
+    <item>
+      <title>lc.32.最长有效括号</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/lc.32.%E6%9C%80%E9%95%BF%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7/</link>
+      <pubDate>Sat, 15 Oct 2022 18:58:31 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/lc.32.%E6%9C%80%E9%95%BF%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7/</guid>
+      <description>32. 最长有效括号 Description Difficulty: 困难 Related Topics: 栈, 字符串, 动态规划 给你一个只包含 &#39;(&#39; 和 &#39;)&#39; 的字符串，找出最长有效（格式正确且连续）括号子串的长度。 示例 1： 1 2 3 输入</description>
+    </item>
+    
+    <item>
+      <title>lc.17.17多次搜索</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/lc.17.17%E5%A4%9A%E6%AC%A1%E6%90%9C%E7%B4%A2/</link>
+      <pubDate>Sat, 15 Oct 2022 18:42:00 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/lc.17.17%E5%A4%9A%E6%AC%A1%E6%90%9C%E7%B4%A2/</guid>
+      <description>面试题 17.17. 多次搜索 Description Difficulty: 中等 Related Topics: 字典树, 数组, 哈希表, 字符串, 字符串匹配, 滑动窗口 给定一个较长字符串big和一个包含较短字符串的数组smalls</description>
+    </item>
+    
+    <item>
+      <title>lc.676.实现一个魔法字典</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E5%85%B8%E6%A0%91/lc.676.%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E9%AD%94%E6%B3%95%E5%AD%97%E5%85%B8/</link>
+      <pubDate>Sat, 15 Oct 2022 18:23:56 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E5%85%B8%E6%A0%91/lc.676.%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E9%AD%94%E6%B3%95%E5%AD%97%E5%85%B8/</guid>
+      <description>676. 实现一个魔法字典 Description Difficulty: 中等 Related Topics: 设计, 字典树, 哈希表, 字符串 设计一个使用单词列表进行初始化的数据结构，单词列表中的单词 互不相同 。 如果给出一个单</description>
+    </item>
+    
+    <item>
+      <title>lc.987.二叉树垂序遍历</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E5%85%B8%E6%A0%91/lc.987.%E4%BA%8C%E5%8F%89%E6%A0%91%E5%9E%82%E5%BA%8F%E9%81%8D%E5%8E%86/</link>
+      <pubDate>Sat, 15 Oct 2022 14:59:15 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E5%85%B8%E6%A0%91/lc.987.%E4%BA%8C%E5%8F%89%E6%A0%91%E5%9E%82%E5%BA%8F%E9%81%8D%E5%8E%86/</guid>
+      <description>987. 二叉树的垂序遍历 Description Difficulty: 困难 Related Topics: 树, 深度优先搜索, 广度优先搜索, 哈希表, 二叉树 给你二叉树的根结点 root ，请你设计算法计算二叉树的垂序遍历 序列。 对位</description>
+    </item>
+    
+    <item>
+      <title>lc.133.克隆图</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E5%85%B8%E6%A0%91/lc.133.%E5%85%8B%E9%9A%86%E5%9B%BE/</link>
+      <pubDate>Sat, 15 Oct 2022 14:36:26 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E5%85%B8%E6%A0%91/lc.133.%E5%85%8B%E9%9A%86%E5%9B%BE/</guid>
+      <description>133. 克隆图 Description Difficulty: 中等 Related Topics: 深度优先搜索, 广度优先搜索, 图, 哈希表 给你无向 **连通**图中一个节点的引用，请你返回该图的 深拷贝（克隆）。 图中的每个节</description>
+    </item>
+    
+    <item>
+      <title>lc.241.为运算表达式设计优先级</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E5%85%B8%E6%A0%91/lc.241.%E4%B8%BA%E8%BF%90%E7%AE%97%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AE%BE%E8%AE%A1%E4%BC%98%E5%85%88%E7%BA%A7/</link>
+      <pubDate>Sat, 15 Oct 2022 14:27:29 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E5%85%B8%E6%A0%91/lc.241.%E4%B8%BA%E8%BF%90%E7%AE%97%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AE%BE%E8%AE%A1%E4%BC%98%E5%85%88%E7%BA%A7/</guid>
+      <description>241. 为运算表达式设计优先级 Description Difficulty: 中等 Related Topics: 递归, 记忆化搜索, 数学, 字符串, 动态规划 给你一个由数字和运算符组成的字符串 expression ，按不同优先级组合数字和运算</description>
+    </item>
+    
+    <item>
+      <title>lc.67.最大异或和</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E5%85%B8%E6%A0%91/lc.67.%E6%9C%80%E5%A4%A7%E5%BC%82%E6%88%96%E5%92%8C/</link>
+      <pubDate>Sat, 15 Oct 2022 12:16:24 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E5%85%B8%E6%A0%91/lc.67.%E6%9C%80%E5%A4%A7%E5%BC%82%E6%88%96%E5%92%8C/</guid>
+      <description>剑指 Offer II 067. 最大的异或 Description Difficulty: 中等 Related Topics: 位运算, 字典树, 数组, 哈希表 给你一个整数数组 nums ，返回nums[i] XOR nums[j] 的最大运算结果，其中 0 ≤ i ≤ j &amp;lt; n 。 示</description>
+    </item>
+    
+    <item>
+      <title>lc.1288.搜索推荐系统</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E5%85%B8%E6%A0%91/lc.1288.%E6%90%9C%E7%B4%A2%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Fri, 14 Oct 2022 23:54:49 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E5%85%B8%E6%A0%91/lc.1288.%E6%90%9C%E7%B4%A2%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</guid>
+      <description>1268. 搜索推荐系统 Description Difficulty: 中等 Related Topics: 字典树, 数组, 字符串 给你一个产品数组 products 和一个字符串 searchWord ，products 数组中每个产品都是一个字符串。 请你设计一个推</description>
+    </item>
+    
+    <item>
+      <title>lc.208.字典树</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E5%85%B8%E6%A0%91/lc.208.%E5%AD%97%E5%85%B8%E6%A0%91/</link>
+      <pubDate>Fri, 14 Oct 2022 23:05:31 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E5%85%B8%E6%A0%91/lc.208.%E5%AD%97%E5%85%B8%E6%A0%91/</guid>
+      <description>208. 实现 Trie (前缀树) Description Difficulty: 中等 Related Topics: 设计, 字典树, 哈希表, 字符串 Trie（发音类似 &amp;ldquo;try&amp;rdquo;）或者说 前缀树 是一种树形数据结</description>
+    </item>
+    
+    <item>
+      <title>双数组字典树</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E5%85%B8%E6%A0%91/%E5%8F%8C%E6%95%B0%E7%BB%84%E5%AD%97%E5%85%B8%E6%A0%91/</link>
+      <pubDate>Wed, 12 Oct 2022 22:51:08 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E5%85%B8%E6%A0%91/%E5%8F%8C%E6%95%B0%E7%BB%84%E5%AD%97%E5%85%B8%E6%A0%91/</guid>
+      <description>双数组字典树 Trie树本质是一个确定的有限状态自动机(DFA)，核心思想是空间换时间，利用字符串的公共前缀来降低查询时间的开销以达到提高效率</description>
+    </item>
+    
+    <item>
       <title>lc.12.整数转罗马数字</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/lc.12.%E6%95%B4%E6%95%B0%E8%BD%AC%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97/</link>
       <pubDate>Wed, 12 Oct 2022 21:31:59 +0800</pubDate>
