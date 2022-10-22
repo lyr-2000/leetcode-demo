@@ -52,7 +52,7 @@
 <meta itemprop="name" content="lc.229.多数元素II">
 <meta itemprop="description" content="229. 多数元素 II Description Difficulty: 中等 Related Topics: 数组, 哈希表, 计数, 排序 给定一个大小为 _n_的整数数组，找出其中所有出现超过 ⌊ n/3 ⌋ 次的元素。 示例 1： 1 2 输入：num"><meta itemprop="datePublished" content="2022-10-20T00:22:02+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
-<meta itemprop="wordCount" content="330"><meta itemprop="image" content="https://tva4.sinaimg.cn/large/0076Ry2fly1fqld9z4qc3j31hc0u0nm1.jpg">
+<meta itemprop="wordCount" content="528"><meta itemprop="image" content="https://tva4.sinaimg.cn/large/0076Ry2fly1fqld9z4qc3j31hc0u0nm1.jpg">
 <meta itemprop="keywords" content="数学," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://tva4.sinaimg.cn/large/0076Ry2fly1fqld9z4qc3j31hc0u0nm1.jpg"/>
 
@@ -196,8 +196,8 @@ input.PC_MARK1:focus{
         <div class="post-category">
             <a href="/code/categories/%E6%95%B0%E5%AD%A6/"> 数学 </a>
             </div>
-          <span class="more-meta"> 约 330 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+          <span class="more-meta"> 约 528 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -264,6 +264,12 @@ input.PC_MARK1:focus{
 </ul>
 <p>**进阶：**尝试设计时间复杂度为 O(n)、空间复杂度为 O(1)的算法解决此问题。</p>
 <h2 id="solution">Solution</h2>
+<p>解题思路，摩尔投票法</p>
+<p>摩尔投票法，解决的问题是如何在任意多的候选人中，选出票数超过一半的那个人。注意，是超出一半票数的那个人。</p>
+<p>假设投票是这样的，[A, C, A, A, B]，ABC 是指三个候选人。</p>
+<p>第一张票与第二张票进行对坑，如果票不同则互相抵消掉；</p>
+<p>接着第三票与第四票进行对坑，如果票相同，则增加这个候选人的可抵消票数；</p>
+<p>这个候选人拿着可抵消票数与第五张票对坑，如果票不同，则互相抵消掉，即候选人的可抵消票数 -1。</p>
 <p>Language: <strong>C++</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -366,7 +372,11 @@ input.PC_MARK1:focus{
           <a href="/code/tags/%E6%95%B0%E5%AD%A6/">数学</a>
           </div>
       <nav class="post-nav">
-        
+        <a class="prev" href="/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/lc.1819.%E5%BA%8F%E5%88%97%E4%B8%AD%E4%B8%8D%E5%90%8C%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0%E6%95%B0%E9%87%8F/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">lc.1819.序列中不同最大公约数数量</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
         <a class="next" href="/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%A6/lc.1201.%E4%B8%91%E6%95%B0/">
             <span class="next-text nav-default">lc.1201.丑数</span>
             <span class="next-text nav-mobile">下一篇</span>
