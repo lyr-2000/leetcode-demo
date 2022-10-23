@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Wed, 19 Oct 2022 21:58:35 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/tags/%E9%93%BE%E8%A1%A8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Oct 2022 21:28:19 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/tags/%E9%93%BE%E8%A1%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lc.2130.链表的孪生和</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/lc.2130.%E9%93%BE%E8%A1%A8%E7%9A%84%E5%AD%AA%E7%94%9F%E5%92%8C/</link>
+      <pubDate>Sun, 23 Oct 2022 21:28:19 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/lc.2130.%E9%93%BE%E8%A1%A8%E7%9A%84%E5%AD%AA%E7%94%9F%E5%92%8C/</guid>
+      <description>2130. 链表最大孪生和 Description Difficulty: 中等 Related Topics: 栈, 链表, 双指针 在一个大小为 n 且 n 为 偶数 的链表中，对于 0 &amp;lt;= i &amp;lt;= (n / 2) - 1 的 i ，第 i 个节点（下标从 0 开始）的孪生节</description>
+    </item>
+    
     <item>
       <title>lc.029.排序的循环链表</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E9%93%BE%E8%A1%A8/lc.029.%E6%8E%92%E5%BA%8F%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8/</link>

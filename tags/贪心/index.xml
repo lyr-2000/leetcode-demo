@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Fri, 07 Oct 2022 22:55:11 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/tags/%E8%B4%AA%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Oct 2022 22:11:37 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/tags/%E8%B4%AA%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lc.2136.全部开花的最早一天</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E8%B4%AA%E5%BF%83/lc.2136.%E5%85%A8%E9%83%A8%E5%BC%80%E8%8A%B1%E7%9A%84%E6%9C%80%E6%97%A9%E4%B8%80%E5%A4%A9/</link>
+      <pubDate>Sun, 23 Oct 2022 22:11:37 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E8%B4%AA%E5%BF%83/lc.2136.%E5%85%A8%E9%83%A8%E5%BC%80%E8%8A%B1%E7%9A%84%E6%9C%80%E6%97%A9%E4%B8%80%E5%A4%A9/</guid>
+      <description>2136. 全部开花的最早一天 Description Difficulty: 困难 Related Topics: 贪心, 数组, 排序 你有 n 枚花的种子。每枚种子必须先种下，才能开始生长、开花。播种需要时间，种子的生长也是如此。</description>
+    </item>
+    
     <item>
       <title>lc.462.最少移动次数使数组元素相等</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E8%B4%AA%E5%BF%83/lc.462.%E6%9C%80%E5%B0%91%E7%A7%BB%E5%8A%A8%E6%AC%A1%E6%95%B0%E4%BD%BF%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0%E7%9B%B8%E7%AD%89/</link>

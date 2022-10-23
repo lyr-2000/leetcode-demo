@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Sat, 11 Jun 2022 01:37:53 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/categories/%E5%A0%86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Oct 2022 13:58:05 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/categories/%E5%A0%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lc.501.IPO</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%A0%86/lc.501.ipo/</link>
+      <pubDate>Sun, 23 Oct 2022 13:58:05 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%A0%86/lc.501.ipo/</guid>
+      <description>502. IPO Description Difficulty: 困难 Related Topics: 贪心, 数组, 排序, 堆（优先队列） 假设 力扣（LeetCode）即将开始 IPO 。为了以更高的价格将股票卖给风险投资公司，力扣 希望在 IPO</description>
+    </item>
+    
     <item>
       <title>347.前k个高频元素</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%A0%86/347.%E9%AB%98%E9%A2%91%E6%95%B0%E5%AD%97/</link>

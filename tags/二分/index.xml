@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Sun, 25 Sep 2022 13:44:03 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/tags/%E4%BA%8C%E5%88%86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Oct 2022 15:27:47 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/tags/%E4%BA%8C%E5%88%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lc.1447.两个和为目标值不重叠子数组</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%88%86/lc.1447.%E4%B8%A4%E4%B8%AA%E5%92%8C%E4%B8%BA%E7%9B%AE%E6%A0%87%E5%80%BC%E4%B8%8D%E9%87%8D%E5%8F%A0%E5%AD%90%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Sun, 23 Oct 2022 15:27:47 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%88%86/lc.1447.%E4%B8%A4%E4%B8%AA%E5%92%8C%E4%B8%BA%E7%9B%AE%E6%A0%87%E5%80%BC%E4%B8%8D%E9%87%8D%E5%8F%A0%E5%AD%90%E6%95%B0%E7%BB%84/</guid>
+      <description>1477. 找两个和为目标值且不重叠的子数组 Description Difficulty: 中等 Related Topics: 数组, 哈希表, 二分查找, 动态规划, 滑动窗口 给你一个整数数组 arr 和一个整数值 target 。 请你在 arr 中找 两个互</description>
+    </item>
+    
+    <item>
+      <title>lc.284.完成所有工作的最短时间</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%88%86/lc.284.%E5%AE%8C%E6%88%90%E6%89%80%E6%9C%89%E5%B7%A5%E4%BD%9C%E7%9A%84%E6%9C%80%E7%9F%AD%E6%97%B6%E9%97%B4/</link>
+      <pubDate>Sun, 23 Oct 2022 14:53:58 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%88%86/lc.284.%E5%AE%8C%E6%88%90%E6%89%80%E6%9C%89%E5%B7%A5%E4%BD%9C%E7%9A%84%E6%9C%80%E7%9F%AD%E6%97%B6%E9%97%B4/</guid>
+      <description>1723. 完成所有工作的最短时间 Description Difficulty: 困难 Related Topics: 位运算, 数组, 动态规划, 回溯, 状态压缩 给你一个整数数组 jobs ，其中 jobs[i] 是完成第 i 项工作要花费的时间。 请你将这些</description>
+    </item>
+    
     <item>
       <title>lc.1760.袋子里最少数目的球</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%88%86/lc.1760.%E8%A2%8B%E5%AD%90%E9%87%8C%E6%9C%80%E5%B0%91%E6%95%B0%E7%9B%AE%E7%9A%84%E7%90%83/</link>

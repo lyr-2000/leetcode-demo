@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Fri, 07 Oct 2022 22:42:42 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/categories/%E9%80%92%E6%8E%A8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Oct 2022 16:12:02 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/categories/%E9%80%92%E6%8E%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lc.2140.解决智力问题</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.2140.%E8%A7%A3%E5%86%B3%E6%99%BA%E5%8A%9B%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sun, 23 Oct 2022 16:12:02 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.2140.%E8%A7%A3%E5%86%B3%E6%99%BA%E5%8A%9B%E9%97%AE%E9%A2%98/</guid>
+      <description>2140. 解决智力问题 Description Difficulty: 中等 Related Topics: 数组, 动态规划 给你一个下标从 0 开始的二维整数数组 questions ，其中 questions[i] = [pointsi, brainpoweri] 。 这个数组表示一场考试里的一系列题目，你需要 按顺序</description>
+    </item>
+    
+    <item>
+      <title>lc.2110股票平滑下降阶段数目</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.2110%E8%82%A1%E7%A5%A8%E5%B9%B3%E6%BB%91%E4%B8%8B%E9%99%8D%E9%98%B6%E6%AE%B5%E6%95%B0%E7%9B%AE/</link>
+      <pubDate>Sun, 23 Oct 2022 15:55:39 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.2110%E8%82%A1%E7%A5%A8%E5%B9%B3%E6%BB%91%E4%B8%8B%E9%99%8D%E9%98%B6%E6%AE%B5%E6%95%B0%E7%9B%AE/</guid>
+      <description>2110. 股票平滑下跌阶段的数目 Description Difficulty: 中等 Related Topics: 数组, 数学, 动态规划 给你一个整数数组 prices ，表示一支股票的历史每日股价，其中 prices[i] 是这支股票第 i 天的价格。 一个 平</description>
+    </item>
+    
     <item>
       <title>lc.377.组合总和5</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E9%80%92%E6%8E%A8/lc.377.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C5/</link>
