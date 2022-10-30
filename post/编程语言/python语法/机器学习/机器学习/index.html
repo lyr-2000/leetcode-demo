@@ -52,7 +52,7 @@
 <meta itemprop="name" content="机器学习">
 <meta itemprop="description" content="numpy 学习 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 import numpy as np # 生成 对角线矩阵 a = np.eye(5) b = np.ones([5,5]) # 5 行5列的 矩阵 &#34;&#34;&#34; [[1. 0. 0. 0. 0.] [0. 1. 0. 0. 0.] [0. 0. 1. 0. 0.] [0. 0. 0. 1."><meta itemprop="datePublished" content="2022-10-29T14:28:30+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
-<meta itemprop="wordCount" content="212"><meta itemprop="image" content="https://tva2.sinaimg.cn/large/9bd9b167gy1g4lhiguvj4j21hc0xc4bb.jpg">
+<meta itemprop="wordCount" content="401"><meta itemprop="image" content="https://tva2.sinaimg.cn/large/9bd9b167gy1g4lhiguvj4j21hc0xc4bb.jpg">
 <meta itemprop="keywords" content="机器学习," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://tva2.sinaimg.cn/large/9bd9b167gy1g4lhiguvj4j21hc0xc4bb.jpg"/>
 
@@ -196,7 +196,7 @@ input.PC_MARK1:focus{
         <div class="post-category">
             <a href="/code/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"> 机器学习 </a>
             </div>
-          <span class="more-meta"> 约 212 字 </span>
+          <span class="more-meta"> 约 401 字 </span>
           <span class="more-meta"> 预计阅读 1 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -283,13 +283,54 @@ input.PC_MARK1:focus{
 </tr>
 <tr>
 <td style="text-align:center">ones</td>
-<td style="text-align:center"></td>
+<td style="text-align:center">生成一个全都是1 的矩阵</td>
 </tr>
 </tbody>
 </table>
-<h2 id="pandas-使用方法">pandas 使用方法</h2>
+<p>查看np 数组的维度</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看维度，返回元组</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">[[1. 1. 1. 1. 1.]
+</span></span></span><span class="line"><span class="cl"><span class="s2"> [1. 1. 1. 1. 1.]
+</span></span></span><span class="line"><span class="cl"><span class="s2"> [1. 1. 1. 1. 1.]
+</span></span></span><span class="line"><span class="cl"><span class="s2"> [1. 1. 1. 1. 1.]
+</span></span></span><span class="line"><span class="cl"><span class="s2"> [1. 1. 1. 1. 1.]]
+</span></span></span><span class="line"><span class="cl"><span class="s2">(5, 5)
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="pandas-使用方法">pandas 使用方法</h2>
 <p>pandas 相当于 python 中 excel：它使用表（也就是 dataframe)，能在数据上做各种变换，但还有其他很多功能。</p>
 <p><a href="https://zhuanlan.zhihu.com/p/99889912">参考博客</a></p>
+<p>了解 pandas 里面的 DataFrame 数据结构
+<a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html">参考文档</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -298,16 +339,61 @@ input.PC_MARK1:focus{
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;col1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="s1">&#39;col2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]}</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">d</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">df</span>
+</span></span><span class="line"><span class="cl">   <span class="n">col1</span>  <span class="n">col2</span>
+</span></span><span class="line"><span class="cl"><span class="mi">0</span>     <span class="mi">1</span>     <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="mi">1</span>     <span class="mi">2</span>     <span class="mi">4</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>data.loc</code> 这个方法会经常用到，需要了解</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;x&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># data = pd.read_csv(&#39;data.csv&#39;)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># print(type(data))</span>
+</span></span><span class="line"><span class="cl"><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;col1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="s1">&#39;col2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]}</span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;col1&#39;</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># 获取所有行，和 &#39;x&#39; 这一列的数据</span>
-</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">   col1  col2
+</span></span></span><span class="line"><span class="cl"><span class="s2">0     1     3
+</span></span></span><span class="line"><span class="cl"><span class="s2">1     2     4
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">0    1
+</span></span></span><span class="line"><span class="cl"><span class="s2">1    2
+</span></span></span><span class="line"><span class="cl"><span class="s2">Name: col1, dtype: int64
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div>
