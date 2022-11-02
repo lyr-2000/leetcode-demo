@@ -52,7 +52,7 @@
 <meta itemprop="name" content="numpy详细用法">
 <meta itemprop="description" content="numpy 详细使用方法 numpy 创建数组 1 2 3 4 5 6 7 8 9 10 11 12 import numpy as np np.__version__ L = [i for i in range (10)] print(L) ll = np.array([i for i in range (10)]) print(ll) print(ll.dtype) 属性 描述 dtype 数组类型 dtype 数组类型 numpy 方法使用 方法 总"><meta itemprop="datePublished" content="2022-10-30T18:12:46+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
-<meta itemprop="wordCount" content="404"><meta itemprop="image" content="https://tva4.sinaimg.cn/large/9bd9b167gy1fwrszi3ow5j21hc0u0akb.jpg">
+<meta itemprop="wordCount" content="586"><meta itemprop="image" content="https://tva4.sinaimg.cn/large/9bd9b167gy1fwrszi3ow5j21hc0u0akb.jpg">
 <meta itemprop="keywords" content="机器学习," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://tva4.sinaimg.cn/large/9bd9b167gy1fwrszi3ow5j21hc0u0akb.jpg"/>
 
@@ -196,8 +196,8 @@ input.PC_MARK1:focus{
         <div class="post-category">
             <a href="/code/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"> 机器学习 </a>
             </div>
-          <span class="more-meta"> 约 404 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+          <span class="more-meta"> 约 586 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -216,6 +216,14 @@ input.PC_MARK1:focus{
             <li><a href="#numpy-矩阵操作">numpy 矩阵操作</a></li>
           </ul>
         </li>
+        <li><a href="#numpy-矩阵运算">numpy 矩阵运算</a>
+          <ul>
+            <li><a href="#universal-function">universal function</a></li>
+            <li><a href="#numpy矩阵运算">numpy矩阵运算</a></li>
+            <li><a href="#矩阵和向量运算">矩阵和向量运算</a></li>
+          </ul>
+        </li>
+        <li><a href="#其他方法">其他方法</a></li>
       </ul>
     </li>
   </ul>
@@ -460,6 +468,103 @@ input.PC_MARK1:focus{
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[:</span><span class="mi">2</span><span class="p">,:</span><span class="mi">3</span><span class="p">])</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># 获取  2x3 的矩阵切片 , 2行3列</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="numpy-矩阵运算">numpy 矩阵运算</h2>
+<h3 id="universal-function">universal function</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">A</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">L</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">C</span> <span class="o">=</span> <span class="n">A</span><span class="o">+</span><span class="n">B</span>
+</span></span><span class="line"><span class="cl"><span class="n">C</span> <span class="o">=</span> <span class="n">A</span><span class="o">-</span><span class="n">B</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 对应元素相乘</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="n">B</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 标准矩阵运算乘法</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># A * B</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 矩阵转置 =&gt; 行列对角交换</span>
+</span></span><span class="line"><span class="cl"><span class="n">A</span><span class="o">.</span><span class="n">T</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>numpy 矩阵乘法的实现原理： <a href="https://www.yiibai.com/python/operator-overloading.html">参考文章</a></p>
+<p>python中是支持运算符重载的，只要重载某个函数，就可以实现</p>
+<h3 id="numpy矩阵运算">numpy矩阵运算</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">L</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 3^x ,每个矩阵元素</span>
+</span></span><span class="line"><span class="cl"><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">np</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="矩阵和向量运算">矩阵和向量运算</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># plus</span>
+</span></span><span class="line"><span class="cl"><span class="n">C</span> <span class="o">=</span> <span class="n">A</span><span class="o">+</span><span class="n">B</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="其他方法">其他方法</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div>

@@ -52,7 +52,7 @@
 <meta itemprop="name" content="逻辑回归实战准备">
 <meta itemprop="description" content="逻辑回归实战 分类散点图可视化 逻辑回归模型使用 建立新书籍 模型评估 分类散点图可视化 1 2 3 4 5 6 7 8 9 # 未区分类别散点图 plt.scatter(x1,x2) #区分类别散点图 mask = y==1 type1"><meta itemprop="datePublished" content="2022-10-30T16:37:11+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
-<meta itemprop="wordCount" content="203"><meta itemprop="image" content="https://tva2.sinaimg.cn/large/9bd9b167gy1g4lifg75yjj21hc0xckjl.jpg">
+<meta itemprop="wordCount" content="707"><meta itemprop="image" content="https://tva2.sinaimg.cn/large/9bd9b167gy1g4lifg75yjj21hc0xckjl.jpg">
 <meta itemprop="keywords" content="逻辑回归," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://tva2.sinaimg.cn/large/9bd9b167gy1g4lifg75yjj21hc0xckjl.jpg"/>
 
@@ -196,8 +196,8 @@ input.PC_MARK1:focus{
         <div class="post-category">
             <a href="/code/categories/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/"> 逻辑回归 </a>
             </div>
-          <span class="more-meta"> 约 203 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+          <span class="more-meta"> 约 707 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -214,6 +214,14 @@ input.PC_MARK1:focus{
             <li><a href="#分类散点图可视化">分类散点图可视化</a></li>
             <li><a href="#逻辑回归实现二分类算法">逻辑回归实现二分类算法</a></li>
             <li><a href="#计算准确率">计算准确率</a></li>
+          </ul>
+        </li>
+        <li><a href="#预测考试通过率">预测考试通过率</a>
+          <ul>
+            <li><a href="#加载数据集">加载数据集</a></li>
+            <li><a href="#绘制散点图">绘制散点图</a></li>
+            <li><a href="#模型精准度评估">模型精准度评估</a></li>
+            <li><a href="#绘制拟合曲线">绘制拟合曲线</a></li>
           </ul>
         </li>
       </ul>
@@ -314,7 +322,231 @@ input.PC_MARK1:focus{
 </span></span><span class="line"><span class="cl"><span class="n">failed</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x1</span><span class="p">[</span><span class="o">~</span><span class="n">mask</span><span class="p">],</span><span class="n">x2</span><span class="p">[</span><span class="o">~</span><span class="n">mask</span><span class="p">],</span><span class="n">maker</span><span class="o">=</span><span class="s1">&#39;^&#39;</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table>
 </div>
+</div><h2 id="预测考试通过率">预测考试通过率</h2>
+<p>数据如下：</p>
+<p>Exam1, Exam2, Pass
+34    78  0
+30   43  0
+60  86  1</p>
+<p>若干数据</p>
+<h3 id="加载数据集">加载数据集</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;examdata.csv&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
 </div>
+</div><h3 id="绘制散点图">绘制散点图</h3>
+<p>绘制 exam2 为y轴，exam1 为 x轴的图</p>
+<p><img src="https://s2.loli.net/2022/11/03/eCvwGRpNtJcZ5WI.png" alt="图 1"></p>
+<p>定义 mask 为 pass ,如果是 1 就是通过，对mask 取反 就是不通过
+分别绘制 mask, 和 <code>~mask</code> 的曲线，得到散点图</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># plt.figure()</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">plt.scatter(data.loc[:,&#39;Exam1&#39;],data.loc[:,&#39;Exam2&#39;])
+</span></span></span><span class="line"><span class="cl"><span class="s2">plt.title(&#39;exam1 and exam2&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">plt.xlabel(&#39;Exam1&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">plt.ylabel(&#39;Exam2&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">plt.show()
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># mask --&gt; 通过的， ~mask 表示不通过的</span>
+</span></span><span class="line"><span class="cl"><span class="n">mask</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;Pass&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># print(mask)</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">passed</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;Exam1&#39;</span><span class="p">][</span><span class="n">mask</span><span class="p">],</span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;Exam2&#39;</span><span class="p">][</span><span class="n">mask</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">failed</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;Exam1&#39;</span><span class="p">][</span><span class="o">~</span><span class="n">mask</span><span class="p">],</span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;Exam2&#39;</span><span class="p">][</span><span class="o">~</span><span class="n">mask</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Exam1&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Exam2&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="n">passed</span><span class="p">,</span><span class="n">failed</span><span class="p">),(</span><span class="s1">&#39;passed&#39;</span><span class="p">,</span><span class="s1">&#39;failed&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="模型精准度评估">模型精准度评估</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 绘制曲线模拟</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 删除最后一列</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Pass&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># print(X)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 获取最后一列 </span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;Pass&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># print(y)</span>
+</span></span><span class="line"><span class="cl"><span class="n">x1</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;Exam1&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">x2</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;Exam2&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># x.head()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 开始训练模式-- 逻辑回归模型</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span><span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 训练模型结束</span>
+</span></span><span class="line"><span class="cl"><span class="n">predict_yvalue</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># print(predict_yvalue)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 准确率</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">score</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">predict_yvalue</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;模型得分：&#34;</span><span class="p">,</span><span class="n">score</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 预测两个考试成绩为 70,65分的是否能通过</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;passed&#39;</span> <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">70</span><span class="p">,</span><span class="mi">65</span><span class="p">]])</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="s1">&#39;failed&#39;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="绘制拟合曲线">绘制拟合曲线</h3>
+<p>定义拟合曲线 <code>ax+by+c = 0</code>, 求出 曲线系数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 系数</span>
+</span></span><span class="line"><span class="cl"><span class="n">model</span><span class="o">.</span><span class="n">coef_</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 截距</span>
+</span></span><span class="line"><span class="cl"><span class="n">model</span><span class="o">.</span><span class="n">intercept_</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">c</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">intercept_</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">y2</span>  <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">c</span> <span class="o">+</span> <span class="n">a</span><span class="o">*</span> <span class="n">x1</span><span class="p">)</span><span class="o">/</span><span class="n">b</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">y2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># plt.show()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ax+by+c = 0 , 线性方程</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ---draw</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># mask --&gt; 通过的， ~mask 表示不通过的</span>
+</span></span><span class="line"><span class="cl"><span class="n">mask</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;Pass&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># print(mask)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># fig2 = plt.figure(figsize=(4,4))</span>
+</span></span><span class="line"><span class="cl"><span class="n">passed</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;Exam1&#39;</span><span class="p">][</span><span class="n">mask</span><span class="p">],</span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;Exam2&#39;</span><span class="p">][</span><span class="n">mask</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">failed</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;Exam1&#39;</span><span class="p">][</span><span class="o">~</span><span class="n">mask</span><span class="p">],</span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;Exam2&#39;</span><span class="p">][</span><span class="o">~</span><span class="n">mask</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Exam1&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Exam2&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">((</span><span class="n">passed</span><span class="p">,</span><span class="n">failed</span><span class="p">),(</span><span class="s1">&#39;passed&#39;</span><span class="p">,</span><span class="s1">&#39;failed&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>结果如图所示：</p>
+<p><img src="https://s2.loli.net/2022/11/03/m4LN7YJbserFwnt.png" alt="图 2"></p>
+
     </div>
 
     <div class="post-copyright">
