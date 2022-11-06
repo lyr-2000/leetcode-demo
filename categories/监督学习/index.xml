@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>监督学习 on 凌冬的代码博客站</title>
+    <link>https://lyr-2000.github.io/code/categories/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in 监督学习 on 凌冬的代码博客站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>LYR</copyright>
+    <lastBuildDate>Sun, 06 Nov 2022 23:37:48 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/categories/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>KNN算法</title>
+      <link>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/knn%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Sun, 06 Nov 2022 23:37:48 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/knn%E7%AE%97%E6%B3%95/</guid>
+      <description>KNN 算法 K近邻算法 思路简单 数学知识少 效果好 KNN算法缺点 算法存储了所有训练数据，所以对内存要求较高 预测时间可能较长 对不相关的功能和数据规模敏感</description>
+    </item>
+    
+  </channel>
+</rss>

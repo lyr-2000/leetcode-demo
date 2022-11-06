@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Sun, 30 Oct 2022 18:12:46 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Nov 2022 23:37:48 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>监督学习</title>
+      <link>https://lyr-2000.github.io/code/categories/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Sun, 06 Nov 2022 23:37:48 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/categories/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>聚类</title>
+      <link>https://lyr-2000.github.io/code/categories/%E8%81%9A%E7%B1%BB/</link>
+      <pubDate>Sun, 06 Nov 2022 16:09:39 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/categories/%E8%81%9A%E7%B1%BB/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>机器学习</title>
       <link>https://lyr-2000.github.io/code/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
