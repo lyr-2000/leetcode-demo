@@ -18,6 +18,33 @@
     </item>
     
     <item>
+      <title>lc.1.两数之和</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/go/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/lc.1.%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</link>
+      <pubDate>Tue, 22 Nov 2022 22:49:43 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/go/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/lc.1.%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</guid>
+      <description>1. 两数之和 Description Difficulty: 简单 Related Topics: 数组, 哈希表 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那 两个 整数，并返回它们的数</description>
+    </item>
+    
+    <item>
+      <title>多层感知机MLP</title>
+      <link>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BA/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BAmlp/</link>
+      <pubDate>Sun, 13 Nov 2022 15:42:19 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BA/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BAmlp/</guid>
+      <description>多层感知机 MLP 多层感知机（MLP，Multilayer Perceptron）也叫人工神经网络（ANN，Artificial Neural Network），</description>
+    </item>
+    
+    <item>
+      <title>决策树</title>
+      <link>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/%E5%86%B3%E7%AD%96%E6%A0%91/</link>
+      <pubDate>Sat, 12 Nov 2022 22:11:17 +0800</pubDate>
+      
+      <guid>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/%E5%86%B3%E7%AD%96%E6%A0%91/</guid>
+      <description>决策树 和 逻辑回归 任务： 根据用户的学习动力，能力提升意愿，兴趣度 判断是否适合学习本门课程, 通过多层判断，从训练集归纳出一组分类规则 $w=w1动</description>
+    </item>
+    
+    <item>
       <title>KNN算法</title>
       <link>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/knn%E7%AE%97%E6%B3%95/</link>
       <pubDate>Sun, 06 Nov 2022 23:37:48 +0800</pubDate>

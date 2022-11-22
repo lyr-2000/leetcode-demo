@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>决策树 - 凌冬的代码博客站</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="lyr" /><meta name="description" content="决策树 和 逻辑回归 任务： 根据用户的学习动力，能力提升意愿，兴趣度 判断是否适合学习本门课程, 通过多层判断，从训练集归纳出一组分类规则 $w=w1动" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.106.0 with theme even" />
+
+
+<link rel="canonical" href="https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/%E5%86%B3%E7%AD%96%E6%A0%91/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/code/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/code/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/code/favicon-16x16.png">
+<link rel="manifest" href="/code/manifest.json">
+<link rel="mask-icon" href="/code/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/code/sass/main.min.4d31fe93a248bf2a033aec98b3dca0e0e3f55453ad76230e57f190d60450d008.css" rel="stylesheet"> 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/post.css">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+<meta property="og:title" content="决策树" />
+<meta property="og:description" content="决策树 和 逻辑回归 任务： 根据用户的学习动力，能力提升意愿，兴趣度 判断是否适合学习本门课程, 通过多层判断，从训练集归纳出一组分类规则 $w=w1动" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/%E5%86%B3%E7%AD%96%E6%A0%91/" /><meta property="og:image" content="https://tva3.sinaimg.cn/large/9bd9b167gy1g2qk7huyqxj21hc0u0ary.jpg" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-11-12T22:11:17+08:00" />
+<meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
+
+<meta itemprop="name" content="决策树">
+<meta itemprop="description" content="决策树 和 逻辑回归 任务： 根据用户的学习动力，能力提升意愿，兴趣度 判断是否适合学习本门课程, 通过多层判断，从训练集归纳出一组分类规则 $w=w1动"><meta itemprop="datePublished" content="2022-11-12T22:11:17+08:00" />
+<meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
+<meta itemprop="wordCount" content="1276"><meta itemprop="image" content="https://tva3.sinaimg.cn/large/9bd9b167gy1g2qk7huyqxj21hc0u0ary.jpg">
+<meta itemprop="keywords" content="逻辑回归," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://tva3.sinaimg.cn/large/9bd9b167gy1g2qk7huyqxj21hc0u0ary.jpg"/>
+
+<meta name="twitter:title" content="决策树"/>
+<meta name="twitter:description" content="决策树 和 逻辑回归 任务： 根据用户的学习动力，能力提升意愿，兴趣度 判断是否适合学习本门课程, 通过多层判断，从训练集归纳出一组分类规则 $w=w1动"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+</head>
+<body >
+  
+  
+  <div>
+    <button class="button pink back">back</button>
+    <button class="button pink go">go</button>
+    <button class="button pink topUrl">top</button>
+    
+  </div>
+  <div id="globalbg"></div>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">凌冬的博客</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list"><li style="display:inline-block;margin-right:10px;">
+			<input type="search" class="mob-docsearch-input" placeholder="Search" />
+		</li><a href="/code/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/code/post/">
+        <li class="mobile-menu-item">归档页</li>
+      </a><a href="/code/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/code/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/code/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a><a href="/code/friends">
+        <li class="mobile-menu-item">友链</li>
+      </a>
+	
+	
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel" >
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">凌冬的博客</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/code/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/code/post/">归档页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/code/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/code/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/code/about/">关于</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/code/friends">友链</a>
+      </li><li  style="list-style: none;position: relative;left: 360px;bottom: 32px;">
+		<input type="search" class="docsearch-input PC_MARK1" placeholder="Search" />
+	  </li></ul>
+</nav>
+
+<style>
+  .mob-docsearch-input {
+	border: 1px solid #ccc;
+	padding: 6px 0px;
+	border-radius: 3px;
+	padding-left:5px;
+	position: relative;
+    vertical-align: top;
+    width: 93%;
+    margin: auto;
+    margin-left: 7px;
+  
+  }
+  input.PC_MARK1{
+	border: 1px solid #ccc;
+	padding: 6px 0px;
+	border-radius: 3px;
+	padding-left:5px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+input.PC_MARK1:focus{
+		border-color: #66afe9;
+		outline: 0;
+		-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+		box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+</style>
+
+    </header>
+	
+	<div class="customByLyr">
+  
+			<img class="lazyload"  draggable="false"  data-original="https://tva3.sinaimg.cn/large/9bd9b167gy1g2qk7huyqxj21hc0u0ary.jpg" />
+		</div>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">决策树</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-11-12 </span>
+        <div class="post-category">
+            <a href="/code/categories/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/"> 逻辑回归 </a>
+            </div>
+          <span class="more-meta"> 约 1276 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#决策树-和-逻辑回归">决策树 和 逻辑回归</a></li>
+        <li><a href="#异常点">异常点</a></li>
+        <li><a href="#sklearn-中的决策树">sklearn 中的决策树</a>
+          <ul>
+            <li><a href="#sklearn-基本建模流程">sklearn 基本建模流程</a></li>
+          </ul>
+        </li>
+        <li><a href="#测试-分类葡萄酒类型实战">测试 分类葡萄酒类型实战</a></li>
+        <li><a href="#探索-决策树的应用">探索 决策树的应用</a>
+          <ul>
+            <li><a href="#减枝参数">减枝参数</a></li>
+          </ul>
+        </li>
+        <li><a href="#随机森林">随机森林</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    <div class="post-content">
+      <h2 id="决策树-和-逻辑回归">决策树 和 逻辑回归</h2>
+<p>任务：
+根据用户的学习动力，能力提升意愿，兴趣度 判断是否适合学习本门课程, 通过多层判断，从训练集归纳出一组分类规则</p>
+<p>$w=w1<em>动力+w2</em>能力+w3<em>兴趣+w4</em>时间$</p>
+<p>决策树使用：</p>
+<ul>
+<li>计算量小，运算速度快</li>
+<li>易于理解，可以清晰查看各个属性的重要性。</li>
+</ul>
+<p>缺点：
+忽略属性的相关性， 样本类别分布不均匀时候，容易影响模型表现。</p>
+<h2 id="异常点">异常点</h2>
+<p><a href="https://zhuanlan.zhihu.com/p/41689368">参考文章</a></p>
+<h2 id="sklearn-中的决策树">sklearn 中的决策树</h2>
+<p>sklearn中决策树的类都在”tree“这个模块之下</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">tree.DecisionTreeClassifier</td>
+<td style="text-align:center">分类树</td>
+</tr>
+<tr>
+<td style="text-align:center">tree.DecisionTreeRegressor</td>
+<td style="text-align:center">回归树</td>
+</tr>
+<tr>
+<td style="text-align:center">tree.export_graphviz</td>
+<td style="text-align:center">将决策树导出为 dot格式，用于画图</td>
+</tr>
+<tr>
+<td style="text-align:center">tree.ExtraTreeClassifier</td>
+<td style="text-align:center">高随机版本的分类树</td>
+</tr>
+<tr>
+<td style="text-align:center">tree.ExtraTreeRegressor</td>
+<td style="text-align:center">高随机版本的回归树</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sklearn-基本建模流程">sklearn 基本建模流程</h3>
+<p><img src="https://s2.loli.net/2022/11/13/DlzSPpUkVR7MOHn.png" alt="图 1"></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
+</span></span><span class="line"><span class="cl"><span class="n">clf</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">clf</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>  <span class="c1"># 训练模型</span>
+</span></span><span class="line"><span class="cl"><span class="n">result</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span> <span class="c1"># 导入测试机</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="测试-分类葡萄酒类型实战">测试 分类葡萄酒类型实战</h2>
+<p><a href="http://scikit-learn.org.cn/view/549.html">参考文档</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_wine</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">wine</span> <span class="o">=</span> <span class="n">load_wine</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">wine</span><span class="o">.</span><span class="n">data</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 特征</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span></span><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">wine</span><span class="o">.</span><span class="n">data</span><span class="p">),</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">wine</span><span class="o">.</span><span class="n">target</span><span class="p">)],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">xtrain</span><span class="p">,</span><span class="n">xtest</span><span class="p">,</span><span class="n">ytrain</span><span class="p">,</span><span class="n">ytest</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">wine</span><span class="o">.</span><span class="n">data</span><span class="p">,</span><span class="n">wine</span><span class="o">.</span><span class="n">target</span><span class="p">,</span><span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">xtrain</span><span class="o">.</span><span class="n">shape</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 实例化</span>
+</span></span><span class="line"><span class="cl"><span class="n">clf</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">criterion</span><span class="o">=</span><span class="s2">&#34;entropy&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">clf</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">xtrain</span><span class="p">,</span><span class="n">ytrain</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">score</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">xtest</span><span class="p">,</span><span class="n">ytest</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">score</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 目前已经建立完模型</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 绘制树</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">graphviz</span> 
+</span></span><span class="line"><span class="cl"><span class="n">feature_name</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;酒精&#39;</span><span class="p">,</span><span class="s1">&#39;苹果酸&#39;</span><span class="p">,</span><span class="s1">&#39;灰&#39;</span><span class="p">,</span><span class="s1">&#39;灰的碱性&#39;</span><span class="p">,</span><span class="s1">&#39;镁&#39;</span><span class="p">,</span><span class="s1">&#39;总酚&#39;</span><span class="p">,</span><span class="s1">&#39;类黄酮&#39;</span><span class="p">,</span><span class="s1">&#39;非黄烷类酚类&#39;</span><span class="p">,</span><span class="s1">&#39;花青素&#39;</span><span class="p">,</span><span class="s1">&#39;颜 色强度&#39;</span><span class="p">,</span><span class="s1">&#39;色调&#39;</span><span class="p">,</span><span class="s1">&#39;od280/od315稀释葡萄酒&#39;</span><span class="p">,</span><span class="s1">&#39;脯氨酸&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">dot_data</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">export_graphviz</span><span class="p">(</span><span class="n">clf</span> <span class="p">,</span><span class="n">feature_names</span><span class="o">=</span> <span class="n">feature_name</span> <span class="p">,</span><span class="n">class_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;琴酒&#34;</span><span class="p">,</span><span class="s2">&#34;雪莉&#34;</span><span class="p">,</span><span class="s2">&#34;贝尔摩德&#34;</span><span class="p">]</span> <span class="p">,</span><span class="n">filled</span><span class="o">=</span><span class="kc">True</span> <span class="p">,</span><span class="n">rounded</span><span class="o">=</span><span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Source</span><span class="p">(</span><span class="n">dot_data</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="n">graph</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><img src="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%0A%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0A%3C!--%20Generated%20by%20graphviz%20version%204.0.0%20(20220529.0937)%0A%20--%3E%0A%3C!--%20Title%3A%20Tree%20Pages%3A%201%20--%3E%0A%3Csvg%20width%3D%22566pt%22%20height%3D%22433pt%22%0A%20viewBox%3D%220.00%200.00%20566.00%20433.00%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%3Cg%20id%3D%22graph0%22%20class%3D%22graph%22%20transform%3D%22scale(1%201)%20rotate(0)%20translate(4%20429)%22%3E%0A%3Ctitle%3ETree%3C%2Ftitle%3E%0A%3Cpolygon%20fill%3D%22white%22%20stroke%3D%22transparent%22%20points%3D%22-4%2C4%20-4%2C-429%20562%2C-429%20562%2C4%20-4%2C4%22%2F%3E%0A%3C!--%200%20--%3E%0A%3Cg%20id%3D%22node1%22%20class%3D%22node%22%3E%0A%3Ctitle%3E0%3C%2Ftitle%3E%0A%3Cpath%20fill%3D%22%23f1fdf6%22%20stroke%3D%22black%22%20d%3D%22M339%2C-425C339%2C-425%20226%2C-425%20226%2C-425%20220%2C-425%20214%2C-419%20214%2C-413%20214%2C-413%20214%2C-354%20214%2C-354%20214%2C-348%20220%2C-342%20226%2C-342%20226%2C-342%20339%2C-342%20339%2C-342%20345%2C-342%20351%2C-348%20351%2C-354%20351%2C-354%20351%2C-413%20351%2C-413%20351%2C-419%20345%2C-425%20339%2C-425%22%2F%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22282.5%22%20y%3D%22-409.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3E%E7%B1%BB%E9%BB%84%E9%85%AE%20%26lt%3B%3D%202.3%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22282.5%22%20y%3D%22-394.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Eentropy%20%3D%201.576%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22282.5%22%20y%3D%22-379.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Esamples%20%3D%20124%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22282.5%22%20y%3D%22-364.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Evalue%20%3D%20%5B41%2C%2047%2C%2036%5D%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22282.5%22%20y%3D%22-349.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Eclass%20%3D%20%E9%9B%AA%E8%8E%89%3C%2Ftext%3E%0A%3C%2Fg%3E%0A%3C!--%201%20--%3E%0A%3Cg%20id%3D%22node2%22%20class%3D%22node%22%3E%0A%3Ctitle%3E1%3C%2Ftitle%3E%0A%3Cpath%20fill%3D%22%23fcfafe%22%20stroke%3D%22black%22%20d%3D%22M266.5%2C-306C266.5%2C-306%20140.5%2C-306%20140.5%2C-306%20134.5%2C-306%20128.5%2C-300%20128.5%2C-294%20128.5%2C-294%20128.5%2C-235%20128.5%2C-235%20128.5%2C-229%20134.5%2C-223%20140.5%2C-223%20140.5%2C-223%20266.5%2C-223%20266.5%2C-223%20272.5%2C-223%20278.5%2C-229%20278.5%2C-235%20278.5%2C-235%20278.5%2C-294%20278.5%2C-294%20278.5%2C-300%20272.5%2C-306%20266.5%2C-306%22%2F%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22203.5%22%20y%3D%22-290.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3E%E9%A2%9C%20%E8%89%B2%E5%BC%BA%E5%BA%A6%20%26lt%3B%3D%203.825%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22203.5%22%20y%3D%22-275.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Eentropy%20%3D%201.0%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22203.5%22%20y%3D%22-260.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Esamples%20%3D%2071%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22203.5%22%20y%3D%22-245.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Evalue%20%3D%20%5B0%2C%2035%2C%2036%5D%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22203.5%22%20y%3D%22-230.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Eclass%20%3D%20%E8%B4%9D%E5%B0%94%E6%91%A9%E5%BE%B7%3C%2Ftext%3E%0A%3C%2Fg%3E%0A%3C!--%200%26%2345%3B%26gt%3B1%20--%3E%0A%3Cg%20id%3D%22edge1%22%20class%3D%22edge%22%3E%0A%3Ctitle%3E0%26%2345%3B%26gt%3B1%3C%2Ftitle%3E%0A%3Cpath%20fill%3D%22none%22%20stroke%3D%22black%22%20d%3D%22M255.09%2C-341.91C249.09%2C-333.01%20242.67%2C-323.51%20236.47%2C-314.33%22%2F%3E%0A%3Cpolygon%20fill%3D%22black%22%20stroke%3D%22black%22%20points%3D%22239.36%2C-312.35%20230.86%2C-306.02%20233.56%2C-316.27%20239.36%2C-312.35%22%2F%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22226.1%22%20y%3D%22-326.86%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3ETrue%3C%2Ftext%3E%0A%3C%2Fg%3E%0A%3C!--%206%20--%3E%0A%3Cg%20id%3D%22node7%22%20class%3D%22node%22%3E%0A%3Ctitle%3E6%3C%2Ftitle%3E%0A%3Cpath%20fill%3D%22%23eda673%22%20stroke%3D%22black%22%20d%3D%22M414%2C-306C414%2C-306%20309%2C-306%20309%2C-306%20303%2C-306%20297%2C-300%20297%2C-294%20297%2C-294%20297%2C-235%20297%2C-235%20297%2C-229%20303%2C-223%20309%2C-223%20309%2C-223%20414%2C-223%20414%2C-223%20420%2C-223%20426%2C-229%20426%2C-235%20426%2C-235%20426%2C-294%20426%2C-294%20426%2C-300%20420%2C-306%20414%2C-306%22%2F%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22361.5%22%20y%3D%22-290.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3E%E8%84%AF%E6%B0%A8%E9%85%B8%20%26lt%3B%3D%20724.5%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22361.5%22%20y%3D%22-275.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Eentropy%20%3D%200.772%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22361.5%22%20y%3D%22-260.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Esamples%20%3D%2053%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22361.5%22%20y%3D%22-245.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Evalue%20%3D%20%5B41%2C%2012%2C%200%5D%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22361.5%22%20y%3D%22-230.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Eclass%20%3D%20%E7%90%B4%E9%85%92%3C%2Ftext%3E%0A%3C%2Fg%3E%0A%3C!--%200%26%2345%3B%26gt%3B6%20--%3E%0A%3Cg%20id%3D%22edge6%22%20class%3D%22edge%22%3E%0A%3Ctitle%3E0%26%2345%3B%26gt%3B6%3C%2Ftitle%3E%0A%3Cpath%20fill%3D%22none%22%20stroke%3D%22black%22%20d%3D%22M309.91%2C-341.91C315.91%2C-333.01%20322.33%2C-323.51%20328.53%2C-314.33%22%2F%3E%0A%3Cpolygon%20fill%3D%22black%22%20stroke%3D%22black%22%20points%3D%22331.44%2C-316.27%20334.14%2C-306.02%20325.64%2C-312.35%20331.44%2C-316.27%22%2F%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22338.9%22%20y%3D%22-326.86%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3EFalse%3C%2Ftext%3E%0A%3C%2Fg%3E%0A%3C!--%202%20--%3E%0A%3Cg%20id%3D%22node3%22%20class%3D%22node%22%3E%0A%3Ctitle%3E2%3C%2Ftitle%3E%0A%3Cpath%20fill%3D%22%2339e581%22%20stroke%3D%22black%22%20d%3D%22M109%2C-179.5C109%2C-179.5%2012%2C-179.5%2012%2C-179.5%206%2C-179.5%200%2C-173.5%200%2C-167.5%200%2C-167.5%200%2C-123.5%200%2C-123.5%200%2C-117.5%206%2C-111.5%2012%2C-111.5%2012%2C-111.5%20109%2C-111.5%20109%2C-111.5%20115%2C-111.5%20121%2C-117.5%20121%2C-123.5%20121%2C-123.5%20121%2C-167.5%20121%2C-167.5%20121%2C-173.5%20115%2C-179.5%20109%2C-179.5%22%2F%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%2260.5%22%20y%3D%22-164.3%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Eentropy%20%3D%200.0%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%2260.5%22%20y%3D%22-149.3%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Esamples%20%3D%2032%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%2260.5%22%20y%3D%22-134.3%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Evalue%20%3D%20%5B0%2C%2032%2C%200%5D%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%2260.5%22%20y%3D%22-119.3%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Eclass%20%3D%20%E9%9B%AA%E8%8E%89%3C%2Ftext%3E%0A%3C%2Fg%3E%0A%3C!--%201%26%2345%3B%26gt%3B2%20--%3E%0A%3Cg%20id%3D%22edge2%22%20class%3D%22edge%22%3E%0A%3Ctitle%3E1%26%2345%3B%26gt%3B2%3C%2Ftitle%3E%0A%3Cpath%20fill%3D%22none%22%20stroke%3D%22black%22%20d%3D%22M153.89%2C-222.91C139.32%2C-210.99%20123.41%2C-197.98%20108.92%2C-186.12%22%2F%3E%0A%3Cpolygon%20fill%3D%22black%22%20stroke%3D%22black%22%20points%3D%22110.99%2C-183.29%20101.04%2C-179.67%20106.56%2C-188.71%20110.99%2C-183.29%22%2F%3E%0A%3C%2Fg%3E%0A%3C!--%203%20--%3E%0A%3Cg%20id%3D%22node4%22%20class%3D%22node%22%3E%0A%3Ctitle%3E3%3C%2Ftitle%3E%0A%3Cpath%20fill%3D%22%238c49e7%22%20stroke%3D%22black%22%20d%3D%22M261.5%2C-187C261.5%2C-187%20151.5%2C-187%20151.5%2C-187%20145.5%2C-187%20139.5%2C-181%20139.5%2C-175%20139.5%2C-175%20139.5%2C-116%20139.5%2C-116%20139.5%2C-110%20145.5%2C-104%20151.5%2C-104%20151.5%2C-104%20261.5%2C-104%20261.5%2C-104%20267.5%2C-104%20273.5%2C-110%20273.5%2C-116%20273.5%2C-116%20273.5%2C-175%20273.5%2C-175%20273.5%2C-181%20267.5%2C-187%20261.5%2C-187%22%2F%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22206.5%22%20y%3D%22-171.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3E%E7%B1%BB%E9%BB%84%E9%85%AE%20%26lt%3B%3D%201.58%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22206.5%22%20y%3D%22-156.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Eentropy%20%3D%200.391%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22206.5%22%20y%3D%22-141.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Esamples%20%3D%2039%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22206.5%22%20y%3D%22-126.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Evalue%20%3D%20%5B0%2C%203%2C%2036%5D%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22206.5%22%20y%3D%22-111.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Eclass%20%3D%20%E8%B4%9D%E5%B0%94%E6%91%A9%E5%BE%B7%3C%2Ftext%3E%0A%3C%2Fg%3E%0A%3C!--%201%26%2345%3B%26gt%3B3%20--%3E%0A%3Cg%20id%3D%22edge3%22%20class%3D%22edge%22%3E%0A%3Ctitle%3E1%26%2345%3B%26gt%3B3%3C%2Ftitle%3E%0A%3Cpath%20fill%3D%22none%22%20stroke%3D%22black%22%20d%3D%22M204.54%2C-222.91C204.75%2C-214.56%20204.98%2C-205.67%20205.2%2C-197.02%22%2F%3E%0A%3Cpolygon%20fill%3D%22black%22%20stroke%3D%22black%22%20points%3D%22208.7%2C-197.11%20205.46%2C-187.02%20201.71%2C-196.93%20208.7%2C-197.11%22%2F%3E%0A%3C%2Fg%3E%0A%3C!--%204%20--%3E%0A%3Cg%20id%3D%22node5%22%20class%3D%22node%22%3E%0A%3Ctitle%3E4%3C%2Ftitle%3E%0A%3Cpath%20fill%3D%22%238139e5%22%20stroke%3D%22black%22%20d%3D%22M190.5%2C-68C190.5%2C-68%2080.5%2C-68%2080.5%2C-68%2074.5%2C-68%2068.5%2C-62%2068.5%2C-56%2068.5%2C-56%2068.5%2C-12%2068.5%2C-12%2068.5%2C-6%2074.5%2C0%2080.5%2C0%2080.5%2C0%20190.5%2C0%20190.5%2C0%20196.5%2C0%20202.5%2C-6%20202.5%2C-12%20202.5%2C-12%20202.5%2C-56%20202.5%2C-56%20202.5%2C-62%20196.5%2C-68%20190.5%2C-68%22%2F%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22135.5%22%20y%3D%22-52.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Eentropy%20%3D%200.0%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22135.5%22%20y%3D%22-37.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Esamples%20%3D%2036%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22135.5%22%20y%3D%22-22.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Evalue%20%3D%20%5B0%2C%200%2C%2036%5D%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22135.5%22%20y%3D%22-7.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Eclass%20%3D%20%E8%B4%9D%E5%B0%94%E6%91%A9%E5%BE%B7%3C%2Ftext%3E%0A%3C%2Fg%3E%0A%3C!--%203%26%2345%3B%26gt%3B4%20--%3E%0A%3Cg%20id%3D%22edge4%22%20class%3D%22edge%22%3E%0A%3Ctitle%3E3%26%2345%3B%26gt%3B4%3C%2Ftitle%3E%0A%3Cpath%20fill%3D%22none%22%20stroke%3D%22black%22%20d%3D%22M180.06%2C-103.73C174.38%2C-94.97%20168.38%2C-85.7%20162.67%2C-76.91%22%2F%3E%0A%3Cpolygon%20fill%3D%22black%22%20stroke%3D%22black%22%20points%3D%22165.47%2C-74.79%20157.09%2C-68.3%20159.6%2C-78.59%20165.47%2C-74.79%22%2F%3E%0A%3C%2Fg%3E%0A%3C!--%205%20--%3E%0A%3Cg%20id%3D%22node6%22%20class%3D%22node%22%3E%0A%3Ctitle%3E5%3C%2Ftitle%3E%0A%3Cpath%20fill%3D%22%2339e581%22%20stroke%3D%22black%22%20d%3D%22M322%2C-68C322%2C-68%20233%2C-68%20233%2C-68%20227%2C-68%20221%2C-62%20221%2C-56%20221%2C-56%20221%2C-12%20221%2C-12%20221%2C-6%20227%2C0%20233%2C0%20233%2C0%20322%2C0%20322%2C0%20328%2C0%20334%2C-6%20334%2C-12%20334%2C-12%20334%2C-56%20334%2C-56%20334%2C-62%20328%2C-68%20322%2C-68%22%2F%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22277.5%22%20y%3D%22-52.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Eentropy%20%3D%200.0%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22277.5%22%20y%3D%22-37.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Esamples%20%3D%203%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22277.5%22%20y%3D%22-22.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Evalue%20%3D%20%5B0%2C%203%2C%200%5D%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22277.5%22%20y%3D%22-7.8%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Eclass%20%3D%20%E9%9B%AA%E8%8E%89%3C%2Ftext%3E%0A%3C%2Fg%3E%0A%3C!--%203%26%2345%3B%26gt%3B5%20--%3E%0A%3Cg%20id%3D%22edge5%22%20class%3D%22edge%22%3E%0A%3Ctitle%3E3%26%2345%3B%26gt%3B5%3C%2Ftitle%3E%0A%3Cpath%20fill%3D%22none%22%20stroke%3D%22black%22%20d%3D%22M232.94%2C-103.73C238.62%2C-94.97%20244.62%2C-85.7%20250.33%2C-76.91%22%2F%3E%0A%3Cpolygon%20fill%3D%22black%22%20stroke%3D%22black%22%20points%3D%22253.4%2C-78.59%20255.91%2C-68.3%20247.53%2C-74.79%20253.4%2C-78.59%22%2F%3E%0A%3C%2Fg%3E%0A%3C!--%207%20--%3E%0A%3Cg%20id%3D%22node8%22%20class%3D%22node%22%3E%0A%3Ctitle%3E7%3C%2Ftitle%3E%0A%3Cpath%20fill%3D%22%2339e581%22%20stroke%3D%22black%22%20d%3D%22M407%2C-179.5C407%2C-179.5%20310%2C-179.5%20310%2C-179.5%20304%2C-179.5%20298%2C-173.5%20298%2C-167.5%20298%2C-167.5%20298%2C-123.5%20298%2C-123.5%20298%2C-117.5%20304%2C-111.5%20310%2C-111.5%20310%2C-111.5%20407%2C-111.5%20407%2C-111.5%20413%2C-111.5%20419%2C-117.5%20419%2C-123.5%20419%2C-123.5%20419%2C-167.5%20419%2C-167.5%20419%2C-173.5%20413%2C-179.5%20407%2C-179.5%22%2F%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22358.5%22%20y%3D%22-164.3%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Eentropy%20%3D%200.0%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22358.5%22%20y%3D%22-149.3%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Esamples%20%3D%2012%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22358.5%22%20y%3D%22-134.3%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Evalue%20%3D%20%5B0%2C%2012%2C%200%5D%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22358.5%22%20y%3D%22-119.3%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Eclass%20%3D%20%E9%9B%AA%E8%8E%89%3C%2Ftext%3E%0A%3C%2Fg%3E%0A%3C!--%206%26%2345%3B%26gt%3B7%20--%3E%0A%3Cg%20id%3D%22edge7%22%20class%3D%22edge%22%3E%0A%3Ctitle%3E6%26%2345%3B%26gt%3B7%3C%2Ftitle%3E%0A%3Cpath%20fill%3D%22none%22%20stroke%3D%22black%22%20d%3D%22M360.46%2C-222.91C360.18%2C-212.2%20359.89%2C-200.62%20359.61%2C-189.78%22%2F%3E%0A%3Cpolygon%20fill%3D%22black%22%20stroke%3D%22black%22%20points%3D%22363.11%2C-189.57%20359.35%2C-179.67%20356.11%2C-189.75%20363.11%2C-189.57%22%2F%3E%0A%3C%2Fg%3E%0A%3C!--%208%20--%3E%0A%3Cg%20id%3D%22node9%22%20class%3D%22node%22%3E%0A%3Ctitle%3E8%3C%2Ftitle%3E%0A%3Cpath%20fill%3D%22%23e58139%22%20stroke%3D%22black%22%20d%3D%22M546%2C-179.5C546%2C-179.5%20449%2C-179.5%20449%2C-179.5%20443%2C-179.5%20437%2C-173.5%20437%2C-167.5%20437%2C-167.5%20437%2C-123.5%20437%2C-123.5%20437%2C-117.5%20443%2C-111.5%20449%2C-111.5%20449%2C-111.5%20546%2C-111.5%20546%2C-111.5%20552%2C-111.5%20558%2C-117.5%20558%2C-123.5%20558%2C-123.5%20558%2C-167.5%20558%2C-167.5%20558%2C-173.5%20552%2C-179.5%20546%2C-179.5%22%2F%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22497.5%22%20y%3D%22-164.3%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Eentropy%20%3D%200.0%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22497.5%22%20y%3D%22-149.3%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Esamples%20%3D%2041%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22497.5%22%20y%3D%22-134.3%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Evalue%20%3D%20%5B41%2C%200%2C%200%5D%3C%2Ftext%3E%0A%3Ctext%20text-anchor%3D%22middle%22%20x%3D%22497.5%22%20y%3D%22-119.3%22%20font-family%3D%22Helvetica%2Csans-Serif%22%20font-size%3D%2214.00%22%3Eclass%20%3D%20%E7%90%B4%E9%85%92%3C%2Ftext%3E%0A%3C%2Fg%3E%0A%3C!--%206%26%2345%3B%26gt%3B8%20--%3E%0A%3Cg%20id%3D%22edge8%22%20class%3D%22edge%22%3E%0A%3Ctitle%3E6%26%2345%3B%26gt%3B8%3C%2Ftitle%3E%0A%3Cpath%20fill%3D%22none%22%20stroke%3D%22black%22%20d%3D%22M408.68%2C-222.91C422.41%2C-211.1%20437.39%2C-198.22%20451.06%2C-186.45%22%2F%3E%0A%3Cpolygon%20fill%3D%22black%22%20stroke%3D%22black%22%20points%3D%22453.65%2C-188.84%20458.95%2C-179.67%20449.08%2C-183.54%20453.65%2C-188.84%22%2F%3E%0A%3C%2Fg%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A" />
+<h2 id="探索-决策树的应用">探索 决策树的应用</h2>
+<h3 id="减枝参数">减枝参数</h3>
+<p>在不加限制的情况下，一棵决策树会生长到衡量不纯度的指标最优，或者没有更多的特征可用为止。这样的决策树 往往会过拟合，这就是说，它会在训练集上表现很好，在测试集上却表现糟糕。我们收集的样本数据不可能和整体 的状况完全一致，因此当一棵决策树对训练数据有了过于优秀的解释性，它找出的规则必然包含了训练样本中的噪 声，并使它对未知数据的拟合程度不足。 正确的减枝是决策树的核心</p>
+<ul>
+<li>max_depth  限制树高度</li>
+<li>max_features</li>
+<li>min_samples</li>
+</ul>
+<p>无论如何，剪枝参数的默认值会让树无尽地生长，这些树在某些数据集上可能非常巨大，对内存的消耗。所以如果 你手中的数据集非常大，你已经预测到无论如何你都是要剪枝的，那提前设定这些参数来控制树的复杂性和大小会 比较好。</p>
+<p>我们可以 循环参数树的深度，然后把图都绘制出来，然后直观的选择 精度最大的一个深度</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span></span><span class="line"><span class="cl"><span class="n">test</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">clf</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">criterion</span><span class="o">=</span><span class="s2">&#34;entropy&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">30</span>
+</span></span><span class="line"><span class="cl">    <span class="p">,</span><span class="n">splitter</span><span class="o">=</span><span class="s2">&#34;random&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">clf</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Xtrain</span><span class="p">,</span> <span class="n">Ytrain</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">score</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">Xtest</span><span class="p">,</span> <span class="n">Ytest</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">test</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">),</span><span class="n">test</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&#34;red&#34;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&#34;max_depth&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="随机森林">随机森林</h2>
+<p>随机森林就是通过集成学习的Bagging思想将多棵树集成的一种算法：它的基本单元就是决策树。随机森林的名称中有两个关键词，一个是“随机”，一个就是“森林”。“森林”很好理解，一棵叫做树，那么成百上千棵就可以叫做森林了，其实这也是随机森林的主要思想&ndash;集成思想的体现。“随机”的含义我们会在下面讲到。</p>
+<p>我们要将一个输入样本进行分类，就需要将它输入到每棵树中进行分类。将若干个弱分类器的分类结果进行投票选择，从而组成一个强分类器，这就是随机森林bagging的思想：</p>
+<p><img src="https://pic3.zhimg.com/80/v2-ebf786a437ecd858e745210b0ddddffe_720w.webp" alt="https://pic3.zhimg.com/80/v2-ebf786a437ecd858e745210b0ddddffe_720w.webp"></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">lyr</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2022-05-11
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/code/tags/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">逻辑回归</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BA/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BAmlp/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">多层感知机MLP</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/knn%E7%AE%97%E6%B3%95/">
+            <span class="next-text nav-default">KNN算法</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+        </div>
+        <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '2022-11-12 22:11:17 \u002b0800 \u002b0800',
+        title: '决策树',
+        clientID: '604ae0a4eff099135503',
+        clientSecret: '403ff7c3a3ff6a91d905110c91eb1651219b7233',
+        repo: 'lyr-2000.github.io',
+        owner: 'lyr-2000',
+        admin: ['lyr-2000'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:lyr-2000@qq.com" class="iconfont icon-email" title="email"></a>
+  <a href="https://lyr-2000.github.io/code/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2021-09-23 - 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>LYR</span>
+  </span>
+</div>
+
+
+
+<script 
+ 
+    src="https://cdn.jsdelivr.net/gh/lyr-2000/live2d-widget@latest/autoload.js"></script>
+
+
+
+
+
+
+
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/code/js/main.min.6d2c4f127d59e1dce56e2845adf7d359011b86d8fc907e98877eb35bd445b2b3.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        tags: 'ams',
+        },
+	  options: {
+		ignoreHtmlClass:'mathjax_ignore',
+	  }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+<script src="/js/back_btn.js"></script>
+<script src="/js/docsearch.min.js"></script>
+<script src="/js/lazyload.min.js"></script>
+<script src="/js/x-plugin.js"></script>
+<script defer="defer" async>
+ 
+  window.addEventListener('load',function() {
+  
+	docsearch({
+		apiKey: "a3054d64a9a7bbdef3c0601fee941703",
+		indexName: "blog-code-pratice",
+		appId: "MVN1L6O934",
+		inputSelector: '.docsearch-input',
+		debug: false,
+    });
+    docsearch({
+	 apiKey: "a3054d64a9a7bbdef3c0601fee941703",
+	 indexName: "blog-code-pratice",
+	 appId: "MVN1L6O934",
+	 inputSelector: '.mob-docsearch-input',
+	 debug: false,
+    });
+  });
+ 
+</script>
+  
+ 
+  <div id="BR_cornner">
+    <div id='darkThemeBtn'>T</div> 
+  </div> 
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
+<script defer async>
+
+  mermaid.initialize({startOnLoad:true});
+</script>
+</body>
+</html>

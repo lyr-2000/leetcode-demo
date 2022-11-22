@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.105.0 with theme even" />
+<meta name="generator" content="Hugo 0.106.0 with theme even" />
 
 
 <link rel="canonical" href="https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E4%BB%8B%E7%BB%8D/" />
@@ -52,7 +52,7 @@
 <meta itemprop="name" content="机器学习算法介绍">
 <meta itemprop="description" content="机器学习算法介绍 传统的算法是，给定一函数 $y = 1000 * 1.1^x$ 输入 x,就出各种y 机器学习这是，输入 x,y ,自动求出 $f(x)$ 的表达式 机器学习的应用场景： 数据挖掘 计算"><meta itemprop="datePublished" content="2022-10-29T16:31:12+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
-<meta itemprop="wordCount" content="269"><meta itemprop="image" content="https://tva3.sinaimg.cn/large/9bd9b167gy1fwrthzjtvfj21hc0u0e0s.jpg">
+<meta itemprop="wordCount" content="511"><meta itemprop="image" content="https://tva3.sinaimg.cn/large/9bd9b167gy1fwrthzjtvfj21hc0u0e0s.jpg">
 <meta itemprop="keywords" content="机器学习," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://tva3.sinaimg.cn/large/9bd9b167gy1fwrthzjtvfj21hc0u0e0s.jpg"/>
 
@@ -196,8 +196,8 @@ input.PC_MARK1:focus{
         <div class="post-category">
             <a href="/code/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"> 机器学习 </a>
             </div>
-          <span class="more-meta"> 约 269 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+          <span class="more-meta"> 约 511 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -211,6 +211,7 @@ input.PC_MARK1:focus{
       <ul>
         <li><a href="#机器学习算法介绍">机器学习算法介绍</a></li>
         <li><a href="#机器学习类别">机器学习类别</a></li>
+        <li><a href="#环境搭建">环境搭建</a></li>
       </ul>
     </li>
   </ul>
@@ -246,6 +247,33 @@ input.PC_MARK1:focus{
 <p>线性回归：
 $距离=速度*t + s_0$</p>
 <p>线性回归其实属于机器学习里面的监督学习</p>
+<h2 id="环境搭建">环境搭建</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 更新 python</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">conda  update python 
+</span></span><span class="line"><span class="cl">conda update pandas 
+</span></span><span class="line"><span class="cl">conda update numpy
+</span></span><span class="line"><span class="cl">conda update scikit-learn
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 一次性更新--时间比较长</span>
+</span></span><span class="line"><span class="cl">conda update --all
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>很多时候 如果能使用 conda 就不使用 pip , pip安装一部分库的时候可能 会出现异常，原因是pip默认下载的一部分库的版本（如SciPy）可能只适用于linux系统，而Anaconda的安装一般不 会有这个问题</p>
+<p>由Anaconda安装的库在使用pip卸载或是更新的时候，可能 出现无法卸载干净，无法正常更新，或更新后一部分库变得无法运行的情况。安装过程中任何的报错，都可以通过卸 载重装来解决问题，这是最有效率的方式</p>
 
     </div>
 
