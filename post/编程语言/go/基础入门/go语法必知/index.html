@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.118.2 with theme even" />
+<meta name="generator" content="Hugo 0.121.1 with theme even" />
 
 
 <link rel="canonical" href="https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/go/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/go%E8%AF%AD%E6%B3%95%E5%BF%85%E7%9F%A5/" />
@@ -48,14 +48,13 @@
 <meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/go/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/go%E8%AF%AD%E6%B3%95%E5%BF%85%E7%9F%A5/" /><meta property="og:image" content="https://tva2.sinaimg.cn/large/9bd9b167ly1g2qmjashi6j21hc0u0u0x.jpg" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-11-23T00:13:07+08:00" />
 <meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
+
 <meta itemprop="name" content="go语法必知">
 <meta itemprop="description" content="go语法坑总结 闭包延时绑定 闭包里面使用闭包外的参数，其值最终调用时候确定下来的。 闭包很强大，但是要小心延时绑定, 一般 可以在代码块前面 重新定义"><meta itemprop="datePublished" content="2022-11-23T00:13:07+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
-<meta itemprop="wordCount" content="109"><meta itemprop="image" content="https://tva2.sinaimg.cn/large/9bd9b167ly1g2qmjashi6j21hc0u0u0x.jpg">
-<meta itemprop="keywords" content="基础入门," /><meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://tva2.sinaimg.cn/large/9bd9b167ly1g2qmjashi6j21hc0u0u0x.jpg"/>
-
-<meta name="twitter:title" content="go语法必知"/>
+<meta itemprop="wordCount" content="109"><meta itemprop="image" content="https://tva2.sinaimg.cn/large/9bd9b167ly1g2qmjashi6j21hc0u0u0x.jpg" />
+<meta itemprop="keywords" content="基础入门," /><meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://tva2.sinaimg.cn/large/9bd9b167ly1g2qmjashi6j21hc0u0u0x.jpg" /><meta name="twitter:title" content="go语法必知"/>
 <meta name="twitter:description" content="go语法坑总结 闭包延时绑定 闭包里面使用闭包外的参数，其值最终调用时候确定下来的。 闭包很强大，但是要小心延时绑定, 一般 可以在代码块前面 重新定义"/>
 
 <!--[if lte IE 9]>

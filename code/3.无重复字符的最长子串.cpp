@@ -1,3 +1,7 @@
+#include<iostream>
+#include<string>
+#include<unordered_map>
+using namespace std;
 /*
  * @lc app=leetcode.cn id=3 lang=cpp
  *
@@ -34,3 +38,10 @@ public:
 };
 // @lc code=end
 
+
+int main() {
+    Solution  s;
+    auto ans = s.lengthOfLongestSubstring("hello_worldk");
+    cout << ans << endl;
+    cout << "Return: 3." << endl;
+}

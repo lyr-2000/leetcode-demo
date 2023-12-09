@@ -7,15 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Sat, 11 Jun 2022 13:18:42 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/categories/%E5%8D%9A%E5%BC%88%E9%97%AE%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Jun 2022 13:18:42 +0800</lastBuildDate>
+    <atom:link href="https://lyr-2000.github.io/code/categories/%E5%8D%9A%E5%BC%88%E9%97%AE%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>877.石子游戏</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/%E5%8D%9A%E5%BC%88%E9%97%AE%E9%A2%98/877.%E7%9F%B3%E5%AD%90%E6%B8%B8%E6%88%8F/</link>
       <pubDate>Sat, 11 Jun 2022 13:18:42 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/%E5%8D%9A%E5%BC%88%E9%97%AE%E9%A2%98/877.%E7%9F%B3%E5%AD%90%E6%B8%B8%E6%88%8F/</guid>
       <description>石子游戏 1 Alice 和 Bob 用几堆石子在做游戏。一共有偶数堆石子，排成一行；每堆都有 正 整数颗石子，数目为 piles[i] 。 游戏以谁手中的石子最多来决出胜负。石子的 总数</description>
     </item>
-    
   </channel>
 </rss>

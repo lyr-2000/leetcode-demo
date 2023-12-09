@@ -7,24 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Wed, 18 May 2022 00:25:33 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 May 2022 00:25:33 +0800</lastBuildDate>
+    <atom:link href="https://lyr-2000.github.io/code/tags/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>学习网站</title>
       <link>https://lyr-2000.github.io/code/post/notes/%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/</link>
       <pubDate>Wed, 18 May 2022 00:25:33 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/notes/%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/</guid>
       <description>学习网站收集 学前端 学前端2</description>
     </item>
-    
     <item>
       <title>vscode代码模板功能</title>
       <link>https://lyr-2000.github.io/code/post/notes/vscode%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF%E5%8A%9F%E8%83%BD/</link>
       <pubDate>Wed, 11 May 2022 23:28:48 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/notes/vscode%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF%E5%8A%9F%E8%83%BD/</guid>
       <description>vscode代码模板功能 ​ 代码片段快捷键 学算法记录 labuladong网站 markdown nice 网站 可以美化代码 中文文档排版指南 参考文章 https://www.bilibili.com/video/BV1no4y1k7YT/?spm_id_from=333.788.recommend_more_video.-1</description>
     </item>
-    
   </channel>
 </rss>

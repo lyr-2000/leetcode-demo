@@ -7,240 +7,189 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Wed, 11 May 2022 20:02:48 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 May 2022 20:02:48 +0800</lastBuildDate>
+    <atom:link href="https://lyr-2000.github.io/code/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>go语法必知</title>
       <link>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/go/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/go%E8%AF%AD%E6%B3%95%E5%BF%85%E7%9F%A5/</link>
       <pubDate>Wed, 23 Nov 2022 00:13:07 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/go/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/go%E8%AF%AD%E6%B3%95%E5%BF%85%E7%9F%A5/</guid>
       <description>go语法坑总结 闭包延时绑定 闭包里面使用闭包外的参数，其值最终调用时候确定下来的。 闭包很强大，但是要小心延时绑定, 一般 可以在代码块前面 重新定义</description>
     </item>
-    
     <item>
       <title>lc.35.搜索插入位置</title>
       <link>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/go/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/lc.35.%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/</link>
       <pubDate>Tue, 22 Nov 2022 23:39:47 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/go/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/lc.35.%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/</guid>
       <description>35. 搜索插入位置 Description Difficulty: 简单 Related Topics: 数组, 二分查找 给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会</description>
     </item>
-    
     <item>
       <title>lc.1.两数之和</title>
       <link>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/go/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/lc.1.%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</link>
       <pubDate>Tue, 22 Nov 2022 22:49:43 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/go/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/lc.1.%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</guid>
       <description>1. 两数之和 Description Difficulty: 简单 Related Topics: 数组, 哈希表 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那 两个 整数，并返回它们的数</description>
     </item>
-    
     <item>
       <title>多层感知机MLP</title>
       <link>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BA/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BAmlp/</link>
       <pubDate>Sun, 13 Nov 2022 15:42:19 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BA/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BAmlp/</guid>
       <description>多层感知机 MLP 多层感知机（MLP，Multilayer Perceptron）也叫人工神经网络（ANN，Artificial Neural Network），</description>
     </item>
-    
     <item>
       <title>决策树</title>
       <link>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/%E5%86%B3%E7%AD%96%E6%A0%91/</link>
       <pubDate>Sat, 12 Nov 2022 22:11:17 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/%E5%86%B3%E7%AD%96%E6%A0%91/</guid>
       <description>决策树 和 逻辑回归 任务： 根据用户的学习动力，能力提升意愿，兴趣度 判断是否适合学习本门课程, 通过多层判断，从训练集归纳出一组分类规则 $w=w1动</description>
     </item>
-    
     <item>
       <title>KNN算法</title>
       <link>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/knn%E7%AE%97%E6%B3%95/</link>
       <pubDate>Sun, 06 Nov 2022 23:37:48 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/knn%E7%AE%97%E6%B3%95/</guid>
       <description>KNN 算法 K近邻算法 思路简单 数学知识少 效果好 KNN算法缺点 算法存储了所有训练数据，所以对内存要求较高 预测时间可能较长 对不相关的功能和数据规模敏感</description>
     </item>
-    
     <item>
       <title>聚类基础</title>
       <link>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%81%9A%E7%B1%BB/%E8%81%9A%E7%B1%BB%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Sun, 06 Nov 2022 16:09:39 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E8%81%9A%E7%B1%BB/%E8%81%9A%E7%B1%BB%E5%9F%BA%E7%A1%80/</guid>
       <description>非监督式学习 Kmeans, KNN, Kmean-shift 算法 其中KNN 是监督式学习 非监督式学习没有对和错，只是寻找数据的共同点</description>
     </item>
-    
     <item>
       <title>numpy详细用法</title>
       <link>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python%E8%AF%AD%E6%B3%95/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/numpy%E8%AF%A6%E7%BB%86%E7%94%A8%E6%B3%95/</link>
       <pubDate>Sun, 30 Oct 2022 18:12:46 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python%E8%AF%AD%E6%B3%95/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/numpy%E8%AF%A6%E7%BB%86%E7%94%A8%E6%B3%95/</guid>
       <description>numpy 详细使用方法 numpy 创建数组 1 2 3 4 5 6 7 8 9 10 11 12 import numpy as np np.__version__ L = [i for i in range (10)] print(L) ll = np.array([i for i in range (10)]) print(ll) print(ll.dtype) 属性 描述 dtype 数组类型 dtype 数组类型 numpy 方法使用 方法 总</description>
     </item>
-    
     <item>
       <title>逻辑回归实战准备</title>
       <link>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E5%AE%9E%E6%88%98%E5%87%86%E5%A4%87/</link>
       <pubDate>Sun, 30 Oct 2022 16:37:11 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E5%AE%9E%E6%88%98%E5%87%86%E5%A4%87/</guid>
       <description>逻辑回归实战 分类散点图可视化 逻辑回归模型使用 建立新书籍 模型评估 分类散点图可视化 1 2 3 4 5 6 7 8 9 # 未区分类别散点图 plt.scatter(x1,x2) #区分类别散点图 mask = y==1 type1</description>
     </item>
-    
     <item>
       <title>逻辑回归模型</title>
       <link>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B/</link>
       <pubDate>Sun, 30 Oct 2022 15:35:07 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B/</guid>
       <description>逻辑回归模型 由于逻辑回归模型简单，可解释强，易实现，广泛应用于机器学习、深度学习、推荐系统、广告预估、智能营销、金融风控、社会学、生物学、经</description>
     </item>
-    
     <item>
       <title>多因子房价预测</title>
       <link>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/%E5%A4%9A%E5%9B%A0%E5%AD%90%E6%88%BF%E4%BB%B7%E9%A2%84%E6%B5%8B/</link>
       <pubDate>Sat, 29 Oct 2022 21:20:06 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/%E5%A4%9A%E5%9B%A0%E5%AD%90%E6%88%BF%E4%BB%B7%E9%A2%84%E6%B5%8B/</guid>
       <description>多因子房价预测 我们要建立一个模型，去预测未来的房价 以面积为输入变量，建立单子模型，评估模型表现，可视化线性回归预测结果 以income,hou</description>
     </item>
-    
     <item>
       <title>监督学习-回归分析</title>
       <link>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/</link>
       <pubDate>Sat, 29 Oct 2022 17:15:11 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/</guid>
       <description>回归分析 一元回归 y = f(x) 多元回归 $y = f(x1,x2,x3,x4&amp;hellip;,xn) $ 线性回归 $y=ax+b$ 非线性回归 $y=ax^2+bx $ 过程： $P = f(A)$ 确定 P、A的定量关系 scikit-learn 框架介绍 python 中的开源框架，针对机器学习发展起来</description>
     </item>
-    
     <item>
       <title>机器学习算法介绍</title>
       <link>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E4%BB%8B%E7%BB%8D/</link>
       <pubDate>Sat, 29 Oct 2022 16:31:12 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E4%BB%8B%E7%BB%8D/</guid>
       <description>机器学习算法介绍 传统的算法是，给定一函数 $y = 1000 * 1.1^x$ 输入 x,就出各种y 机器学习这是，输入 x,y ,自动求出 $f(x)$ 的表达式 机器学习的应用场景： 数据挖掘 计算</description>
     </item>
-    
     <item>
       <title>机器学习</title>
       <link>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python%E8%AF%AD%E6%B3%95/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Sat, 29 Oct 2022 14:28:30 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python%E8%AF%AD%E6%B3%95/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
       <description>numpy 学习 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 import numpy as np # 生成 对角线矩阵 a = np.eye(5) b = np.ones([5,5]) # 5 行5列的 矩阵 &amp;#34;&amp;#34;&amp;#34; [[1. 0. 0. 0. 0.] [0. 1. 0. 0. 0.] [0. 0. 1. 0. 0.] [0. 0. 0. 1.</description>
     </item>
-    
     <item>
       <title>shell基础</title>
       <link>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/shell/shell%E5%9F%BA%E6%9C%AC/</link>
       <pubDate>Sun, 02 Oct 2022 16:09:35 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/shell/shell%E5%9F%BA%E6%9C%AC/</guid>
       <description>帮住命令 man命令，manual缩写， man ls , man 7 man , 通过 man 命令获得man 的帮主 help ， 命令解释器自带的叫做内部命令，其他为外部命令 info 命令， info 比 help</description>
     </item>
-    
     <item>
       <title>git操作杂记</title>
       <link>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/git%E6%93%8D%E4%BD%9C%E6%9D%82%E8%AE%B0/git%E6%93%8D%E4%BD%9C%E6%9D%82%E8%AE%B0/</link>
       <pubDate>Sun, 02 Oct 2022 09:26:17 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/git%E6%93%8D%E4%BD%9C%E6%9D%82%E8%AE%B0/git%E6%93%8D%E4%BD%9C%E6%9D%82%E8%AE%B0/</guid>
       <description>git 操作杂记 git config git config 的三个作用域 1 2 3 4 5 6 7 8 9 git config --local # 某个仓库 git config --global # 当前用户所有仓库 git config --system # 是对系统所有登录用户 git config --list --global 删除不需要的分支</description>
     </item>
-    
     <item>
       <title>vim其他用法</title>
       <link>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/vim%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95/vim%E5%85%B6%E4%BB%96%E7%94%A8%E6%B3%95/</link>
       <pubDate>Sun, 25 Sep 2022 22:27:08 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/vim%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95/vim%E5%85%B6%E4%BB%96%E7%94%A8%E6%B3%95/</guid>
       <description>vim 其他需要了解的用法 text Object 高效编辑 word w iw ,inner word aw , arround word paragraph ip,inner paragraph is ,inner sentence vim sourround 插件 快速单引号改双引号 或者 括号等操作 ysiw + 符号， 单词添加上 对应符号 cs +符号1</description>
     </item>
-    
     <item>
       <title>项目开发相关</title>
       <link>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/go/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/</link>
       <pubDate>Mon, 19 Sep 2022 19:46:11 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/go/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3/</guid>
       <description>项目开发 shell 的2种工作模式 交换模式 非交互模式 1 /bin/bash -c &amp;#34;ls -l&amp;#34; 涉及到的系统调用 pipe() : 创建2个文件描述符 fd[0] 可读，fd[1]可写 fork() : 创建子进程， fd[1]继</description>
     </item>
-    
     <item>
       <title>并发原语</title>
       <link>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/go/sync/%E5%B9%B6%E5%8F%91%E5%8E%9F%E8%AF%AD/</link>
       <pubDate>Thu, 04 Aug 2022 22:10:35 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/go/sync/%E5%B9%B6%E5%8F%91%E5%8E%9F%E8%AF%AD/</guid>
       <description>atomic.Value 参考 参考博客 Go的sync/atomic包提供了原子操作，支持的数据类型包括： int32, int64, uint32, uint64, uintptr, unsafe.Pointer 1 若需要扩大原子操作的适用范围，可以使用atom</description>
     </item>
-    
     <item>
       <title>开发环境安装</title>
       <link>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/rust/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</link>
       <pubDate>Mon, 01 Aug 2022 22:47:47 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/rust/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</guid>
       <description>安装 rust 无论使用何种系统, 均可以根据 Rust 官方网站提供的 rustup-init 工具完成 Rust 的安装. rustup-init 下载地址: https://www.rust-lang.org/zh-CN/tools/install. 网站会自动识别你的操作系统并给出提示, 遵循网站提示一步一</description>
     </item>
-    
     <item>
       <title>基本数据类型</title>
       <link>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/rust/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link>
       <pubDate>Mon, 01 Aug 2022 22:45:16 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/rust/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid>
       <description>rust介绍 rust 能做什么？ 区块链 系统层面 编译器虚拟机 rust 基本数据类型学习 复合类型 元组 1 2 3 4 5 6 7 8 fn main() { let a :i32 = 10; let b:char = &amp;#39;A&amp;#39;; let tuple = (a,b); println!(&amp;#34;key{},value={}&amp;#34;,tuple.0,tuple.1); } 定义数组</description>
     </item>
-    
     <item>
       <title>yield生成器</title>
       <link>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python%E8%AF%AD%E6%B3%95/yield%E7%94%9F%E6%88%90%E5%99%A8/</link>
       <pubDate>Wed, 18 May 2022 11:40:28 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python%E8%AF%AD%E6%B3%95/yield%E7%94%9F%E6%88%90%E5%99%A8/</guid>
       <description>yield 生成器语法 1 2 3 4 5 6 7 8 9 10 def fab(max): n, a, b = 0, 0, 1 while n &amp;lt; max: yield b # 使用 yield # print b a, b = b, a + b n = n + 1 for n in fab(5): print n 通过这个 yield ,我们就不需要在 while</description>
     </item>
-    
     <item>
       <title>学习网站</title>
       <link>https://lyr-2000.github.io/code/post/notes/%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/</link>
       <pubDate>Wed, 18 May 2022 00:25:33 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/notes/%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/</guid>
       <description>学习网站收集 学前端 学前端2</description>
     </item>
-    
     <item>
       <title>函数</title>
       <link>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python%E8%AF%AD%E6%B3%95/%E5%87%BD%E6%95%B0/</link>
       <pubDate>Wed, 18 May 2022 00:24:40 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python%E8%AF%AD%E6%B3%95/%E5%87%BD%E6%95%B0/</guid>
       <description>函数定义 参考学习教程 脚本中函数定义要放在函数调用之前，因为这是解释型语言 1 2 3 4 def say(); print(&amp;#34;hello world&amp;#34;) say() # say调用放在定义之后 注释 名字 描述 单行注释 #, 注意</description>
     </item>
-    
     <item>
       <title>vscode代码模板功能</title>
       <link>https://lyr-2000.github.io/code/post/notes/vscode%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF%E5%8A%9F%E8%83%BD/</link>
       <pubDate>Wed, 11 May 2022 23:28:48 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/notes/vscode%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF%E5%8A%9F%E8%83%BD/</guid>
       <description>vscode代码模板功能 ​ 代码片段快捷键 学算法记录 labuladong网站 markdown nice 网站 可以美化代码 中文文档排版指南 参考文章 https://www.bilibili.com/video/BV1no4y1k7YT/?spm_id_from=333.788.recommend_more_video.-1</description>
     </item>
-    
     <item>
       <title>准备工作</title>
       <link>https://lyr-2000.github.io/code/post/docs/%E5%B8%B8%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</link>
       <pubDate>Wed, 11 May 2022 20:02:48 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/docs/%E5%B8%B8%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</guid>
       <description>shell 文档网站 awk 使用教程</description>
     </item>
-    
   </channel>
 </rss>

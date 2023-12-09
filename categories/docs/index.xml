@@ -7,33 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Wed, 11 May 2022 20:02:48 +0800</lastBuildDate><atom:link href="https://lyr-2000.github.io/code/categories/docs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 May 2022 20:02:48 +0800</lastBuildDate>
+    <atom:link href="https://lyr-2000.github.io/code/categories/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>准备工作</title>
       <link>https://lyr-2000.github.io/code/</link>
       <pubDate>Wed, 11 May 2022 20:02:48 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>准备工作</title>
       <link>https://lyr-2000.github.io/code/post/</link>
       <pubDate>Wed, 11 May 2022 20:02:48 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>准备工作</title>
       <link>https://lyr-2000.github.io/code/post/docs/%E5%B8%B8%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</link>
       <pubDate>Wed, 11 May 2022 20:02:48 +0800</pubDate>
-      
       <guid>https://lyr-2000.github.io/code/post/docs/%E5%B8%B8%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</guid>
       <description>shell 文档网站 awk 使用教程</description>
     </item>
-    
   </channel>
 </rss>
