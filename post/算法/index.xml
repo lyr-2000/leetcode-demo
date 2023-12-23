@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Fri, 22 Dec 2023 23:29:34 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 23 Dec 2023 18:58:05 +0800</lastBuildDate>
     <atom:link href="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lc.864.获取所有钥匙最短路径</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/lc.864.%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E9%92%A5%E5%8C%99%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/</link>
+      <pubDate>Sat, 23 Dec 2023 18:58:05 +0800</pubDate>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/lc.864.%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E9%92%A5%E5%8C%99%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/</guid>
+      <description>@lc app=leetcode.cn id=864 lang=cpp * [864] 获取所有钥匙的最短路径 * https://leetcode.cn/problems/shortest-path-to-get-all-keys/description/ * algorithms Hard (59.25%) Likes: 275 Dislikes: 0 Total Accepted: 21.7K Total Submissions: 36.7K Testcase Example: &amp;lsquo;[&amp;quot;@.a..&amp;quot;,&amp;quot;###.#&amp;quot;,&amp;ldquo;b.A.B&amp;rdquo;]&amp;rsquo; * 给定一个二维网格 grid ，其中： &amp;lsquo;.&amp;rsquo; 代表一个空房间 &amp;lsquo;#&amp;rsquo; 代表一堵墙 &amp;lsquo;@&amp;rsquo; 是起点 小写</description>
+    </item>
     <item>
       <title>421.数组中两个数最大异或值</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BD%8D%E8%BF%90%E7%AE%97/421.%E6%95%B0%E7%BB%84%E4%B8%AD%E4%B8%A4%E4%B8%AA%E6%95%B0%E6%9C%80%E5%A4%A7%E5%BC%82%E6%88%96%E5%80%BC/</link>
