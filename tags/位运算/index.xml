@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Tue, 19 Dec 2023 23:53:43 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 24 Dec 2023 13:58:23 +0800</lastBuildDate>
     <atom:link href="https://lyr-2000.github.io/code/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1.位运算通用算法总结</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BD%8D%E8%BF%90%E7%AE%97/1.%E4%BD%8D%E8%BF%90%E7%AE%97%E9%80%9A%E7%94%A8%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sun, 24 Dec 2023 13:58:23 +0800</pubDate>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BD%8D%E8%BF%90%E7%AE%97/1.%E4%BD%8D%E8%BF%90%E7%AE%97%E9%80%9A%E7%94%A8%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/</guid>
+      <description>位运算通用算法</description>
+    </item>
     <item>
       <title>421.数组中两个数最大异或值</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BD%8D%E8%BF%90%E7%AE%97/421.%E6%95%B0%E7%BB%84%E4%B8%AD%E4%B8%A4%E4%B8%AA%E6%95%B0%E6%9C%80%E5%A4%A7%E5%BC%82%E6%88%96%E5%80%BC/</link>

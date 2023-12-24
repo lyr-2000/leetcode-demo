@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>凌冬的代码博客站</title>
+  <title>1.位运算通用算法总结 - 凌冬的代码博客站</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="lyr" /><meta name="description" content="凌冬的博客" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
+<meta name="author" content="lyr" /><meta name="description" content="位运算通用算法" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
 
 
 
@@ -26,9 +26,7 @@
 <meta name="generator" content="Hugo 0.121.1 with theme even" />
 
 
-<link rel="canonical" href="https://lyr-2000.github.io/code/" />
-  <link href="https://lyr-2000.github.io/code/index.xml" rel="alternate" type="application/rss+xml" title="凌冬的代码博客站" />
-  <link href="https://lyr-2000.github.io/code/index.xml" rel="feed" type="application/rss+xml" title="凌冬的代码博客站" />
+<link rel="canonical" href="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BD%8D%E8%BF%90%E7%AE%97/1.%E4%BD%8D%E8%BF%90%E7%AE%97%E9%80%9A%E7%94%A8%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/code/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/code/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/code/favicon-16x16.png">
@@ -44,15 +42,20 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="准备工作" />
-<meta property="og:description" content="凌冬的博客" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://lyr-2000.github.io/code/" /><meta property="og:image" content="https://tva3.sinaimg.cn/large/0075auPSly1fqb8bsfdysj31hc0tze81.jpg" />
+<meta property="og:title" content="1.位运算通用算法总结" />
+<meta property="og:description" content="位运算通用算法" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BD%8D%E8%BF%90%E7%AE%97/1.%E4%BD%8D%E8%BF%90%E7%AE%97%E9%80%9A%E7%94%A8%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" /><meta property="og:image" content="https://lyr-2000.github.io/code" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-12-24T13:58:23+08:00" />
+<meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
 
-<meta itemprop="name" content="准备工作">
-<meta itemprop="description" content="凌冬的博客"><meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://tva3.sinaimg.cn/large/0075auPSly1fqb8bsfdysj31hc0tze81.jpg" /><meta name="twitter:title" content="准备工作"/>
-<meta name="twitter:description" content="凌冬的博客"/>
+<meta itemprop="name" content="1.位运算通用算法总结">
+<meta itemprop="description" content="位运算通用算法"><meta itemprop="datePublished" content="2023-12-24T13:58:23+08:00" />
+<meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
+<meta itemprop="wordCount" content="7"><meta itemprop="image" content="https://lyr-2000.github.io/code" />
+<meta itemprop="keywords" content="位运算," /><meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://lyr-2000.github.io/code" /><meta name="twitter:title" content="1.位运算通用算法总结"/>
+<meta name="twitter:description" content="位运算通用算法"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -175,202 +178,102 @@ input.PC_MARK1:focus{
 	
 	<div class="customByLyr">
   
-			<img class="lazyload"  draggable="false"  data-original="https://tva3.sinaimg.cn/large/0075auPSly1fqb8bsfdysj31hc0tze81.jpg" />
+			<img class="lazyload"  draggable="false"  data-original="" />
 		</div>
 
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <section id="posts" class="posts">
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%A0%86/347.%E9%AB%98%E9%A2%91%E6%95%B0%E5%AD%97/">347.前k个高频元素</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-06-11 </span>
-      <div class="post-category">
-          <a href="/code/categories/%E5%A0%86/"> 堆 </a>
-          </div>
-        <span class="more-meta"> 约 206 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  <section style="display: flex;">
-	  
-	  <div class="post-content">
-		<div class="post-summary  mathjax_ignore">
-		  给你一个整数数组 nums 和一个整数 k ，请你返回其中出现频率前 k 高的元素。你可以按 任意顺序 返回答案。 示例 1: 输入: nums = [1,1,1,2,2,3], k = 2 输出: [1,2] 示例 2: 输入: nums =
-		</div>
-		<div class="read-more">
-		  <a href="/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%A0%86/347.%E9%AB%98%E9%A2%91%E6%95%B0%E5%AD%97/" class="read-more-link">阅读更多</a>
-		</div>
-	  </div>
-		
-	  
-      
-      
-      
-        <div class="post-content">
-          <img data-original="https://tva2.sinaimg.cn/large/0072Vf1pgy1foxkfnmbgcj31kw0w0qsa.jpg" class="lazyload"  style="max-width: 134px;max-height: 156px;margin-left: 12px;border-radius: 3px;" draggable="false">
-        </div>
-      
-	  
-  </section>
-</article>
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">1.位运算通用算法总结</h1>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%A0%86/23.%E5%90%88%E5%B9%B6%E5%89%8Dk%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8/">23.合并前k个升序链表</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-06-11 </span>
-      <div class="post-category">
-          <a href="/code/categories/%E5%A0%86/"> 堆 </a>
-          </div>
-        <span class="more-meta"> 约 811 字 </span>
-        <span class="more-meta"> 预计阅读 2 分钟 </span>
-    </div>
-  </header>
-  <section style="display: flex;">
-	  
-	  <div class="post-content">
-		<div class="post-summary  mathjax_ignore">
-		  23. 合并K个升序链表 Description Difficulty: 困难 Related Topics: 链表, 分治, 堆（优先队列）, 归并排序 给你一个链表数组，每个链表都已经按升序排列。 请你将所有链表合并到一个升序链
-		</div>
-		<div class="read-more">
-		  <a href="/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%A0%86/23.%E5%90%88%E5%B9%B6%E5%89%8Dk%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8/" class="read-more-link">阅读更多</a>
-		</div>
-	  </div>
-		
-	  
-      
-      
-      
-        <div class="post-content">
-          <img data-original="https://tva4.sinaimg.cn/large/0075auPSly1fqb8fzyx17j31kw14cne7.jpg" class="lazyload"  style="max-width: 134px;max-height: 156px;margin-left: 12px;border-radius: 3px;" draggable="false">
-        </div>
-      
-	  
-  </section>
-</article>
+      <div class="post-meta">
+        <span class="post-time"> 2023-12-24 </span>
+        <div class="post-category">
+            <a href="/code/categories/%E4%BD%8D%E8%BF%90%E7%AE%97/"> 位运算 </a>
+            </div>
+          <span class="more-meta"> 约 7 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python%E8%AF%AD%E6%B3%95/yield%E7%94%9F%E6%88%90%E5%99%A8/">yield生成器</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-05-18 </span>
-      <div class="post-category">
-          <a href="/code/categories/python%E8%AF%AD%E6%B3%95/"> python语法 </a>
-          </div>
-        <span class="more-meta"> 约 214 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  <section style="display: flex;">
-	  
-	  <div class="post-content">
-		<div class="post-summary  mathjax_ignore">
-		  yield 生成器语法 1 2 3 4 5 6 7 8 9 10 def fab(max): n, a, b = 0, 0, 1 while n &lt; max: yield b # 使用 yield # print b a, b = b, a + b n = n + 1 for n in fab(5): print n 通过这个 yield ,我们就不需要在 while
-		</div>
-		<div class="read-more">
-		  <a href="/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python%E8%AF%AD%E6%B3%95/yield%E7%94%9F%E6%88%90%E5%99%A8/" class="read-more-link">阅读更多</a>
-		</div>
-	  </div>
-		
-	  
-      
-      
-      
-        <div class="post-content">
-          <img data-original="https://tva2.sinaimg.cn/large/0072Vf1pgy1fodqo7k1j9j31kw0ws4qq.jpg" class="lazyload"  style="max-width: 134px;max-height: 156px;margin-left: 12px;border-radius: 3px;" draggable="false">
-        </div>
-      
-	  
-  </section>
-</article>
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#位运算通用算法">位运算通用算法</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/code/post/notes/%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/">学习网站</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-05-18 </span>
-      <div class="post-category">
-          <a href="/code/categories/notes/"> notes </a>
-          </div>
-        <span class="more-meta"> 约 13 字 </span>
-        <span class="more-meta"> 预计阅读 1 分钟 </span>
-    </div>
-  </header>
-  <section style="display: flex;">
-	  
-	  <div class="post-content">
-		<div class="post-summary  mathjax_ignore">
-		  学习网站收集 学前端 学前端2
-		</div>
-		<div class="read-more">
-		  <a href="/code/post/notes/%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/" class="read-more-link">阅读更多</a>
-		</div>
-	  </div>
-		
-	  
-      
-      
-      
-        <div class="post-content">
-          <img data-original="https://tva4.sinaimg.cn/large/87c01ec7gy1fri8nr7idlj21hc0u0u0x.jpg" class="lazyload"  style="max-width: 134px;max-height: 156px;margin-left: 12px;border-radius: 3px;" draggable="false">
-        </div>
-      
-	  
-  </section>
-</article>
+    <div class="post-content">
+      <h2 id="位运算通用算法">位运算通用算法</h2>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python%E8%AF%AD%E6%B3%95/%E5%87%BD%E6%95%B0/">函数</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-05-18 </span>
-      <div class="post-category">
-          <a href="/code/categories/python%E8%AF%AD%E6%B3%95/"> python语法 </a>
-          </div>
-        <span class="more-meta"> 约 846 字 </span>
-        <span class="more-meta"> 预计阅读 2 分钟 </span>
     </div>
-  </header>
-  <section style="display: flex;">
-	  
-	  <div class="post-content">
-		<div class="post-summary  mathjax_ignore">
-		  函数定义 参考学习教程 脚本中函数定义要放在函数调用之前，因为这是解释型语言 1 2 3 4 def say(); print(&#34;hello world&#34;) say() # say调用放在定义之后 注释 名字 描述 单行注释 #, 注意
-		</div>
-		<div class="read-more">
-		  <a href="/code/post/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/python%E8%AF%AD%E6%B3%95/%E5%87%BD%E6%95%B0/" class="read-more-link">阅读更多</a>
-		</div>
-	  </div>
-		
-	  
-      
-      
-      
-        <div class="post-content">
-          <img data-original="https://tva3.sinaimg.cn/large/0072Vf1pgy1foxk3zh2jtj31hc0u04i8.jpg" class="lazyload"  style="max-width: 134px;max-height: 156px;margin-left: 12px;border-radius: 3px;" draggable="false">
-        </div>
-      
-	  
-  </section>
-</article>
 
-    </section>
-  
-  <nav class="pagination">
-    <a class="prev" href="/code/page/44/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text">上一页</span>
-      </a>
-    <a class="next" href="/code/page/46/">
-        <span class="next-text">下一页</span>
-        <i class="iconfont icon-right"></i>
-      </a>
-  </nav>
-        </div>
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">lyr</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2022-05-11
         
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/code/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/code/post/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/lc.864.%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E9%92%A5%E5%8C%99%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/">
+            <span class="next-text nav-default">lc.864.获取所有钥匙最短路径</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+        </div>
+        <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '2023-12-24 13:58:23 \u002b0800 \u002b0800',
+        title: '1.位运算通用算法总结',
+        clientID: '604ae0a4eff099135503',
+        clientSecret: '403ff7c3a3ff6a91d905110c91eb1651219b7233',
+        repo: 'lyr-2000.github.io',
+        owner: 'lyr-2000',
+        admin: ['lyr-2000'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+  
+
+  
 
       </div>
     </main>
