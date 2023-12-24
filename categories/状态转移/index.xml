@@ -21,7 +21,7 @@
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/</link>
       <pubDate>Thu, 30 Jun 2022 20:32:51 +0800</pubDate>
       <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/</guid>
-      <description>10. 正则表达式匹配 Description Difficulty: 困难 Related Topics: 递归, 字符串, 动态规划 给你一个字符串 s 和一个字符规律 p，请你来实现一个支持 &#39;.&#39; 和 &#39;*&#39; 的正则表达式匹配。 &#39;.&#39; 匹配任意单个</description>
+      <description>10. 正则表达式匹配 Description Difficulty: 困难 Related Topics: 递归 , 字符串 , 动态规划 给你一个字符串 s 和一个字符规律 p，请你来实现一个支持 &#39;.&#39; 和 &#39;*&#39; 的正则表达式匹配。 &#39;.&#39; 匹配任意单个</description>
     </item>
   </channel>
 </rss>

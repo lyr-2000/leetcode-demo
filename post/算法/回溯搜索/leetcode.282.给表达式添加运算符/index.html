@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="lyr" /><meta name="description" content="282. 给表达式添加运算符 Description Difficulty: 困难 Related Topics: 数学, 字符串, 回溯 给定一个仅包含数字 0-9 的字符串 num 和一个目标值整数 target ，在 num 的数字之间添加 二元 运算符（不是一元）" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
+<meta name="author" content="lyr" /><meta name="description" content="282. 给表达式添加运算符 Description Difficulty: 困难 Related Topics: 数学 , 字符串 , 回溯 给定一个仅包含数字 0-9 的字符串 num 和一个目标值整数 target ，在 num 的数字之间添加 二元 运算符（不是一元）" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
 
 
 
@@ -43,19 +43,19 @@
 
 
 <meta property="og:title" content="leetcode.282.给表达式添加运算符" />
-<meta property="og:description" content="282. 给表达式添加运算符 Description Difficulty: 困难 Related Topics: 数学, 字符串, 回溯 给定一个仅包含数字 0-9 的字符串 num 和一个目标值整数 target ，在 num 的数字之间添加 二元 运算符（不是一元）" />
+<meta property="og:description" content="282. 给表达式添加运算符 Description Difficulty: 困难 Related Topics: 数学 , 字符串 , 回溯 给定一个仅包含数字 0-9 的字符串 num 和一个目标值整数 target ，在 num 的数字之间添加 二元 运算符（不是一元）" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%9B%9E%E6%BA%AF%E6%90%9C%E7%B4%A2/leetcode.282.%E7%BB%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B7%BB%E5%8A%A0%E8%BF%90%E7%AE%97%E7%AC%A6/" /><meta property="og:image" content="https://tva4.sinaimg.cn/large/0076R7yAgy1fptogxizw7j302n01mmx0.jpg" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-06-11T18:24:29+08:00" />
 <meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
 
 <meta itemprop="name" content="leetcode.282.给表达式添加运算符">
-<meta itemprop="description" content="282. 给表达式添加运算符 Description Difficulty: 困难 Related Topics: 数学, 字符串, 回溯 给定一个仅包含数字 0-9 的字符串 num 和一个目标值整数 target ，在 num 的数字之间添加 二元 运算符（不是一元）"><meta itemprop="datePublished" content="2022-06-11T18:24:29+08:00" />
+<meta itemprop="description" content="282. 给表达式添加运算符 Description Difficulty: 困难 Related Topics: 数学 , 字符串 , 回溯 给定一个仅包含数字 0-9 的字符串 num 和一个目标值整数 target ，在 num 的数字之间添加 二元 运算符（不是一元）"><meta itemprop="datePublished" content="2022-06-11T18:24:29+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
 <meta itemprop="wordCount" content="443"><meta itemprop="image" content="https://tva4.sinaimg.cn/large/0076R7yAgy1fptogxizw7j302n01mmx0.jpg" />
 <meta itemprop="keywords" content="回溯搜索," /><meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://tva4.sinaimg.cn/large/0076R7yAgy1fptogxizw7j302n01mmx0.jpg" /><meta name="twitter:title" content="leetcode.282.给表达式添加运算符"/>
-<meta name="twitter:description" content="282. 给表达式添加运算符 Description Difficulty: 困难 Related Topics: 数学, 字符串, 回溯 给定一个仅包含数字 0-9 的字符串 num 和一个目标值整数 target ，在 num 的数字之间添加 二元 运算符（不是一元）"/>
+<meta name="twitter:description" content="282. 给表达式添加运算符 Description Difficulty: 困难 Related Topics: 数学 , 字符串 , 回溯 给定一个仅包含数字 0-9 的字符串 num 和一个目标值整数 target ，在 num 的数字之间添加 二元 运算符（不是一元）"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -217,10 +217,22 @@ input.PC_MARK1:focus{
 </div>
 
     <div class="post-content">
-      <h1 id="282-给表达式添加运算符httpsleetcodecnproblemsexpression-add-operators"><a href="https://leetcode.cn/problems/expression-add-operators/">282. 给表达式添加运算符</a></h1>
+      <h1 id="282-给表达式添加运算符httpsleetcodecnproblemsexpression-add-operators"><a href="https://leetcode.cn/problems/expression-add-operators/" target="_blank" rel="noopener">
+  282. 给表达式添加运算符
+</a>
+</h1>
 <h2 id="description">Description</h2>
 <p>Difficulty: <strong>困难</strong></p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/math/">数学</a>, <a href="https://leetcode.cn/tag/string/">字符串</a>, <a href="https://leetcode.cn/tag/backtracking/">回溯</a></p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/math/" target="_blank" rel="noopener">
+  数学
+</a>
+, <a href="https://leetcode.cn/tag/string/" target="_blank" rel="noopener">
+  字符串
+</a>
+, <a href="https://leetcode.cn/tag/backtracking/" target="_blank" rel="noopener">
+  回溯
+</a>
+</p>
 <p>给定一个仅包含数字 <code>0-9</code> 的字符串 <code>num</code> 和一个目标值整数 <code>target</code> ，在 <code>num</code> 的数字之间添加 <strong>二元</strong> 运算符（不是一元）<code>+</code>、<code>-</code> 或 <code>*</code> ，返回 <strong>所有</strong> 能够得到 <code>target</code> 的表达式。</p>
 <p>注意，返回表达式中的操作数 <strong>不应该</strong> 包含前导零。</p>
 <p><strong>示例 1:</strong></p>

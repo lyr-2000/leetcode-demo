@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="lyr" /><meta name="description" content="56. 合并区间 Description Difficulty: 中等 Related Topics: 数组, 排序 以数组 intervals 表示若干个区间的集合，其中单个区间为 intervals[i] = [starti, endi] 。请你合并所有重叠的区间，并返回 一个不重叠的区间数组，该" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
+<meta name="author" content="lyr" /><meta name="description" content="56. 合并区间 Description Difficulty: 中等 Related Topics: 数组 , 排序 以数组 intervals 表示若干个区间的集合，其中单个区间为 intervals[i] = [starti, endi] 。请你合并所有重叠的区间，并返回 一个不重叠的区间数组，该" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
 
 
 
@@ -43,19 +43,19 @@
 
 
 <meta property="og:title" content="lc.56.合并区间" />
-<meta property="og:description" content="56. 合并区间 Description Difficulty: 中等 Related Topics: 数组, 排序 以数组 intervals 表示若干个区间的集合，其中单个区间为 intervals[i] = [starti, endi] 。请你合并所有重叠的区间，并返回 一个不重叠的区间数组，该" />
+<meta property="og:description" content="56. 合并区间 Description Difficulty: 中等 Related Topics: 数组 , 排序 以数组 intervals 表示若干个区间的集合，其中单个区间为 intervals[i] = [starti, endi] 。请你合并所有重叠的区间，并返回 一个不重叠的区间数组，该" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/lc.56.%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/" /><meta property="og:image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxk3oqnw0j31hc0u0qnm.jpg" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-09-18T18:36:52+08:00" />
 <meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
 
 <meta itemprop="name" content="lc.56.合并区间">
-<meta itemprop="description" content="56. 合并区间 Description Difficulty: 中等 Related Topics: 数组, 排序 以数组 intervals 表示若干个区间的集合，其中单个区间为 intervals[i] = [starti, endi] 。请你合并所有重叠的区间，并返回 一个不重叠的区间数组，该"><meta itemprop="datePublished" content="2022-09-18T18:36:52+08:00" />
+<meta itemprop="description" content="56. 合并区间 Description Difficulty: 中等 Related Topics: 数组 , 排序 以数组 intervals 表示若干个区间的集合，其中单个区间为 intervals[i] = [starti, endi] 。请你合并所有重叠的区间，并返回 一个不重叠的区间数组，该"><meta itemprop="datePublished" content="2022-09-18T18:36:52+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
 <meta itemprop="wordCount" content="370"><meta itemprop="image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxk3oqnw0j31hc0u0qnm.jpg" />
 <meta itemprop="keywords" content="排序," /><meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxk3oqnw0j31hc0u0qnm.jpg" /><meta name="twitter:title" content="lc.56.合并区间"/>
-<meta name="twitter:description" content="56. 合并区间 Description Difficulty: 中等 Related Topics: 数组, 排序 以数组 intervals 表示若干个区间的集合，其中单个区间为 intervals[i] = [starti, endi] 。请你合并所有重叠的区间，并返回 一个不重叠的区间数组，该"/>
+<meta name="twitter:description" content="56. 合并区间 Description Difficulty: 中等 Related Topics: 数组 , 排序 以数组 intervals 表示若干个区间的集合，其中单个区间为 intervals[i] = [starti, endi] 。请你合并所有重叠的区间，并返回 一个不重叠的区间数组，该"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -217,10 +217,19 @@ input.PC_MARK1:focus{
 </div>
 
     <div class="post-content">
-      <h1 id="56-合并区间httpsleetcodecnproblemsmerge-intervals"><a href="https://leetcode.cn/problems/merge-intervals/">56. 合并区间</a></h1>
+      <h1 id="56-合并区间httpsleetcodecnproblemsmerge-intervals"><a href="https://leetcode.cn/problems/merge-intervals/" target="_blank" rel="noopener">
+  56. 合并区间
+</a>
+</h1>
 <h2 id="description">Description</h2>
 <p>Difficulty: <strong>中等</strong></p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/array/">数组</a>, <a href="https://leetcode.cn/tag/sorting/">排序</a></p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/array/" target="_blank" rel="noopener">
+  数组
+</a>
+, <a href="https://leetcode.cn/tag/sorting/" target="_blank" rel="noopener">
+  排序
+</a>
+</p>
 <p>以数组 <code>intervals</code> 表示若干个区间的集合，其中单个区间为 intervals[i] = [start<sub>i</sub>, end<sub>i</sub>] 。请你合并所有重叠的区间，并返回 <em>一个不重叠的区间数组，该数组需恰好覆盖输入中的所有区间</em> 。</p>
 <p><strong>示例 1：</strong></p>
 <div class="highlight"><div class="chroma">

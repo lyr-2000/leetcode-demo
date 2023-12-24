@@ -227,10 +227,19 @@ input.PC_MARK1:focus{
 <li>pre_3 == last_3</li>
 <li>pre_2 == last_2</li>
 </ol>
-<p><img src="https://s2.loli.net/2022/10/09/T5ViQHx7z26wYUy.png" alt="图 1"></p>
-<p><img src="https://s2.loli.net/2022/10/09/TRdsm5ynzeqwlVD.png" alt="图 2"></p>
+<p><p class="md__image">
+  <img src="https://s2.loli.net/2022/10/09/T5ViQHx7z26wYUy.png" alt="图 1"  />
+</p>
+</p>
+<p><p class="md__image">
+  <img src="https://s2.loli.net/2022/10/09/TRdsm5ynzeqwlVD.png" alt="图 2"  />
+</p>
+</p>
 <p>如果不是最长的后缀，就可能错过答案的位置，要保证后缀和前缀最长。</p>
-<p><img src="https://s2.loli.net/2022/10/09/pXj6vxMlFYoPb9U.png" alt="图 3"></p>
+<p><p class="md__image">
+  <img src="https://s2.loli.net/2022/10/09/pXj6vxMlFYoPb9U.png" alt="图 3"  />
+</p>
+</p>
 <p>证明 两个串可以直接匹配：</p>
 <p>$$
 TA == TB\</p>
@@ -243,7 +252,10 @@ TA == SB\</p>
 <p>直接 比较 sb后面黄色的那段就可以了，蓝色的那段不需要重复进行匹配。 黄色的那段位置是 <code>i+j</code></p>
 <p>我们令 母串 S 的黄色位置是 i, 模式T当前匹配位置是 j,
 如果 i,j 不匹配，j就往前跳， i变，j下标变化，往模式串前面跳 $j=next[j]$。</p>
-<p><img src="https://s2.loli.net/2022/10/09/1wUBgO2Mj7EV6Ap.png" alt="图 4"></p>
+<p><p class="md__image">
+  <img src="https://s2.loli.net/2022/10/09/1wUBgO2Mj7EV6Ap.png" alt="图 4"  />
+</p>
+</p>
 <p>$Tb==Sb ==Ta$</p>
 <p>如果 Tb后面和Sb无法匹配，那么就从 Ta开始和 Sb匹配【模式串往前挪动,母串不变。】</p>
 <p>如果相等，就相当于 i,j增长一位，匹配下一位。</p>
@@ -251,7 +263,10 @@ TA == SB\</p>
 <p>如果我们可以预处理出 Ta 和 Tb的信息的话，我们就可以提升字符串匹配的效率。</p>
 <h2 id="kmp-预处理的过程">KMP 预处理的过程</h2>
 <p>kmp预处理的是 <code>j</code> 跳到<code>j'</code> ,<code>j'</code> 跳到 <code>j''</code> 的整个过程。 整个过程我们可以理解为是递归的。</p>
-<p><img src="https://s2.loli.net/2022/10/10/BeZWKxwusUPdH4M.png" alt="图 1"></p>
+<p><p class="md__image">
+  <img src="https://s2.loli.net/2022/10/10/BeZWKxwusUPdH4M.png" alt="图 1"  />
+</p>
+</p>
 <p>首先getNext 是模式串和模式串比较， 如果 模式串 i位置不等于 j位置，j就往前跳。</p>
 <p>如果匹配成功， 说明第 i位可以跳到 第 j+1 位置。</p>
 <div class="highlight"><div class="chroma">

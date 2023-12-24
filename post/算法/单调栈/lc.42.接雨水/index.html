@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="lyr" /><meta name="description" content="42. 接雨水 Description Difficulty: 困难 Related Topics: 栈, 数组, 双指针, 动态规划, 单调栈 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
+<meta name="author" content="lyr" /><meta name="description" content="42. 接雨水 Description Difficulty: 困难 Related Topics: 栈 , 数组 , 双指针 , 动态规划 , 单调栈 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
 
 
 
@@ -43,19 +43,19 @@
 
 
 <meta property="og:title" content="lc.42.接雨水" />
-<meta property="og:description" content="42. 接雨水 Description Difficulty: 困难 Related Topics: 栈, 数组, 双指针, 动态规划, 单调栈 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨" />
+<meta property="og:description" content="42. 接雨水 Description Difficulty: 困难 Related Topics: 栈 , 数组 , 双指针 , 动态规划 , 单调栈 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%8D%95%E8%B0%83%E6%A0%88/lc.42.%E6%8E%A5%E9%9B%A8%E6%B0%B4/" /><meta property="og:image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkezeq4jj31hc0u0qiy.jpg" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-09-29T22:34:24+08:00" />
 <meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
 
 <meta itemprop="name" content="lc.42.接雨水">
-<meta itemprop="description" content="42. 接雨水 Description Difficulty: 困难 Related Topics: 栈, 数组, 双指针, 动态规划, 单调栈 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨"><meta itemprop="datePublished" content="2022-09-29T22:34:24+08:00" />
+<meta itemprop="description" content="42. 接雨水 Description Difficulty: 困难 Related Topics: 栈 , 数组 , 双指针 , 动态规划 , 单调栈 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨"><meta itemprop="datePublished" content="2022-09-29T22:34:24+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
 <meta itemprop="wordCount" content="518"><meta itemprop="image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkezeq4jj31hc0u0qiy.jpg" />
 <meta itemprop="keywords" content="单调栈," /><meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkezeq4jj31hc0u0qiy.jpg" /><meta name="twitter:title" content="lc.42.接雨水"/>
-<meta name="twitter:description" content="42. 接雨水 Description Difficulty: 困难 Related Topics: 栈, 数组, 双指针, 动态规划, 单调栈 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨"/>
+<meta name="twitter:description" content="42. 接雨水 Description Difficulty: 困难 Related Topics: 栈 , 数组 , 双指针 , 动态规划 , 单调栈 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -219,13 +219,34 @@ input.PC_MARK1:focus{
 </div>
 
     <div class="post-content">
-      <h1 id="42-接雨水httpsleetcodecnproblemstrapping-rain-water"><a href="https://leetcode.cn/problems/trapping-rain-water/">42. 接雨水</a></h1>
+      <h1 id="42-接雨水httpsleetcodecnproblemstrapping-rain-water"><a href="https://leetcode.cn/problems/trapping-rain-water/" target="_blank" rel="noopener">
+  42. 接雨水
+</a>
+</h1>
 <h2 id="description">Description</h2>
 <p>Difficulty: <strong>困难</strong></p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/stack/">栈</a>, <a href="https://leetcode.cn/tag/array/">数组</a>, <a href="https://leetcode.cn/tag/two-pointers/">双指针</a>, <a href="https://leetcode.cn/tag/dynamic-programming/">动态规划</a>, <a href="https://leetcode.cn/tag/monotonic-stack/">单调栈</a></p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/stack/" target="_blank" rel="noopener">
+  栈
+</a>
+, <a href="https://leetcode.cn/tag/array/" target="_blank" rel="noopener">
+  数组
+</a>
+, <a href="https://leetcode.cn/tag/two-pointers/" target="_blank" rel="noopener">
+  双指针
+</a>
+, <a href="https://leetcode.cn/tag/dynamic-programming/" target="_blank" rel="noopener">
+  动态规划
+</a>
+, <a href="https://leetcode.cn/tag/monotonic-stack/" target="_blank" rel="noopener">
+  单调栈
+</a>
+</p>
 <p>给定 <code>n</code> 个非负整数表示每个宽度为 <code>1</code> 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。</p>
 <p><strong>示例 1：</strong></p>
-<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rainwatertrap.png" alt=""></p>
+<p><p class="md__image">
+  <img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rainwatertrap.png" alt=""  />
+</p>
+</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -260,8 +281,14 @@ input.PC_MARK1:focus{
 <h2 id="单调栈解法">单调栈解法</h2>
 <p>思路：  v字形结构 ，维护一个单调递减栈，遇到比栈顶高的元素就形成 v字形结构体，
 这种情况就能接住雨水。 然后把这个接住雨水的面积算出来。</p>
-<p><img src="https://s2.loli.net/2022/09/29/Y5T1gmiDtsqrbC2.png" alt="图 2"></p>
-<p><img src="https://s2.loli.net/2022/09/29/pr6gIj7tVNBznvH.png" alt="图 1"></p>
+<p><p class="md__image">
+  <img src="https://s2.loli.net/2022/09/29/Y5T1gmiDtsqrbC2.png" alt="图 2"  />
+</p>
+</p>
+<p><p class="md__image">
+  <img src="https://s2.loli.net/2022/09/29/pr6gIj7tVNBznvH.png" alt="图 1"  />
+</p>
+</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1

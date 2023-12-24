@@ -21,7 +21,7 @@
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%9B%9E%E6%BA%AF%E6%90%9C%E7%B4%A2/leetcode.282.%E7%BB%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B7%BB%E5%8A%A0%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
       <pubDate>Sat, 11 Jun 2022 18:24:29 +0800</pubDate>
       <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%9B%9E%E6%BA%AF%E6%90%9C%E7%B4%A2/leetcode.282.%E7%BB%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B7%BB%E5%8A%A0%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
-      <description>282. 给表达式添加运算符 Description Difficulty: 困难 Related Topics: 数学, 字符串, 回溯 给定一个仅包含数字 0-9 的字符串 num 和一个目标值整数 target ，在 num 的数字之间添加 二元 运算符（不是一元）</description>
+      <description>282. 给表达式添加运算符 Description Difficulty: 困难 Related Topics: 数学 , 字符串 , 回溯 给定一个仅包含数字 0-9 的字符串 num 和一个目标值整数 target ，在 num 的数字之间添加 二元 运算符（不是一元）</description>
     </item>
   </channel>
 </rss>

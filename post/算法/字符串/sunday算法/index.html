@@ -223,13 +223,25 @@ input.PC_MARK1:focus{
 <p>平均性能的时间复杂度为 $O(n)$；
 最差情况的时间复杂度为 $O(n∗m)$。</p>
 <p>其实有很多算法可以来实现字符串查找，暴力的BF算法，经典的KMP算法，BM算法，Sunday算法等等，就效率和实现难度上来说，Sunday算法应该是性价比最高的，效率高，容易理解，实现也比较简单。</p>
-<p><img src="https://s2.loli.net/2022/10/10/3TemYoIxnc84VaX.png" alt="图 2"></p>
-<p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/5/22/1723c1823f8db358~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.awebp" alt=""></p>
-<p><a href="https://juejin.cn/post/6844904166117081095">参考博客</a></p>
+<p><p class="md__image">
+  <img src="https://s2.loli.net/2022/10/10/3TemYoIxnc84VaX.png" alt="图 2"  />
+</p>
+</p>
+<p><p class="md__image">
+  <img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/5/22/1723c1823f8db358~tplv-t2oaga2asx-zoom-in-crop-mark:3024:0:0:0.awebp" alt=""  />
+</p>
+</p>
+<p><a href="https://juejin.cn/post/6844904166117081095" target="_blank" rel="noopener">
+  参考博客
+</a>
+</p>
 <p>sunday 算法时间复杂度 最优秀情况下可以得到  $O(N/M)$</p>
 <p>Sunday算法思想跟BM算法很相似，在匹配失败时关注的是文本串中参加匹配的最末位字符的下一位字符。如果该字符没有在匹配串中出现则直接跳过，即移动步长= 匹配串长度+1；否则，同BM算法一样其移动步长=匹配串中最右端的该字符到末尾的距离+1。</p>
 <p>Sunday算法实现</p>
-<p><a href="https://www.bilibili.com/video/BV1jq4y1K7eY/?spm_id_from=333.337.search-card.all.click&amp;vd_source=5680f9cc1e793f7b70191c94d5552ecb">视频教程</a></p>
+<p><a href="https://www.bilibili.com/video/BV1jq4y1K7eY/?spm_id_from=333.337.search-card.all.click&amp;vd_source=5680f9cc1e793f7b70191c94d5552ecb" target="_blank" rel="noopener">
+  视频教程
+</a>
+</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1

@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="lyr" /><meta name="description" content="15. 三数之和 Description Difficulty: 中等 Related Topics: 数组, 双指针, 排序 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 _a，b，c ，_使得 a &#43; b &#43; c = 0 ？请你" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
+<meta name="author" content="lyr" /><meta name="description" content="15. 三数之和 Description Difficulty: 中等 Related Topics: 数组 , 双指针 , 排序 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 _a，b，c ，_使得 a &#43; b &#43; c = 0 ？请你" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
 
 
 
@@ -43,19 +43,19 @@
 
 
 <meta property="og:title" content="三数之和" />
-<meta property="og:description" content="15. 三数之和 Description Difficulty: 中等 Related Topics: 数组, 双指针, 排序 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 _a，b，c ，_使得 a &#43; b &#43; c = 0 ？请你" />
+<meta property="og:description" content="15. 三数之和 Description Difficulty: 中等 Related Topics: 数组 , 双指针 , 排序 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 _a，b，c ，_使得 a &#43; b &#43; c = 0 ？请你" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%8F%8C%E6%8C%87%E9%92%88/%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/" /><meta property="og:image" content="https://tva4.sinaimg.cn/large/006ZFECEgy1fr1x6jmgyxj31hc0u07wh.jpg" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-07-30T22:11:30+08:00" />
 <meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
 
 <meta itemprop="name" content="三数之和">
-<meta itemprop="description" content="15. 三数之和 Description Difficulty: 中等 Related Topics: 数组, 双指针, 排序 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 _a，b，c ，_使得 a &#43; b &#43; c = 0 ？请你"><meta itemprop="datePublished" content="2022-07-30T22:11:30+08:00" />
+<meta itemprop="description" content="15. 三数之和 Description Difficulty: 中等 Related Topics: 数组 , 双指针 , 排序 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 _a，b，c ，_使得 a &#43; b &#43; c = 0 ？请你"><meta itemprop="datePublished" content="2022-07-30T22:11:30+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
 <meta itemprop="wordCount" content="386"><meta itemprop="image" content="https://tva4.sinaimg.cn/large/006ZFECEgy1fr1x6jmgyxj31hc0u07wh.jpg" />
 <meta itemprop="keywords" content="双指针," /><meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://tva4.sinaimg.cn/large/006ZFECEgy1fr1x6jmgyxj31hc0u07wh.jpg" /><meta name="twitter:title" content="三数之和"/>
-<meta name="twitter:description" content="15. 三数之和 Description Difficulty: 中等 Related Topics: 数组, 双指针, 排序 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 _a，b，c ，_使得 a &#43; b &#43; c = 0 ？请你"/>
+<meta name="twitter:description" content="15. 三数之和 Description Difficulty: 中等 Related Topics: 数组 , 双指针 , 排序 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 _a，b，c ，_使得 a &#43; b &#43; c = 0 ？请你"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -217,10 +217,22 @@ input.PC_MARK1:focus{
 </div>
 
     <div class="post-content">
-      <h1 id="15-三数之和httpsleetcodecnproblems3sum"><a href="https://leetcode.cn/problems/3sum/">15. 三数之和</a></h1>
+      <h1 id="15-三数之和httpsleetcodecnproblems3sum"><a href="https://leetcode.cn/problems/3sum/" target="_blank" rel="noopener">
+  15. 三数之和
+</a>
+</h1>
 <h2 id="description">Description</h2>
 <p>Difficulty: <strong>中等</strong></p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/array/">数组</a>, <a href="https://leetcode.cn/tag/two-pointers/">双指针</a>, <a href="https://leetcode.cn/tag/sorting/">排序</a></p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/array/" target="_blank" rel="noopener">
+  数组
+</a>
+, <a href="https://leetcode.cn/tag/two-pointers/" target="_blank" rel="noopener">
+  双指针
+</a>
+, <a href="https://leetcode.cn/tag/sorting/" target="_blank" rel="noopener">
+  排序
+</a>
+</p>
 <p>给你一个包含 <code>n</code> 个整数的数组 <code>nums</code>，判断 <code>nums</code> 中是否存在三个元素 _a，b，c ，_使得 <em>a + b + c =</em> 0 ？请你找出所有和为 <code>0</code> 且不重复的三元组。</p>
 <p>**注意：**答案中不可以包含重复的三元组。</p>
 <p><strong>示例 1：</strong></p>

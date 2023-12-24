@@ -14,14 +14,14 @@
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/lc.1288.%E5%88%A0%E9%99%A4%E8%A2%AB%E8%A6%86%E7%9B%96%E7%9A%84%E5%8C%BA%E9%97%B4/</link>
       <pubDate>Sun, 18 Sep 2022 19:30:19 +0800</pubDate>
       <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/lc.1288.%E5%88%A0%E9%99%A4%E8%A2%AB%E8%A6%86%E7%9B%96%E7%9A%84%E5%8C%BA%E9%97%B4/</guid>
-      <description>1288. 删除被覆盖区间 Description Difficulty: 中等 Related Topics: 数组, 排序 给你一个区间列表，请你删除列表中被其他区间所覆盖的区间。 只有当 c &amp;lt;= a 且 b &amp;lt;= d 时，我们才认为区间 [a,b) 被区间</description>
+      <description>1288. 删除被覆盖区间 Description Difficulty: 中等 Related Topics: 数组 , 排序 给你一个区间列表，请你删除列表中被其他区间所覆盖的区间。 只有当 c &amp;lt;= a 且 b &amp;lt;= d 时，我们才认为区间 [a,b) 被区间</description>
     </item>
     <item>
       <title>lc.56.合并区间</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/lc.56.%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/</link>
       <pubDate>Sun, 18 Sep 2022 18:36:52 +0800</pubDate>
       <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/lc.56.%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/</guid>
-      <description>56. 合并区间 Description Difficulty: 中等 Related Topics: 数组, 排序 以数组 intervals 表示若干个区间的集合，其中单个区间为 intervals[i] = [starti, endi] 。请你合并所有重叠的区间，并返回 一个不重叠的区间数组，该</description>
+      <description>56. 合并区间 Description Difficulty: 中等 Related Topics: 数组 , 排序 以数组 intervals 表示若干个区间的集合，其中单个区间为 intervals[i] = [starti, endi] 。请你合并所有重叠的区间，并返回 一个不重叠的区间数组，该</description>
     </item>
     <item>
       <title>桶排序</title>

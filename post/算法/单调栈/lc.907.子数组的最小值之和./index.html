@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="lyr" /><meta name="description" content="907. 子数组的最小值之和 Description Difficulty: 中等 Related Topics: 栈, 数组, 动态规划, 单调栈 给定一个整数数组 arr，找到 min(b) 的总和，其中 b 的范围为 arr 的每个（连续）子数组。 由于答" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
+<meta name="author" content="lyr" /><meta name="description" content="907. 子数组的最小值之和 Description Difficulty: 中等 Related Topics: 栈 , 数组 , 动态规划 , 单调栈 给定一个整数数组 arr，找到 min(b) 的总和，其中 b 的范围为 arr 的每个（连续）子数组。 由于答" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
 
 
 
@@ -43,19 +43,19 @@
 
 
 <meta property="og:title" content="lc.907.子数组的最小值之和." />
-<meta property="og:description" content="907. 子数组的最小值之和 Description Difficulty: 中等 Related Topics: 栈, 数组, 动态规划, 单调栈 给定一个整数数组 arr，找到 min(b) 的总和，其中 b 的范围为 arr 的每个（连续）子数组。 由于答" />
+<meta property="og:description" content="907. 子数组的最小值之和 Description Difficulty: 中等 Related Topics: 栈 , 数组 , 动态规划 , 单调栈 给定一个整数数组 arr，找到 min(b) 的总和，其中 b 的范围为 arr 的每个（连续）子数组。 由于答" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%8D%95%E8%B0%83%E6%A0%88/lc.907.%E5%AD%90%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC%E4%B9%8B%E5%92%8C./" /><meta property="og:image" content="https://tva4.sinaimg.cn/large/0075auPSly1fqaxbsels3j31gs0u6ds8.jpg" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-09-28T22:33:50+08:00" />
 <meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
 
 <meta itemprop="name" content="lc.907.子数组的最小值之和.">
-<meta itemprop="description" content="907. 子数组的最小值之和 Description Difficulty: 中等 Related Topics: 栈, 数组, 动态规划, 单调栈 给定一个整数数组 arr，找到 min(b) 的总和，其中 b 的范围为 arr 的每个（连续）子数组。 由于答"><meta itemprop="datePublished" content="2022-09-28T22:33:50+08:00" />
+<meta itemprop="description" content="907. 子数组的最小值之和 Description Difficulty: 中等 Related Topics: 栈 , 数组 , 动态规划 , 单调栈 给定一个整数数组 arr，找到 min(b) 的总和，其中 b 的范围为 arr 的每个（连续）子数组。 由于答"><meta itemprop="datePublished" content="2022-09-28T22:33:50+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
 <meta itemprop="wordCount" content="413"><meta itemprop="image" content="https://tva4.sinaimg.cn/large/0075auPSly1fqaxbsels3j31gs0u6ds8.jpg" />
 <meta itemprop="keywords" content="单调栈," /><meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://tva4.sinaimg.cn/large/0075auPSly1fqaxbsels3j31gs0u6ds8.jpg" /><meta name="twitter:title" content="lc.907.子数组的最小值之和."/>
-<meta name="twitter:description" content="907. 子数组的最小值之和 Description Difficulty: 中等 Related Topics: 栈, 数组, 动态规划, 单调栈 给定一个整数数组 arr，找到 min(b) 的总和，其中 b 的范围为 arr 的每个（连续）子数组。 由于答"/>
+<meta name="twitter:description" content="907. 子数组的最小值之和 Description Difficulty: 中等 Related Topics: 栈 , 数组 , 动态规划 , 单调栈 给定一个整数数组 arr，找到 min(b) 的总和，其中 b 的范围为 arr 的每个（连续）子数组。 由于答"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -218,10 +218,25 @@ input.PC_MARK1:focus{
 </div>
 
     <div class="post-content">
-      <h1 id="907-子数组的最小值之和httpsleetcodecnproblemssum-of-subarray-minimums"><a href="https://leetcode.cn/problems/sum-of-subarray-minimums/">907. 子数组的最小值之和</a></h1>
+      <h1 id="907-子数组的最小值之和httpsleetcodecnproblemssum-of-subarray-minimums"><a href="https://leetcode.cn/problems/sum-of-subarray-minimums/" target="_blank" rel="noopener">
+  907. 子数组的最小值之和
+</a>
+</h1>
 <h2 id="description">Description</h2>
 <p>Difficulty: <strong>中等</strong></p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/stack/">栈</a>, <a href="https://leetcode.cn/tag/array/">数组</a>, <a href="https://leetcode.cn/tag/dynamic-programming/">动态规划</a>, <a href="https://leetcode.cn/tag/monotonic-stack/">单调栈</a></p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/stack/" target="_blank" rel="noopener">
+  栈
+</a>
+, <a href="https://leetcode.cn/tag/array/" target="_blank" rel="noopener">
+  数组
+</a>
+, <a href="https://leetcode.cn/tag/dynamic-programming/" target="_blank" rel="noopener">
+  动态规划
+</a>
+, <a href="https://leetcode.cn/tag/monotonic-stack/" target="_blank" rel="noopener">
+  单调栈
+</a>
+</p>
 <p>给定一个整数数组 <code>arr</code>，找到 <code>min(b)</code> 的总和，其中 <code>b</code> 的范围为 <code>arr</code> 的每个（连续）子数组。</p>
 <p>由于答案可能很大，因此 <strong>返回答案模 <code>10^9 + 7</code></strong> 。</p>
 <p><strong>示例 1：</strong></p>

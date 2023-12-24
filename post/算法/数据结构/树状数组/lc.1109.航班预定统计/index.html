@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="lyr" /><meta name="description" content="1109. 航班预订统计 Description Difficulty: 中等 Related Topics: 数组, 前缀和 这里有 n 个航班，它们分别从 1 到 n 进行编号。 有一份航班预订表 bookings ，表中第 i 条预订记录 bookings[i] = [firsti, lasti, seatsi] 意味着在从 firsti" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
+<meta name="author" content="lyr" /><meta name="description" content="1109. 航班预订统计 Description Difficulty: 中等 Related Topics: 数组 , 前缀和 这里有 n 个航班，它们分别从 1 到 n 进行编号。 有一份航班预订表 bookings ，表中第 i 条预订记录 bookings[i] = [firsti, lasti, seatsi] 意味着在从 firsti" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
 
 
 
@@ -43,19 +43,19 @@
 
 
 <meta property="og:title" content="lc.1109.航班预定统计" />
-<meta property="og:description" content="1109. 航班预订统计 Description Difficulty: 中等 Related Topics: 数组, 前缀和 这里有 n 个航班，它们分别从 1 到 n 进行编号。 有一份航班预订表 bookings ，表中第 i 条预订记录 bookings[i] = [firsti, lasti, seatsi] 意味着在从 firsti" />
+<meta property="og:description" content="1109. 航班预订统计 Description Difficulty: 中等 Related Topics: 数组 , 前缀和 这里有 n 个航班，它们分别从 1 到 n 进行编号。 有一份航班预订表 bookings ，表中第 i 条预订记录 bookings[i] = [firsti, lasti, seatsi] 意味着在从 firsti" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/lc.1109.%E8%88%AA%E7%8F%AD%E9%A2%84%E5%AE%9A%E7%BB%9F%E8%AE%A1/" /><meta property="og:image" content="https://tva4.sinaimg.cn/large/0072Vf1pgy1fodqig7h5nj318g0p0qv5.jpg" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-10-15T23:18:12+08:00" />
 <meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
 
 <meta itemprop="name" content="lc.1109.航班预定统计">
-<meta itemprop="description" content="1109. 航班预订统计 Description Difficulty: 中等 Related Topics: 数组, 前缀和 这里有 n 个航班，它们分别从 1 到 n 进行编号。 有一份航班预订表 bookings ，表中第 i 条预订记录 bookings[i] = [firsti, lasti, seatsi] 意味着在从 firsti"><meta itemprop="datePublished" content="2022-10-15T23:18:12+08:00" />
+<meta itemprop="description" content="1109. 航班预订统计 Description Difficulty: 中等 Related Topics: 数组 , 前缀和 这里有 n 个航班，它们分别从 1 到 n 进行编号。 有一份航班预订表 bookings ，表中第 i 条预订记录 bookings[i] = [firsti, lasti, seatsi] 意味着在从 firsti"><meta itemprop="datePublished" content="2022-10-15T23:18:12+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
 <meta itemprop="wordCount" content="586"><meta itemprop="image" content="https://tva4.sinaimg.cn/large/0072Vf1pgy1fodqig7h5nj318g0p0qv5.jpg" />
 <meta itemprop="keywords" content="树状数组," /><meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://tva4.sinaimg.cn/large/0072Vf1pgy1fodqig7h5nj318g0p0qv5.jpg" /><meta name="twitter:title" content="lc.1109.航班预定统计"/>
-<meta name="twitter:description" content="1109. 航班预订统计 Description Difficulty: 中等 Related Topics: 数组, 前缀和 这里有 n 个航班，它们分别从 1 到 n 进行编号。 有一份航班预订表 bookings ，表中第 i 条预订记录 bookings[i] = [firsti, lasti, seatsi] 意味着在从 firsti"/>
+<meta name="twitter:description" content="1109. 航班预订统计 Description Difficulty: 中等 Related Topics: 数组 , 前缀和 这里有 n 个航班，它们分别从 1 到 n 进行编号。 有一份航班预订表 bookings ，表中第 i 条预订记录 bookings[i] = [firsti, lasti, seatsi] 意味着在从 firsti"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -222,10 +222,19 @@ input.PC_MARK1:focus{
 </div>
 
     <div class="post-content">
-      <h1 id="1109-航班预订统计httpsleetcodecnproblemscorporate-flight-bookings"><a href="https://leetcode.cn/problems/corporate-flight-bookings/">1109. 航班预订统计</a></h1>
+      <h1 id="1109-航班预订统计httpsleetcodecnproblemscorporate-flight-bookings"><a href="https://leetcode.cn/problems/corporate-flight-bookings/" target="_blank" rel="noopener">
+  1109. 航班预订统计
+</a>
+</h1>
 <h2 id="description">Description</h2>
 <p>Difficulty: <strong>中等</strong></p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/array/">数组</a>, <a href="https://leetcode.cn/tag/prefix-sum/">前缀和</a></p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/array/" target="_blank" rel="noopener">
+  数组
+</a>
+, <a href="https://leetcode.cn/tag/prefix-sum/" target="_blank" rel="noopener">
+  前缀和
+</a>
+</p>
 <p>这里有 <code>n</code> 个航班，它们分别从 <code>1</code> 到 <code>n</code> 进行编号。</p>
 <p>有一份航班预订表 <code>bookings</code> ，表中第 <code>i</code> 条预订记录 bookings[i] = [first<sub>i</sub>, last<sub>i</sub>, seats<sub>i</sub>] 意味着在从 first<sub>i</sub> 到 last<sub>i</sub> （<strong>包含</strong> first<sub>i</sub> 和 last<sub>i</sub> ）的 <strong>每个航班</strong> 上预订了 seats<sub>i</sub> 个座位。</p>
 <p>请你返回一个长度为 <code>n</code> 的数组 <code>answer</code>，里面的元素是每个航班预定的座位总数。</p>

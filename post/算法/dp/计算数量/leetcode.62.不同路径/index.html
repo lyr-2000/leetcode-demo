@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="lyr" /><meta name="description" content="62. 不同路径 Description Difficulty: 中等 Related Topics: 数学, 动态规划, 组合数学 一个机器人位于一个 m x n网格的左上角 （起始点在下图中标记为 “Start” ）。 机器人每次只能向下" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
+<meta name="author" content="lyr" /><meta name="description" content="62. 不同路径 Description Difficulty: 中等 Related Topics: 数学 , 动态规划 , 组合数学 一个机器人位于一个 m x n网格的左上角 （起始点在下图中标记为 “Start” ）。 机器人每次只能向下" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
 
 
 
@@ -43,19 +43,19 @@
 
 
 <meta property="og:title" content="leetcode.62.不同路径" />
-<meta property="og:description" content="62. 不同路径 Description Difficulty: 中等 Related Topics: 数学, 动态规划, 组合数学 一个机器人位于一个 m x n网格的左上角 （起始点在下图中标记为 “Start” ）。 机器人每次只能向下" />
+<meta property="og:description" content="62. 不同路径 Description Difficulty: 中等 Related Topics: 数学 , 动态规划 , 组合数学 一个机器人位于一个 m x n网格的左上角 （起始点在下图中标记为 “Start” ）。 机器人每次只能向下" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/dp/%E8%AE%A1%E7%AE%97%E6%95%B0%E9%87%8F/leetcode.62.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84/" /><meta property="og:image" content="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkc6qp2sj31hc0u0k1p.jpg" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-06-11T15:49:28+08:00" />
 <meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
 
 <meta itemprop="name" content="leetcode.62.不同路径">
-<meta itemprop="description" content="62. 不同路径 Description Difficulty: 中等 Related Topics: 数学, 动态规划, 组合数学 一个机器人位于一个 m x n网格的左上角 （起始点在下图中标记为 “Start” ）。 机器人每次只能向下"><meta itemprop="datePublished" content="2022-06-11T15:49:28+08:00" />
+<meta itemprop="description" content="62. 不同路径 Description Difficulty: 中等 Related Topics: 数学 , 动态规划 , 组合数学 一个机器人位于一个 m x n网格的左上角 （起始点在下图中标记为 “Start” ）。 机器人每次只能向下"><meta itemprop="datePublished" content="2022-06-11T15:49:28+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
 <meta itemprop="wordCount" content="805"><meta itemprop="image" content="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkc6qp2sj31hc0u0k1p.jpg" />
 <meta itemprop="keywords" content="计算数量," /><meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://tva4.sinaimg.cn/large/0072Vf1pgy1foxkc6qp2sj31hc0u0k1p.jpg" /><meta name="twitter:title" content="leetcode.62.不同路径"/>
-<meta name="twitter:description" content="62. 不同路径 Description Difficulty: 中等 Related Topics: 数学, 动态规划, 组合数学 一个机器人位于一个 m x n网格的左上角 （起始点在下图中标记为 “Start” ）。 机器人每次只能向下"/>
+<meta name="twitter:description" content="62. 不同路径 Description Difficulty: 中等 Related Topics: 数学 , 动态规划 , 组合数学 一个机器人位于一个 m x n网格的左上角 （起始点在下图中标记为 “Start” ）。 机器人每次只能向下"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -227,15 +227,30 @@ input.PC_MARK1:focus{
 </div>
 
     <div class="post-content">
-      <h1 id="62-不同路径httpsleetcodecnproblemsunique-paths"><a href="https://leetcode.cn/problems/unique-paths/">62. 不同路径</a></h1>
+      <h1 id="62-不同路径httpsleetcodecnproblemsunique-paths"><a href="https://leetcode.cn/problems/unique-paths/" target="_blank" rel="noopener">
+  62. 不同路径
+</a>
+</h1>
 <h2 id="description">Description</h2>
 <p>Difficulty: <strong>中等</strong></p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/math/">数学</a>, <a href="https://leetcode.cn/tag/dynamic-programming/">动态规划</a>, <a href="https://leetcode.cn/tag/combinatorics/">组合数学</a></p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/math/" target="_blank" rel="noopener">
+  数学
+</a>
+, <a href="https://leetcode.cn/tag/dynamic-programming/" target="_blank" rel="noopener">
+  动态规划
+</a>
+, <a href="https://leetcode.cn/tag/combinatorics/" target="_blank" rel="noopener">
+  组合数学
+</a>
+</p>
 <p>一个机器人位于一个 <code>m x n</code>网格的左上角 （起始点在下图中标记为 “Start” ）。</p>
 <p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish” ）。</p>
 <p>问总共有多少条不同的路径？</p>
 <p><strong>示例 1：</strong></p>
-<p><img src="https://assets.leetcode.com/uploads/2018/10/22/robot_maze.png" alt=""></p>
+<p><p class="md__image">
+  <img src="https://assets.leetcode.com/uploads/2018/10/22/robot_maze.png" alt=""  />
+</p>
+</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -353,16 +368,31 @@ input.PC_MARK1:focus{
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="不同路径2">不同路径2</h3>
-<h1 id="63-不同路径-iihttpsleetcodecnproblemsunique-paths-ii"><a href="https://leetcode.cn/problems/unique-paths-ii/">63. 不同路径 II</a></h1>
+<h1 id="63-不同路径-iihttpsleetcodecnproblemsunique-paths-ii"><a href="https://leetcode.cn/problems/unique-paths-ii/" target="_blank" rel="noopener">
+  63. 不同路径 II
+</a>
+</h1>
 <h2 id="description-1">Description</h2>
 <p>Difficulty: <strong>中等</strong></p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/array/">数组</a>, <a href="https://leetcode.cn/tag/dynamic-programming/">动态规划</a>, <a href="https://leetcode.cn/tag/matrix/">矩阵</a></p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/array/" target="_blank" rel="noopener">
+  数组
+</a>
+, <a href="https://leetcode.cn/tag/dynamic-programming/" target="_blank" rel="noopener">
+  动态规划
+</a>
+, <a href="https://leetcode.cn/tag/matrix/" target="_blank" rel="noopener">
+  矩阵
+</a>
+</p>
 <p>一个机器人位于一个 <code>m x n</code> 网格的左上角 （起始点在下图中标记为 “Start” ）。</p>
 <p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish”）。</p>
 <p>现在考虑网格中有障碍物。那么从左上角到右下角将会有多少条不同的路径？</p>
 <p>网格中的障碍物和空位置分别用 <code>1</code> 和 <code>0</code> 来表示。</p>
 <p><strong>示例 1：</strong></p>
-<p><img src="https://assets.leetcode.com/uploads/2020/11/04/robot1.jpg" alt=""></p>
+<p><p class="md__image">
+  <img src="https://assets.leetcode.com/uploads/2020/11/04/robot1.jpg" alt=""  />
+</p>
+</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -382,7 +412,10 @@ input.PC_MARK1:focus{
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>示例 2：</strong></p>
-<p><img src="https://assets.leetcode.com/uploads/2020/11/04/robot2.jpg" alt=""></p>
+<p><p class="md__image">
+  <img src="https://assets.leetcode.com/uploads/2020/11/04/robot2.jpg" alt=""  />
+</p>
+</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1

@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="lyr" /><meta name="description" content="1392. 最长快乐前缀 Description Difficulty: 困难 Related Topics: 字符串, 字符串匹配, 哈希函数, 滚动哈希 「快乐前缀」 是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
+<meta name="author" content="lyr" /><meta name="description" content="1392. 最长快乐前缀 Description Difficulty: 困难 Related Topics: 字符串 , 字符串匹配 , 哈希函数 , 滚动哈希 「快乐前缀」 是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
 
 
 
@@ -43,19 +43,19 @@
 
 
 <meta property="og:title" content="lc.1392.最长快乐前缀" />
-<meta property="og:description" content="1392. 最长快乐前缀 Description Difficulty: 困难 Related Topics: 字符串, 字符串匹配, 哈希函数, 滚动哈希 「快乐前缀」 是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串" />
+<meta property="og:description" content="1392. 最长快乐前缀 Description Difficulty: 困难 Related Topics: 字符串 , 字符串匹配 , 哈希函数 , 滚动哈希 「快乐前缀」 是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/lc.1392.%E6%9C%80%E9%95%BF%E5%BF%AB%E4%B9%90%E5%89%8D%E7%BC%80/" /><meta property="og:image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkcmckquj31kw0w0e5l.jpg" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-10-10T22:31:43+08:00" />
 <meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
 
 <meta itemprop="name" content="lc.1392.最长快乐前缀">
-<meta itemprop="description" content="1392. 最长快乐前缀 Description Difficulty: 困难 Related Topics: 字符串, 字符串匹配, 哈希函数, 滚动哈希 「快乐前缀」 是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串"><meta itemprop="datePublished" content="2022-10-10T22:31:43+08:00" />
+<meta itemprop="description" content="1392. 最长快乐前缀 Description Difficulty: 困难 Related Topics: 字符串 , 字符串匹配 , 哈希函数 , 滚动哈希 「快乐前缀」 是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串"><meta itemprop="datePublished" content="2022-10-10T22:31:43+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
 <meta itemprop="wordCount" content="464"><meta itemprop="image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkcmckquj31kw0w0e5l.jpg" />
 <meta itemprop="keywords" content="字符串," /><meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkcmckquj31kw0w0e5l.jpg" /><meta name="twitter:title" content="lc.1392.最长快乐前缀"/>
-<meta name="twitter:description" content="1392. 最长快乐前缀 Description Difficulty: 困难 Related Topics: 字符串, 字符串匹配, 哈希函数, 滚动哈希 「快乐前缀」 是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串"/>
+<meta name="twitter:description" content="1392. 最长快乐前缀 Description Difficulty: 困难 Related Topics: 字符串 , 字符串匹配 , 哈希函数 , 滚动哈希 「快乐前缀」 是在原字符串中既是 非空 前缀也是后缀（不包括原字符串自身）的字符串"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -218,10 +218,25 @@ input.PC_MARK1:focus{
 </div>
 
     <div class="post-content">
-      <h1 id="1392-最长快乐前缀httpsleetcodecnproblemslongest-happy-prefix"><a href="https://leetcode.cn/problems/longest-happy-prefix/">1392. 最长快乐前缀</a></h1>
+      <h1 id="1392-最长快乐前缀httpsleetcodecnproblemslongest-happy-prefix"><a href="https://leetcode.cn/problems/longest-happy-prefix/" target="_blank" rel="noopener">
+  1392. 最长快乐前缀
+</a>
+</h1>
 <h2 id="description">Description</h2>
 <p>Difficulty: <strong>困难</strong></p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/string/">字符串</a>, <a href="https://leetcode.cn/tag/string-matching/">字符串匹配</a>, <a href="https://leetcode.cn/tag/hash-function/">哈希函数</a>, <a href="https://leetcode.cn/tag/rolling-hash/">滚动哈希</a></p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/string/" target="_blank" rel="noopener">
+  字符串
+</a>
+, <a href="https://leetcode.cn/tag/string-matching/" target="_blank" rel="noopener">
+  字符串匹配
+</a>
+, <a href="https://leetcode.cn/tag/hash-function/" target="_blank" rel="noopener">
+  哈希函数
+</a>
+, <a href="https://leetcode.cn/tag/rolling-hash/" target="_blank" rel="noopener">
+  滚动哈希
+</a>
+</p>
 <p><strong>「快乐前缀」</strong> 是在原字符串中既是 <strong>非空</strong> 前缀也是后缀（不包括原字符串自身）的字符串。</p>
 <p>给你一个字符串 <code>s</code>，请你返回它的 <strong>最长快乐前缀</strong>。如果不存在满足题意的前缀，则返回一个空字符串 <code>&quot;&quot;</code> 。</p>
 <p><strong>示例 1：</strong></p>

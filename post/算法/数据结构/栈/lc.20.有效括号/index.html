@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="lyr" /><meta name="description" content="20. 有效的括号 Description Difficulty: 简单 Related Topics: 栈, 字符串 给定一个只包括 &#39;(&#39;，&#39;)&#39;，&#39;{&#39;，&#39;}&#39;，&#39;[&#39;，&#39;]&#39; 的字符串 s ，判断字符串是否有效。 有效字符串需满" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
+<meta name="author" content="lyr" /><meta name="description" content="20. 有效的括号 Description Difficulty: 简单 Related Topics: 栈 , 字符串 给定一个只包括 &#39;(&#39;，&#39;)&#39;，&#39;{&#39;，&#39;}&#39;，&#39;[&#39;，&#39;]&#39; 的字符串 s ，判断字符串是否有效。 有效字符串需满" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
 
 
 
@@ -43,19 +43,19 @@
 
 
 <meta property="og:title" content="lc.20.有效括号" />
-<meta property="og:description" content="20. 有效的括号 Description Difficulty: 简单 Related Topics: 栈, 字符串 给定一个只包括 &#39;(&#39;，&#39;)&#39;，&#39;{&#39;，&#39;}&#39;，&#39;[&#39;，&#39;]&#39; 的字符串 s ，判断字符串是否有效。 有效字符串需满" />
+<meta property="og:description" content="20. 有效的括号 Description Difficulty: 简单 Related Topics: 栈 , 字符串 给定一个只包括 &#39;(&#39;，&#39;)&#39;，&#39;{&#39;，&#39;}&#39;，&#39;[&#39;，&#39;]&#39; 的字符串 s ，判断字符串是否有效。 有效字符串需满" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%88/lc.20.%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7/" /><meta property="og:image" content="https://tva2.sinaimg.cn/large/0072Vf1pgy1foxkiswmqaj31kw0w0kh8.jpg" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-09-03T13:32:05+08:00" />
 <meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
 
 <meta itemprop="name" content="lc.20.有效括号">
-<meta itemprop="description" content="20. 有效的括号 Description Difficulty: 简单 Related Topics: 栈, 字符串 给定一个只包括 &#39;(&#39;，&#39;)&#39;，&#39;{&#39;，&#39;}&#39;，&#39;[&#39;，&#39;]&#39; 的字符串 s ，判断字符串是否有效。 有效字符串需满"><meta itemprop="datePublished" content="2022-09-03T13:32:05+08:00" />
+<meta itemprop="description" content="20. 有效的括号 Description Difficulty: 简单 Related Topics: 栈 , 字符串 给定一个只包括 &#39;(&#39;，&#39;)&#39;，&#39;{&#39;，&#39;}&#39;，&#39;[&#39;，&#39;]&#39; 的字符串 s ，判断字符串是否有效。 有效字符串需满"><meta itemprop="datePublished" content="2022-09-03T13:32:05+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
 <meta itemprop="wordCount" content="291"><meta itemprop="image" content="https://tva2.sinaimg.cn/large/0072Vf1pgy1foxkiswmqaj31kw0w0kh8.jpg" />
 <meta itemprop="keywords" content="栈," /><meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://tva2.sinaimg.cn/large/0072Vf1pgy1foxkiswmqaj31kw0w0kh8.jpg" /><meta name="twitter:title" content="lc.20.有效括号"/>
-<meta name="twitter:description" content="20. 有效的括号 Description Difficulty: 简单 Related Topics: 栈, 字符串 给定一个只包括 &#39;(&#39;，&#39;)&#39;，&#39;{&#39;，&#39;}&#39;，&#39;[&#39;，&#39;]&#39; 的字符串 s ，判断字符串是否有效。 有效字符串需满"/>
+<meta name="twitter:description" content="20. 有效的括号 Description Difficulty: 简单 Related Topics: 栈 , 字符串 给定一个只包括 &#39;(&#39;，&#39;)&#39;，&#39;{&#39;，&#39;}&#39;，&#39;[&#39;，&#39;]&#39; 的字符串 s ，判断字符串是否有效。 有效字符串需满"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -217,10 +217,19 @@ input.PC_MARK1:focus{
 </div>
 
     <div class="post-content">
-      <h1 id="20-有效的括号httpsleetcodecnproblemsvalid-parentheses"><a href="https://leetcode.cn/problems/valid-parentheses/">20. 有效的括号</a></h1>
+      <h1 id="20-有效的括号httpsleetcodecnproblemsvalid-parentheses"><a href="https://leetcode.cn/problems/valid-parentheses/" target="_blank" rel="noopener">
+  20. 有效的括号
+</a>
+</h1>
 <h2 id="description">Description</h2>
 <p>Difficulty: <strong>简单</strong></p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/stack/">栈</a>, <a href="https://leetcode.cn/tag/string/">字符串</a></p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/stack/" target="_blank" rel="noopener">
+  栈
+</a>
+, <a href="https://leetcode.cn/tag/string/" target="_blank" rel="noopener">
+  字符串
+</a>
+</p>
 <p>给定一个只包括 <code>'('</code>，<code>')'</code>，<code>'{'</code>，<code>'}'</code>，<code>'['</code>，<code>']'</code> 的字符串 <code>s</code> ，判断字符串是否有效。</p>
 <p>有效字符串需满足：</p>
 <ol>

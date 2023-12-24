@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="lyr" /><meta name="description" content="433. 最小基因变化 Description Difficulty: 中等 Related Topics: 广度优先搜索, 哈希表, 字符串 基因序列可以表示为一条由 8 个字符组成的字符串，其中每个字符都是 &#39;A&#39;、&#39;C&#39;、&#39;G&#39; 和" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
+<meta name="author" content="lyr" /><meta name="description" content="433. 最小基因变化 Description Difficulty: 中等 Related Topics: 广度优先搜索 , 哈希表 , 字符串 基因序列可以表示为一条由 8 个字符组成的字符串，其中每个字符都是 &#39;A&#39;、&#39;C&#39;、&#39;G&#39; 和" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
 
 
 
@@ -43,19 +43,19 @@
 
 
 <meta property="og:title" content="lc.443.最小基因变化" />
-<meta property="og:description" content="433. 最小基因变化 Description Difficulty: 中等 Related Topics: 广度优先搜索, 哈希表, 字符串 基因序列可以表示为一条由 8 个字符组成的字符串，其中每个字符都是 &#39;A&#39;、&#39;C&#39;、&#39;G&#39; 和" />
+<meta property="og:description" content="433. 最小基因变化 Description Difficulty: 中等 Related Topics: 广度优先搜索 , 哈希表 , 字符串 基因序列可以表示为一条由 8 个字符组成的字符串，其中每个字符都是 &#39;A&#39;、&#39;C&#39;、&#39;G&#39; 和" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/lc.443.%E6%9C%80%E5%B0%8F%E5%9F%BA%E5%9B%A0%E5%8F%98%E5%8C%96/" /><meta property="og:image" content="https://tva2.sinaimg.cn/large/0075auPSly1fqb8lgz38sj31kw0vbnpd.jpg" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-09-09T23:14:16+08:00" />
 <meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
 
 <meta itemprop="name" content="lc.443.最小基因变化">
-<meta itemprop="description" content="433. 最小基因变化 Description Difficulty: 中等 Related Topics: 广度优先搜索, 哈希表, 字符串 基因序列可以表示为一条由 8 个字符组成的字符串，其中每个字符都是 &#39;A&#39;、&#39;C&#39;、&#39;G&#39; 和"><meta itemprop="datePublished" content="2022-09-09T23:14:16+08:00" />
+<meta itemprop="description" content="433. 最小基因变化 Description Difficulty: 中等 Related Topics: 广度优先搜索 , 哈希表 , 字符串 基因序列可以表示为一条由 8 个字符组成的字符串，其中每个字符都是 &#39;A&#39;、&#39;C&#39;、&#39;G&#39; 和"><meta itemprop="datePublished" content="2022-09-09T23:14:16+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
 <meta itemprop="wordCount" content="558"><meta itemprop="image" content="https://tva2.sinaimg.cn/large/0075auPSly1fqb8lgz38sj31kw0vbnpd.jpg" />
 <meta itemprop="keywords" content="最短路径问题," /><meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://tva2.sinaimg.cn/large/0075auPSly1fqb8lgz38sj31kw0vbnpd.jpg" /><meta name="twitter:title" content="lc.443.最小基因变化"/>
-<meta name="twitter:description" content="433. 最小基因变化 Description Difficulty: 中等 Related Topics: 广度优先搜索, 哈希表, 字符串 基因序列可以表示为一条由 8 个字符组成的字符串，其中每个字符都是 &#39;A&#39;、&#39;C&#39;、&#39;G&#39; 和"/>
+<meta name="twitter:description" content="433. 最小基因变化 Description Difficulty: 中等 Related Topics: 广度优先搜索 , 哈希表 , 字符串 基因序列可以表示为一条由 8 个字符组成的字符串，其中每个字符都是 &#39;A&#39;、&#39;C&#39;、&#39;G&#39; 和"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -217,10 +217,22 @@ input.PC_MARK1:focus{
 </div>
 
     <div class="post-content">
-      <h1 id="433-最小基因变化httpsleetcodecnproblemsminimum-genetic-mutation"><a href="https://leetcode.cn/problems/minimum-genetic-mutation/">433. 最小基因变化</a></h1>
+      <h1 id="433-最小基因变化httpsleetcodecnproblemsminimum-genetic-mutation"><a href="https://leetcode.cn/problems/minimum-genetic-mutation/" target="_blank" rel="noopener">
+  433. 最小基因变化
+</a>
+</h1>
 <h2 id="description">Description</h2>
 <p>Difficulty: <strong>中等</strong></p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/breadth-first-search/">广度优先搜索</a>, <a href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a href="https://leetcode.cn/tag/string/">字符串</a></p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/breadth-first-search/" target="_blank" rel="noopener">
+  广度优先搜索
+</a>
+, <a href="https://leetcode.cn/tag/hash-table/" target="_blank" rel="noopener">
+  哈希表
+</a>
+, <a href="https://leetcode.cn/tag/string/" target="_blank" rel="noopener">
+  字符串
+</a>
+</p>
 <p>基因序列可以表示为一条由 8 个字符组成的字符串，其中每个字符都是 <code>'A'</code>、<code>'C'</code>、<code>'G'</code> 和 <code>'T'</code> 之一。</p>
 <p>假设我们需要调查从基因序列 <code>start</code> 变为 <code>end</code> 所发生的基因变化。一次基因变化就意味着这个基因序列中的一个字符发生了变化。</p>
 <ul>

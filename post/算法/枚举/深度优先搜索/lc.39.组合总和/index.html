@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="lyr" /><meta name="description" content="39. 组合总和 Description Difficulty: 中等 Related Topics: 数组, 回溯 给你一个 无重复元素 的整数数组 candidates 和一个目标整数 target ，找出 candidates 中可以使数字和为目标数 target 的 所有不同组合 ，并以列表形式返" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
+<meta name="author" content="lyr" /><meta name="description" content="39. 组合总和 Description Difficulty: 中等 Related Topics: 数组 , 回溯 给你一个 无重复元素 的整数数组 candidates 和一个目标整数 target ，找出 candidates 中可以使数字和为目标数 target 的 所有不同组合 ，并以列表形式返" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
 
 
 
@@ -43,19 +43,19 @@
 
 
 <meta property="og:title" content="lc.39.组合总和" />
-<meta property="og:description" content="39. 组合总和 Description Difficulty: 中等 Related Topics: 数组, 回溯 给你一个 无重复元素 的整数数组 candidates 和一个目标整数 target ，找出 candidates 中可以使数字和为目标数 target 的 所有不同组合 ，并以列表形式返" />
+<meta property="og:description" content="39. 组合总和 Description Difficulty: 中等 Related Topics: 数组 , 回溯 给你一个 无重复元素 的整数数组 candidates 和一个目标整数 target ，找出 candidates 中可以使数字和为目标数 target 的 所有不同组合 ，并以列表形式返" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%9E%9A%E4%B8%BE/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/lc.39.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C/" /><meta property="og:image" content="https://tva3.sinaimg.cn/large/0072Vf1pgy1fodqgnyehhj31hc0u0x6p.jpg" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-10-02T00:31:06+08:00" />
 <meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
 
 <meta itemprop="name" content="lc.39.组合总和">
-<meta itemprop="description" content="39. 组合总和 Description Difficulty: 中等 Related Topics: 数组, 回溯 给你一个 无重复元素 的整数数组 candidates 和一个目标整数 target ，找出 candidates 中可以使数字和为目标数 target 的 所有不同组合 ，并以列表形式返"><meta itemprop="datePublished" content="2022-10-02T00:31:06+08:00" />
+<meta itemprop="description" content="39. 组合总和 Description Difficulty: 中等 Related Topics: 数组 , 回溯 给你一个 无重复元素 的整数数组 candidates 和一个目标整数 target ，找出 candidates 中可以使数字和为目标数 target 的 所有不同组合 ，并以列表形式返"><meta itemprop="datePublished" content="2022-10-02T00:31:06+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
 <meta itemprop="wordCount" content="436"><meta itemprop="image" content="https://tva3.sinaimg.cn/large/0072Vf1pgy1fodqgnyehhj31hc0u0x6p.jpg" />
 <meta itemprop="keywords" content="深度优先搜索," /><meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://tva3.sinaimg.cn/large/0072Vf1pgy1fodqgnyehhj31hc0u0x6p.jpg" /><meta name="twitter:title" content="lc.39.组合总和"/>
-<meta name="twitter:description" content="39. 组合总和 Description Difficulty: 中等 Related Topics: 数组, 回溯 给你一个 无重复元素 的整数数组 candidates 和一个目标整数 target ，找出 candidates 中可以使数字和为目标数 target 的 所有不同组合 ，并以列表形式返"/>
+<meta name="twitter:description" content="39. 组合总和 Description Difficulty: 中等 Related Topics: 数组 , 回溯 给你一个 无重复元素 的整数数组 candidates 和一个目标整数 target ，找出 candidates 中可以使数字和为目标数 target 的 所有不同组合 ，并以列表形式返"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -217,10 +217,19 @@ input.PC_MARK1:focus{
 </div>
 
     <div class="post-content">
-      <h1 id="39-组合总和httpsleetcodecnproblemscombination-sum"><a href="https://leetcode.cn/problems/combination-sum/">39. 组合总和</a></h1>
+      <h1 id="39-组合总和httpsleetcodecnproblemscombination-sum"><a href="https://leetcode.cn/problems/combination-sum/" target="_blank" rel="noopener">
+  39. 组合总和
+</a>
+</h1>
 <h2 id="description">Description</h2>
 <p>Difficulty: <strong>中等</strong></p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/array/">数组</a>, <a href="https://leetcode.cn/tag/backtracking/">回溯</a></p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/array/" target="_blank" rel="noopener">
+  数组
+</a>
+, <a href="https://leetcode.cn/tag/backtracking/" target="_blank" rel="noopener">
+  回溯
+</a>
+</p>
 <p>给你一个 <strong>无重复元素</strong> 的整数数组 <code>candidates</code> 和一个目标整数 <code>target</code> ，找出 <code>candidates</code> 中可以使数字和为目标数 <code>target</code> 的 <em>所有</em><strong>不同组合</strong> ，并以列表形式返回。你可以按 <strong>任意顺序</strong> 返回这些组合。</p>
 <p><code>candidates</code> 中的 <strong>同一个</strong> 数字可以 <strong>无限制重复被选取</strong> 。如果至少一个数字的被选数量不同，则两种组合是不同的。</p>
 <p>对于给定的输入，保证和为 <code>target</code> 的不同组合数少于 <code>150</code> 个。</p>

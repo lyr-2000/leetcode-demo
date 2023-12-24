@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="lyr" /><meta name="description" content="1248. 统计「优美子数组」 Description Difficulty: 中等 Related Topics: 数组, 哈希表, 数学, 滑动窗口 给你一个整数数组 nums 和一个整数 k。如果某个连续子数组中恰好有 k 个奇数数字，我们就认" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
+<meta name="author" content="lyr" /><meta name="description" content="1248. 统计「优美子数组」 Description Difficulty: 中等 Related Topics: 数组 , 哈希表 , 数学 , 滑动窗口 给你一个整数数组 nums 和一个整数 k。如果某个连续子数组中恰好有 k 个奇数数字，我们就认" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
 
 
 
@@ -43,19 +43,19 @@
 
 
 <meta property="og:title" content="1248.统计优美子数组" />
-<meta property="og:description" content="1248. 统计「优美子数组」 Description Difficulty: 中等 Related Topics: 数组, 哈希表, 数学, 滑动窗口 给你一个整数数组 nums 和一个整数 k。如果某个连续子数组中恰好有 k 个奇数数字，我们就认" />
+<meta property="og:description" content="1248. 统计「优美子数组」 Description Difficulty: 中等 Related Topics: 数组 , 哈希表 , 数学 , 滑动窗口 给你一个整数数组 nums 和一个整数 k。如果某个连续子数组中恰好有 k 个奇数数字，我们就认" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%89%8D%E7%BC%80%E5%92%8C/1248.%E7%BB%9F%E8%AE%A1%E4%BC%98%E7%BE%8E%E5%AD%90%E6%95%B0%E7%BB%84/" /><meta property="og:image" content="https://tva3.sinaimg.cn/large/0072Vf1pgy1foxlojk0kbj31kw0w0tyb.jpg" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-08-03T22:18:11+08:00" />
 <meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
 
 <meta itemprop="name" content="1248.统计优美子数组">
-<meta itemprop="description" content="1248. 统计「优美子数组」 Description Difficulty: 中等 Related Topics: 数组, 哈希表, 数学, 滑动窗口 给你一个整数数组 nums 和一个整数 k。如果某个连续子数组中恰好有 k 个奇数数字，我们就认"><meta itemprop="datePublished" content="2022-08-03T22:18:11+08:00" />
+<meta itemprop="description" content="1248. 统计「优美子数组」 Description Difficulty: 中等 Related Topics: 数组 , 哈希表 , 数学 , 滑动窗口 给你一个整数数组 nums 和一个整数 k。如果某个连续子数组中恰好有 k 个奇数数字，我们就认"><meta itemprop="datePublished" content="2022-08-03T22:18:11+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
 <meta itemprop="wordCount" content="409"><meta itemprop="image" content="https://tva3.sinaimg.cn/large/0072Vf1pgy1foxlojk0kbj31kw0w0tyb.jpg" />
 <meta itemprop="keywords" content="前缀和," /><meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://tva3.sinaimg.cn/large/0072Vf1pgy1foxlojk0kbj31kw0w0tyb.jpg" /><meta name="twitter:title" content="1248.统计优美子数组"/>
-<meta name="twitter:description" content="1248. 统计「优美子数组」 Description Difficulty: 中等 Related Topics: 数组, 哈希表, 数学, 滑动窗口 给你一个整数数组 nums 和一个整数 k。如果某个连续子数组中恰好有 k 个奇数数字，我们就认"/>
+<meta name="twitter:description" content="1248. 统计「优美子数组」 Description Difficulty: 中等 Related Topics: 数组 , 哈希表 , 数学 , 滑动窗口 给你一个整数数组 nums 和一个整数 k。如果某个连续子数组中恰好有 k 个奇数数字，我们就认"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -217,10 +217,25 @@ input.PC_MARK1:focus{
 </div>
 
     <div class="post-content">
-      <h1 id="1248-统计优美子数组httpsleetcodecnproblemscount-number-of-nice-subarrays"><a href="https://leetcode.cn/problems/count-number-of-nice-subarrays/">1248. 统计「优美子数组」</a></h1>
+      <h1 id="1248-统计优美子数组httpsleetcodecnproblemscount-number-of-nice-subarrays"><a href="https://leetcode.cn/problems/count-number-of-nice-subarrays/" target="_blank" rel="noopener">
+  1248. 统计「优美子数组」
+</a>
+</h1>
 <h2 id="description">Description</h2>
 <p>Difficulty: <strong>中等</strong></p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/array/">数组</a>, <a href="https://leetcode.cn/tag/hash-table/">哈希表</a>, <a href="https://leetcode.cn/tag/math/">数学</a>, <a href="https://leetcode.cn/tag/sliding-window/">滑动窗口</a></p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/array/" target="_blank" rel="noopener">
+  数组
+</a>
+, <a href="https://leetcode.cn/tag/hash-table/" target="_blank" rel="noopener">
+  哈希表
+</a>
+, <a href="https://leetcode.cn/tag/math/" target="_blank" rel="noopener">
+  数学
+</a>
+, <a href="https://leetcode.cn/tag/sliding-window/" target="_blank" rel="noopener">
+  滑动窗口
+</a>
+</p>
 <p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code>。如果某个连续子数组中恰好有 <code>k</code> 个奇数数字，我们就认为这个子数组是「<strong>优美子数组</strong>」。</p>
 <p>请返回这个数组中 <strong>「优美子数组」</strong> 的数目。</p>
 <p><strong>示例 1：</strong></p>

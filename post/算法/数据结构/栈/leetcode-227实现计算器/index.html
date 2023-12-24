@@ -261,9 +261,15 @@ s 表示一个 有效表达式
 题目数据保证答案是一个 32-bit 整数</p>
 <h3 id="解题思路">解题思路</h3>
 <ol>
-<li>编译原理： <a href="https://www.youtube.com/watch?v=SToUyjAsaFk">参考学习教程</a></li>
+<li>编译原理： <a href="https://www.youtube.com/watch?v=SToUyjAsaFk" target="_blank" rel="noopener">
+  参考学习教程
+</a>
+</li>
 </ol>
-<p><a href="https://zhuanlan.zhihu.com/p/94424139">文法学习</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/94424139" target="_blank" rel="noopener">
+  文法学习
+</a>
+</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -274,7 +280,10 @@ s 表示一个 有效表达式
 </span></span><span class="line"><span class="cl"><span class="n">E</span> <span class="o">-&gt;</span> <span class="n">E</span> <span class="o">+</span> <span class="n">T</span> <span class="o">|</span> <span class="n">E</span> <span class="o">-</span> <span class="n">T</span> <span class="o">|</span> <span class="n">T</span> 
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><a href="https://www.youtube.com/watch?v=9-EYWLbmiG0">参考的教程2</a></p>
+</div><p><a href="https://www.youtube.com/watch?v=9-EYWLbmiG0" target="_blank" rel="noopener">
+  参考的教程2
+</a>
+</p>
 <h3 id="解题代码">解题代码</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -640,7 +649,10 @@ s 表示一个 有效表达式
 </div>
 </div><h2 id="通用解法">通用解法</h2>
 <p>上面的做法还是有一定的局限性，因为没有总结出一般规律来， 函数会有个优先级处理的问题，我们可以这样理解，每一层函数都不主动去处理字符，而是委托给下一层去处理 输入的符号，如果下一层能解决，这一层就不用解决，如果下一层不解决，那么尝试这一层解决。 我们通过这样 就可以解决符号优先级的问题了，最后可以解析出一个抽象语法树。</p>
-<p><a href="https://www.cnblogs.com/blogernice/articles/13156017.html">c语言运算符优先级表</a></p>
+<p><a href="https://www.cnblogs.com/blogernice/articles/13156017.html" target="_blank" rel="noopener">
+  c语言运算符优先级表
+</a>
+</p>
 <p>做了这道题，我们就有编译原理的基础了，可以实现简单的脚本语言</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

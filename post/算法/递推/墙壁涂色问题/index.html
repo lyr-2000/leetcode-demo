@@ -225,13 +225,22 @@ input.PC_MARK1:focus{
     <div class="post-content">
       <h2 id="环形墙壁涂色问题">环形墙壁涂色问题</h2>
 <p>环形墙壁涂色问题：在一面环形墙上分成了n块，现在共有3种颜料，要给这个墙涂色，要求相邻不能是同一个颜色，问有多少种方案。</p>
-<p><img src="https://s2.loli.net/2022/10/06/lvoRfMOQmiCEFTa.png" alt="图 1"></p>
-<p><img src="https://s2.loli.net/2022/10/06/eHG3iQBpUOrcfT6.png" alt="图 2"></p>
+<p><p class="md__image">
+  <img src="https://s2.loli.net/2022/10/06/lvoRfMOQmiCEFTa.png" alt="图 1"  />
+</p>
+</p>
+<p><p class="md__image">
+  <img src="https://s2.loli.net/2022/10/06/eHG3iQBpUOrcfT6.png" alt="图 2"  />
+</p>
+</p>
 <h3 id="方法1">方法1</h3>
 <p>f[n][i][j] 代表第 n块墙壁，在不考虑头尾成环的前提下，第一涂i,最后一块图j 的种类是多少？</p>
 <p>f(n,i,j) = Σf(n,i,j) (i!=j )</p>
 <p>把所有的 f(n,i,j), i!=j 的情况下累加起来，就是结果了。</p>
-<p><img src="https://s2.loli.net/2022/10/06/qvSUHA1lCZ9O7cW.png" alt="图 3"></p>
+<p><p class="md__image">
+  <img src="https://s2.loli.net/2022/10/06/qvSUHA1lCZ9O7cW.png" alt="图 3"  />
+</p>
+</p>
 <h3 id="方法2">方法2</h3>
 <p>定义 f(n,j),  j 为最后一块墙的颜色</p>
 <p>f(n,j) ,第1块涂 第0种颜色，最后一块涂第z种</p>
@@ -246,9 +255,15 @@ input.PC_MARK1:focus{
 <p>考虑第 1 块和 n-1块颜色不一样的情况，现在第 n 块要和第 n-1和 1 都不一样，但是只有 3 种颜色，所以 n 只有一种颜色选择，这种情况方案数正好是 dp[n-1]。</p>
 <p>考虑第 1 块和 n-1 块颜色一样的情况，第 n-2 块必然要和第 n-1 块不同，同时也就和第 1 块不同，前面 n-2 块方案数是 dp[n-2]，第 n 块要和第 1 块和第 n-1块不同，有 2 种选择，所以这种情况方案数是 2∗dp[n−2]。
 上面 2 种情况加起来就是总方案数。</p>
-<p><img src="https://s2.loli.net/2022/10/07/Z67SeJpngBu38Go.png" alt="图 4"></p>
+<p><p class="md__image">
+  <img src="https://s2.loli.net/2022/10/07/Z67SeJpngBu38Go.png" alt="图 4"  />
+</p>
+</p>
 <h2 id="参考">参考</h2>
-<p><a href="https://blog.nowcoder.net/n/26d37d711a3a4f2187b332b2ed687533?from=nowcoder_improve">参考文章</a></p>
+<p><a href="https://blog.nowcoder.net/n/26d37d711a3a4f2187b332b2ed687533?from=nowcoder_improve" target="_blank" rel="noopener">
+  参考文章
+</a>
+</p>
 
     </div>
 

@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="lyr" /><meta name="description" content="315. 计算右侧小于当前元素的个数 Description Difficulty: 困难 Related Topics: 树状数组, 线段树, 数组, 二分查找, 分治, 有序集合, 归并排序 给你一个整数数组 nums，按要求返回一个新" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
+<meta name="author" content="lyr" /><meta name="description" content="315. 计算右侧小于当前元素的个数 Description Difficulty: 困难 Related Topics: 树状数组 , 线段树 , 数组 , 二分查找 , 分治 , 有序集合 , 归并排序 给你一个整数数组 nums，按要求返回一个新" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
 
 
 
@@ -43,19 +43,19 @@
 
 
 <meta property="og:title" content="lc.315.计算右侧小于当前元素的个数" />
-<meta property="og:description" content="315. 计算右侧小于当前元素的个数 Description Difficulty: 困难 Related Topics: 树状数组, 线段树, 数组, 二分查找, 分治, 有序集合, 归并排序 给你一个整数数组 nums，按要求返回一个新" />
+<meta property="og:description" content="315. 计算右侧小于当前元素的个数 Description Difficulty: 困难 Related Topics: 树状数组 , 线段树 , 数组 , 二分查找 , 分治 , 有序集合 , 归并排序 给你一个整数数组 nums，按要求返回一个新" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/lc.315.%E8%AE%A1%E7%AE%97%E5%8F%B3%E4%BE%A7%E5%B0%8F%E4%BA%8E%E5%BD%93%E5%89%8D%E5%85%83%E7%B4%A0%E7%9A%84%E4%B8%AA%E6%95%B0/" /><meta property="og:image" content="https://tva4.sinaimg.cn/large/0072Vf1pgy1fodqiguph4j31hc0xcqg9.jpg" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-09-18T12:05:03+08:00" />
 <meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
 
 <meta itemprop="name" content="lc.315.计算右侧小于当前元素的个数">
-<meta itemprop="description" content="315. 计算右侧小于当前元素的个数 Description Difficulty: 困难 Related Topics: 树状数组, 线段树, 数组, 二分查找, 分治, 有序集合, 归并排序 给你一个整数数组 nums，按要求返回一个新"><meta itemprop="datePublished" content="2022-09-18T12:05:03+08:00" />
+<meta itemprop="description" content="315. 计算右侧小于当前元素的个数 Description Difficulty: 困难 Related Topics: 树状数组 , 线段树 , 数组 , 二分查找 , 分治 , 有序集合 , 归并排序 给你一个整数数组 nums，按要求返回一个新"><meta itemprop="datePublished" content="2022-09-18T12:05:03+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
 <meta itemprop="wordCount" content="444"><meta itemprop="image" content="https://tva4.sinaimg.cn/large/0072Vf1pgy1fodqiguph4j31hc0xcqg9.jpg" />
 <meta itemprop="keywords" content="归并排序," /><meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://tva4.sinaimg.cn/large/0072Vf1pgy1fodqiguph4j31hc0xcqg9.jpg" /><meta name="twitter:title" content="lc.315.计算右侧小于当前元素的个数"/>
-<meta name="twitter:description" content="315. 计算右侧小于当前元素的个数 Description Difficulty: 困难 Related Topics: 树状数组, 线段树, 数组, 二分查找, 分治, 有序集合, 归并排序 给你一个整数数组 nums，按要求返回一个新"/>
+<meta name="twitter:description" content="315. 计算右侧小于当前元素的个数 Description Difficulty: 困难 Related Topics: 树状数组 , 线段树 , 数组 , 二分查找 , 分治 , 有序集合 , 归并排序 给你一个整数数组 nums，按要求返回一个新"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -217,10 +217,34 @@ input.PC_MARK1:focus{
 </div>
 
     <div class="post-content">
-      <h1 id="315-计算右侧小于当前元素的个数httpsleetcodecnproblemscount-of-smaller-numbers-after-self"><a href="https://leetcode.cn/problems/count-of-smaller-numbers-after-self/">315. 计算右侧小于当前元素的个数</a></h1>
+      <h1 id="315-计算右侧小于当前元素的个数httpsleetcodecnproblemscount-of-smaller-numbers-after-self"><a href="https://leetcode.cn/problems/count-of-smaller-numbers-after-self/" target="_blank" rel="noopener">
+  315. 计算右侧小于当前元素的个数
+</a>
+</h1>
 <h2 id="description">Description</h2>
 <p>Difficulty: <strong>困难</strong></p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/binary-indexed-tree/">树状数组</a>, <a href="https://leetcode.cn/tag/segment-tree/">线段树</a>, <a href="https://leetcode.cn/tag/array/">数组</a>, <a href="https://leetcode.cn/tag/binary-search/">二分查找</a>, <a href="https://leetcode.cn/tag/divide-and-conquer/">分治</a>, <a href="https://leetcode.cn/tag/ordered-set/">有序集合</a>, <a href="https://leetcode.cn/tag/merge-sort/">归并排序</a></p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/binary-indexed-tree/" target="_blank" rel="noopener">
+  树状数组
+</a>
+, <a href="https://leetcode.cn/tag/segment-tree/" target="_blank" rel="noopener">
+  线段树
+</a>
+, <a href="https://leetcode.cn/tag/array/" target="_blank" rel="noopener">
+  数组
+</a>
+, <a href="https://leetcode.cn/tag/binary-search/" target="_blank" rel="noopener">
+  二分查找
+</a>
+, <a href="https://leetcode.cn/tag/divide-and-conquer/" target="_blank" rel="noopener">
+  分治
+</a>
+, <a href="https://leetcode.cn/tag/ordered-set/" target="_blank" rel="noopener">
+  有序集合
+</a>
+, <a href="https://leetcode.cn/tag/merge-sort/" target="_blank" rel="noopener">
+  归并排序
+</a>
+</p>
 <p>给你一个整数数组 <code>nums</code>，按要求返回一个新数组 <code>counts</code>。数组 <code>counts</code> 有该性质： <code>counts[i]</code> 的值是  <code>nums[i]</code> 右侧小于 <code>nums[i]</code> 的元素的数量。</p>
 <p><strong>示例 1：</strong></p>
 <div class="highlight"><div class="chroma">

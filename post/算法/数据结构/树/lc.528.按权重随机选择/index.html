@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="lyr" /><meta name="description" content="528. 按权重随机选择 Description Difficulty: 中等 Related Topics: 数学, 二分查找, 前缀和, 随机化 给你一个 下标从 0 开始 的正整数数组 w ，其中 w[i] 代表第 i 个下标的权重。 请你实现一个函数 pickIndex" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
+<meta name="author" content="lyr" /><meta name="description" content="528. 按权重随机选择 Description Difficulty: 中等 Related Topics: 数学 , 二分查找 , 前缀和 , 随机化 给你一个 下标从 0 开始 的正整数数组 w ，其中 w[i] 代表第 i 个下标的权重。 请你实现一个函数 pickIndex" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
 
 
 
@@ -43,19 +43,19 @@
 
 
 <meta property="og:title" content="lc.528.按权重随机选择" />
-<meta property="og:description" content="528. 按权重随机选择 Description Difficulty: 中等 Related Topics: 数学, 二分查找, 前缀和, 随机化 给你一个 下标从 0 开始 的正整数数组 w ，其中 w[i] 代表第 i 个下标的权重。 请你实现一个函数 pickIndex" />
+<meta property="og:description" content="528. 按权重随机选择 Description Difficulty: 中等 Related Topics: 数学 , 二分查找 , 前缀和 , 随机化 给你一个 下标从 0 开始 的正整数数组 w ，其中 w[i] 代表第 i 个下标的权重。 请你实现一个函数 pickIndex" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/lc.528.%E6%8C%89%E6%9D%83%E9%87%8D%E9%9A%8F%E6%9C%BA%E9%80%89%E6%8B%A9/" /><meta property="og:image" content="https://tva4.sinaimg.cn/large/87c01ec7gy1frhlysganrj21hc0u0hdt.jpg" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-10-05T00:02:40+08:00" />
 <meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
 
 <meta itemprop="name" content="lc.528.按权重随机选择">
-<meta itemprop="description" content="528. 按权重随机选择 Description Difficulty: 中等 Related Topics: 数学, 二分查找, 前缀和, 随机化 给你一个 下标从 0 开始 的正整数数组 w ，其中 w[i] 代表第 i 个下标的权重。 请你实现一个函数 pickIndex"><meta itemprop="datePublished" content="2022-10-05T00:02:40+08:00" />
+<meta itemprop="description" content="528. 按权重随机选择 Description Difficulty: 中等 Related Topics: 数学 , 二分查找 , 前缀和 , 随机化 给你一个 下标从 0 开始 的正整数数组 w ，其中 w[i] 代表第 i 个下标的权重。 请你实现一个函数 pickIndex"><meta itemprop="datePublished" content="2022-10-05T00:02:40+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
 <meta itemprop="wordCount" content="530"><meta itemprop="image" content="https://tva4.sinaimg.cn/large/87c01ec7gy1frhlysganrj21hc0u0hdt.jpg" />
 <meta itemprop="keywords" content="树," /><meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://tva4.sinaimg.cn/large/87c01ec7gy1frhlysganrj21hc0u0hdt.jpg" /><meta name="twitter:title" content="lc.528.按权重随机选择"/>
-<meta name="twitter:description" content="528. 按权重随机选择 Description Difficulty: 中等 Related Topics: 数学, 二分查找, 前缀和, 随机化 给你一个 下标从 0 开始 的正整数数组 w ，其中 w[i] 代表第 i 个下标的权重。 请你实现一个函数 pickIndex"/>
+<meta name="twitter:description" content="528. 按权重随机选择 Description Difficulty: 中等 Related Topics: 数学 , 二分查找 , 前缀和 , 随机化 给你一个 下标从 0 开始 的正整数数组 w ，其中 w[i] 代表第 i 个下标的权重。 请你实现一个函数 pickIndex"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -217,10 +217,25 @@ input.PC_MARK1:focus{
 </div>
 
     <div class="post-content">
-      <h1 id="528-按权重随机选择httpsleetcodecnproblemsrandom-pick-with-weight"><a href="https://leetcode.cn/problems/random-pick-with-weight/">528. 按权重随机选择</a></h1>
+      <h1 id="528-按权重随机选择httpsleetcodecnproblemsrandom-pick-with-weight"><a href="https://leetcode.cn/problems/random-pick-with-weight/" target="_blank" rel="noopener">
+  528. 按权重随机选择
+</a>
+</h1>
 <h2 id="description">Description</h2>
 <p>Difficulty: <strong>中等</strong></p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/math/">数学</a>, <a href="https://leetcode.cn/tag/binary-search/">二分查找</a>, <a href="https://leetcode.cn/tag/prefix-sum/">前缀和</a>, <a href="https://leetcode.cn/tag/randomized/">随机化</a></p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/math/" target="_blank" rel="noopener">
+  数学
+</a>
+, <a href="https://leetcode.cn/tag/binary-search/" target="_blank" rel="noopener">
+  二分查找
+</a>
+, <a href="https://leetcode.cn/tag/prefix-sum/" target="_blank" rel="noopener">
+  前缀和
+</a>
+, <a href="https://leetcode.cn/tag/randomized/" target="_blank" rel="noopener">
+  随机化
+</a>
+</p>
 <p>给你一个 <strong>下标从 0 开始</strong> 的正整数数组 <code>w</code> ，其中 <code>w[i]</code> 代表第 <code>i</code> 个下标的权重。</p>
 <p>请你实现一个函数 <code>pickIndex</code> ，它可以 <strong>随机地</strong> 从范围 <code>[0, w.length - 1]</code> 内（含 <code>0</code> 和 <code>w.length - 1</code>）选出并返回一个下标。选取下标 <code>i</code> 的 <strong>概率</strong> 为 <code>w[i] / sum(w)</code> 。</p>
 <ul>

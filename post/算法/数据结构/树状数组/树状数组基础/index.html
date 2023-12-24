@@ -231,16 +231,25 @@ input.PC_MARK1:focus{
 <p>$lowbit(x) = x&amp;(-x)$</p>
 <h2 id="改进前缀和数组">改进前缀和数组</h2>
 <p>tree[i] 代表 C[i] 代表前lowbit(i) 项的和</p>
-<p><img src="https://s2.loli.net/2022/10/15/guPe2CEJ49pGaUr.png" alt="图 1"></p>
+<p><p class="md__image">
+  <img src="https://s2.loli.net/2022/10/15/guPe2CEJ49pGaUr.png" alt="图 1"  />
+</p>
+</p>
 <p>原来前缀和数组的定义是 [1,n] 项的 数组和，由于 sum[n] 与 {1,n} 项都有关系，就导致了单点修改的问题比较大， 所以前缀和数组改进的方式在于 让 sum[n] 只记录 前 lowbit(n) 项的和。</p>
-<p><img src="https://s2.loli.net/2022/10/15/Xqj6fvg1uCRTYoP.png" alt="图 2"></p>
+<p><p class="md__image">
+  <img src="https://s2.loli.net/2022/10/15/Xqj6fvg1uCRTYoP.png" alt="图 2"  />
+</p>
+</p>
 <p>如图所示
 $$
 lowbit(8) = 8\
 lowbit(7)=1\
 lowbit(6) = 2\</p>
 <p>$$</p>
-<p><img src="https://s2.loli.net/2022/10/15/RAWD4MmTaXCtouU.png" alt="图 3"></p>
+<p><p class="md__image">
+  <img src="https://s2.loli.net/2022/10/15/RAWD4MmTaXCtouU.png" alt="图 3"  />
+</p>
+</p>
 <p>如图所示，用树状数组的话修改 nums[1] ,只需要修改 C[1],C[2],C[4],和 C[8] 的值，不需要 修改 C[1~n] 的所有值</p>
 <h2 id="树状数组求和公式">树状数组求和公式</h2>
 <p>$S[i] = S[i-lowbit(i)] + C[i]$</p>
@@ -251,7 +260,10 @@ sum[6] = sum[4] + nums[6]
 $$</p>
 <h3 id="树状数组单点修改">树状数组单点修改</h3>
 <p>修改A[5],那么要更新 C[5],C[6],C[8] 的值</p>
-<p><img src="https://s2.loli.net/2022/10/15/dQIJnq36yGXMjsg.png" alt="图 4"></p>
+<p><p class="md__image">
+  <img src="https://s2.loli.net/2022/10/15/dQIJnq36yGXMjsg.png" alt="图 4"  />
+</p>
+</p>
 <h3 id="代码实现">代码实现</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

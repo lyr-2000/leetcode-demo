@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="lyr" /><meta name="description" content="1004. 最大连续1的个数 III Description Difficulty: 中等 Related Topics: 数组, 二分查找, 前缀和, 滑动窗口 给定一个二进制数组 nums 和一个整数 k，如果可以翻转最多 k 个 0 ，则返回 数组中连续 1" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
+<meta name="author" content="lyr" /><meta name="description" content="1004. 最大连续1的个数 III Description Difficulty: 中等 Related Topics: 数组 , 二分查找 , 前缀和 , 滑动窗口 给定一个二进制数组 nums 和一个整数 k，如果可以翻转最多 k 个 0 ，则返回 数组中连续 1" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
 
 
 
@@ -43,19 +43,19 @@
 
 
 <meta property="og:title" content="lc.1004.最大连续1的个数" />
-<meta property="og:description" content="1004. 最大连续1的个数 III Description Difficulty: 中等 Related Topics: 数组, 二分查找, 前缀和, 滑动窗口 给定一个二进制数组 nums 和一个整数 k，如果可以翻转最多 k 个 0 ，则返回 数组中连续 1" />
+<meta property="og:description" content="1004. 最大连续1的个数 III Description Difficulty: 中等 Related Topics: 数组 , 二分查找 , 前缀和 , 滑动窗口 给定一个二进制数组 nums 和一个整数 k，如果可以翻转最多 k 个 0 ，则返回 数组中连续 1" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%8F%8C%E6%8C%87%E9%92%88/lc.1004.%E6%9C%80%E5%A4%A7%E8%BF%9E%E7%BB%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/" /><meta property="og:image" content="https://tva4.sinaimg.cn/large/9bd9b167gy1fwrssd1rerj21hc0u07d1.jpg" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-10-22T21:17:29+08:00" />
 <meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
 
 <meta itemprop="name" content="lc.1004.最大连续1的个数">
-<meta itemprop="description" content="1004. 最大连续1的个数 III Description Difficulty: 中等 Related Topics: 数组, 二分查找, 前缀和, 滑动窗口 给定一个二进制数组 nums 和一个整数 k，如果可以翻转最多 k 个 0 ，则返回 数组中连续 1"><meta itemprop="datePublished" content="2022-10-22T21:17:29+08:00" />
+<meta itemprop="description" content="1004. 最大连续1的个数 III Description Difficulty: 中等 Related Topics: 数组 , 二分查找 , 前缀和 , 滑动窗口 给定一个二进制数组 nums 和一个整数 k，如果可以翻转最多 k 个 0 ，则返回 数组中连续 1"><meta itemprop="datePublished" content="2022-10-22T21:17:29+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
 <meta itemprop="wordCount" content="440"><meta itemprop="image" content="https://tva4.sinaimg.cn/large/9bd9b167gy1fwrssd1rerj21hc0u07d1.jpg" />
 <meta itemprop="keywords" content="双指针," /><meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://tva4.sinaimg.cn/large/9bd9b167gy1fwrssd1rerj21hc0u07d1.jpg" /><meta name="twitter:title" content="lc.1004.最大连续1的个数"/>
-<meta name="twitter:description" content="1004. 最大连续1的个数 III Description Difficulty: 中等 Related Topics: 数组, 二分查找, 前缀和, 滑动窗口 给定一个二进制数组 nums 和一个整数 k，如果可以翻转最多 k 个 0 ，则返回 数组中连续 1"/>
+<meta name="twitter:description" content="1004. 最大连续1的个数 III Description Difficulty: 中等 Related Topics: 数组 , 二分查找 , 前缀和 , 滑动窗口 给定一个二进制数组 nums 和一个整数 k，如果可以翻转最多 k 个 0 ，则返回 数组中连续 1"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -217,10 +217,25 @@ input.PC_MARK1:focus{
 </div>
 
     <div class="post-content">
-      <h1 id="1004-最大连续1的个数-iiihttpsleetcodecnproblemsmax-consecutive-ones-iii"><a href="https://leetcode.cn/problems/max-consecutive-ones-iii/">1004. 最大连续1的个数 III</a></h1>
+      <h1 id="1004-最大连续1的个数-iiihttpsleetcodecnproblemsmax-consecutive-ones-iii"><a href="https://leetcode.cn/problems/max-consecutive-ones-iii/" target="_blank" rel="noopener">
+  1004. 最大连续1的个数 III
+</a>
+</h1>
 <h2 id="description">Description</h2>
 <p>Difficulty: <strong>中等</strong></p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/array/">数组</a>, <a href="https://leetcode.cn/tag/binary-search/">二分查找</a>, <a href="https://leetcode.cn/tag/prefix-sum/">前缀和</a>, <a href="https://leetcode.cn/tag/sliding-window/">滑动窗口</a></p>
+<p>Related Topics: <a href="https://leetcode.cn/tag/array/" target="_blank" rel="noopener">
+  数组
+</a>
+, <a href="https://leetcode.cn/tag/binary-search/" target="_blank" rel="noopener">
+  二分查找
+</a>
+, <a href="https://leetcode.cn/tag/prefix-sum/" target="_blank" rel="noopener">
+  前缀和
+</a>
+, <a href="https://leetcode.cn/tag/sliding-window/" target="_blank" rel="noopener">
+  滑动窗口
+</a>
+</p>
 <p>给定一个二进制数组 <code>nums</code> 和一个整数 <code>k</code>，如果可以翻转最多 <code>k</code> 个 <code>0</code> ，则返回 <em>数组中连续 <code>1</code> 的最大个数</em> 。</p>
 <p><strong>示例 1：</strong></p>
 <div class="highlight"><div class="chroma">
