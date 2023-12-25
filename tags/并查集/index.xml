@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Wed, 07 Sep 2022 23:23:24 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 24 Dec 2023 14:59:42 +0800</lastBuildDate>
     <atom:link href="https://lyr-2000.github.io/code/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lc.547.省份数量</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%B9%B6%E6%9F%A5%E9%9B%86/lc.547.%E7%9C%81%E4%BB%BD%E6%95%B0%E9%87%8F/</link>
+      <pubDate>Sun, 24 Dec 2023 14:59:42 +0800</pubDate>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%B9%B6%E6%9F%A5%E9%9B%86/lc.547.%E7%9C%81%E4%BB%BD%E6%95%B0%E9%87%8F/</guid>
+      <description>/* @lc app=leetcode.cn id=547 lang=cpp * [547] 省份数量 * https://leetcode.cn/problems/number-of-provinces/description/ * algorithms Medium (62.14%) Likes: 1077 Dislikes: 0 Total Accepted: 293.8K Total Submissions: 472.8K Testcase Example: &amp;lsquo;[[1,1,0],[1,1,0],[0,0,1]]&amp;rsquo; * 有 n 个城市，其中一些彼此相连，另一些没有相连。如果城市 a 与城市 b 直接相连，且城</description>
+    </item>
     <item>
       <title>lc.1202.交换字符串中的元素</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B9%B6%E6%9F%A5%E9%9B%86/lc.1202.%E4%BA%A4%E6%8D%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0/</link>

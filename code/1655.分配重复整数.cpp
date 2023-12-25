@@ -7,6 +7,7 @@ void printa(vector<int> &a) { for(int w:a) print(w); print("\n");}
 struct TreeNode { int val; TreeNode *left; TreeNode *right; TreeNode() : val(0), left(nullptr), right(nullptr) {} TreeNode(int x) : val(x), left(nullptr), right(nullptr) {} TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {} };
 void printt(const std::string &prefix, const TreeNode *node, bool isLeft) { if (node != nullptr) { cout << prefix; cout << (isLeft ? "├──" : "└──"); cout << node->val << endl; printt(prefix + (isLeft ? "│ " : " "), node->left, true); printt(prefix + (isLeft ? "│ " : " "), node->right, false); } }
 TreeNode* makeTree(vector<int> levelOrder) { if (levelOrder.empty()) { return NULL; } queue<TreeNode*> q; TreeNode* root = new TreeNode(levelOrder[0]); q.push(root); int i = 1; while (!q.empty() && i < levelOrder.size()) { TreeNode* node = q.front(); q.pop(); if (levelOrder[i] != -1) { node->left = new TreeNode(levelOrder[i]); q.push(node->left); } i++; if (i < levelOrder.size() && levelOrder[i] != -1) { node->right = new TreeNode(levelOrder[i]); q.push(node->right); } i++; } return root; }
+string itoa2(int a =0,int len=31) { string s = ""; while(a) { s.push_back(a%2 + '0'); a/=2; } int off = len - s.size(); while(off-->0) { printf("%c",'0'); } reverse(s.begin(),s.end()); return s; }
 
 /*
  * @lc app=leetcode.cn id=1655 lang=cpp
@@ -117,11 +118,11 @@ public:
                     continue;
                 }
                 for (int sub = state;sub ; sub = (sub-1) & state) {
-
+                    // cout<<"sub: " << itoa2(sub,8) << " state^sub: " << itoa2(state ^ sub ,8)  << " mask: "<<itoa2(state,8)<<endl;
                     // printf("sub: %d | %d \n",state - sub,state);
                     // 求子集
                     // if(!dp[i-1][state - sub]) continue;
-                    if (cnt[i-1] >= sum[sub] && dp[i-1][state - sub]) {
+                    if (cnt[i-1] >= sum[sub] && dp[i-1][state ^ sub]) {
                         dp[i][state] = 1;
                     }
                     // if(isok(cnt[i-1],sub,quantity,m)) 
