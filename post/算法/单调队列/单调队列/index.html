@@ -227,10 +227,10 @@ input.PC_MARK1:focus{
 <p>如果 区间的两个前缀作差，可以知道 [l,r] 之间的信息，就考虑用前缀和，否则就要考虑其他算法了</p>
 <h2 id="通用问题-rmq问题">通用问题 RMQ问题</h2>
 <p>问题引入：</p>
-<p>RMQ(x,y) 就是询问数组 [x,y] 区间内部的最小值,
+<p>RMQ(x,y) 就是询问数组 [x,y] 区间内部的最小值,<br>
 现在如果固定区间的尾部，例如 rmq(x,7), 请问 如下序列中最少记录几个元素，满足 rmq(x,7)满足任何需求</p>
 <p>比如滑动窗口的最小值，我们可以用一个单调递增队列(双端队列), 头部访问 o(1) 的时间复杂度获取区间最小元素</p>
-<p>单调队列的本质：
+<p>单调队列的本质：<br>
 <strong>维护 固定末尾的 RMQ问题</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

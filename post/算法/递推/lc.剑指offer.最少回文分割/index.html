@@ -284,8 +284,8 @@ input.PC_MARK1:focus{
 <li>整个思路参考最长上升子序列的解法</li>
 </ol>
 <p>定义dp[j] 为 从 0 到 j 为止，最少的回文分割的数量</p>
-<p>假设  (0,k) (k,j) 之中切一刀 使得两边都是回文串，并且 从 k 切出的回文串最短的话，
-那么 dp[j] 就会得到最小值。 所以这里是一个递推问题，
+<p>假设  (0,k) (k,j) 之中切一刀 使得两边都是回文串，并且 从 k 切出的回文串最短的话，<br>
+那么 dp[j] 就会得到最小值。 所以这里是一个递推问题，<br>
 我们要通过 for 循环 一个个的 去找 k 的值，看 k取什么值能让 dp[j] 最小，那么就可以求出dp[j], 同样的道理， k也可以按照这个步骤求，求到尽头就是答案。</p>
 <p>Language: <strong>C++</strong></p>
 <div class="highlight"><div class="chroma">
@@ -351,9 +351,9 @@ input.PC_MARK1:focus{
 </div><h2 id="优化版本">优化版本</h2>
 <p>预处理字符串回文记录时间复杂度 为 $o(N^2)$, 整体 计算的时间复杂度为 $o(N^2)$ ,上面的那种做法时间复杂度为 $o(N^3)$</p>
 <p>dp公式为：</p>
-<p>$$
-dp[i] = min(dp[i],dp[j] + isPali(j,i))\
-\j∈(0,i)
+<p>$$<br>
+dp[i] = min(dp[i],dp[j] + isPali(j,i))\<br>
+\j∈(0,i)<br>
 $$</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

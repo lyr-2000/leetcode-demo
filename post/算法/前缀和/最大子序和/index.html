@@ -278,7 +278,7 @@ input.PC_MARK1:focus{
 </ul>
 <p>**进阶：**如果你已经实现复杂度为 <code>O(n)</code> 的解法，尝试使用更为精妙的 <strong>分治法</strong> 求解。</p>
 <h2 id="前缀和算法">前缀和算法</h2>
-<p>先求出前缀和，然后再用贪心算法，求出 最小的 sum[l], 和 最大的 sum[r],
+<p>先求出前缀和，然后再用贪心算法，求出 最小的 sum[l], 和 最大的 sum[r],<br>
 然后 sum[r] - sum[l] 取最大，就是最大子数组和了。</p>
 <p>求出前缀和数组sum,枚举一个右端点 i,找到 i之前的一个 j,让 s[i] - s[j] 最大，也就是 让 s[j] 最小，再维护一个 S的前缀最小值即可。</p>
 <p>Language: <strong>Go</strong></p>

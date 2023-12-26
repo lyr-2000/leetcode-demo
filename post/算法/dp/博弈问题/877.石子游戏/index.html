@@ -222,16 +222,16 @@ input.PC_MARK1:focus{
 <p>Alice 和 Bob 轮流进行，<strong>Alice 先开始</strong> 。 每回合，玩家从行的 <strong>开始</strong> 或 <strong>结束</strong> 处取走整堆石头。 这种情况一直持续到没有更多的石子堆为止，此时手中 <strong>石子最多</strong> 的玩家 <strong>获胜</strong> 。</p>
 <p>假设 Alice 和 Bob 都发挥出最佳水平，当 Alice 赢得比赛时返回 <code>true</code> ，当 Bob 赢得比赛时返回 <code>false</code> 。</p>
 <p><strong>示例 1：</strong></p>
-<p>**输入：**piles = [5,3,4,5]
-**输出：**true
-<strong>解释：</strong>
-Alice 先开始，只能拿前 5 颗或后 5 颗石子 。
-假设他取了前 5 颗，这一行就变成了 [3,4,5] 。
-如果 Bob 拿走前 3 颗，那么剩下的是 [4,5]，Alice 拿走后 5 颗赢得 10 分。
-如果 Bob 拿走后 5 颗，那么剩下的是 [3,4]，Alice 拿走后 4 颗赢得 9 分。
+<p>**输入：**piles = [5,3,4,5]<br>
+**输出：**true<br>
+<strong>解释：</strong><br>
+Alice 先开始，只能拿前 5 颗或后 5 颗石子 。<br>
+假设他取了前 5 颗，这一行就变成了 [3,4,5] 。<br>
+如果 Bob 拿走前 3 颗，那么剩下的是 [4,5]，Alice 拿走后 5 颗赢得 10 分。<br>
+如果 Bob 拿走后 5 颗，那么剩下的是 [3,4]，Alice 拿走后 4 颗赢得 9 分。<br>
 这表明，取前 5 颗石子对 Alice 来说是一个胜利的举动，所以返回 true 。</p>
 <p><strong>示例 2：</strong></p>
-<p>**输入：**piles = [3,7,2,3]
+<p>**输入：**piles = [3,7,2,3]<br>
 **输出：**true</p>
 <p><strong>提示：</strong></p>
 <ul>

@@ -227,14 +227,14 @@ input.PC_MARK1:focus{
   <img src="https://pic2.zhimg.com/80/v2-2340c53e5ca7f1db5536492960bb4ebd_720w.webp" alt="https://pic2.zhimg.com/80/v2-2340c53e5ca7f1db5536492960bb4ebd_720w.webp"  />
 </p>
 </p>
-<p>$$
-p(x) = 1/(1+e^{-(a*x+b)})
+<p>$$<br>
+p(x) = 1/(1+e^{-(a*x+b)})<br>
 \</p>
-<p>y=\left{
-\begin{array}{rcl}
-1     &amp;      &amp; {P(x) \geq 0 }\
-0       &amp;      &amp; {P(x) \lt 0}
-\end{array} \right.
+<p>y=\left{<br>
+\begin{array}{rcl}<br>
+1     &amp;      &amp; {P(x) \geq 0 }\<br>
+0       &amp;      &amp; {P(x) \lt 0}<br>
+\end{array} \right.<br>
 $$</p>
 <h2 id="利用逻辑回归预测皮马人糖尿病数据">利用逻辑回归预测皮马人糖尿病数据</h2>
 <p><p class="md__image">
@@ -257,10 +257,10 @@ $$</p>
   <img src="https://s2.loli.net/2022/10/30/zC9Gfh4mAqYLWZr.png" alt="图 2"  />
 </p>
 </p>
-<p>$$
-P(x) = 1/(1+e^{-g(x)})
-\
-g(x) = a+bx_1 + cx_2
+<p>$$<br>
+P(x) = 1/(1+e^{-g(x)})<br>
+\<br>
+g(x) = a+bx_1 + cx_2<br>
 $$</p>
 <p>这里我们可以很直观的用高中数学学到的知识，求出这个线性函数表达式</p>
 <p>g(x) = -4 + x_1 + x_2 &gt; 0: 三角形</p>
@@ -272,10 +272,10 @@ $$</p>
 </p>
 </p>
 <p>如图所示，我们用上面的方法，也能够实现</p>
-<p>$$
-P(x) = 1/(1+e^{-g(x)})
-\
-g(x) = a_0 + a_1<em>x_1 + a_2</em>x_2 + a_3<em>x_1^2 + a_4</em>x_2^4
+<p>$$<br>
+P(x) = 1/(1+e^{-g(x)})<br>
+\<br>
+g(x) = a_0 + a_1<em>x_1 + a_2</em>x_2 + a_3<em>x_1^2 + a_4</em>x_2^4<br>
 $$</p>
 <p>我们很容易的求出g(x),</p>
 <p>$g(x) = x_1^2 + x_2 ^2 -1$</p>
@@ -283,21 +283,21 @@ $$</p>
 <p>逻辑回归结合多项式边界函数，可以解决复杂的分类问题。</p>
 <h2 id="损失函数">损失函数</h2>
 <p>线性回归求解， 最小化损失函数 (J):</p>
-<p>$$
-J = \frac{1}{2m}\sum_{i=1}^{m}(y^{&rsquo;}_i - y_i)
+<p>$$<br>
+J = \frac{1}{2m}\sum_{i=1}^{m}(y^{&rsquo;}_i - y_i)<br>
 $$</p>
 <p>上面是线性回归的损失函数，由于这里说的是分类问题，在分类问题中，标签(值)，预测结果都是离散的点，使用这个瞬时函数无法寻找极小值， 因此我们要找到一个 特别的瞬时函数，当 $y_i=0$ 的时候，返回1， $y_i=1$ 的时候，返回0， 得到的 J非常大，来实现惩罚值，告诉计算机</p>
 <p>逻辑回归求解，最小化损失函数 (J):</p>
 <p>$$</p>
-<p>J_{i}=\left{
-\begin{array}{rcl}
--log(P(x_i))  &amp;   &amp; { y_i = 1 }\
--log(1-p(x_i)    &amp;   &amp; {y_i = 0}
-\end{array} \right.
+<p>J_{i}=\left{<br>
+\begin{array}{rcl}<br>
+-log(P(x_i))  &amp;   &amp; { y_i = 1 }\<br>
+-log(1-p(x_i)    &amp;   &amp; {y_i = 0}<br>
+\end{array} \right.<br>
 $$</p>
 <p>损失值越大，表示预测越不准确，用来评判一个模型的好坏的</p>
-<p>$$
-J=\frac{1}{m}\sum_{i=1}^{m}j_i = -\frac{1}{m}[\sum_{i=1}^{m}(y_i log(P(x_i )) + (1-y_i) log(1-P(x_i)))]
+<p>$$<br>
+J=\frac{1}{m}\sum_{i=1}^{m}j_i = -\frac{1}{m}[\sum_{i=1}^{m}(y_i log(P(x_i )) + (1-y_i) log(1-P(x_i)))]<br>
 $$</p>
 
     </div>

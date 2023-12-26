@@ -227,30 +227,30 @@ input.PC_MARK1:focus{
   https://leetcode.cn/problems/distinct-subsequences-ii/description/
 </a>
 </p>
-<p>algorithms
-Hard (53.10%)
-Likes:    328
-Dislikes: 0
-Total Accepted:    31.3K
-Total Submissions: 59K
+<p>algorithms<br>
+Hard (53.10%)<br>
+Likes:    328<br>
+Dislikes: 0<br>
+Total Accepted:    31.3K<br>
+Total Submissions: 59K<br>
 Testcase Example:  &lsquo;&ldquo;abc&rdquo;&rsquo;</p>
 <p>给定一个字符串 s，计算 s 的 不同非空子序列 的个数。因为结果可能很大，所以返回答案需要对 10^9 + 7 取余 。</p>
 <p>字符串的 子序列 是经由原字符串删除一些（也可能不删除）字符但不改变剩余字符相对位置的一个新字符串。</p>
 <p>例如，&ldquo;ace&rdquo; 是 &ldquo;abcde&rdquo; 的一个子序列，但 &ldquo;aec&rdquo; 不是。</p>
 <p>示例 1：</p>
-<p>输入：s = &ldquo;abc&rdquo;
-输出：7
+<p>输入：s = &ldquo;abc&rdquo;<br>
+输出：7<br>
 解释：7 个不同的子序列分别是 &ldquo;a&rdquo;, &ldquo;b&rdquo;, &ldquo;c&rdquo;, &ldquo;ab&rdquo;, &ldquo;ac&rdquo;, &ldquo;bc&rdquo;, 以及 &ldquo;abc&rdquo;。</p>
 <p>示例 2：</p>
-<p>输入：s = &ldquo;aba&rdquo;
-输出：6
+<p>输入：s = &ldquo;aba&rdquo;<br>
+输出：6<br>
 解释：6 个不同的子序列分别是 &ldquo;a&rdquo;, &ldquo;b&rdquo;, &ldquo;ab&rdquo;, &ldquo;ba&rdquo;, &ldquo;aa&rdquo; 以及 &ldquo;aba&rdquo;。</p>
 <p>示例 3：</p>
-<p>输入：s = &ldquo;aaa&rdquo;
-输出：3
+<p>输入：s = &ldquo;aaa&rdquo;<br>
+输出：3<br>
 解释：3 个不同的子序列分别是 &ldquo;a&rdquo;, &ldquo;aa&rdquo; 以及 &ldquo;aaa&rdquo;。</p>
 <p>提示：</p>
-<p>1 &lt;= s.length &lt;= 2000
+<p>1 &lt;= s.length &lt;= 2000<br>
 s 仅由小写英文字母组成</p>
 <h2 id="解题思路">解题思路</h2>
 <p><p class="md__image">
@@ -262,8 +262,8 @@ s 仅由小写英文字母组成</p>
 </a>
 </p>
 <p>根据题意我们设dp[i]为前i个字符可以组成的不同的子序列，则有</p>
-<p>$$
-dp[i] = dp[i - 1] + newCount - repeatCount
+<p>$$<br>
+dp[i] = dp[i - 1] + newCount - repeatCount<br>
 $$</p>
 <p><p class="md__image">
   <img src="../../../..//image/mdfiles/image-1.png" alt="Alt text"  />
@@ -436,7 +436,11 @@ $$</p>
           <a href="/code/tags/%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86/">容斥原理</a>
           </div>
       <nav class="post-nav">
-        
+        <a class="prev" href="/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E9%80%92%E5%BD%92/lc.2193.%E5%BE%97%E5%88%B0%E5%9B%9E%E6%96%87%E4%B8%B2%E7%9A%84%E6%9C%80%E5%B0%91%E6%93%8D%E4%BD%9C%E6%AC%A1%E6%95%B0/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">lc.2193.得到回文串的最少操作次数</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
         <a class="next" href="/code/post/%E7%AE%97%E6%B3%95/%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86/lc.1987.%E4%B8%8D%E5%90%8C%E7%9A%84%E5%A5%BD%E5%AD%90%E5%BA%8F%E5%88%97%E6%95%B0%E7%9B%AE/">
             <span class="next-text nav-default">lc.1987.不同的好子序列数目</span>
             <span class="next-text nav-mobile">下一篇</span>

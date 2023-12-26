@@ -241,16 +241,16 @@ input.PC_MARK1:focus{
 </p>
 </p>
 <p>证明 两个串可以直接匹配：</p>
-<p>$$
+<p>$$<br>
 TA == TB\</p>
 <p>SA == TA\</p>
-<p>so:\
-SA == TA\
+<p>so:\<br>
+SA == TA\<br>
 TA == SB\</p>
 <p>$$</p>
 <p>Ta 可以和 SB直接对齐。</p>
 <p>直接 比较 sb后面黄色的那段就可以了，蓝色的那段不需要重复进行匹配。 黄色的那段位置是 <code>i+j</code></p>
-<p>我们令 母串 S 的黄色位置是 i, 模式T当前匹配位置是 j,
+<p>我们令 母串 S 的黄色位置是 i, 模式T当前匹配位置是 j,<br>
 如果 i,j 不匹配，j就往前跳， i变，j下标变化，往模式串前面跳 $j=next[j]$。</p>
 <p><p class="md__image">
   <img src="https://s2.loli.net/2022/10/09/1wUBgO2Mj7EV6Ap.png" alt="图 4"  />
@@ -295,7 +295,7 @@ TA == SB\</p>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>KMP母串是不会往前回溯的，只会往后面跳，所以算法效率是非常高效的。
+</div><p>KMP母串是不会往前回溯的，只会往后面跳，所以算法效率是非常高效的。<br>
 伪代码如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

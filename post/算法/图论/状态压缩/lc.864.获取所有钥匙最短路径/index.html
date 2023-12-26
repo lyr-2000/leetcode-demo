@@ -212,50 +212,50 @@ input.PC_MARK1:focus{
 </div>
 
     <div class="post-content">
-      <p>@lc app=leetcode.cn id=864 lang=cpp
-*
-[864] 获取所有钥匙的最短路径
-*
+      <p>@lc app=leetcode.cn id=864 lang=cpp<br>
+*<br>
+[864] 获取所有钥匙的最短路径<br>
+*<br>
 <a href="https://leetcode.cn/problems/shortest-path-to-get-all-keys/description/" target="_blank" rel="noopener">
   https://leetcode.cn/problems/shortest-path-to-get-all-keys/description/
 </a>
-
-*
-algorithms
-Hard (59.25%)
-Likes:    275
-Dislikes: 0
-Total Accepted:    21.7K
-Total Submissions: 36.7K
-Testcase Example:  &lsquo;[&quot;@.a..&quot;,&quot;###.#&quot;,&ldquo;b.A.B&rdquo;]&rsquo;
-*
+<br>
+*<br>
+algorithms<br>
+Hard (59.25%)<br>
+Likes:    275<br>
+Dislikes: 0<br>
+Total Accepted:    21.7K<br>
+Total Submissions: 36.7K<br>
+Testcase Example:  &lsquo;[&quot;@.a..&quot;,&quot;###.#&quot;,&ldquo;b.A.B&rdquo;]&rsquo;<br>
+*<br>
 给定一个二维网格 grid ，其中：</p>
-<p>&lsquo;.&rsquo; 代表一个空房间
-&lsquo;#&rsquo; 代表一堵墙
-&lsquo;@&rsquo; 是起点
-小写字母代表钥匙
+<p>&lsquo;.&rsquo; 代表一个空房间<br>
+&lsquo;#&rsquo; 代表一堵墙<br>
+&lsquo;@&rsquo; 是起点<br>
+小写字母代表钥匙<br>
 大写字母代表锁</p>
 <p>我们从起点开始出发，一次移动是指向四个基本方向之一行走一个单位空间。我们不能在网格外面行走，也无法穿过一堵墙。如果途经一个钥匙，我们就把它捡起来。除非我们手里有对应的钥匙，否则无法通过锁。</p>
-<p>假设 k 为 钥匙/锁 的个数，且满足 1 &lt;= k &lt;= 6，字母表中的前 k
+<p>假设 k 为 钥匙/锁 的个数，且满足 1 &lt;= k &lt;= 6，字母表中的前 k<br>
 个字母在网格中都有自己对应的一个小写和一个大写字母。换言之，每个锁有唯一对应的钥匙，每个钥匙也有唯一对应的锁。另外，代表钥匙和锁的字母互为大小写并按字母顺序排列。</p>
 <p>返回获取所有钥匙所需要的移动的最少次数。如果无法获取所有钥匙，返回 -1 。</p>
 <p>示例 1：</p>
-<p>输入：grid = [&quot;@.a.#&quot;,&quot;###.#&quot;,&ldquo;b.A.B&rdquo;]
-输出：8
+<p>输入：grid = [&quot;@.a.#&quot;,&quot;###.#&quot;,&ldquo;b.A.B&rdquo;]<br>
+输出：8<br>
 解释：目标是获得所有钥匙，而不是打开所有锁。</p>
 <p>示例 2：</p>
-<p>输入：grid = [&quot;@..aA&quot;,&quot;..B#.&quot;,&quot;&hellip;.b&quot;]
+<p>输入：grid = [&quot;@..aA&quot;,&quot;..B#.&quot;,&quot;&hellip;.b&quot;]<br>
 输出：6</p>
 <p>示例 3:</p>
-<p>输入: grid = [&quot;@Aa&quot;]
+<p>输入: grid = [&quot;@Aa&quot;]<br>
 输出: -1</p>
 <p>提示：</p>
-<p>m == grid.length
-n == grid[i].length
-1 &lt;= m, n &lt;= 30
-grid[i][j] 只含有 &lsquo;.&rsquo;, &lsquo;#&rsquo;, &lsquo;@&rsquo;, &lsquo;a&rsquo;-&lsquo;f&rsquo; 以及 &lsquo;A&rsquo;-&lsquo;F&rsquo;
-钥匙的数目范围是 [1, 6]
-每个钥匙都对应一个 不同 的字母
+<p>m == grid.length<br>
+n == grid[i].length<br>
+1 &lt;= m, n &lt;= 30<br>
+grid[i][j] 只含有 &lsquo;.&rsquo;, &lsquo;#&rsquo;, &lsquo;@&rsquo;, &lsquo;a&rsquo;-&lsquo;f&rsquo; 以及 &lsquo;A&rsquo;-&lsquo;F&rsquo;<br>
+钥匙的数目范围是 [1, 6]<br>
+每个钥匙都对应一个 不同 的字母<br>
 每个钥匙正好打开一个对应的锁</p>
 <h2 id="解题思路">解题思路</h2>
 <p>把所有钥匙压缩为状态进行表示，1 表示 获得，0没获得，最后 状态一定要到达  <code>(1&lt;&lt;m) -1</code></p>

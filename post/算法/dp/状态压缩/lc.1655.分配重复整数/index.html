@@ -213,58 +213,58 @@ input.PC_MARK1:focus{
 </div>
 
     <div class="post-content">
-      <p>@lc app=leetcode.cn id=1655 lang=cpp
-*
-[1655] 分配重复整数
-*
+      <p>@lc app=leetcode.cn id=1655 lang=cpp<br>
+*<br>
+[1655] 分配重复整数<br>
+*<br>
 <a href="https://leetcode.cn/problems/distribute-repeating-integers/description/" target="_blank" rel="noopener">
   https://leetcode.cn/problems/distribute-repeating-integers/description/
 </a>
-
-*
-algorithms
-Hard (39.88%)
-Likes:    51
-Dislikes: 0
-Total Accepted:    4.4K
-Total Submissions: 11.1K
-Testcase Example:  &lsquo;[1,2,3,4]\n[2]&rsquo;
-*
-给你一个长度为 n 的整数数组 nums ，这个数组中至多有 50 个不同的值。同时你有 m 个顾客的订单 quantity ，其中，整数
+<br>
+*<br>
+algorithms<br>
+Hard (39.88%)<br>
+Likes:    51<br>
+Dislikes: 0<br>
+Total Accepted:    4.4K<br>
+Total Submissions: 11.1K<br>
+Testcase Example:  &lsquo;[1,2,3,4]\n[2]&rsquo;<br>
+*<br>
+给你一个长度为 n 的整数数组 nums ，这个数组中至多有 50 个不同的值。同时你有 m 个顾客的订单 quantity ，其中，整数<br>
 quantity[i] 是第 i 位顾客订单的数目。请你判断是否能将 nums 中的整数分配给这些顾客，且满足：</p>
-<p>第 i 位顾客 恰好 有 quantity[i] 个整数。
-第 i 位顾客拿到的整数都是 相同的 。
+<p>第 i 位顾客 恰好 有 quantity[i] 个整数。<br>
+第 i 位顾客拿到的整数都是 相同的 。<br>
 每位顾客都满足上述两个要求。</p>
 <p>如果你可以分配 nums 中的整数满足上面的要求，那么请返回 true ，否则返回 false 。</p>
 <p>示例 1：</p>
-<p>输入：nums = [1,2,3,4], quantity = [2]
-输出：false
+<p>输入：nums = [1,2,3,4], quantity = [2]<br>
+输出：false<br>
 解释：第 0 位顾客没办法得到两个相同的整数。</p>
 <p>示例 2：</p>
-<p>输入：nums = [1,2,3,3], quantity = [2]
-输出：true
+<p>输入：nums = [1,2,3,3], quantity = [2]<br>
+输出：true<br>
 解释：第 0 位顾客得到 [3,3] 。整数 [1,2] 都没有被使用。</p>
 <p>示例 3：</p>
-<p>输入：nums = [1,1,2,2], quantity = [2,2]
-输出：true
+<p>输入：nums = [1,1,2,2], quantity = [2,2]<br>
+输出：true<br>
 解释：第 0 位顾客得到 [1,1] ，第 1 位顾客得到 [2,2] 。</p>
 <p>提示：</p>
-<p>n == nums.length
-1 &lt;= n &lt;= 10^5
-1 &lt;= nums[i] &lt;= 1000
-m == quantity.length
-1 &lt;= m &lt;= 10
-1 &lt;= quantity[i] &lt;= 10^5
+<p>n == nums.length<br>
+1 &lt;= n &lt;= 10^5<br>
+1 &lt;= nums[i] &lt;= 1000<br>
+m == quantity.length<br>
+1 &lt;= m &lt;= 10<br>
+1 &lt;= quantity[i] &lt;= 10^5<br>
 nums 中至多有 50 个不同的数字。</p>
 <h2 id="解题关键公式">解题关键公式</h2>
-<p>每个订单状态只有满足 和 不满足 2种情况， 用 一个 二进制数表示 这组订单的状态
+<p>每个订单状态只有满足 和 不满足 2种情况， 用 一个 二进制数表示 这组订单的状态<br>
 例如： 110 表示 最后1个订单不能满足，其他的订单满足 的情况</p>
-<p>$$ dp[i][111] = dp[i-1][110] \ and \ cnt[i] &gt;= need(001) $$
-or
+<p>$$ dp[i][111] = dp[i-1][110] \ and \ cnt[i] &gt;= need(001) $$<br>
+or<br>
 $$ dp[i][111] = dp[i-1][100] \ and \ cnt[i] &gt;= need(011) $$</p>
 <p>即为</p>
-<p>$
-dp[i][mask]  = dp[i-1][sub]  \ and \  cnt[i] &gt;= need(mask - sub)
+<p>$<br>
+dp[i][mask]  = dp[i-1][sub]  \ and \  cnt[i] &gt;= need(mask - sub)<br>
 $</p>
 <p>state = mask &amp; (state - 1)</p>
 <p>state 表示 mask的子集</p>

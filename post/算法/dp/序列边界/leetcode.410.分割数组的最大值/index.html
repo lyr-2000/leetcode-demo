@@ -387,12 +387,12 @@ input.PC_MARK1:focus{
 </div><p>「将数组分割为 m 段，求……」是动态规划题目常见的问法。</p>
 <h2 id="动态规划思路">动态规划思路</h2>
 <p>令 f[i][j]  表示将数组的前 i 个数分割为 j  段所能得到的最大连续子数组和的最小值。在进行状态转移时，我们可以考虑第 j 段的具体范围，即我们可以枚举 k ，其中前 k 个数被分割为 j-1  段，而第 k+1 到第 i  个数为第 j  段。此时，这 j  段子数组中和的最大值，就等于 f[k][j-1]  与  sub(k+1,i) 中的较大值，其中  sub(i,j) 表示数组 nums 中下标落在区间 [i,j] 内的数的和。</p>
-<p>作者：LeetCode-Solution
+<p>作者：LeetCode-Solution<br>
 链接：<a href="https://leetcode.cn/problems/split-array-largest-sum/solution/fen-ge-shu-zu-de-zui-da-zhi-by-leetcode-solution/" target="_blank" rel="noopener">
   https://leetcode.cn/problems/split-array-largest-sum/solution/fen-ge-shu-zu-de-zui-da-zhi-by-leetcode-solution/
 </a>
-
-来源：力扣（LeetCode）
+<br>
+来源：力扣（LeetCode）<br>
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
