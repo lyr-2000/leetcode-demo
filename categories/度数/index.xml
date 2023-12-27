@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>度数 on 凌冬的代码博客站</title>
+    <link>https://lyr-2000.github.io/code/categories/%E5%BA%A6%E6%95%B0/</link>
+    <description>Recent content in 度数 on 凌冬的代码博客站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>LYR</copyright>
+    <lastBuildDate>Thu, 28 Dec 2023 00:21:17 +0800</lastBuildDate>
+    <atom:link href="https://lyr-2000.github.io/code/categories/%E5%BA%A6%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lc.2924.找到冠军</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E5%BA%A6%E6%95%B0/lc.2924.%E6%89%BE%E5%88%B0%E5%86%A0%E5%86%9B/</link>
+      <pubDate>Thu, 28 Dec 2023 00:21:17 +0800</pubDate>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E5%BA%A6%E6%95%B0/lc.2924.%E6%89%BE%E5%88%B0%E5%86%A0%E5%86%9B/</guid>
+      <description>[2924] 找到冠军 II https://leetcode.cn/problems/find-champion-ii/description/ algorithms Medium (56.27%) Likes: 5 Dislikes: 0 Total Accepted: 5.4K Total Submissions: 9.6K Testcase Example: &amp;lsquo;3\n[[0,1],[1,2]]&amp;rsquo; 一场比赛中共有 n 支队伍，按从 0 到 n - 1 编号。每支队伍也是 有向无环图（DAG） 上的一个节点。 给你</description>
+    </item>
+  </channel>
+</rss>
