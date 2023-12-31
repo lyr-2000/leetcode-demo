@@ -93,12 +93,37 @@ string itoa2(int a =0,int len=31) { string s = ""; while(a) { s.push_back(a%2 + 
  * 
  * 
  */
-
+//思路： 在固定和不变的情况下，求最大分数就等价于求出最小的分数 
+// 要求出最小的分数，尽量保证 每个节点不选
+/**
+dfs(x) = 对于一个 x为根的子树，如果这个树是健康的，损失的最小分数是多少
+树形dp:模板题
+*/
 // @lc code=start
+#define ll long long
 class Solution {
 public:
     long long maximumScoreAfterOperations(vector<vector<int>>& edges, vector<int>& values) {
-        
+        int n = values.size();
+        ll sum = 0;
+        for (int u:values)  sum+=u ;
+        vector<vector<int> > g(n,vector<int> (0));
+        g[0].push_back(-1);
+        for (auto w: edges) {
+            g[w[0]].push_back(w[1]);
+            g[w[1]].push_back(w[0]);
+        }
+        return sum - dfs(0,-1,g,values);
+    }
+    long long dfs(int x,int fa,vector<vector<int> > &g,vector<int> &val ) {
+        if (g[x].size() == 1) return val[x];
+        ll lost = 0;
+        for (int ne: g[x]) {
+            if (ne != fa) {
+                lost += dfs(ne,x,g,val);
+            }
+        }
+        return min((ll)val[x],lost);
     }
 };
 // @lc code=end

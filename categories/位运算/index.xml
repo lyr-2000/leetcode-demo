@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Tue, 19 Dec 2023 23:53:43 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 30 Dec 2023 16:52:50 +0800</lastBuildDate>
     <atom:link href="https://lyr-2000.github.io/code/categories/%E4%BD%8D%E8%BF%90%E7%AE%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lc.2917.找出数组中的-k-or-值</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BD%8D%E8%BF%90%E7%AE%97/lc.2917.%E6%89%BE%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84-k-or-%E5%80%BC/</link>
+      <pubDate>Sat, 30 Dec 2023 16:52:50 +0800</pubDate>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BD%8D%E8%BF%90%E7%AE%97/lc.2917.%E6%89%BE%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84-k-or-%E5%80%BC/</guid>
+      <description>[2917] 找出数组中的 K-or 值 algorithms Easy (70.73%) Likes: 5 Dislikes: 0 Total Accepted: 5.5K Total Submissions: 7.8K Testcase Example: &amp;lsquo;[7,12,9,8,9,15]\n4&amp;rsquo; 给你一个下标从 0 开始的整数数组 nums 和一个整数 k 。 nums 中的 K-or 是一个满足以下条件的非负整数： 只有在</description>
+    </item>
     <item>
       <title>421.数组中两个数最大异或值</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BD%8D%E8%BF%90%E7%AE%97/421.%E6%95%B0%E7%BB%84%E4%B8%AD%E4%B8%A4%E4%B8%AA%E6%95%B0%E6%9C%80%E5%A4%A7%E5%BC%82%E6%88%96%E5%80%BC/</link>
