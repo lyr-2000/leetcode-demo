@@ -7,8 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Sat, 30 Dec 2023 16:52:50 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jan 2024 18:56:07 +0800</lastBuildDate>
     <atom:link href="https://lyr-2000.github.io/code/categories/%E4%BD%8D%E8%BF%90%E7%AE%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>集合类型解题技巧</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E8%A7%A3%E9%A2%98%E6%8A%80%E5%B7%A7/%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B%E8%A7%A3%E9%A2%98%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Sun, 14 Jan 2024 18:56:07 +0800</pubDate>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E8%A7%A3%E9%A2%98%E6%8A%80%E5%B7%A7/%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B%E8%A7%A3%E9%A2%98%E6%8A%80%E5%B7%A7/</guid>
+      <description>从集合论到位运算，常见位运算技巧分类总结 本文参考 : https://leetcode.cn/circle/discuss/CaOJ45/ 1 2 3 4 s = 101100 ~s = 010011 (~s)+1 = 010100 // 根据补码的定义，这就是 -s 最低 1 左侧取反，右侧不变 s &amp;amp; -s = 000100 //</description>
+    </item>
+    <item>
+      <title>lc.2897.对数组执行创作使平方和最大</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BD%8D%E8%BF%90%E7%AE%97/lc.2897.%E5%AF%B9%E6%95%B0%E7%BB%84%E6%89%A7%E8%A1%8C%E5%88%9B%E4%BD%9C%E4%BD%BF%E5%B9%B3%E6%96%B9%E5%92%8C%E6%9C%80%E5%A4%A7/</link>
+      <pubDate>Sun, 14 Jan 2024 18:51:21 +0800</pubDate>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BD%8D%E8%BF%90%E7%AE%97/lc.2897.%E5%AF%B9%E6%95%B0%E7%BB%84%E6%89%A7%E8%A1%8C%E5%88%9B%E4%BD%9C%E4%BD%BF%E5%B9%B3%E6%96%B9%E5%92%8C%E6%9C%80%E5%A4%A7/</guid>
+      <description>leetcode 2897.对数组执行操作使平方和最大 algorithms Hard (57.22%) Likes: 13 Dislikes: 0 Total Accepted: 2.3K Total Submissions: 4.1K Testcase Example: &amp;lsquo;[2,6,5,8]\n2&amp;rsquo; 给你一个下标从 0 开始的整数数组 nums 和一个 正 整数 k 。 你可以对数组执行以下操</description>
+    </item>
     <item>
       <title>lc.2917.找出数组中的-k-or-值</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E4%BD%8D%E8%BF%90%E7%AE%97/lc.2917.%E6%89%BE%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84-k-or-%E5%80%BC/</link>

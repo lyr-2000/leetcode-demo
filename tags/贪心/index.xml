@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Sun, 23 Oct 2022 22:11:37 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jan 2024 17:16:22 +0800</lastBuildDate>
     <atom:link href="https://lyr-2000.github.io/code/tags/%E8%B4%AA%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lc.2895.最小处理时间</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E8%B4%AA%E5%BF%83/lc.2895.%E6%9C%80%E5%B0%8F%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4/</link>
+      <pubDate>Sun, 14 Jan 2024 17:16:22 +0800</pubDate>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E8%B4%AA%E5%BF%83/lc.2895.%E6%9C%80%E5%B0%8F%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4/</guid>
+      <description>leetcode 2895.最小处理时间 algorithms Medium (77.12%) Likes: 9 Dislikes: 0 Total Accepted: 5.2K Total Submissions: 6.8K Testcase Example: &amp;lsquo;[8,10]\n[2,2,3,1,8,7,4,5]&amp;rsquo; 你有 n 颗处理器，每颗处理器都有 4 个核心。现有 n * 4 个待执行任务，每个核心只执行 一个 任</description>
+    </item>
     <item>
       <title>lc.2136.全部开花的最早一天</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E8%B4%AA%E5%BF%83/lc.2136.%E5%85%A8%E9%83%A8%E5%BC%80%E8%8A%B1%E7%9A%84%E6%9C%80%E6%97%A9%E4%B8%80%E5%A4%A9/</link>
