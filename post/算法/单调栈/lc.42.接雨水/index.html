@@ -52,7 +52,7 @@
 <meta itemprop="name" content="lc.42.接雨水">
 <meta itemprop="description" content="42. 接雨水 Description Difficulty: 困难 Related Topics: 栈 , 数组 , 双指针 , 动态规划 , 单调栈 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨"><meta itemprop="datePublished" content="2022-09-29T22:34:24+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
-<meta itemprop="wordCount" content="518"><meta itemprop="image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkezeq4jj31hc0u0qiy.jpg" />
+<meta itemprop="wordCount" content="516"><meta itemprop="image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkezeq4jj31hc0u0qiy.jpg" />
 <meta itemprop="keywords" content="单调栈," /><meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkezeq4jj31hc0u0qiy.jpg" /><meta name="twitter:title" content="lc.42.接雨水"/>
 <meta name="twitter:description" content="42. 接雨水 Description Difficulty: 困难 Related Topics: 栈 , 数组 , 双指针 , 动态规划 , 单调栈 给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨"/>
@@ -194,7 +194,7 @@ input.PC_MARK1:focus{
         <div class="post-category">
             <a href="/code/categories/%E5%8D%95%E8%B0%83%E6%A0%88/"> 单调栈 </a>
             </div>
-          <span class="more-meta"> 约 518 字 </span>
+          <span class="more-meta"> 约 516 字 </span>
           <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -314,30 +314,32 @@ input.PC_MARK1:focus{
 </span><span class="lnt">21
 </span><span class="lnt">22
 </span><span class="lnt">23
+</span><span class="lnt">24
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">trap</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">height</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">height</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">&lt;=</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// vector&lt;int&gt; lh(n),rh(n);
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">stack</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">s</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">//单调递减栈
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">while</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">height</span><span class="p">[</span><span class="n">s</span><span class="p">.</span><span class="n">top</span><span class="p">()]</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="kt">int</span> <span class="n">v</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">top</span><span class="p">();</span><span class="n">s</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">                <span class="c1">// 左边下降，右边上升
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="kt">int</span>  <span class="n">w</span><span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="n">s</span><span class="p">.</span><span class="n">top</span><span class="p">()</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">                <span class="kt">int</span> <span class="n">h</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">height</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span><span class="n">height</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="p">,</span><span class="n">height</span><span class="p">[</span><span class="n">s</span><span class="p">.</span><span class="n">top</span><span class="p">()]</span> <span class="o">-</span> <span class="n">height</span><span class="p">[</span><span class="n">v</span><span class="p">]);</span> <span class="c1">//能接的高度
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="n">ans</span> <span class="o">+=</span> <span class="n">w</span><span class="o">*</span><span class="n">h</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">            <span class="n">s</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kt">int</span> <span class="n">trap</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">height</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">stack</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">height</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">n</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">area</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// v 结构, 递减栈
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">s</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">height</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">height</span><span class="p">[</span><span class="n">s</span><span class="p">.</span><span class="n">top</span><span class="p">()])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">lowh</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">s</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">          <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">L</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">w</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="n">L</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">h</span> <span class="o">=</span> <span class="p">(</span><span class="n">min</span><span class="p">(</span><span class="n">height</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">height</span><span class="p">[</span><span class="n">L</span><span class="p">])</span> <span class="o">-</span> <span class="n">height</span><span class="p">[</span><span class="n">lowh</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">area</span> <span class="o">+=</span> <span class="n">w</span> <span class="o">*</span> <span class="n">h</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="n">s</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">area</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>
 </div>

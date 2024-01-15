@@ -52,7 +52,7 @@
 <meta itemprop="name" content="lc.739.每日温度">
 <meta itemprop="description" content="739. 每日温度 Description Difficulty: 中等 Related Topics: 栈 , 数组 , 单调栈 给定一个整数数组 temperatures ，表示每天的温度，返回一个数组 answer ，其中 answer[i] 是指对于第 i 天，下一个更高温度出现在几天后。"><meta itemprop="datePublished" content="2022-09-27T20:27:16+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
-<meta itemprop="wordCount" content="326"><meta itemprop="image" content="https://tva3.sinaimg.cn/large/87c01ec7gy1frqdpollutj21hc0u07wh.jpg" />
+<meta itemprop="wordCount" content="287"><meta itemprop="image" content="https://tva3.sinaimg.cn/large/87c01ec7gy1frqdpollutj21hc0u07wh.jpg" />
 <meta itemprop="keywords" content="单调栈," /><meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://tva3.sinaimg.cn/large/87c01ec7gy1frqdpollutj21hc0u07wh.jpg" /><meta name="twitter:title" content="lc.739.每日温度"/>
 <meta name="twitter:description" content="739. 每日温度 Description Difficulty: 中等 Related Topics: 栈 , 数组 , 单调栈 给定一个整数数组 temperatures ，表示每天的温度，返回一个数组 answer ，其中 answer[i] 是指对于第 i 天，下一个更高温度出现在几天后。"/>
@@ -194,7 +194,7 @@ input.PC_MARK1:focus{
         <div class="post-category">
             <a href="/code/categories/%E5%8D%95%E8%B0%83%E6%A0%88/"> 单调栈 </a>
             </div>
-          <span class="more-meta"> 约 326 字 </span>
+          <span class="more-meta"> 约 287 字 </span>
           <span class="more-meta"> 预计阅读 1 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -300,28 +300,24 @@ input.PC_MARK1:focus{
 </span><span class="lnt">16
 </span><span class="lnt">17
 </span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
 </span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">dailyTemperatures</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">temperatures</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">temperatures</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">&lt;=</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="p">{};</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">n</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
-</span></span><span class="line"><span class="cl">        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">ret</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">stack</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">stk</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="kt">int</span> <span class="n">current</span> <span class="o">=</span> <span class="n">temperatures</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="p">(</span><span class="n">stk</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">current</span> <span class="o">&gt;</span> <span class="n">temperatures</span><span class="p">[</span><span class="n">stk</span><span class="p">.</span><span class="n">top</span><span class="p">()])</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="c1">//更高的温度
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="n">ret</span><span class="p">[</span><span class="n">stk</span><span class="p">.</span><span class="n">top</span><span class="p">()]</span> <span class="o">=</span> <span class="n">i</span>  <span class="o">-</span> <span class="n">stk</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">                <span class="n">stk</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span> <span class="c1">//比栈里面的元素都要高，就都出栈，找到了比栈里面每一个元素都要高的一个元素
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">            <span class="n">stk</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//  自动回溯？
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">temperatures</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">stack</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">res</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">s</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">temperatures</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">temperatures</span><span class="p">[</span><span class="n">s</span><span class="p">.</span><span class="n">top</span><span class="p">()])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">int</span> <span class="n">pre</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">top</span><span class="p">();</span> <span class="n">s</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">int</span> <span class="n">lenx</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="n">pre</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span><span class="p">[</span><span class="n">pre</span><span class="p">]</span> <span class="o">=</span> <span class="n">lenx</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="n">s</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></td></tr></table>

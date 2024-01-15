@@ -10,6 +10,13 @@
     <lastBuildDate>Wed, 11 May 2022 20:02:48 +0800</lastBuildDate>
     <atom:link href="https://lyr-2000.github.io/code/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>单调栈</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E8%A7%A3%E9%A2%98%E6%8A%80%E5%B7%A7/%E5%8D%95%E8%B0%83%E6%A0%88/</link>
+      <pubDate>Tue, 16 Jan 2024 00:22:23 +0800</pubDate>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E8%A7%A3%E9%A2%98%E6%8A%80%E5%B7%A7/%E5%8D%95%E8%B0%83%E6%A0%88/</guid>
+      <description>【题单】单调栈（矩形系列/字典序最小/贡献法） 原理 单调栈 单调栈原理讲解 739. 每日温度 1475. 商品折扣后的最终价格 1212 496. 下一个更大元素 I 503. 下一个更大元素 II</description>
+    </item>
+    <item>
       <title>lc.2772.使数组中的所有元素都等于0</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%B7%AE%E5%88%86/lc.2772.%E4%BD%BF%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E5%85%83%E7%B4%A0%E9%83%BD%E7%AD%89%E4%BA%8E0/</link>
       <pubDate>Mon, 15 Jan 2024 00:49:41 +0800</pubDate>

@@ -22,33 +22,93 @@ ListNode * makeLinkedList(vector<int> w) { if(w.size()==0) return NULL; ListNode
 string bin(int a =0,int len=31) { string s = ""; while(a) { s.push_back(a%2 + '0'); a/=2; } int off = len - s.size(); while(off-->0) { printf("%c",'0'); } reverse(s.begin(),s.end()); return s; }
 /* clang-format on */
 
+/*
 
-${comment.start}
-${comment.line} @lc app=${app} id=${fid} lang=${lang}
-${comment.line}
-${comment.line} [${fid}] ${name}
-${comment.line}
-${comment.line} ${link}
-${comment.line}
-${comment.line} ${category}
-${comment.line} ${level} (${percent}%)
-${comment.line} Likes:    ${likes}
-${comment.line} Dislikes: ${dislikes}
-${comment.line} Total Accepted:    ${totalAC}
-${comment.line} Total Submissions: ${totalSubmit}
-${comment.line} Testcase Example:  ${testcase}
-${comment.line}
-{{ desc.forEach(function(x) { }}${comment.line} ${x}
-{{ }) }}${comment.end}
+<!-- @lc app=leetcode.cn id=42 lang=cpp -->
 
-${comment.singleLine} @lc code=start
-${code}
-${comment.singleLine} @lc code=end
+[leetcode 42.接雨水](https://leetcode.cn/problems/trapping-rain-water/description/)
 
-int main(void) {
 
-  Solution so;
-  //todo:
-  cout << "${name} "  << endl;
+algorithms
+Hard (63.21%)
+Likes:    4967
+Dislikes: 0
+Total Accepted:    843.6K
+Total Submissions: 1.3M
+Testcase Example:  '[0,1,0,2,1,0,1,3,2,1,2,1]'
+
+给定 n 个非负整数表示每个宽度为 1
+的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。
+
+
+
+示例 1：
+
+
+
+
+输入：height = [0,1,0,2,1,0,1,3,2,1,2,1]
+输出：6
+解释：上面是由数组 [0,1,0,2,1,0,1,3,2,1,2,1] 表示的高度图，在这种情况下，可以接
+6 个单位的雨水（蓝色部分表示雨水）。
+
+
+示例 2：
+
+
+输入：height = [4,2,0,3,2,5]
+输出：9
+
+
+
+
+提示：
+
+
+n == height.length
+1 <= n <= 2 * 10^4
+0 <= height[i] <= 10^5
+
+
+
+
+ */
+
+// @lc code=start
+class Solution {
+public:
+  int trap(vector<int> &height) {
+    stack<int> s;
+    int n = height.size();
+    if(!n) return 0;
+    int area = 0;
+    for (int i = 0; i < n; i++) {
+      // v 结构, 递减栈
+      while (!s.empty() && height[i] > height[s.top()]) {
+        int lowh = s.top();
+        s.pop();
+        if (s.empty())
+          break;
+        int L = s.top();
+        int w = i - L - 1;
+        int h = (min(height[i], height[L]) - height[lowh]);
+        area += w * h;
+      }
+      s.push(i);
+    }
+    return area;
+  }
+};
+// @lc code=end
+
+int main() {
+#ifdef debug
+  cout << " * [42] 接雨水" << endl;
+#endif
+
+  Solution k;
+  vector<int> a = {4,2,0,3,2,5};
+  println(k.trap(a));
+
   return 0;
 }
