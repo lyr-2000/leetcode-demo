@@ -160,7 +160,30 @@ $(function () {
 
 });
 
-//hightlight
+function absolute(base, relative) {
+  var stack = base.split("/"),
+      parts = relative.split("/");
+  stack.pop(); // remove current file name (or empty string)
+               // (omit if "base" is the current folder without trailing slash)
+  for (var i=0; i<parts.length; i++) {
+      if (parts[i] == ".")
+          continue;
+      if (parts[i] == "..")
+          stack.pop();
+      else
+          stack.push(parts[i]);
+  }
+  // debugger
+  return stack.join("/");
+} 
+function matchName(s) {
+  // s.split('/')
+  s = s.replace(/\.md$/g,'')
+  s = s.replace(/\.\.\//g,'')
+  return s
+}
+
+//hightlight wiki links
 $(function () {
   //双链支持
   let ok = window.location.href.indexOf('/post/') > -1;
@@ -185,23 +208,37 @@ $(function () {
         let t = $this.text().replace(/\[\[(.*)\]\]/g, function (a, b) {
           //双链
           let prefix = '' //默认相对路径
-          if (b.indexOf('post') == 0) {
-            //采用绝对路径
-            prefix = '/'
-          }
+          b = b.replace(/\\/g, "/") 
+          let bpre = b
           let link;
           let linkName;
           // 别名判断
-          let _arr = b.split('|');
-  
-          if (_arr[1]) {
-            linkName = _arr[1];// 别名
-            link = prefix + _arr[0];
-          } else {
-            linkName = b;//默认
-            link = prefix + b; 
-            
+          let _arr = bpre.split('|');
+          let isRelative= false
+          // debugger;
+          if (b.indexOf('post') == 0) {
+            //采用绝对路径
+            prefix = '/'
+          }else if(b.indexOf('../') == 0) {
+            let curr = window.location.pathname
+
+            curr = curr.replace(/\\$/, '.md')
+            let currall = curr.split('/')
+            currall.pop()
+            // currall.pop()
+            b = absolute(currall.join('/'),b)
+            b = b.replace(/\.md/g,'/')
+            isRelative = true
           }
+
+            if (_arr[1]) {
+              linkName = _arr[1];// 别名
+              link = prefix + _arr[0];
+            } else {
+              linkName = matchName(bpre);//默认
+              link = prefix + b; 
+            }
+         
           return '<a class="doubleLink" href="' + link + '" target="_blank">' + linkName + '</a><br/>';
         });
         if($text != t) {

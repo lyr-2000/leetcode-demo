@@ -38,8 +38,8 @@
 <link href="/code/sass/main.min.4d31fe93a248bf2a033aec98b3dca0e0e3f55453ad76230e57f190d60450d008.css" rel="stylesheet"> 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/post.css">
-<link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="/css/../code/css/post.css">
+<link rel="stylesheet" href="/css/../code/css/custom.css">
 
 
 <meta property="og:title" content="lc.329.矩阵中的最长递增路径" />
@@ -534,6 +534,7 @@ input.PC_MARK1:focus{
 </div>
     </div>
 
+
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">文章作者</span>
@@ -670,28 +671,29 @@ input.PC_MARK1:focus{
 
 
 
-<script src="/js/back_btn.js"></script>
-<script src="/js/docsearch.min.js"></script>
-<script src="/js/lazyload.min.js"></script>
-<script src="/js/x-plugin.js"></script>
+<script src="/js/../code/js/back_btn.js"></script>
+<script src="/js/../code/js/docsearch.min.js"></script>
+<script src="/js/../code/js/lazyload.min.js"></script>
 <script defer="defer" async>
  
   window.addEventListener('load',function() {
-  
-	docsearch({
-		apiKey: "a3054d64a9a7bbdef3c0601fee941703",
-		indexName: "blog-code-pratice",
-		appId: "MVN1L6O934",
-		inputSelector: '.docsearch-input',
-		debug: false,
-    });
-    docsearch({
-	 apiKey: "a3054d64a9a7bbdef3c0601fee941703",
-	 indexName: "blog-code-pratice",
-	 appId: "MVN1L6O934",
-	 inputSelector: '.mob-docsearch-input',
-	 debug: false,
-    });
+    if(window.docsearch) {
+        docsearch({
+        apiKey: "a3054d64a9a7bbdef3c0601fee941703",
+        indexName: "blog-code-pratice",
+        appId: "MVN1L6O934",
+        inputSelector: '.docsearch-input',
+        debug: false,
+        });
+        docsearch({
+      apiKey: "a3054d64a9a7bbdef3c0601fee941703",
+      indexName: "blog-code-pratice",
+      appId: "MVN1L6O934",
+      inputSelector: '.mob-docsearch-input',
+      debug: false,
+        });
+    } 
+	
   });
  
 </script>
