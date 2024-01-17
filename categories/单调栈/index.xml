@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>LYR</copyright>
-    <lastBuildDate>Thu, 29 Sep 2022 22:34:24 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jan 2024 22:02:51 +0800</lastBuildDate>
     <atom:link href="https://lyr-2000.github.io/code/categories/%E5%8D%95%E8%B0%83%E6%A0%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lc.1475.商品折扣后的最终价格</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%8D%95%E8%B0%83%E6%A0%88/lc.1475.%E5%95%86%E5%93%81%E6%8A%98%E6%89%A3%E5%90%8E%E7%9A%84%E6%9C%80%E7%BB%88%E4%BB%B7%E6%A0%BC/</link>
+      <pubDate>Tue, 16 Jan 2024 22:02:51 +0800</pubDate>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%8D%95%E8%B0%83%E6%A0%88/lc.1475.%E5%95%86%E5%93%81%E6%8A%98%E6%89%A3%E5%90%8E%E7%9A%84%E6%9C%80%E7%BB%88%E4%BB%B7%E6%A0%BC/</guid>
+      <description>leetcode 1475.商品折扣后的最终价格 algorithms Easy (73.54%) Likes: 218 Dislikes: 0 Total Accepted: 73.1K Total Submissions: 99.4K Testcase Example: &amp;lsquo;[8,4,6,2,3]&amp;rsquo; 给你一个数组 prices ，其中 prices[i] 是商店里第 i 件商品的价格。 商店里正在进行促销活动，如果</description>
+    </item>
     <item>
       <title>lc.42.接雨水</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%8D%95%E8%B0%83%E6%A0%88/lc.42.%E6%8E%A5%E9%9B%A8%E6%B0%B4/</link>

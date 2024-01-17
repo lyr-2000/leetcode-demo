@@ -17,6 +17,13 @@
       <description>欢迎来到我的文档站 github地址 个人独立博客地址 csdn博客 博客园 一起听歌,放松 特此声明 本站所有的原创文章均受 创作共享 署名-非商业性 4.0 许可</description>
     </item>
     <item>
+      <title>lc.1475.商品折扣后的最终价格</title>
+      <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%8D%95%E8%B0%83%E6%A0%88/lc.1475.%E5%95%86%E5%93%81%E6%8A%98%E6%89%A3%E5%90%8E%E7%9A%84%E6%9C%80%E7%BB%88%E4%BB%B7%E6%A0%BC/</link>
+      <pubDate>Tue, 16 Jan 2024 22:02:51 +0800</pubDate>
+      <guid>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%8D%95%E8%B0%83%E6%A0%88/lc.1475.%E5%95%86%E5%93%81%E6%8A%98%E6%89%A3%E5%90%8E%E7%9A%84%E6%9C%80%E7%BB%88%E4%BB%B7%E6%A0%BC/</guid>
+      <description>leetcode 1475.商品折扣后的最终价格 algorithms Easy (73.54%) Likes: 218 Dislikes: 0 Total Accepted: 73.1K Total Submissions: 99.4K Testcase Example: &amp;lsquo;[8,4,6,2,3]&amp;rsquo; 给你一个数组 prices ，其中 prices[i] 是商店里第 i 件商品的价格。 商店里正在进行促销活动，如果</description>
+    </item>
+    <item>
       <title>单调栈</title>
       <link>https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E8%A7%A3%E9%A2%98%E6%8A%80%E5%B7%A7/%E5%8D%95%E8%B0%83%E6%A0%88/</link>
       <pubDate>Tue, 16 Jan 2024 00:22:23 +0800</pubDate>

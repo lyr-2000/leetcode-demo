@@ -52,7 +52,7 @@
 <meta itemprop="name" content="lc.503.下一个更大元素II">
 <meta itemprop="description" content="503. 下一个更大元素 II Description Difficulty: 中等 Related Topics: 栈 , 数组 , 单调栈 给定一个循环数组 nums （ nums[nums.length - 1] 的下一个元素是 nums[0] ），返回 nums 中每个元素的 下一个更大元素 。 数字 x 的 下一个"><meta itemprop="datePublished" content="2022-09-26T21:56:18+08:00" />
 <meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
-<meta itemprop="wordCount" content="374"><meta itemprop="image" content="https://tva3.sinaimg.cn/large/0072Vf1pgy1fodqnwsypsj31hc10qe82.jpg" />
+<meta itemprop="wordCount" content="539"><meta itemprop="image" content="https://tva3.sinaimg.cn/large/0072Vf1pgy1fodqnwsypsj31hc10qe82.jpg" />
 <meta itemprop="keywords" content="单调栈," /><meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://tva3.sinaimg.cn/large/0072Vf1pgy1fodqnwsypsj31hc10qe82.jpg" /><meta name="twitter:title" content="lc.503.下一个更大元素II"/>
 <meta name="twitter:description" content="503. 下一个更大元素 II Description Difficulty: 中等 Related Topics: 栈 , 数组 , 单调栈 给定一个循环数组 nums （ nums[nums.length - 1] 的下一个元素是 nums[0] ），返回 nums 中每个元素的 下一个更大元素 。 数字 x 的 下一个"/>
@@ -194,8 +194,8 @@ input.PC_MARK1:focus{
         <div class="post-category">
             <a href="/code/categories/%E5%8D%95%E8%B0%83%E6%A0%88/"> 单调栈 </a>
             </div>
-          <span class="more-meta"> 约 374 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+          <span class="more-meta"> 约 539 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
     </header>
@@ -209,6 +209,7 @@ input.PC_MARK1:focus{
       <ul>
         <li><a href="#description">Description</a></li>
         <li><a href="#solution">Solution</a></li>
+        <li><a href="#循环数组直接用-mod-运算即可">循环数组，直接用 mod 运算即可</a></li>
         <li><a href="#思路">思路</a></li>
       </ul>
     </li>
@@ -271,7 +272,86 @@ input.PC_MARK1:focus{
 </ul>
 <h2 id="solution">Solution</h2>
 <p>Language: <strong>C++</strong></p>
-<h2 id="思路">思路</h2>
+<h2 id="循环数组直接用-mod-运算即可">循环数组，直接用 mod 运算即可</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">nextGreaterElements</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">n</span><span class="p">)</span> <span class="k">return</span> <span class="p">{};</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// vector&lt;int&gt; nums(n*2);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// for (int i=0;i&lt;n;i++) {
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">//     nums[i] = nums_[i];
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// }
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// for (int i=0;i&lt;n;i++) {
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">//     nums[i+n] = nums_[i];
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// }
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// todo:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// 1 2 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// [1 2 1 1 2] 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">stack</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">res</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">while</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">()</span>  <span class="o">&amp;&amp;</span> <span class="n">nums</span><span class="p">[</span><span class="n">remap</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">top</span><span class="p">(),</span><span class="n">n</span><span class="p">)]</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">[</span><span class="n">remap</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">n</span><span class="p">)])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">                <span class="n">s</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span><span class="p">[</span><span class="n">remap</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">n</span><span class="p">)]</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">remap</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">n</span><span class="p">)];</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="n">s</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="nf">remap</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">i</span> <span class="o">%</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// if (i &gt;= n) {
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">//     return i-n;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// }
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// return i;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="思路">思路</h2>
 <p>单调栈解法：  环形数组相当于执行两次</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
