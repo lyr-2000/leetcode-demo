@@ -172,6 +172,12 @@ function matchName(s) {
   s = s.replace(/\.\.\//g, "");
   return s;
 }
+function normalName(s) {
+  if(!s || !s.toLowerCase) {
+    return s
+  }
+  return s.toLowerCase()
+}
 
 //hightlight wiki links
 $(function () {
@@ -222,10 +228,10 @@ $(function () {
 
             if (_arr[1]) {
               linkName = _arr[1]; // 别名
-              link = prefix + _arr[0];
+              link = prefix + normalName(_arr[0]);
             } else {
               linkName = matchName(bpre); //默认
-              link = prefix + b;
+              link = prefix + normalName(b);
             }
             return (
               '<a class="doubleLink wiki_link" href="' +
@@ -303,6 +309,6 @@ $(function () {
       // btn1.addClass('hide');
       hide();
     });
-  //todo 背景图片速度优化
+  // todo 背景图片速度优化
    
 });
