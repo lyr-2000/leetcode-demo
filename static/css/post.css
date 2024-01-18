@@ -315,7 +315,8 @@ body {
   bottom: 0px;
   z-index: -2;
   position: fixed;
-  background: url(/asserts/background.jpg);
+  /* todo: 图片加载优化 */
+  background: url(/asserts/background.jpg); 
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
