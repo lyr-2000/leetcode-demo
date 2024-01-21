@@ -1,568 +1,124 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>lc.968.监控二叉树 - 凌冬的代码博客站</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-
-<meta name="author" content="lyr" /><meta name="description" content="968. 监控二叉树 Description Difficulty: 困难 Related Topics: 树 , 深度优先搜索 , 动态规划 , 二叉树 给定一个二叉树，我们在树的节点上安装摄像头。 节点上的每个摄影头都可以监视其父对象、" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.121.2 with theme even" />
-
-
-<link rel="canonical" href="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/lc.968.%E7%9B%91%E6%8E%A7%E4%BA%8C%E5%8F%89%E6%A0%91/" />
-<link rel="apple-touch-icon" sizes="180x180" href="/code/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/code/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/code/favicon-16x16.png">
-<link rel="manifest" href="/code/manifest.json">
-<link rel="mask-icon" href="/code/safari-pinned-tab.svg" color="#5bbad5">
-
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-<link href="/code/sass/main.min.4d31fe93a248bf2a033aec98b3dca0e0e3f55453ad76230e57f190d60450d008.css" rel="stylesheet"> 
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/../code/static/css/post.css">
-
-
-<meta property="og:title" content="lc.968.监控二叉树" />
-<meta property="og:description" content="968. 监控二叉树 Description Difficulty: 困难 Related Topics: 树 , 深度优先搜索 , 动态规划 , 二叉树 给定一个二叉树，我们在树的节点上安装摄像头。 节点上的每个摄影头都可以监视其父对象、" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/lc.968.%E7%9B%91%E6%8E%A7%E4%BA%8C%E5%8F%89%E6%A0%91/" /><meta property="og:image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkg877vyj31hc0u0ndz.jpg" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-09-04T20:35:38+08:00" />
-<meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
-
-<meta itemprop="name" content="lc.968.监控二叉树">
-<meta itemprop="description" content="968. 监控二叉树 Description Difficulty: 困难 Related Topics: 树 , 深度优先搜索 , 动态规划 , 二叉树 给定一个二叉树，我们在树的节点上安装摄像头。 节点上的每个摄影头都可以监视其父对象、"><meta itemprop="datePublished" content="2022-09-04T20:35:38+08:00" />
-<meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
-<meta itemprop="wordCount" content="764"><meta itemprop="image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkg877vyj31hc0u0ndz.jpg" />
-<meta itemprop="keywords" content="树," /><meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkg877vyj31hc0u0ndz.jpg" /><meta name="twitter:title" content="lc.968.监控二叉树"/>
-<meta name="twitter:description" content="968. 监控二叉树 Description Difficulty: 困难 Related Topics: 树 , 深度优先搜索 , 动态规划 , 二叉树 给定一个二叉树，我们在树的节点上安装摄像头。 节点上的每个摄影头都可以监视其父对象、"/>
-
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-
-</head>
-<body >
-  
-  
-  <div>
-    <button class="button pink back">back</button>
-    <button class="button pink go">go</button>
-    <button class="button pink topUrl">top</button>
-    
-  </div>
-  <div id="globalbg"></div>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">凌冬的博客</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list"><li style="display:inline-block;margin-right:10px;">
-			<input type="search" class="mob-docsearch-input" placeholder="Search" />
-		</li><a href="/code/">
-        <li class="mobile-menu-item">首页</li>
-      </a><a href="/code/post/">
-        <li class="mobile-menu-item">归档页</li>
-      </a><a href="/code/tags/">
-        <li class="mobile-menu-item">标签</li>
-      </a><a href="/code/categories/">
-        <li class="mobile-menu-item">分类</li>
-      </a><a href="/code/about/">
-        <li class="mobile-menu-item">关于</li>
-      </a><a href="/code/friends">
-        <li class="mobile-menu-item">友链</li>
-      </a>
-	
-	
-  </ul>
-
-  
-
-
-</nav>
-
-  <div class="container" id="mobile-panel" >
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">凌冬的博客</a>
-</div>
-
-
-
-
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/code/">首页</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/code/post/">归档页</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/code/tags/">标签</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/code/categories/">分类</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/code/about/">关于</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/code/friends">友链</a>
-      </li><li  style="list-style: none;position: relative;left: 360px;bottom: 32px;">
-		<input type="search" class="docsearch-input PC_MARK1" placeholder="Search" />
-	  </li></ul>
-</nav>
-
-<style>
-  .mob-docsearch-input {
-	border: 1px solid #ccc;
-	padding: 6px 0px;
-	border-radius: 3px;
-	padding-left:5px;
-	position: relative;
-    vertical-align: top;
-    width: 93%;
-    margin: auto;
-    margin-left: 7px;
-  
-  }
-  input.PC_MARK1{
-	border: 1px solid #ccc;
-	padding: 6px 0px;
-	border-radius: 3px;
-	padding-left:5px;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
-}
-input.PC_MARK1:focus{
-		border-color: #66afe9;
-		outline: 0;
-		-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
-		box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
-}
-</style>
-
-    </header>
-	
-	<div class="customByLyr">
-  
-			<img class="lazyload"  draggable="false"  data-original="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkg877vyj31hc0u0ndz.jpg" />
-		</div>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">lc.968.监控二叉树</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2022-09-04 </span>
-        <div class="post-category">
-            <a href="/code/categories/%E6%A0%91/"> 树 </a>
-            </div>
-          <span class="more-meta"> 约 764 字 </span>
-          <span class="more-meta"> 预计阅读 2 分钟 </span>
-        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
-      </div>
-    </header>
-
-    <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#968-监控二叉树httpsleetcodecnproblemsbinary-tree-cameras"><a href="https://leetcode.cn/problems/binary-tree-cameras/">968. 监控二叉树</a></a>
-      <ul>
-        <li><a href="#description">Description</a></li>
-        <li><a href="#dp状态思路解析">dp状态思路解析</a></li>
-        <li><a href="#solution">Solution</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-  </div>
-</div>
-
-    <div class="post-content">
-      <h1 id="968-监控二叉树httpsleetcodecnproblemsbinary-tree-cameras"><a href="https://leetcode.cn/problems/binary-tree-cameras/" target="_blank" rel="noopener">
-  968. 监控二叉树
-</a>
-</h1>
-<h2 id="description">Description</h2>
-<p>Difficulty: <strong>困难</strong></p>
-<p>Related Topics: <a href="https://leetcode.cn/tag/tree/" target="_blank" rel="noopener">
-  树
-</a>
-, <a href="https://leetcode.cn/tag/depth-first-search/" target="_blank" rel="noopener">
-  深度优先搜索
-</a>
-, <a href="https://leetcode.cn/tag/dynamic-programming/" target="_blank" rel="noopener">
-  动态规划
-</a>
-, <a href="https://leetcode.cn/tag/binary-tree/" target="_blank" rel="noopener">
-  二叉树
-</a>
-</p>
-<p>给定一个二叉树，我们在树的节点上安装摄像头。</p>
-<p>节点上的每个摄影头都可以监视<strong>其父对象、自身及其直接子对象。</strong></p>
-<p>计算监控树的所有节点所需的最小摄像头数量。</p>
-<p><strong>示例 1：</strong></p>
-<p><p class="md__image">
-  <img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/29/bst_cameras_01.png" alt=""  />
-</p>
-</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">输入：[0,0,null,0,0]
-</span></span><span class="line"><span class="cl">输出：1
-</span></span><span class="line"><span class="cl">解释：如图所示，一台摄像头足以监控所有节点。
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>示例 2：</strong></p>
-<p><p class="md__image">
-  <img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/29/bst_cameras_02.png" alt=""  />
-</p>
-</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">输入：[0,0,null,0,null,0,null,null,0]
-</span></span><span class="line"><span class="cl">输出：2
-</span></span><span class="line"><span class="cl">解释：需要至少两个摄像头来监视树的所有节点。 上图显示了摄像头放置的有效位置之一。
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>提示：</strong></p>
-<ol>
-<li>给定树的节点数的范围是 <code>[1, 1000]</code>。</li>
-<li>每个节点的值都是 0。</li>
-</ol>
-<h2 id="dp状态思路解析">dp状态思路解析</h2>
-<p><code>dp[i][j]</code> 表示当前节点不放 <strong>最少放摄像头的数量</strong></p>
-<p>i=1 表示父节点放，0表示父节点不放<br>
-j=1 表示当前节点放，0表示不放</p>
-<p>这样就可以列出当前节点和父亲节点的 4种状态。</p>
-<p><strong>状态表达式</strong>：<br>
-当前节点不放 dp[0][0] = min ( [左放，右不放], [左不放，右放],[左右都放]  )</p>
-<p>这个表达式 覆盖了左右节点和当前节点</p>
-<h2 id="solution">Solution</h2>
-<p>Language: <strong>C++</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cm">/**
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * Definition for a binary tree node.
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * struct TreeNode {
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     int val;
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     TreeNode *left;
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     TreeNode *right;
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-</span></span></span><span class="line"><span class="cl"><span class="cm"> *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
-</span></span></span><span class="line"><span class="cl"><span class="cm"> * };
-</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">minCameraCover</span><span class="p">(</span><span class="n">TreeNode</span><span class="o">*</span> <span class="n">root</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">//本节点不放置摄像头可否最少？放摄像头可否最少？  动态规划问题！！ [1, 1000]， 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">//dp[n][k] = min(dp[n][0],dp[n][1]) 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">int</span> <span class="n">dp</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">        <span class="n">getDp</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="n">dp</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nf">min</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="cp">#define min3(i,j,k) (min(i,min(j,k)))
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span>    <span class="kt">void</span> <span class="nf">getDp</span><span class="p">(</span><span class="n">TreeNode</span> <span class="o">*</span> <span class="n">root</span><span class="p">,</span> <span class="kt">int</span> <span class="n">dp</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">root</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//父节点不放，当前节点不放
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">;</span><span class="c1">//父节点不放，当前节点放
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">dp</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span>  <span class="mi">0</span><span class="p">;</span> <span class="c1">//父节点放，当前不放
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">dp</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="o">==</span><span class="nb">NULL</span> <span class="o">&amp;&amp;</span> <span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">==</span><span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">;</span><span class="c1">// 父节点不放，当前节点不放
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="c1">//父节点不放，当前节点放
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">dp</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="n">dp</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span><span class="c1">//父节点放不放不影响当前数量
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl">        <span class="n">getDp</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span><span class="n">l</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">getDp</span><span class="p">(</span><span class="n">root</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span><span class="n">r</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">min3</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">dp</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]);</span><span class="c1">//父节点放，当前不放   
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">min</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span> <span class="p">,</span> <span class="n">min</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]))</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">dp</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span><span class="c1">//父节点不放，当前节点放
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
-    </div>
-
-
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">文章作者</span>
-    <span class="item-content">lyr</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">上次更新</span>
-    <span class="item-content">
-        2022-05-11
-        
-    </span>
-  </p>
-  
-  
-</div>
-<footer class="post-footer">
-      <div class="post-tags">
-          <a href="/code/tags/%E6%A0%91/">树</a>
-          </div>
-      <nav class="post-nav">
-        <a class="prev" href="/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/lc.662.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E5%AE%BD%E5%BA%A6/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">lc.662.二叉树的最大宽度</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        <a class="next" href="/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%9A%84%E4%BD%9C%E7%94%A8/">
-            <span class="next-text nav-default">树的作用</span>
-            <span class="next-text nav-mobile">下一篇</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
-
-  
-  
-        </div>
-        <div id="gitalk-container"></div>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-      var gitalk = new Gitalk({
-        id: '2022-09-04 20:35:38 \u002b0800 \u002b0800',
-        title: 'lc.968.监控二叉树',
-        clientID: '604ae0a4eff099135503',
-        clientSecret: '403ff7c3a3ff6a91d905110c91eb1651219b7233',
-        repo: 'lyr-2000.github.io',
-        owner: 'lyr-2000',
-        admin: ['lyr-2000'],
-        body: decodeURI(location.href)
-      });
-      gitalk.render('gitalk-container');
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
-
-  
-
-  
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="mailto:lyr-2000@qq.com" class="iconfont icon-email" title="email"></a>
-  <a href="https://lyr-2000.github.io/code/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    主题 - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  <div class="busuanzi-footer">
-    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
-      <span class="division">|</span>
-    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
-  </div>
-
-  <span class="copyright-year">
-    &copy; 
-    2021-09-23 - 
-    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>LYR</span>
-  </span>
-</div>
-
-
-
-<script 
- 
-    src="https://cdn.jsdelivr.net/gh/lyr-2000/live2d-widget@latest/autoload.js"></script>
-
-
-
-
-
-
-
-
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
-  </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-
-
-
-<script type="text/javascript" src="/code/js/main.min.6d2c4f127d59e1dce56e2845adf7d359011b86d8fc907e98877eb35bd445b2b3.js"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$','$'], ['\\(','\\)']],
-        tags: 'ams',
-        },
-	  options: {
-		ignoreHtmlClass:'mathjax_ignore',
-	  }
-    };
-  </script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
-
-
-
-
-
-
-<script src="/js/../code/static/js/back_btn.js"></script>
-<script src="/js/../code/static/js/docsearch.min.js"></script>
-<script src="/js/../code/static/js/lazyload.min.js"></script>
-<script defer="defer" async>
- 
-  window.addEventListener('load',function() {
-    if(window.docsearch) {
-        docsearch({
-        apiKey: "a3054d64a9a7bbdef3c0601fee941703",
-        indexName: "blog-code-pratice",
-        appId: "MVN1L6O934",
-        inputSelector: '.docsearch-input',
-        debug: false,
-        });
-        docsearch({
-      apiKey: "a3054d64a9a7bbdef3c0601fee941703",
-      indexName: "blog-code-pratice",
-      appId: "MVN1L6O934",
-      inputSelector: '.mob-docsearch-input',
-      debug: false,
-        });
-    } 
-	
-  });
- 
-</script>
-  
- 
-  <div id="BR_cornner">
-    <div id='darkThemeBtn'>T</div> 
-  </div> 
-
-
-  
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-
-<script defer async>
-
-  mermaid.initialize({startOnLoad:true});
-</script>
-</body>
-</html>
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><title>lc.968.监控二叉树 - 凌冬的代码博客站</title>
+<meta name=renderer content="webkit"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv=Cache-Control content="no-transform"><meta http-equiv=Cache-Control content="no-siteapp"><meta name=theme-color content="#f8f5ec"><meta name=msapplication-navbutton-color content="#f8f5ec"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="#f8f5ec"><meta name=author content="lyr"><meta name=description content="968. 监控二叉树 Description Difficulty: 困难 Related Topics: 树 , 深度优先搜索 , 动态规划 , 二叉树 给定一个二叉树，我们在树的节点上安装摄像头。 节点上的每个摄影头都可以监视其父对象、"><meta name=keywords content="凌冬的博客,LYR的个人博客,二次元技术宅"><meta name=generator content="Hugo 0.121.2 with theme even"><link rel=canonical href=https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/lc.968.%E7%9B%91%E6%8E%A7%E4%BA%8C%E5%8F%89%E6%A0%91/><link rel=apple-touch-icon sizes=180x180 href=/code/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/code/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/code/favicon-16x16.png><link rel=manifest href=/code/manifest.json><link rel=mask-icon href=/code/safari-pinned-tab.svg color=#5bbad5><script async src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js></script><link href=/code/sass/main.min.4d31fe93a248bf2a033aec98b3dca0e0e3f55453ad76230e57f190d60450d008.css rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin=anonymous><link rel=stylesheet href=/css/../code/static/css/post.css><meta property="og:title" content="lc.968.监控二叉树"><meta property="og:description" content="968. 监控二叉树 Description Difficulty: 困难 Related Topics: 树 , 深度优先搜索 , 动态规划 , 二叉树 给定一个二叉树，我们在树的节点上安装摄像头。 节点上的每个摄影头都可以监视其父对象、"><meta property="og:type" content="article"><meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/lc.968.%E7%9B%91%E6%8E%A7%E4%BA%8C%E5%8F%89%E6%A0%91/"><meta property="og:image" content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkg877vyj31hc0u0ndz.jpg"><meta property="article:section" content="post"><meta property="article:published_time" content="2022-09-04T20:35:38+08:00"><meta property="article:modified_time" content="2022-05-11T20:02:48+08:00"><meta itemprop=name content="lc.968.监控二叉树"><meta itemprop=description content="968. 监控二叉树 Description Difficulty: 困难 Related Topics: 树 , 深度优先搜索 , 动态规划 , 二叉树 给定一个二叉树，我们在树的节点上安装摄像头。 节点上的每个摄影头都可以监视其父对象、"><meta itemprop=datePublished content="2022-09-04T20:35:38+08:00"><meta itemprop=dateModified content="2022-05-11T20:02:48+08:00"><meta itemprop=wordCount content="764"><meta itemprop=image content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkg877vyj31hc0u0ndz.jpg"><meta itemprop=keywords content="树,"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkg877vyj31hc0u0ndz.jpg"><meta name=twitter:title content="lc.968.监控二叉树"><meta name=twitter:description content="968. 监控二叉树 Description Difficulty: 困难 Related Topics: 树 , 深度优先搜索 , 动态规划 , 二叉树 给定一个二叉树，我们在树的节点上安装摄像头。 节点上的每个摄影头都可以监视其父对象、"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script><script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]--><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css></head><body><div><button class="button pink back">back</button>
+<button class="button pink go">go</button>
+<button class="button pink topUrl">top</button></div><div id=globalbg></div><div id=mobile-navbar class=mobile-navbar><div class=mobile-header-logo><a href=/ class=logo>凌冬的博客</a></div><div class=mobile-navbar-icon><span></span>
+<span></span>
+<span></span></div></div><nav id=mobile-menu class="mobile-menu slideout-menu"><ul class=mobile-menu-list><li style=display:inline-block;margin-right:10px><input type=search class=mob-docsearch-input placeholder=Search></li><a href=/code/><li class=mobile-menu-item>首页</li></a><a href=/code/post/><li class=mobile-menu-item>归档页</li></a><a href=/code/tags/><li class=mobile-menu-item>标签</li></a><a href=/code/categories/><li class=mobile-menu-item>分类</li></a><a href=/code/about/><li class=mobile-menu-item>关于</li></a><a href=/code/friends><li class=mobile-menu-item>友链</li></a></ul></nav><div class=container id=mobile-panel><header id=header class=header><div class=logo-wrapper><a href=/ class=logo>凌冬的博客</a></div><nav class=site-navbar><ul id=menu class=menu><li class=menu-item><a class=menu-item-link href=/code/>首页</a></li><li class=menu-item><a class=menu-item-link href=/code/post/>归档页</a></li><li class=menu-item><a class=menu-item-link href=/code/tags/>标签</a></li><li class=menu-item><a class=menu-item-link href=/code/categories/>分类</a></li><li class=menu-item><a class=menu-item-link href=/code/about/>关于</a></li><li class=menu-item><a class=menu-item-link href=/code/friends>友链</a></li><li style=list-style:none;position:relative;left:360px;bottom:32px><input type=search class="docsearch-input PC_MARK1" placeholder=Search></li></ul></nav><style>.mob-docsearch-input{border:1px solid #ccc;padding:6px 0;border-radius:3px;padding-left:5px;position:relative;vertical-align:top;width:93%;margin:auto;margin-left:7px}input.PC_MARK1{border:1px solid #ccc;padding:6px 0;border-radius:3px;padding-left:5px;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;-o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s}input.PC_MARK1:focus{border-color:#66afe9;outline:0;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)}</style></header><div class=customByLyr><img class=lazyload draggable=false data-original=https://tva1.sinaimg.cn/large/0072Vf1pgy1foxkg877vyj31hc0u0ndz.jpg></div><main id=main class=main><div class=content-wrapper><div id=content class=content><article class=post><header class=post-header><h1 class=post-title>lc.968.监控二叉树</h1><div class=post-meta><span class=post-time>2022-09-04</span><div class=post-category><a href=/code/categories/%E6%A0%91/>树</a></div><span class=more-meta>约 764 字 </span><span class=more-meta>预计阅读 2 分钟 </span><span id=busuanzi_container_page_pv class=more-meta><span id=busuanzi_value_page_pv><img src=/code/img/spinner.svg alt=spinner.svg></span> 次阅读</span></div></header><div class=post-toc id=post-toc><h2 class=post-toc-title>文章目录</h2><div class=post-toc-content><nav id=TableOfContents><ul><li><a href=#968-监控二叉树httpsleetcodecnproblemsbinary-tree-cameras><a href=https://leetcode.cn/problems/binary-tree-cameras/>968. 监控二叉树</a></a><ul><li><a href=#description>Description</a></li><li><a href=#dp状态思路解析>dp状态思路解析</a></li><li><a href=#solution>Solution</a></li></ul></li></ul></nav></div></div><div class=post-content><h1 id=968-监控二叉树httpsleetcodecnproblemsbinary-tree-cameras><a href=https://leetcode.cn/problems/binary-tree-cameras/ target=_blank rel=noopener>968. 监控二叉树</a></h1><h2 id=description>Description</h2><p>Difficulty: <strong>困难</strong></p><p>Related Topics: <a href=https://leetcode.cn/tag/tree/ target=_blank rel=noopener>树
+</a>, <a href=https://leetcode.cn/tag/depth-first-search/ target=_blank rel=noopener>深度优先搜索
+</a>, <a href=https://leetcode.cn/tag/dynamic-programming/ target=_blank rel=noopener>动态规划
+</a>, <a href=https://leetcode.cn/tag/binary-tree/ target=_blank rel=noopener>二叉树</a></p><p>给定一个二叉树，我们在树的节点上安装摄像头。</p><p>节点上的每个摄影头都可以监视<strong>其父对象、自身及其直接子对象。</strong></p><p>计算监控树的所有节点所需的最小摄像头数量。</p><p><strong>示例 1：</strong></p><p><p class=md__image><img src=https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/29/bst_cameras_01.png alt></p></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>输入：[0,0,null,0,0]
+</span></span><span class=line><span class=cl>输出：1
+</span></span><span class=line><span class=cl>解释：如图所示，一台摄像头足以监控所有节点。
+</span></span></code></pre></td></tr></table></div></div><p><strong>示例 2：</strong></p><p><p class=md__image><img src=https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/29/bst_cameras_02.png alt></p></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>输入：[0,0,null,0,null,0,null,null,0]
+</span></span><span class=line><span class=cl>输出：2
+</span></span><span class=line><span class=cl>解释：需要至少两个摄像头来监视树的所有节点。 上图显示了摄像头放置的有效位置之一。
+</span></span></code></pre></td></tr></table></div></div><p><strong>提示：</strong></p><ol><li>给定树的节点数的范围是 <code>[1, 1000]</code>。</li><li>每个节点的值都是 0。</li></ol><h2 id=dp状态思路解析>dp状态思路解析</h2><p><code>dp[i][j]</code> 表示当前节点不放 <strong>最少放摄像头的数量</strong></p><p>i=1 表示父节点放，0表示父节点不放<br>j=1 表示当前节点放，0表示不放</p><p>这样就可以列出当前节点和父亲节点的 4种状态。</p><p><strong>状态表达式</strong>：<br>当前节点不放 dp[0][0] = min ( [左放，右不放], [左不放，右放],[左右都放] )</p><p>这个表达式 覆盖了左右节点和当前节点</p><h2 id=solution>Solution</h2><p>Language: <strong>C++</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl><span class=cm>/**
+</span></span></span><span class=line><span class=cl><span class=cm> * Definition for a binary tree node.
+</span></span></span><span class=line><span class=cl><span class=cm> * struct TreeNode {
+</span></span></span><span class=line><span class=cl><span class=cm> *     int val;
+</span></span></span><span class=line><span class=cl><span class=cm> *     TreeNode *left;
+</span></span></span><span class=line><span class=cl><span class=cm> *     TreeNode *right;
+</span></span></span><span class=line><span class=cl><span class=cm> *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+</span></span></span><span class=line><span class=cl><span class=cm> *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+</span></span></span><span class=line><span class=cl><span class=cm> *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+</span></span></span><span class=line><span class=cl><span class=cm> * };
+</span></span></span><span class=line><span class=cl><span class=cm> */</span>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=k>public</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>minCameraCover</span><span class=p>(</span><span class=n>TreeNode</span><span class=o>*</span> <span class=n>root</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=c1>//本节点不放置摄像头可否最少？放摄像头可否最少？  动态规划问题！！ [1, 1000]， 
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=c1>//dp[n][k] = min(dp[n][0],dp[n][1]) 
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=kt>int</span> <span class=n>dp</span><span class=p>[</span><span class=mi>2</span><span class=p>][</span><span class=mi>2</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>        <span class=n>getDp</span><span class=p>(</span><span class=n>root</span><span class=p>,</span><span class=n>dp</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nf>min</span><span class=p>(</span><span class=n>dp</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>1</span><span class=p>],</span><span class=n>dp</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>0</span><span class=p>]);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=cp>#define min3(i,j,k) (min(i,min(j,k)))
+</span></span></span><span class=line><span class=cl><span class=cp></span>    <span class=kt>void</span> <span class=nf>getDp</span><span class=p>(</span><span class=n>TreeNode</span> <span class=o>*</span> <span class=n>root</span><span class=p>,</span> <span class=kt>int</span> <span class=n>dp</span><span class=p>[</span><span class=mi>2</span><span class=p>][</span><span class=mi>2</span><span class=p>])</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span><span class=p>(</span><span class=o>!</span><span class=n>root</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>dp</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=c1>//父节点不放，当前节点不放
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=n>dp</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>1</span><span class=p>]</span> <span class=o>=</span> <span class=mi>10000</span><span class=p>;</span><span class=c1>//父节点不放，当前节点放
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=n>dp</span><span class=p>[</span><span class=mi>1</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span> <span class=o>=</span>  <span class=mi>0</span><span class=p>;</span> <span class=c1>//父节点放，当前不放
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=n>dp</span><span class=p>[</span><span class=mi>1</span><span class=p>][</span><span class=mi>1</span><span class=p>]</span> <span class=o>=</span> <span class=mi>10000</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span><span class=p>(</span><span class=n>root</span><span class=o>-&gt;</span><span class=n>left</span><span class=o>==</span><span class=nb>NULL</span> <span class=o>&amp;&amp;</span> <span class=n>root</span><span class=o>-&gt;</span><span class=n>right</span><span class=o>==</span><span class=nb>NULL</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>dp</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span> <span class=o>=</span> <span class=mi>10000</span><span class=p>;</span><span class=c1>// 父节点不放，当前节点不放
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=n>dp</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>1</span><span class=p>]</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span><span class=c1>//父节点不放，当前节点放
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=n>dp</span><span class=p>[</span><span class=mi>1</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>dp</span><span class=p>[</span><span class=mi>1</span><span class=p>][</span><span class=mi>1</span><span class=p>]</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span><span class=c1>//父节点放不放不影响当前数量
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>l</span><span class=p>[</span><span class=mi>2</span><span class=p>][</span><span class=mi>2</span><span class=p>],</span><span class=n>r</span><span class=p>[</span><span class=mi>2</span><span class=p>][</span><span class=mi>2</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>        <span class=n>getDp</span><span class=p>(</span><span class=n>root</span><span class=o>-&gt;</span><span class=n>left</span><span class=p>,</span><span class=n>l</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>getDp</span><span class=p>(</span><span class=n>root</span><span class=o>-&gt;</span><span class=n>right</span><span class=p>,</span><span class=n>r</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>dp</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span> <span class=o>=</span> <span class=n>min3</span><span class=p>(</span><span class=n>l</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>1</span><span class=p>]</span> <span class=o>+</span> <span class=n>r</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>0</span><span class=p>],</span><span class=n>l</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span><span class=o>+</span><span class=n>r</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>1</span><span class=p>],</span><span class=n>l</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>1</span><span class=p>]</span><span class=o>+</span><span class=n>r</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>1</span><span class=p>]);</span>
+</span></span><span class=line><span class=cl>        <span class=n>dp</span><span class=p>[</span><span class=mi>1</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span> <span class=o>=</span> <span class=n>min</span><span class=p>(</span><span class=n>dp</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>0</span><span class=p>],</span><span class=n>l</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span> <span class=o>+</span> <span class=n>r</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>0</span><span class=p>]);</span><span class=c1>//父节点放，当前不放   
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=n>dp</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>1</span><span class=p>]</span> <span class=o>=</span> <span class=n>min</span><span class=p>(</span><span class=n>dp</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>0</span><span class=p>],</span><span class=n>l</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span> <span class=o>+</span> <span class=n>r</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>0</span><span class=p>])</span> <span class=o>+</span> <span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>dp</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>1</span><span class=p>]</span> <span class=o>=</span> <span class=n>min</span><span class=p>(</span><span class=n>min</span><span class=p>(</span><span class=n>l</span><span class=p>[</span><span class=mi>1</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span> <span class=o>+</span> <span class=n>r</span><span class=p>[</span><span class=mi>1</span><span class=p>][</span><span class=mi>0</span><span class=p>],</span><span class=n>l</span><span class=p>[</span><span class=mi>1</span><span class=p>][</span><span class=mi>1</span><span class=p>]</span><span class=o>+</span><span class=n>r</span><span class=p>[</span><span class=mi>1</span><span class=p>][</span><span class=mi>1</span><span class=p>])</span> <span class=p>,</span> <span class=n>min</span><span class=p>(</span><span class=n>l</span><span class=p>[</span><span class=mi>1</span><span class=p>][</span><span class=mi>0</span><span class=p>]</span> <span class=o>+</span> <span class=n>r</span><span class=p>[</span><span class=mi>1</span><span class=p>][</span><span class=mi>1</span><span class=p>],</span><span class=n>l</span><span class=p>[</span><span class=mi>1</span><span class=p>][</span><span class=mi>1</span><span class=p>]</span><span class=o>+</span><span class=n>r</span><span class=p>[</span><span class=mi>1</span><span class=p>][</span><span class=mi>0</span><span class=p>]))</span> <span class=o>+</span> <span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>dp</span><span class=p>[</span><span class=mi>1</span><span class=p>][</span><span class=mi>1</span><span class=p>]</span> <span class=o>=</span> <span class=n>dp</span><span class=p>[</span><span class=mi>0</span><span class=p>][</span><span class=mi>1</span><span class=p>];</span><span class=c1>//父节点不放，当前节点放
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span></code></pre></td></tr></table></div></div></div><div class=post-copyright><p class=copyright-item><span class=item-title>文章作者</span>
+<span class=item-content>lyr</span></p><p class=copyright-item><span class=item-title>上次更新</span>
+<span class=item-content>2022-05-11</span></p></div><footer class=post-footer><div class=post-tags><a href=/code/tags/%E6%A0%91/>树</a></div><nav class=post-nav><a class=prev href=/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91/lc.662.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E5%AE%BD%E5%BA%A6/><i class="iconfont icon-left"></i>
+<span class="prev-text nav-default">lc.662.二叉树的最大宽度</span>
+<span class="prev-text nav-mobile">上一篇</span>
+</a><a class=next href=/code/post/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E7%9A%84%E4%BD%9C%E7%94%A8/><span class="next-text nav-default">树的作用</span>
+<span class="next-text nav-mobile">下一篇</span>
+<i class="iconfont icon-right"></i></a></nav></footer></article></div><div id=gitalk-container></div><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js crossorigin=anonymous></script><script type=text/javascript>var gitalk=new Gitalk({id:"2022-09-04 20:35:38 +0800 +0800",title:"lc.968.监控二叉树",clientID:"604ae0a4eff099135503",clientSecret:"403ff7c3a3ff6a91d905110c91eb1651219b7233",repo:"lyr-2000.github.io",owner:"lyr-2000",admin:["lyr-2000"],body:decodeURI(location.href)});gitalk.render("gitalk-container")</script><noscript>Please enable JavaScript to view the <a href=https://github.com/gitalk/gitalk>comments powered by gitalk.</a></noscript></div></main><footer id=footer class=footer><div class=social-links><a href=mailto:lyr-2000@qq.com class="iconfont icon-email" title=email></a><a href=https://lyr-2000.github.io/code/index.xml type=application/rss+xml class="iconfont icon-rss" title=rss></a></div><div class=copyright><span class=power-by>由 <a class=hexo-link href=https://gohugo.io>Hugo</a> 强力驱动
+</span><span class=division>|</span>
+<span class=theme-info>主题 -
+<a class=theme-link href=https://github.com/olOwOlo/hugo-theme-even>Even</a></span><div class=busuanzi-footer><span id=busuanzi_container_site_pv>本站总访问量 <span id=busuanzi_value_site_pv><img src=/code/img/spinner.svg alt=spinner.svg></span> 次 </span><span class=division>|</span>
+<span id=busuanzi_container_site_uv>本站总访客数 <span id=busuanzi_value_site_uv><img src=/code/img/spinner.svg alt=spinner.svg></span> 人</span></div><span class=copyright-year>&copy;
+2021-09-23 -
+2024<span class=heart><i class="iconfont icon-heart"></i></span><span>LYR</span></span></div><script src=https://cdn.jsdelivr.net/gh/lyr-2000/live2d-widget@latest/autoload.js></script></footer><div class=back-to-top id=back-to-top><i class="iconfont icon-up"></i></div></div><script src=https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=anonymous></script><script src=https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin=anonymous></script><script src=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin=anonymous></script><script type=text/javascript src=/code/js/main.min.6d2c4f127d59e1dce56e2845adf7d359011b86d8fc907e98877eb35bd445b2b3.js></script><script type=text/javascript>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],tags:"ams"},options:{ignoreHtmlClass:"mathjax_ignore"}}</script><script async src=https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin=anonymous></script><script src=/js/../code/static/js/back_btn.js></script><script src=/js/../code/static/js/docsearch.min.js></script><script src=/js/../code/static/js/lazyload.min.js></script><script defer async>window.addEventListener("load",function(){window.docsearch&&(docsearch({apiKey:"a3054d64a9a7bbdef3c0601fee941703",indexName:"blog-code-pratice",appId:"MVN1L6O934",inputSelector:".docsearch-input",debug:!1}),docsearch({apiKey:"a3054d64a9a7bbdef3c0601fee941703",indexName:"blog-code-pratice",appId:"MVN1L6O934",inputSelector:".mob-docsearch-input",debug:!1}))})</script><div id=BR_cornner><div id=darkThemeBtn>T</div></div><script src=https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js></script><script defer async>mermaid.initialize({startOnLoad:!0})</script></body></html>

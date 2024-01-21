@@ -173,10 +173,10 @@ function matchName(s) {
   return s;
 }
 function normalName(s) {
-  if(!s || !s.toLowerCase) {
-    return s
+  if (!s || !s.toLowerCase) {
+    return s;
   }
-  return s.toLowerCase()
+  return s.toLowerCase();
 }
 
 //hightlight wiki links
@@ -310,5 +310,20 @@ $(function () {
       hide();
     });
   // todo 背景图片速度优化
-   
 });
+
+(function () {
+  function calculatePageLoadSpeed() {
+    let startTime = performance.now(); // 获取页面开始加载的时间
+
+    // 监听DOMContentLoaded事件，当文档完全加载和解析完成时触发
+    document.addEventListener("DOMContentLoaded", function () {
+      let endTime = performance.now(); // 获取页面完全加载完成的时间
+      let loadTime = endTime - startTime; // 计算总加载时间
+      console.log("页面加载时间为: " + loadTime + "毫秒");
+    });
+  }
+
+  // 调用函数来开始计时
+  calculatePageLoadSpeed();
+})();

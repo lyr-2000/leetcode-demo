@@ -1,539 +1,119 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>lc.2193.得到回文串的最少操作次数 - 凌冬的代码博客站</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-
-<meta name="author" content="lyr" /><meta name="description" content="[2193] 得到回文串的最少操作次数 https://leetcode.cn/problems/minimum-number-of-moves-to-make-palindrome/description/ algorithms Hard (49.26%) Likes: 53 Dislikes: 0 Total Accepted: 3.6K Total Submissions: 7.3K Testcase Example: &amp;lsquo;&amp;ldquo;aabb&amp;rdquo;&amp;rsquo; 给你一个只包含小写英文字母的字符串 s 。 每一次 操作 ，你可以选择 s 中两个 相邻 的字符，" /><meta name="keywords" content="凌冬的博客, LYR的个人博客, 二次元技术宅" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.121.2 with theme even" />
-
-
-<link rel="canonical" href="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E9%80%92%E5%BD%92/lc.2193.%E5%BE%97%E5%88%B0%E5%9B%9E%E6%96%87%E4%B8%B2%E7%9A%84%E6%9C%80%E5%B0%91%E6%93%8D%E4%BD%9C%E6%AC%A1%E6%95%B0/" />
-<link rel="apple-touch-icon" sizes="180x180" href="/code/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/code/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/code/favicon-16x16.png">
-<link rel="manifest" href="/code/manifest.json">
-<link rel="mask-icon" href="/code/safari-pinned-tab.svg" color="#5bbad5">
-
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-<link href="/code/sass/main.min.4d31fe93a248bf2a033aec98b3dca0e0e3f55453ad76230e57f190d60450d008.css" rel="stylesheet"> 
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/../code/static/css/post.css">
-
-
-<meta property="og:title" content="lc.2193.得到回文串的最少操作次数" />
-<meta property="og:description" content="[2193] 得到回文串的最少操作次数 https://leetcode.cn/problems/minimum-number-of-moves-to-make-palindrome/description/ algorithms Hard (49.26%) Likes: 53 Dislikes: 0 Total Accepted: 3.6K Total Submissions: 7.3K Testcase Example: &lsquo;&ldquo;aabb&rdquo;&rsquo; 给你一个只包含小写英文字母的字符串 s 。 每一次 操作 ，你可以选择 s 中两个 相邻 的字符，" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E9%80%92%E5%BD%92/lc.2193.%E5%BE%97%E5%88%B0%E5%9B%9E%E6%96%87%E4%B8%B2%E7%9A%84%E6%9C%80%E5%B0%91%E6%93%8D%E4%BD%9C%E6%AC%A1%E6%95%B0/" /><meta property="og:image" content="https://lyr-2000.github.io/code" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-12-26T23:53:41+08:00" />
-<meta property="article:modified_time" content="2022-05-11T20:02:48+08:00" />
-
-<meta itemprop="name" content="lc.2193.得到回文串的最少操作次数">
-<meta itemprop="description" content="[2193] 得到回文串的最少操作次数 https://leetcode.cn/problems/minimum-number-of-moves-to-make-palindrome/description/ algorithms Hard (49.26%) Likes: 53 Dislikes: 0 Total Accepted: 3.6K Total Submissions: 7.3K Testcase Example: &lsquo;&ldquo;aabb&rdquo;&rsquo; 给你一个只包含小写英文字母的字符串 s 。 每一次 操作 ，你可以选择 s 中两个 相邻 的字符，"><meta itemprop="datePublished" content="2023-12-26T23:53:41+08:00" />
-<meta itemprop="dateModified" content="2022-05-11T20:02:48+08:00" />
-<meta itemprop="wordCount" content="617"><meta itemprop="image" content="https://lyr-2000.github.io/code" />
-<meta itemprop="keywords" content="递归," /><meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://lyr-2000.github.io/code" /><meta name="twitter:title" content="lc.2193.得到回文串的最少操作次数"/>
-<meta name="twitter:description" content="[2193] 得到回文串的最少操作次数 https://leetcode.cn/problems/minimum-number-of-moves-to-make-palindrome/description/ algorithms Hard (49.26%) Likes: 53 Dislikes: 0 Total Accepted: 3.6K Total Submissions: 7.3K Testcase Example: &lsquo;&ldquo;aabb&rdquo;&rsquo; 给你一个只包含小写英文字母的字符串 s 。 每一次 操作 ，你可以选择 s 中两个 相邻 的字符，"/>
-
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-
-</head>
-<body >
-  
-  
-  <div>
-    <button class="button pink back">back</button>
-    <button class="button pink go">go</button>
-    <button class="button pink topUrl">top</button>
-    
-  </div>
-  <div id="globalbg"></div>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">凌冬的博客</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list"><li style="display:inline-block;margin-right:10px;">
-			<input type="search" class="mob-docsearch-input" placeholder="Search" />
-		</li><a href="/code/">
-        <li class="mobile-menu-item">首页</li>
-      </a><a href="/code/post/">
-        <li class="mobile-menu-item">归档页</li>
-      </a><a href="/code/tags/">
-        <li class="mobile-menu-item">标签</li>
-      </a><a href="/code/categories/">
-        <li class="mobile-menu-item">分类</li>
-      </a><a href="/code/about/">
-        <li class="mobile-menu-item">关于</li>
-      </a><a href="/code/friends">
-        <li class="mobile-menu-item">友链</li>
-      </a>
-	
-	
-  </ul>
-
-  
-
-
-</nav>
-
-  <div class="container" id="mobile-panel" >
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">凌冬的博客</a>
-</div>
-
-
-
-
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/code/">首页</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/code/post/">归档页</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/code/tags/">标签</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/code/categories/">分类</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/code/about/">关于</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/code/friends">友链</a>
-      </li><li  style="list-style: none;position: relative;left: 360px;bottom: 32px;">
-		<input type="search" class="docsearch-input PC_MARK1" placeholder="Search" />
-	  </li></ul>
-</nav>
-
-<style>
-  .mob-docsearch-input {
-	border: 1px solid #ccc;
-	padding: 6px 0px;
-	border-radius: 3px;
-	padding-left:5px;
-	position: relative;
-    vertical-align: top;
-    width: 93%;
-    margin: auto;
-    margin-left: 7px;
-  
-  }
-  input.PC_MARK1{
-	border: 1px solid #ccc;
-	padding: 6px 0px;
-	border-radius: 3px;
-	padding-left:5px;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
-}
-input.PC_MARK1:focus{
-		border-color: #66afe9;
-		outline: 0;
-		-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
-		box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
-}
-</style>
-
-    </header>
-	
-	<div class="customByLyr">
-  
-			<img class="lazyload"  draggable="false"  data-original="" />
-		</div>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">lc.2193.得到回文串的最少操作次数</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2023-12-26 </span>
-        <div class="post-category">
-            <a href="/code/categories/%E9%80%92%E5%BD%92/"> 递归 </a>
-            </div>
-          <span class="more-meta"> 约 617 字 </span>
-          <span class="more-meta"> 预计阅读 2 分钟 </span>
-        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
-      </div>
-    </header>
-
-    <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content">
-    <nav id="TableOfContents"></nav>
-  </div>
-</div>
-
-    <div class="post-content">
-      <p>[2193] 得到回文串的最少操作次数</p>
-<p><a href="https://leetcode.cn/problems/minimum-number-of-moves-to-make-palindrome/description/" target="_blank" rel="noopener">
-  https://leetcode.cn/problems/minimum-number-of-moves-to-make-palindrome/description/
-</a>
-</p>
-<p>algorithms</p>
-<p>Hard (49.26%)</p>
-<p>Likes:    53</p>
-<p>Dislikes: 0</p>
-<p>Total Accepted:    3.6K</p>
-<p>Total Submissions: 7.3K</p>
-<p>Testcase Example:  &lsquo;&ldquo;aabb&rdquo;&rsquo;</p>
-<p>给你一个只包含小写英文字母的字符串 s 。</p>
-<p>每一次 操作 ，你可以选择 s 中两个 相邻 的字符，并将它们交换。</p>
-<p>请你返回将 s 变成回文串的 最少操作次数 。</p>
-<p>注意 ，输入数据会确保 s 一定能变成一个回文串。</p>
-<p>示例 1：</p>
-<p>输入：s = &ldquo;aabb&rdquo;<br>
-输出：2<br>
-解释：<br>
-我们可以将 s 变成 2 个回文串，&ldquo;abba&rdquo; 和 &ldquo;baab&rdquo; 。</p>
-<ul>
-<li>
-<p>我们可以通过 2 次操作得到 &ldquo;abba&rdquo; ：&ldquo;aabb&rdquo; -&gt; &ldquo;abab&rdquo; -&gt; &ldquo;abba&rdquo; 。</p>
-</li>
-<li>
-<p>我们可以通过 2 次操作得到 &ldquo;baab&rdquo; ：&ldquo;aabb&rdquo; -&gt; &ldquo;abab&rdquo; -&gt; &ldquo;baab&rdquo; 。<br>
-因此，得到回文串的最少总操作次数为 2 。</p>
-</li>
-</ul>
-<p>示例 2：</p>
-<p>输入：s = &ldquo;letelt&rdquo;<br>
-输出：2<br>
-解释：<br>
-通过 2 次操作从 s 能得到回文串 &ldquo;lettel&rdquo; 。<br>
-其中一种方法是：&ldquo;letelt&rdquo; -&gt; &ldquo;letetl&rdquo; -&gt; &ldquo;lettel&rdquo; 。<br>
-其他回文串比方说 &ldquo;tleelt&rdquo; 也可以通过 2 次操作得到。<br>
-可以证明少于 2 次操作，无法得到回文串。</p>
-<p>提示：</p>
-<p>1 &lt;= s.length &lt;= 2000<br>
-s 只包含小写英文字母。<br>
-s 可以通过有限次操作得到一个回文串。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// @lc code=start
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">minMovesToMakePalindrome</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">//    unordered_map&lt;char,int&gt; mp;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//    for(char k:s) {
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//         if(mp[k]) mp[k]--;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//         else {
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//             mp[k]++;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//         }
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//    }
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//    int cnt=0;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//    for (auto [k,v]: mp) {
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//      if(cnt &amp;&amp; (v &amp; 1)==1) {
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//         return 0;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//      }
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//    }
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 一定会变回文
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">return</span> <span class="nf">dp</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="nf">dp</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">&lt;=</span><span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="c1">//  i  
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="c1">//a a b  N:
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="c1">//0 1 2  3
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="kt">int</span> <span class="n">sz</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">                <span class="c1">// aabb
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="k">auto</span> <span class="n">ns</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">                <span class="c1">// cout &lt;&lt; ns&lt;&lt;endl;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="k">return</span> <span class="n">sz</span> <span class="o">+</span> <span class="n">dp</span><span class="p">(</span><span class="n">ns</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">m</span> <span class="o">+</span> <span class="n">dp</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// @lc code=end
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; * [2193] 得到回文串的最少操作次数&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">Solution</span> <span class="n">k</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">print</span><span class="p">(</span><span class="n">k</span><span class="p">.</span><span class="n">minMovesToMakePalindrome</span><span class="p">(</span><span class="s">&#34;aabb&#34;</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
-    </div>
-
-
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">文章作者</span>
-    <span class="item-content">lyr</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">上次更新</span>
-    <span class="item-content">
-        2022-05-11
-        
-    </span>
-  </p>
-  
-  
-</div>
-<footer class="post-footer">
-      <div class="post-tags">
-          <a href="/code/tags/%E9%80%92%E5%BD%92/">递归</a>
-          </div>
-      <nav class="post-nav">
-        <a class="prev" href="/code/post/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E5%BA%A6%E6%95%B0/lc.2924.%E6%89%BE%E5%88%B0%E5%86%A0%E5%86%9B/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">lc.2924.找到冠军</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        <a class="next" href="/code/post/%E7%AE%97%E6%B3%95/%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86/lc.940.%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AD%90%E5%BA%8F%E5%88%972/">
-            <span class="next-text nav-default">lc.940.不同的子序列2</span>
-            <span class="next-text nav-mobile">下一篇</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
-
-  
-  
-        </div>
-        <div id="gitalk-container"></div>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-      var gitalk = new Gitalk({
-        id: '2023-12-26 23:53:41 \u002b0800 \u002b0800',
-        title: 'lc.2193.得到回文串的最少操作次数',
-        clientID: '604ae0a4eff099135503',
-        clientSecret: '403ff7c3a3ff6a91d905110c91eb1651219b7233',
-        repo: 'lyr-2000.github.io',
-        owner: 'lyr-2000',
-        admin: ['lyr-2000'],
-        body: decodeURI(location.href)
-      });
-      gitalk.render('gitalk-container');
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
-
-  
-
-  
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="mailto:lyr-2000@qq.com" class="iconfont icon-email" title="email"></a>
-  <a href="https://lyr-2000.github.io/code/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    主题 - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
-  <div class="busuanzi-footer">
-    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
-      <span class="division">|</span>
-    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/code/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
-  </div>
-
-  <span class="copyright-year">
-    &copy; 
-    2021-09-23 - 
-    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>LYR</span>
-  </span>
-</div>
-
-
-
-<script 
- 
-    src="https://cdn.jsdelivr.net/gh/lyr-2000/live2d-widget@latest/autoload.js"></script>
-
-
-
-
-
-
-
-
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
-  </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-
-
-
-<script type="text/javascript" src="/code/js/main.min.6d2c4f127d59e1dce56e2845adf7d359011b86d8fc907e98877eb35bd445b2b3.js"></script>
-  <script type="text/javascript">
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$','$'], ['\\(','\\)']],
-        tags: 'ams',
-        },
-	  options: {
-		ignoreHtmlClass:'mathjax_ignore',
-	  }
-    };
-  </script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
-
-
-
-
-
-
-<script src="/js/../code/static/js/back_btn.js"></script>
-<script src="/js/../code/static/js/docsearch.min.js"></script>
-<script src="/js/../code/static/js/lazyload.min.js"></script>
-<script defer="defer" async>
- 
-  window.addEventListener('load',function() {
-    if(window.docsearch) {
-        docsearch({
-        apiKey: "a3054d64a9a7bbdef3c0601fee941703",
-        indexName: "blog-code-pratice",
-        appId: "MVN1L6O934",
-        inputSelector: '.docsearch-input',
-        debug: false,
-        });
-        docsearch({
-      apiKey: "a3054d64a9a7bbdef3c0601fee941703",
-      indexName: "blog-code-pratice",
-      appId: "MVN1L6O934",
-      inputSelector: '.mob-docsearch-input',
-      debug: false,
-        });
-    } 
-	
-  });
- 
-</script>
-  
- 
-  <div id="BR_cornner">
-    <div id='darkThemeBtn'>T</div> 
-  </div> 
-
-
-  
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-
-<script defer async>
-
-  mermaid.initialize({startOnLoad:true});
-</script>
-</body>
-</html>
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><title>lc.2193.得到回文串的最少操作次数 - 凌冬的代码博客站</title>
+<meta name=renderer content="webkit"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv=Cache-Control content="no-transform"><meta http-equiv=Cache-Control content="no-siteapp"><meta name=theme-color content="#f8f5ec"><meta name=msapplication-navbutton-color content="#f8f5ec"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="#f8f5ec"><meta name=author content="lyr"><meta name=description content="[2193] 得到回文串的最少操作次数 https://leetcode.cn/problems/minimum-number-of-moves-to-make-palindrome/description/ algorithms Hard (49.26%) Likes: 53 Dislikes: 0 Total Accepted: 3.6K Total Submissions: 7.3K Testcase Example: &amp;lsquo;&amp;ldquo;aabb&amp;rdquo;&amp;rsquo; 给你一个只包含小写英文字母的字符串 s 。 每一次 操作 ，你可以选择 s 中两个 相邻 的字符，"><meta name=keywords content="凌冬的博客,LYR的个人博客,二次元技术宅"><meta name=generator content="Hugo 0.121.2 with theme even"><link rel=canonical href=https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E9%80%92%E5%BD%92/lc.2193.%E5%BE%97%E5%88%B0%E5%9B%9E%E6%96%87%E4%B8%B2%E7%9A%84%E6%9C%80%E5%B0%91%E6%93%8D%E4%BD%9C%E6%AC%A1%E6%95%B0/><link rel=apple-touch-icon sizes=180x180 href=/code/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/code/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/code/favicon-16x16.png><link rel=manifest href=/code/manifest.json><link rel=mask-icon href=/code/safari-pinned-tab.svg color=#5bbad5><script async src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js></script><link href=/code/sass/main.min.4d31fe93a248bf2a033aec98b3dca0e0e3f55453ad76230e57f190d60450d008.css rel=stylesheet><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin=anonymous><link rel=stylesheet href=/css/../code/static/css/post.css><meta property="og:title" content="lc.2193.得到回文串的最少操作次数"><meta property="og:description" content="[2193] 得到回文串的最少操作次数 https://leetcode.cn/problems/minimum-number-of-moves-to-make-palindrome/description/ algorithms Hard (49.26%) Likes: 53 Dislikes: 0 Total Accepted: 3.6K Total Submissions: 7.3K Testcase Example: &lsquo;&ldquo;aabb&rdquo;&rsquo; 给你一个只包含小写英文字母的字符串 s 。 每一次 操作 ，你可以选择 s 中两个 相邻 的字符，"><meta property="og:type" content="article"><meta property="og:url" content="https://lyr-2000.github.io/code/post/%E7%AE%97%E6%B3%95/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E9%80%92%E5%BD%92/lc.2193.%E5%BE%97%E5%88%B0%E5%9B%9E%E6%96%87%E4%B8%B2%E7%9A%84%E6%9C%80%E5%B0%91%E6%93%8D%E4%BD%9C%E6%AC%A1%E6%95%B0/"><meta property="og:image" content="https://lyr-2000.github.io/code"><meta property="article:section" content="post"><meta property="article:published_time" content="2023-12-26T23:53:41+08:00"><meta property="article:modified_time" content="2022-05-11T20:02:48+08:00"><meta itemprop=name content="lc.2193.得到回文串的最少操作次数"><meta itemprop=description content="[2193] 得到回文串的最少操作次数 https://leetcode.cn/problems/minimum-number-of-moves-to-make-palindrome/description/ algorithms Hard (49.26%) Likes: 53 Dislikes: 0 Total Accepted: 3.6K Total Submissions: 7.3K Testcase Example: &lsquo;&ldquo;aabb&rdquo;&rsquo; 给你一个只包含小写英文字母的字符串 s 。 每一次 操作 ，你可以选择 s 中两个 相邻 的字符，"><meta itemprop=datePublished content="2023-12-26T23:53:41+08:00"><meta itemprop=dateModified content="2022-05-11T20:02:48+08:00"><meta itemprop=wordCount content="617"><meta itemprop=image content="https://lyr-2000.github.io/code"><meta itemprop=keywords content="递归,"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://lyr-2000.github.io/code"><meta name=twitter:title content="lc.2193.得到回文串的最少操作次数"><meta name=twitter:description content="[2193] 得到回文串的最少操作次数 https://leetcode.cn/problems/minimum-number-of-moves-to-make-palindrome/description/ algorithms Hard (49.26%) Likes: 53 Dislikes: 0 Total Accepted: 3.6K Total Submissions: 7.3K Testcase Example: &lsquo;&ldquo;aabb&rdquo;&rsquo; 给你一个只包含小写英文字母的字符串 s 。 每一次 操作 ，你可以选择 s 中两个 相邻 的字符，"><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script><script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]--><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css></head><body><div><button class="button pink back">back</button>
+<button class="button pink go">go</button>
+<button class="button pink topUrl">top</button></div><div id=globalbg></div><div id=mobile-navbar class=mobile-navbar><div class=mobile-header-logo><a href=/ class=logo>凌冬的博客</a></div><div class=mobile-navbar-icon><span></span>
+<span></span>
+<span></span></div></div><nav id=mobile-menu class="mobile-menu slideout-menu"><ul class=mobile-menu-list><li style=display:inline-block;margin-right:10px><input type=search class=mob-docsearch-input placeholder=Search></li><a href=/code/><li class=mobile-menu-item>首页</li></a><a href=/code/post/><li class=mobile-menu-item>归档页</li></a><a href=/code/tags/><li class=mobile-menu-item>标签</li></a><a href=/code/categories/><li class=mobile-menu-item>分类</li></a><a href=/code/about/><li class=mobile-menu-item>关于</li></a><a href=/code/friends><li class=mobile-menu-item>友链</li></a></ul></nav><div class=container id=mobile-panel><header id=header class=header><div class=logo-wrapper><a href=/ class=logo>凌冬的博客</a></div><nav class=site-navbar><ul id=menu class=menu><li class=menu-item><a class=menu-item-link href=/code/>首页</a></li><li class=menu-item><a class=menu-item-link href=/code/post/>归档页</a></li><li class=menu-item><a class=menu-item-link href=/code/tags/>标签</a></li><li class=menu-item><a class=menu-item-link href=/code/categories/>分类</a></li><li class=menu-item><a class=menu-item-link href=/code/about/>关于</a></li><li class=menu-item><a class=menu-item-link href=/code/friends>友链</a></li><li style=list-style:none;position:relative;left:360px;bottom:32px><input type=search class="docsearch-input PC_MARK1" placeholder=Search></li></ul></nav><style>.mob-docsearch-input{border:1px solid #ccc;padding:6px 0;border-radius:3px;padding-left:5px;position:relative;vertical-align:top;width:93%;margin:auto;margin-left:7px}input.PC_MARK1{border:1px solid #ccc;padding:6px 0;border-radius:3px;padding-left:5px;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;-o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s}input.PC_MARK1:focus{border-color:#66afe9;outline:0;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)}</style></header><div class=customByLyr><img class=lazyload draggable=false data-original></div><main id=main class=main><div class=content-wrapper><div id=content class=content><article class=post><header class=post-header><h1 class=post-title>lc.2193.得到回文串的最少操作次数</h1><div class=post-meta><span class=post-time>2023-12-26</span><div class=post-category><a href=/code/categories/%E9%80%92%E5%BD%92/>递归</a></div><span class=more-meta>约 617 字 </span><span class=more-meta>预计阅读 2 分钟 </span><span id=busuanzi_container_page_pv class=more-meta><span id=busuanzi_value_page_pv><img src=/code/img/spinner.svg alt=spinner.svg></span> 次阅读</span></div></header><div class=post-toc id=post-toc><h2 class=post-toc-title>文章目录</h2><div class=post-toc-content><nav id=TableOfContents></nav></div></div><div class=post-content><p>[2193] 得到回文串的最少操作次数</p><p><a href=https://leetcode.cn/problems/minimum-number-of-moves-to-make-palindrome/description/ target=_blank rel=noopener>https://leetcode.cn/problems/minimum-number-of-moves-to-make-palindrome/description/</a></p><p>algorithms</p><p>Hard (49.26%)</p><p>Likes: 53</p><p>Dislikes: 0</p><p>Total Accepted: 3.6K</p><p>Total Submissions: 7.3K</p><p>Testcase Example: &lsquo;&ldquo;aabb&rdquo;&rsquo;</p><p>给你一个只包含小写英文字母的字符串 s 。</p><p>每一次 操作 ，你可以选择 s 中两个 相邻 的字符，并将它们交换。</p><p>请你返回将 s 变成回文串的 最少操作次数 。</p><p>注意 ，输入数据会确保 s 一定能变成一个回文串。</p><p>示例 1：</p><p>输入：s = &ldquo;aabb&rdquo;<br>输出：2<br>解释：<br>我们可以将 s 变成 2 个回文串，&ldquo;abba&rdquo; 和 &ldquo;baab&rdquo; 。</p><ul><li><p>我们可以通过 2 次操作得到 &ldquo;abba&rdquo; ：&ldquo;aabb&rdquo; -> &ldquo;abab&rdquo; -> &ldquo;abba&rdquo; 。</p></li><li><p>我们可以通过 2 次操作得到 &ldquo;baab&rdquo; ：&ldquo;aabb&rdquo; -> &ldquo;abab&rdquo; -> &ldquo;baab&rdquo; 。<br>因此，得到回文串的最少总操作次数为 2 。</p></li></ul><p>示例 2：</p><p>输入：s = &ldquo;letelt&rdquo;<br>输出：2<br>解释：<br>通过 2 次操作从 s 能得到回文串 &ldquo;lettel&rdquo; 。<br>其中一种方法是：&ldquo;letelt&rdquo; -> &ldquo;letetl&rdquo; -> &ldquo;lettel&rdquo; 。<br>其他回文串比方说 &ldquo;tleelt&rdquo; 也可以通过 2 次操作得到。<br>可以证明少于 2 次操作，无法得到回文串。</p><p>提示：</p><p>1 &lt;= s.length &lt;= 2000<br>s 只包含小写英文字母。<br>s 可以通过有限次操作得到一个回文串。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-cpp data-lang=cpp><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// @lc code=start
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=k>public</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>minMovesToMakePalindrome</span><span class=p>(</span><span class=n>string</span> <span class=n>s</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>//    unordered_map&lt;char,int&gt; mp;
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>//    for(char k:s) {
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>//         if(mp[k]) mp[k]--;
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>//         else {
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>//             mp[k]++;
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>//         }
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>//    }
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>//    int cnt=0;
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>//    for (auto [k,v]: mp) {
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>//      if(cnt &amp;&amp; (v &amp; 1)==1) {
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>//         return 0;
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>//      }
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>//    }
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// 一定会变回文
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=k>return</span> <span class=nf>dp</span><span class=p>(</span><span class=n>s</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=nf>dp</span><span class=p>(</span><span class=n>string</span> <span class=n>s</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>n</span> <span class=o>=</span> <span class=n>s</span><span class=p>.</span><span class=n>size</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span><span class=p>(</span><span class=n>n</span><span class=o>&lt;=</span><span class=mi>1</span><span class=p>)</span> <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=p>(</span><span class=kt>int</span> <span class=n>i</span><span class=o>=</span><span class=n>n</span><span class=o>-</span><span class=mi>1</span><span class=p>;</span><span class=n>i</span><span class=o>&gt;</span><span class=mi>0</span><span class=p>;</span><span class=n>i</span><span class=o>--</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=p>(</span><span class=n>s</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>==</span> <span class=n>s</span><span class=p>[</span><span class=mi>0</span><span class=p>])</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=c1>//  i  
+</span></span></span><span class=line><span class=cl><span class=c1></span>                <span class=c1>//a a b  N:
+</span></span></span><span class=line><span class=cl><span class=c1></span>                <span class=c1>//0 1 2  3
+</span></span></span><span class=line><span class=cl><span class=c1></span>                <span class=kt>int</span> <span class=n>sz</span> <span class=o>=</span> <span class=n>n</span><span class=o>-</span><span class=n>i</span><span class=o>-</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=c1>// aabb
+</span></span></span><span class=line><span class=cl><span class=c1></span>                <span class=k>auto</span> <span class=n>ns</span> <span class=o>=</span> <span class=n>s</span><span class=p>.</span><span class=n>substr</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span><span class=n>i</span><span class=o>-</span><span class=mi>1</span><span class=p>)</span> <span class=o>+</span> <span class=n>s</span><span class=p>.</span><span class=n>substr</span><span class=p>(</span><span class=n>i</span><span class=o>+</span><span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>                <span class=c1>// cout &lt;&lt; ns&lt;&lt;endl;
+</span></span></span><span class=line><span class=cl><span class=c1></span>                <span class=k>return</span> <span class=n>sz</span> <span class=o>+</span> <span class=n>dp</span><span class=p>(</span><span class=n>ns</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>m</span> <span class=o>=</span> <span class=n>n</span><span class=o>/</span><span class=mi>2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>m</span> <span class=o>+</span> <span class=n>dp</span><span class=p>(</span><span class=n>s</span><span class=p>.</span><span class=n>substr</span><span class=p>(</span><span class=mi>1</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl><span class=c1>// @lc code=end
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&#34; * [2193] 得到回文串的最少操作次数&#34;</span> <span class=o>&lt;&lt;</span> <span class=n>endl</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>Solution</span> <span class=n>k</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>print</span><span class=p>(</span><span class=n>k</span><span class=p>.</span><span class=n>minMovesToMakePalindrome</span><span class=p>(</span><span class=s>&#34;aabb&#34;</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div></div><div class=post-copyright><p class=copyright-item><span class=item-title>文章作者</span>
+<span class=item-content>lyr</span></p><p class=copyright-item><span class=item-title>上次更新</span>
+<span class=item-content>2022-05-11</span></p></div><footer class=post-footer><div class=post-tags><a href=/code/tags/%E9%80%92%E5%BD%92/>递归</a></div><nav class=post-nav><a class=prev href=/code/post/%E7%AE%97%E6%B3%95/%E5%9B%BE%E8%AE%BA/%E5%BA%A6%E6%95%B0/lc.2924.%E6%89%BE%E5%88%B0%E5%86%A0%E5%86%9B/><i class="iconfont icon-left"></i>
+<span class="prev-text nav-default">lc.2924.找到冠军</span>
+<span class="prev-text nav-mobile">上一篇</span>
+</a><a class=next href=/code/post/%E7%AE%97%E6%B3%95/%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86/lc.940.%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AD%90%E5%BA%8F%E5%88%972/><span class="next-text nav-default">lc.940.不同的子序列2</span>
+<span class="next-text nav-mobile">下一篇</span>
+<i class="iconfont icon-right"></i></a></nav></footer></article></div><div id=gitalk-container></div><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js crossorigin=anonymous></script><script type=text/javascript>var gitalk=new Gitalk({id:"2023-12-26 23:53:41 +0800 +0800",title:"lc.2193.得到回文串的最少操作次数",clientID:"604ae0a4eff099135503",clientSecret:"403ff7c3a3ff6a91d905110c91eb1651219b7233",repo:"lyr-2000.github.io",owner:"lyr-2000",admin:["lyr-2000"],body:decodeURI(location.href)});gitalk.render("gitalk-container")</script><noscript>Please enable JavaScript to view the <a href=https://github.com/gitalk/gitalk>comments powered by gitalk.</a></noscript></div></main><footer id=footer class=footer><div class=social-links><a href=mailto:lyr-2000@qq.com class="iconfont icon-email" title=email></a><a href=https://lyr-2000.github.io/code/index.xml type=application/rss+xml class="iconfont icon-rss" title=rss></a></div><div class=copyright><span class=power-by>由 <a class=hexo-link href=https://gohugo.io>Hugo</a> 强力驱动
+</span><span class=division>|</span>
+<span class=theme-info>主题 -
+<a class=theme-link href=https://github.com/olOwOlo/hugo-theme-even>Even</a></span><div class=busuanzi-footer><span id=busuanzi_container_site_pv>本站总访问量 <span id=busuanzi_value_site_pv><img src=/code/img/spinner.svg alt=spinner.svg></span> 次 </span><span class=division>|</span>
+<span id=busuanzi_container_site_uv>本站总访客数 <span id=busuanzi_value_site_uv><img src=/code/img/spinner.svg alt=spinner.svg></span> 人</span></div><span class=copyright-year>&copy;
+2021-09-23 -
+2024<span class=heart><i class="iconfont icon-heart"></i></span><span>LYR</span></span></div><script src=https://cdn.jsdelivr.net/gh/lyr-2000/live2d-widget@latest/autoload.js></script></footer><div class=back-to-top id=back-to-top><i class="iconfont icon-up"></i></div></div><script src=https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=anonymous></script><script src=https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin=anonymous></script><script src=https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin=anonymous></script><script type=text/javascript src=/code/js/main.min.6d2c4f127d59e1dce56e2845adf7d359011b86d8fc907e98877eb35bd445b2b3.js></script><script type=text/javascript>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],tags:"ams"},options:{ignoreHtmlClass:"mathjax_ignore"}}</script><script async src=https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin=anonymous></script><script src=/js/../code/static/js/back_btn.js></script><script src=/js/../code/static/js/docsearch.min.js></script><script src=/js/../code/static/js/lazyload.min.js></script><script defer async>window.addEventListener("load",function(){window.docsearch&&(docsearch({apiKey:"a3054d64a9a7bbdef3c0601fee941703",indexName:"blog-code-pratice",appId:"MVN1L6O934",inputSelector:".docsearch-input",debug:!1}),docsearch({apiKey:"a3054d64a9a7bbdef3c0601fee941703",indexName:"blog-code-pratice",appId:"MVN1L6O934",inputSelector:".mob-docsearch-input",debug:!1}))})</script><div id=BR_cornner><div id=darkThemeBtn>T</div></div><script src=https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js></script><script defer async>mermaid.initialize({startOnLoad:!0})</script></body></html>
