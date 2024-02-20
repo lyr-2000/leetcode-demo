@@ -86,27 +86,19 @@ public:
     int n = nums.size();
     if (!n)
       return false;
-    vector<int> d(n + 3);
-    d[0] = nums[0];
-    for (int i = 1; i < n; i++) d[i] = nums[i] - nums[i - 1];
-    d[n] = -nums[n - 1];
-#ifdef debug
+    vector<int> d(n + 1); //标记数组 mark 
+    int pre = 0;
+    for(int i=0;i<n;i++) {
+       pre += d[i];
+       int x = nums[i] + pre;
 
-    printa(d);
-#endif
-
-    for (int i = 0; i + k <= n; i++) {
-      if (d[i] == 0)
-        continue;
-      if (d[i] < 0) {
-        return false;
-      }
-      int x = d[i];
-      d[i] -= x;
-      d[i + k] += x;
-    }
-    for (int i=n-k+1;i<=n;i++) {
-        if(d[i]) return false;
+       if(x<0) return false;
+       if(x==0) continue;
+       if(i+k > n) return false;
+       if(x>0) {
+         pre -= x;
+         d[i+k] += x;
+       }
     }
     return true;
   }

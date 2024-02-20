@@ -82,7 +82,41 @@ low 和 high 都不含前导 0 。
 class Solution {
 public:
     int countSteppingNumbers(string low, string high) {
-        
+        base = high;
+        int preval = 0;
+        f = vector<vector<int> >(base.size(),vector<int>(10,-1));
+        int bval = query(0,preval,true,false);
+        base = low;
+        f = vector<vector<int> >(base.size(),vector<int>(10,-1));
+        return (bval - query(0,preval,true,false) + valid(low)+MOD) % MOD ;
+    }
+    int valid(string &s) {
+        for(int i=1;i<s.size();i++) {
+            if( abs(int(s[i]) - int(s[i-1])) !=1) {
+                return false;
+            }
+        }
+        return true;
+    }
+    string base;
+    vector<vector<int> > f ;
+    const int MOD = 1e9+7;
+    int query(int i,int pre,bool limit,bool isnum) {
+        if(base.size() == i) return isnum;
+        if(!limit && isnum && f[i][pre]!=-1) return f[i][pre];
+        int res=0;
+        if(not isnum) 
+            res = query(i+1,pre,false,false);
+        // int minval = isnum? 0:1;
+        int maxcurr = limit ? base[i]-'0': 9;
+        for (int j=1-isnum;j<=maxcurr;j++) {
+            if (!isnum || abs(j - pre) == 1) {
+                res = (res + query(i+1,j,limit && j == maxcurr,true)) % MOD;
+            }
+        }
+        if(!limit && isnum) f[i][pre] = res;
+        return res;
+
     }
 };
 // @lc code=end
