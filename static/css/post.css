@@ -307,6 +307,8 @@ body {
   color: white;
 }
 
+/* 禁用背景图片 */
+/*
 #globalbg {
   opacity: 0.85;
   top: 0px;
@@ -315,7 +317,6 @@ body {
   bottom: 0px;
   z-index: -2;
   position: fixed;
-  /* todo: 图片加载优化 */
   background: url(/asserts/background.jpg); 
   background-size: cover;
   background-repeat: no-repeat;
@@ -323,6 +324,7 @@ body {
   background-position: 50% 50%;
   background-color: #f2f2f2;
 }
+*/
 
 body #mobile-panel {
   opacity: 0.97;
